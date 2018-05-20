@@ -1,0 +1,92 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myPassword-->
+<section class="myCom myWithdraw myAddress myBank" id="myWithdraw">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">提现</a>
+                </div>
+            </div>
+            <div class="com basicInf passWord">
+                <div class="inpCom">
+                    <form method="post" action="" class="myForm" data-validator-option="{stopOnError:true}" autocomplete="off">
+                        <ul>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">可提现佣金：</span>
+                                    <span class="" style="line-height:40px;"><em class="num" style="color:#ff6e15;">{$user_account['brokerage']}</em>元</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">选择提现账户</span>
+                                    <div class="selCom selBank">
+                                        <select name="bank_card" >
+                                            <option value="0">&nbsp;&nbsp;请选择</option>
+                                            <volist name="user_bank" key="k" id="v">
+                                                <option value="{$v['id']}">&nbsp;&nbsp;{:getBankType($v['type'])}&nbsp;&nbsp;({:substr($v['number'],-4,4)})</option>
+                                            </volist>
+                                        </select>
+                                        <a>还没绑定银行卡？</a><a href="{:U('Safe/securityList')}" style="color: #ff6e15;">前往绑定</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">提现金额：</span>
+                                    <input type="text" name="money" placeholder="" data-rule="提现金额:required;" >
+                                    <p class="tip2"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">登录密码：</span>
+                                    <input type="password" name="password" placeholder="" data-rule="请输入登录密码:required;" >
+                                    <p class="tip3"></p>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>注：(<em style="color: red;">每天申请提现上限3次，单次额度不低于100元</em>)</p>
+                        <div class="myBtn keepBtn">
+                            <button type="submit" class="bbtn">确定提现</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<script>
+    var formUrl = "{:U('User/myTiXian')}";
+    //提交表单
+    $('.myForm').on('valid.form', function(e){
+        $.post(formUrl, $(this).serialize(),function(data){
+            if(data.status==0){
+                show_msg(data.info,'error');
+                $('input[name="password"]').val('');
+            }
+            else if(data.status==1){
+                show_msg(data.info);
+                if(data.url != ''){
+                    setTimeout(function(){location.href = data.url;},1500);
+                }
+            }
+        },'json');
+    });
+    //nice表单配置
+    $('.myForm').validator({
+        theme: "yellow_right_effect", //消息皮肤
+        msgStyle: "margin-left:3px; margin-top:5px;" ,//消息自定义样式
+        msgClass: "n-right"   //消息将自动显示在输入框右边
+    });
+</script>

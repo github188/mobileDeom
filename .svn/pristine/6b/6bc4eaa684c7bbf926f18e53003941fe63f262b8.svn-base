@@ -1,0 +1,98 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myAccUpSel-->
+<section class="myCom myAccUpSel" id="myAccUpSel">
+    <div class="in w1100 m0a">
+        <!--左侧共用myLeft.html-->
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <span>个人中心</span>
+                    <i></i>
+                    <span>报名课程</span>
+                </div>
+                <div class="com accPay accPay02">
+                    <div class="payPlan" id="payPlan02">
+                        <div class="planIn">
+                            <div class="inLine" style="width:263px"></div>
+                            <ol>
+                                <li class="li01 cur">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">充值学习币</span>
+                                    </div>
+                                </li>
+                                <li class="li02">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">选择课程</span>
+                                    </div>
+                                </li>
+                                <li class="li03">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">确认课程</span>
+                                    </div>
+                                </li>
+                                <li class="li04">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">报名成功</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="selCour">
+                        <ul>
+                            <volist name="data" key="k" id="v">
+                                <li group-id="{$v['id']}">
+                                    <div class="item">
+                                        <div class="fl">
+                                            <i></i>
+                                            <span>{$v['name']}</span>
+                                        </div>
+                                        <div class="fr">
+                                            <span><em>{$v['buy_money']}</em> 学习币</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </volist>
+                        </ul>
+                        <div class="link">
+                            <a href="{:U('Index/course')}">课程介绍请点这里</a>
+                        </div>
+                        <div class="myBtn nextBtn">
+                            <button type="button" class="bbtn" id="nextB01" >下一步</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<script>
+    var url = "{:U('Pay/courseChoose')}";
+    //点击下一步跳转
+    $('.bbtn').on('click',function(){
+        var group_id = $('.selCour ul').children('.cur').attr('group-id');
+        if(!group_id) {
+            show_msg('请选择要购买的课程！','error');
+            return false;
+        }
+        $.post(url,{'group_id':group_id},function(data){
+            if(data.status==0){
+                show_msg(data.info,'error');
+                return false;
+            }else if(data.status==1){
+                location.href = data.url;
+            }
+        },'json');
+    });
+</script>

@@ -1,0 +1,153 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+
+
+    <style type="text/css">
+        .accessApp{
+            margin-left: 10px;
+            color: red;
+        }
+        .accessAction{
+            margin: 15px 5px 5px 10px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #;
+            color: #008d4c;
+        }
+        .border-app{
+            padding: 5px 15px 10px 10px;
+            border:1px solid #fff;
+        }
+        .border-app .accessMethod{
+            margin: 5px;
+            padding: 5px 15px;
+            border:1px solid #fff;
+            /*text-align: center;*/
+        }
+        fieldset{
+            margin-bottom: 6px;
+        }
+        .accessMethod span{
+            margin-left: 8px;
+        }
+    </style>
+
+    <form action="{:U(MODULE_NAME.'/Rbac/access')}" method="post" class="form-horizontal">
+		<div class="portlet-body" style="width:98%;margin:10px;border:1px solid #ddd; background-color: #fff;">
+            <input type="hidden" name='rid' value='{$rid}'/>
+            <volist name="node" id="app" class="app">
+                <h4 class="accessApp">
+                    {$app.title} 
+                    <input type="checkbox"  name="access[]" value="{$app.id}_1" level="1" <if condition="$app['access']">checked="checked"</if>/>
+                </h4>
+
+                <div class="border-app">
+                    <volist name="app.child" id="action" key="k">
+                        <fieldset>
+                            <legend class="accessAction">
+                                {$action.title} 
+                                <input type="checkbox" name="access[]" value="{$action.id}_2" level="2" <if condition="$action['access']">checked="checked"</if>/>
+                            </legend>
+                            <span class="accessMethod">
+                                <volist name="action.child" id="method" >
+                                    <span>
+                                        {$method.title} 
+                                        <input type="checkbox" name="access[]" value="{$method.id}_3" level="3" <if condition="$method['access']">checked="checked"</if>/> &nbsp;
+                                    </span>
+                                </volist>
+                            </span>
+                        </fieldset>
+                    </volist>
+                </div>
+            </volist>
+		</div>
+        <div align="center"> 
+            <button class="btn btn-success" type="button" onclick="ajaxSubmit(this)"><i class="fa fa-check"></i> 确定修改权限</button>
+        </div>
+    </form>
+
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+
+<script type="text/javascript">
+    //checkbox 模块勾选判断
+   /* $('.accessApp input[level=1]').on('ifChecked', function(){
+        if ($(this).is(':checked')) {
+            $(".border-app input[type=checkbox]").each(function(){
+                $(this).iCheck('check');
+            });
+        }
+    });
+    $('.accessApp input[level=1]').on('ifUnchecked', function(){
+        $(".border-app input[type=checkbox]").each(function(){
+            $(this).iCheck('uncheck');
+        });
+    });
+    //控制器勾选判断
+    $('.accessAction input[level=2]').on('ifChecked', function(){
+        if ($(this).is(':checked')) {
+
+            $(this).parents('fieldset').find('input').each(function(){
+                $(this).iCheck('check');
+            });
+        }
+    });
+    $('.accessAction input[level=2]').on('ifUnchecked', function(){
+        $(this).parents('fieldset').find('input').each(function(){
+            $(this).iCheck('uncheck');
+        });
+    });*/
+//父级选中，所有字节点选中
+var checkpr=true;
+var unchekpr=true;
+var uncheckchi=[];
+$(".border-app input").on('ifChecked',function(){
+var level=$(this).attr("level");
+	$(this).iCheck('check');
+	var ck_count=0,un_count=0,length;
+	if(level==2){
+		checkpr&&($(this).parents('fieldset').find('input').iCheck('check'),unchekpr=true),$.each(uncheckchi,function(i,v){$(".border-app input[value="+v+"]").iCheck('uncheck')});
+	}else if(level==3){
+	var input_dom=$(this).parents('fieldset').find('.accessMethod input');
+		length=input_dom.length;
+		console.log(input_dom);
+		checkpr=false;
+		$.each(input_dom,function(){
+			var index=$.inArray($(this).val(),uncheckchi);
+			if($(this).is(":checked")){
+			ck_count++;
+			console.log(index);
+			if(index>=0)uncheckchi.splice(index,1)
+			}else{un_count++;if(index==-1)uncheckchi.push($(this).val())}
+		})
+		ck_count>0&&$(this).parents('fieldset').find('.accessAction input').iCheck('check');
+		ck_count==length&&(checkpr=true);
+		console.log(ck_count==length);
+	}
+})
+
+$(".border-app input").on('ifUnchecked',function(){
+var level=$(this).attr("level");
+	$(this).iCheck('uncheck');
+	var ck_count=0,un_count=0,length;
+	if(level==2){
+		unchekpr&&$(this).parents('fieldset').find('input').iCheck('uncheck');
+	}else if(level==3){
+		var input_dom=$(this).parents('fieldset').find('.accessMethod input');
+		length=input_dom.length;
+		$.each(input_dom,function(){
+			if(!$(this).is(":checked"))un_count++
+		})
+		console.log(un_count);
+		un_count==length&&($(this).parents('fieldset').find('.accessAction input').iCheck('uncheck'),checkpr=true)
+		console.log(un_count==length);
+		console.log(length);
+	}
+})
+//父级取消，所有节点取消
+//选中单个字节点父级选中
+
+
+</script>
+

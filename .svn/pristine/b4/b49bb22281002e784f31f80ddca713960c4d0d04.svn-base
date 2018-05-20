@@ -1,0 +1,70 @@
+<footer class="footer mt20 clearfix" id="footer">
+    <div class="links">
+        <div class="in w1200 m0a">
+            <div class="tit fl">
+                <h5>友情链接</h5>
+            </div>
+            <ul>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院2</a></li>
+                <li><a href="javascript:;">嗨推学院3</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院3</a></li>
+                <li><a href="javascript:;">嗨推学院88</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+                <li><a href="javascript:;">嗨推学院0</a></li>
+                <li><a href="javascript:;">嗨推学院55</a></li>
+                <li><a href="javascript:;">嗨推学院</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="botCom">
+        <div class="in w1200 m0a">
+            <div class="copyright">
+                <p>© CopyRight 2011-2017&nbsp;&nbsp;全五分quan5fen.com&nbsp;&nbsp;<a href="javascript:">粤ICP备14017207号-2</a></p>
+                <ul>
+                    <li>
+                        <a href="javascript:;"><img src="../public/images/copy01.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="../public/images/copy02.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="../public/images/copy03.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="../public/images/copy04.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="../public/images/copy05.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="../public/images/copy06.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="../public/images/copy07.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="workInf">
+                <div class="botLog">
+                    <a href="javascript:;"></a>
+                </div>
+                <div class="botTel">
+                    <i></i><span>020-36700550</span>
+                </div>
+                <div class="botTime">
+                    <p>工作日9:00-18:00&nbsp;&nbsp;周一至周六</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

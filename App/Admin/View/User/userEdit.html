@@ -1,0 +1,203 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+             <li><a href="#">用户管理</a></li>
+            <li class="active">添加会员</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+            <style>
+                .table img {
+                    /*margin-top: 8px;*/
+                    margin-left: 2px;
+                    margin-right: 2px;
+                }
+            </style>
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                   <form method="post" action="{:U(MODULE_NAME.'/User/userEdit')}" enctype="multipart/form-data" id="form1">
+                    <table id="example" class="table table-bordered table-hover" align="center" cellpadding="4" cellspacing="1" width="100%">
+                        <tbody>
+
+                            <tr>
+                                <td bgcolor="#F8F8F8" colspan="3">会员分组:</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><strong>用户组</strong></td>
+                                <td>
+                                    <input type="text" disabled value="开通时间">&nbsp; - &nbsp;
+                                    <input type="text" disabled value="过期时间"><font style="color: red;font-size: 12px;">(注意：若填写则选择填写的时间。不填写会自动选择对应用户组的时间。只需要打一个勾即可！)</font>
+                                </td>
+                            </tr>
+                             <volist name="user_groups" id="v" key="k">
+                                    <tr>
+                                        <td></td>
+                                        <td  width="20%">
+                                            <input type="checkbox" name="group_ext[id][{$v['id']}]" {$v['ext_id']?'checked':''} value="{$v['id']}"> <img style="display: inline-block;border-radius: 3px;margin: 0;" src="__MEMBER__/images/user_group/{$v.id}.png" alt="会员组">&nbsp;{$v['name']}
+                                        </td>
+                                        <td>
+                                            <input type="text" name="group_ext[start_time][{$v['id']}]" class="date-time" data-date-format="yyyy-mm-dd" value="{$v['user_start_time']?date('Y-m-d',$v['user_start_time']):''}">&nbsp; - &nbsp;
+                                            <input type="text" name="group_ext[end_time][{$v['id']}]"   class="date-time" data-date-format="yyyy-mm-dd" value="{$v['user_end_time']?date('Y-m-d',$v['user_end_time']):''}"> <if condition="$v['gq_str']"><font class="fa fa-times" color="red"> {$v['gq_str']}</font></if>
+                                        </td>
+                                    </tr>
+                            </volist>
+                            <tr>
+                                <td></td>
+                                <td width="10%">用户名:</td>
+                                <td>
+                                    <input name="info[username]" type="text" value="{$userinfo['username']}" data-rule="required">
+                                </td>
+                            </tr>
+                            <tr>
+                               <td >&nbsp;</td>
+                                <td width="10%">密码:</td>
+                                <td>
+                                    <input name="info[password]" id="password" type="password" value="" autocomplete="off" > <font style="font-size: 12px;color: #bbb">(不输入默认不修改密码)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">确认密码:</td>
+                                <td>
+                                    <input name="info[passwordok]" id="passwordok" type="password" value="" autocomplete="off"  >  <font style="font-size: 12px;color: #bbb">(不输入默认不修改密码)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">头像:</td>
+                                <td width="66%">
+                                    <for start = "1" end= "40">
+                                        <label for="logo_{$i}">
+                                            <img src="__MEMBER__/images/logo/{$i}.png" width="50px" height="50px" style="cursor: pointer;">
+                                        </label>
+                                        <input type="radio" name="info[face]" value="{$i}" {$userinfo['face']==$i?'checked':''} id="logo_{$i}" >
+                                     </for>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">真实姓名:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[realname]" type="text" value="{$userinfo['realname']}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">QQ号:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[qq]" type="text" value="{$userinfo['qq']}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">微信号:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[weixin_username]" type="text" value="{$userinfo['weixin_username']}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">微信openid:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[weixin_openid]" type="text" value="{$userinfo['weixin_openid']}">  <font style="font-size: 12px;color: #bbb">(用于微信取消和绑定)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">微信unionid:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[weixin_unionid]" type="text" value="{$userinfo['weixin_unionid']}">  <font style="font-size: 12px;color: #bbb">(用于微信取消和绑定)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">城市:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[city]" type="text" value="{$userinfo['city']}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">行业:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[trade]" type="text" value="{$userinfo['trade']}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">公司:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[company]" type="text" value="{$userinfo['company']}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">手机:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[mobile]" type="text" value="{$userinfo['mobile']}" data-rule="required">
+                                </td>
+                            </tr>
+                              <!--以下为地址信息-->
+                            <tr>
+                                <td></td>
+                                <td width="10%">email:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[email]" type="text" value="{$userinfo['email']}">
+                                </td>
+                            </tr>
+                            <input type="hidden" name="user_id" value="{$userinfo['id']}">
+                            <input type="hidden" name="page"    value="{$page}">
+                        </tbody>
+                    </table>
+                   <br>
+                  <center>
+                      <button class="btn btn-success inlineSearch display-inline"  type="submit">提交修改</button>
+                  </center>
+                   </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <br>
+            <br>
+            <br>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+
+<script type="text/javascript">
+    //日期插件
+    $('.date-time').datepicker({
+        weekStart: 1,
+        autoclose: true
+    });
+    //删除询问框
+    $(".delete-msg-find").on('click', function(){
+        var status = confirm('确定删除本条文章？\n \n 删除后将无法恢复！\n 确定删除吗？？？\n \n ');
+        if(!status){
+            return false;
+        }
+    });
+
+</script>

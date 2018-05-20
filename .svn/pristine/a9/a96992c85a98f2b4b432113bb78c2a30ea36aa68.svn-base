@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>提交订单</title>
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_1fp093uu4xx39pb9.css" />
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_dkxg3p0b0swtgldi.css"   />
+		<link rel="stylesheet" href="../../public/css/reset.css" />
+		<link rel="stylesheet" href="../../public/css/weui.css"/>
+		<link rel="stylesheet" href="../../public/css/partner.css" />
+	    <link rel="stylesheet" href="../../public/css/products.css">
+	</head>
+	<body>
+		<div class="partnerBox">
+			<!--图片广告-->
+			<div class="par-top">
+				<img src="../../public/images/tijiaodingdan.png"/>
+			</div>
+			<!--表单提示-->
+			<div class="par-center" style="height: 60px;line-height: 60px;">
+				<h1 class="weui-cells__title order_title">请在下单15分钟后,复制淘宝订单号提交</h1>
+			</div>
+			<!--表单内容-->
+            
+			<div class="par-form">
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell" style="padding: 15px 20px;">
+						<div class="weui-cell__hd">
+							<label class="weui-label" style="width: 80px;color: #333333;">淘宝单号:</label>
+						</div>
+						<div class="weui-cell__bd weui-cell_primary">
+							<input type="text" class="weui-input" id="input" name="orderid" placeholder="请输入淘宝订单号"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order-tips-div">
+				<p>
+					以下情况无法参与下单返积分活动：<br/>
+                    1、未使用本站淘口令或链接购买<br/>
+                    2、打开商品后没有直接下单<br/>
+                    3、同一个淘宝订单号提交多次<br/>
+                    本活动解释权归本平台所有，如有疑问，欢迎添加客服二维码咨询
+				</p>
+			</div>
+			<!--提交审核按钮-->
+			<div class="par-bot" style="padding:25px 10px ;">
+				<a class="weui-btn bg-org" id="submit" style="font-size: 14px;height: 48px;line-height: 48px;" href="javascript:;">确认</a>
+                <div class="logs"><a href="/index.php?m=home&c=user&a=myorder" style="font-size:12px;color:#ff4479">兑换记录</a></div>
+			</div>
+		</div>
+
+		<!--底部-->
+		<!--<div class="page-foot" id="page-foot" style="z-index:99">-->
+			<!--<div class="g-foot-bar">-->
+				<!--<ul class="m-nav-foot clearfix">-->
+					<!--<li>-->
+						<!--<a href="/">-->
+							<!--<p><i class="iconfont icon-home-icon-shouye-nor-copy"></i></p>-->
+							<!--<span>首页</span>-->
+						<!--</a>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<a href="../live/index.html">-->
+							<!--<p><i class="iconfont icon-home-icon-zjhibojian"></i></p>-->
+							<!--<span>直播间</span>-->
+						<!--</a>-->
+					<!--</li>-->
+					<!--<li style="float:right">-->
+						<!--<a class="bot-coupons2" href="javascript:;">立即兑换</a>-->
+					<!--</li>-->
+					<!--<li style="float:right">-->
+						<!--<a class="bot-coupons1" href="javascript:;">返回商城</a>-->
+					<!--</li>-->
+				<!--</ul>-->
+			<!--</div>-->
+		<!--</div>-->
+
+
+		<div id="goback" onClick="window.history.go(-1);"><i class="iconfont icon-fanhui1"></i></div>
+		<script type="text/javascript" src="../../public/js/jquery-1.11.1.js" ></script>
+        <div id="kefu">
+            <span><i class="iconfont icon-kefu"></i></span>
+        </div>
+        <div id="kefu_mask">
+            <div class="qrcode_box">
+					<img src="http://www.t5166.com/Uploads/csqrcode/2017-04-26/5900783071e7a.png" />
+					<div class="text">长按识别二维码 添加客服微信<br/>享受更多服务</div>
+                <div id="close_kefu"><i class="iconfont icon-guanbifuzhi"></i></div>
+            </div>
+        </div>
+        <script>
+        $(function(){
+            $("#kefu").click(function(){
+                $('#kefu_mask').show();
+            });
+            $('#close_kefu').click(function(){
+                $('#kefu_mask').hide();
+            });
+        })
+        </script>
+        <!--kefu-->
+        <script type="text/javascript" src="../../public/js/sweetalert.min.js"></script>
+        <link href="../../public/css/sweetalert.css" type="text/css" rel="stylesheet" />
+		<script>
+		$(function(){
+			$("#submit").click(function(){
+				orderid = $('#input').val();
+				if(orderid){
+					url = "/index.php?m=home&c=user&a=post_orderid&op=do";
+					$.post(url,{orderid:orderid},function(json){
+						if(json.state){
+							swal("成功","订单号提交成功","success");
+						}else{
+							swal("失败",json.msg,"error");
+						}
+						$('#input').val("");
+					});
+				}else{
+					$('.weui-cells').css({"boxShadow":"0px 0px 5px rgba(255,0,0,0.9)"});
+					$('#input').focus();
+				}
+				
+			});
+		})
+		</script>
+	</body>
+</html>

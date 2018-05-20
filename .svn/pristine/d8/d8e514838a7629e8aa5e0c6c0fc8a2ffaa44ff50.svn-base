@@ -1,0 +1,136 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">文章管理</a></li>
+            <li class="active">文章列表</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/User/lists')}">
+
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qq号码：</b></label>
+                            <input type="text" class="form-control" name="qq" value="{$condition[qq]}" >
+                        </div>&nbsp; &nbsp;
+                      <div class="form-group inlineForm display-inline">
+                            <label><b>手机号码：</b></label>
+                            <input type="text" class="form-control" name="mobile" value="{$condition[mobile]}">
+                      </div><p></p>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{$condition[username]}" >
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>真实姓名：</b></label>
+                            <input type="text" class="form-control" name="realname" value="{$condition[realname]}">
+                        </div><p></p>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户组：</b></label>
+                            <select class="form-control inlineSelect" name="group">
+                                <option value="0" >  ---  请选择用户组  --- </option>
+                                 <volist name="group" id="v">
+                                 <option value="{$v.ugid}" <if condition="$condition[group] == $v[ugid]">selected="selected"</if>>{$v.name}</option>
+                                 </volist>
+                            </select>
+                        </div>&nbsp; &nbsp;&nbsp; &nbsp;
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查询</button>
+
+
+                    </form>
+
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td width="50">分组</td>
+                                <td width="30" align="center">会员</td>
+                                <td width="50" align="center">姓名</td>
+                                <td width="50" align="center">qq</td>
+                                <td width="100" align="center">城市</td>
+                                <td width="50" align="center">手机</td>
+                                <td width="50" align="center">注册</td>
+                                <td width="50" align="center">邀请人</td>
+                                <td width="120" align="center">过期</td>
+                                <td width="20" align="center">提问</td>
+                                <td width="20" align="center">笔记</td>
+                                <td width="50" align="center">观看时间</td>
+                                <td width="100" align="center">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <volist name="info" id="v">
+                                    <tr>
+                                        <td width="50">{$v.name}</td>
+                                        <td width="30" align="center">{$v.username}</td>
+                                        <td width="50" align="center">{$v.realname}</td>
+                                        <td width="50" align="center">{$v.qq}</td>
+                                        <td width="100" align="center">{$v.city}</td>
+                                        <td width="50" align="center">{$v.mobile}</td>
+                                        <td width="50" align="center">{$v.regtime|date="Y-m-d",###}</td>
+                                        <td width="50" align="center">{$v.username_a}</td>
+                                        <td width="120" align="center">{$v.gqtime|date="Y-m-d",###}</td>
+                                        
+                                        <td width="50" align="center"><a href="{:U(MODULE_NAME.'/User/tiwen',[username=>$v[username]])}">{$v.dayi_num}</a></td>
+                                        <td width="50" align="center"><a href="{:U(MODULE_NAME.'/User/biji',[username=>$v[username]])}">{$v.biji_num}</a></td>
+                                        <td width="120" align="center">{$v.video_time|video_time_format}</td>
+                                         <td align="center" style="border-bottom:1px dotted #EDEDED">
+                                            <a href="{:U(MODULE_NAME.'/User/list_edit',[uid=>$v[uid]])}">[编辑]</a>&nbsp; &nbsp; &nbsp; &nbsp; 
+                                            <a href="{:U(MODULE_NAME.'/User/user_add',[uid=>$v[uid]])}">[例外]</a> <br>
+                                            <a href="{:U(MODULE_NAME.'/User/hack_add',[uid=>$v[uid]])}">[拉黑]</a>&nbsp;&nbsp; &nbsp; &nbsp; 
+                                            <a href="{:U(MODULE_NAME.'/User/delete_user',[uid=>$v[uid]])}" onclick="return confirm('你确实要删除吗?不可恢复');">[删除]</a> &nbsp; <br/>
+                                            <a target="_blank" href="http://xue.quan5fen.com/?m=front_new&c=index&a=login_admin&username={$v['username']}&password={$v['password']}&encrypt={$v['encrypt']}">[登录平台]</a><br>
+                                            <a href="{:U(MODULE_NAME.'/User/send_message',[uid=>$v[uid]])}">[测试模板消息]</a> &nbsp; 
+                                        </td>
+                                    </tr>
+                             </volist>
+
+                            <if condition="!$info">
+                                <tr>
+                                    <td colspan="13" align="center"> 没有数据！</td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="13" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+  //删除询问框
+$(".delete-msg-find").on('click', function(){
+    var status = confirm('确定删除本条文章？\n \n 删除后将无法恢复！\n 确定删除吗？？？\n \n ');
+    if(!status){
+        return false;
+    }
+});  
+
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

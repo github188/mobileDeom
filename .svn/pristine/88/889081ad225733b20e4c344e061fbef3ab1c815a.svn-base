@@ -1,0 +1,603 @@
+<include file="Public:header"/>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_gwe8d2i5nduw61or.css">
+    <link rel="stylesheet" href="__MOBILE__/css/main.css">
+
+<style>
+    .origin{
+        display: none;
+    }
+</style>
+
+<!--视频主要内容块-->
+<setion class="playVideo  Hlearn">
+    <!--视频播放S-->
+    <!--<div id="module_basic_player" class="palyV">-->
+        <!--<div class="player" id="videoLeft">-->
+
+                <script src="https://player.polyv.net/script/polyvplayer.min.js"></script>
+                <!-- 视频播放 -->
+                <div id='plv_{$videoInfo.video_code}'></div>
+                <script>
+                    //视频播放参数
+                    var player = polyvObject('#plv_{$videoInfo.video_code}').videoPlayer({
+//                        'width':'100%',
+                        'height':'146',
+                        'vid' : '{$videoInfo.video_code}',
+                        //ban_history_time off 记录播放进度并续播  history_video_duration表示视频总时长超过多少分钟时，记录历史播放进度，下次播放时自动续播，默认为5分钟
+                        'flashvars':{"ban_history_time":"off", "history_video_duration":1, "autoplay":1}
+                    });
+                </script>
+
+        <!--</div>-->
+    <!--</div>-->
+    <!--视频播放E-->
+
+    <div class="Hrow">
+        <span class="fl hfont">{$videoInfo.title}</span>
+        <span class="fr ke">课程简介 <i class="iconfont icon-xiala"></i></span>
+        <div class="introduce">
+            <p>{$videoInfo.remark}</p>
+        </div>
+    </div>
+
+ <!--tab栏-->
+    <div class="learnTab clearfix">
+        <ul>
+            <li class="cur"><a href="#">目录</a></li>
+            <li><a href="#">问答</a></li>
+            <li><a href="#">笔记</a></li>
+        </ul>
+    </div>
+
+<!--目录S-->
+    <div class="questionMain show" style="min-height: 500px">
+        <div class="videoItem">
+              <ul class="list tab-bd">
+
+                  <!--正在播放-->
+                  <li class="itemLi bofang boxShadow">
+
+                      <div class="itemMain clearfix">
+                          <a class="pic" href="javascript:;" target="_blank">
+                              <img class="img" src="{$videoInfo.cover_img}" alt="{$videoInfo.title}" title="{$videoInfo.title}">
+                              <i data-vid="{$videoInfo.id}" class="iconfont video_shoucang <if condition='$videoInfo.is_shoucang === true'> icon-icon-sel-shixin <else/> icon-shoucang </if>"></i>
+
+                              <if condition="$videoInfo['is_tag'] EQ 1">
+                                  <div class="sanjiao blueColor">
+                                      <span class="ico-lt">最新</span>
+                                  </div>
+                              <elseif condition="$videoInfo['is_tag'] EQ 2"/>
+                                  <div class="sanjiao redColor">
+                                      <span class="ico-lt">推荐</span>
+                                  </div>
+                              </if>
+                          </a>
+
+                          <div class="liRight">
+                              <p class="wzH">{$videoInfo.title}</p>
+                              <p class="fc ft15">{$videoInfo.total_question}个提问</p>
+                              <p class="botm clearfix">
+                                  <span class="fl style"><em>{$videoInfo.buy_money}</em> 学习币</span>
+                                  <span class="fr" style="font-size:13px"><i class="iconfont icon-bofang"></i>播放中</span>
+                              </p>
+                          </div>
+                      </div>
+                  </li>
+
+                  <volist name="categoryVideoList" id="val">
+
+                      <php>
+                          #判断视频是否有播放权限
+                          $playAuth = videoPlayAuth($val['id']);
+                          #判断视频是否被收藏
+                          $shoucang = M('video_shoucang')->where(array('user_id'=>session(C('USER_AUTH_UID')),'vid'=>$val['id']))->getField('id');
+                          $url = U('Video/play',array('vid'=>$val['id']));
+                          $is_play = $vid == $val['id'] ? true : false;
+
+                      </php>
+
+
+                      <if condition="$playAuth['allow_play'] eq 1">
+                          <if condition="$is_play === true">
+                                <li class="itemLi bofang boxShadow">
+                          <else/>
+                                <li class="itemLi bofang">
+                          </if>
+
+                      <else />
+                            <li class="itemLi recommend">
+                      </if>
+                          <div class="itemMain clearfix">
+                              <a class="pic" href="{:U('Video/play',array('vid'=>$val['id']))}">
+                                  <img class="img" src="{$videoInfo.cover_img}" alt="{$videoInfo.title}" title="{$videoInfo.title}">
+                                  <i data-vid="{$val.id}" class="iconfont video_shoucang {$shoucang? 'icon-icon-sel-shixin' : 'icon-shoucang'}"></i>
+
+                                  <if condition="$val['is_tag'] EQ 1">
+                                      <div class="sanjiao blueColor">
+                                          <span class="ico-lt">最新</span>
+                                      </div>
+                                      <elseif condition="$val['is_tag'] EQ 2"/>
+                                      <div class="sanjiao redColor">
+                                          <span class="ico-lt">推荐</span>
+                                      </div>
+                                  </if>
+
+                              </a>
+                              <div class="liRight">
+                                  <p class="wzH">{$val.title}</p>
+                                  <p class="fc ft15">{$val.total_question}个提问</p>
+                                  <p class="botm clearfix">
+                                      <span class="fl {$playAuth['allow_play']==1?'style':''} "><em class="{$playAuth['allow_play']==1?'':'cssStyle'}">{$val.buy_money}</em> 学习币</span>
+                                      <a href="{$playAuth['allow_play'] == 1? U('Video/play',array('vid'=>$val['id'])) : 'javascript:;'}">
+                                        <span class="fr" style="font-size: 15px">{$playAuth['allow_play'] == 1? '<i class="iconfont icon-bofang"></i>播放' : '<i class="iconfont icon-216"></i>购买'}</span>
+                                      </a>
+                                  </p>
+                              </div>
+                          </div>
+                      </li>
+                  </volist>
+
+              </ul>
+        </div>
+    </div>
+<!--目录E-->
+
+
+<!--问答S-->
+    <div class="questionMain " style="min-height: 500px">
+        <!--表单S-->
+        <div class="Hfrom">
+            <form action="" method="post">
+                <textarea id="questionContent" placeholder=""></textarea>
+                <div class="tijiao">
+                    <a href="javascript:;" onclick="writeQuestion()" class="subBtn">发表问题</a>
+                </div>
+            </form>
+        </div>
+        <!--表单E-->
+        <ul id="questionList">
+            <volist name="question.question" id="val">
+                <li class="mt16" data-question-id="{$val.id}">
+                    <div data-last-answer-id="{$val.limit_end_id}" class="item question_list">
+                        <div class="tp fl">
+                            <a href="javascript:;">
+                                <img class="q_userface" src="__MEMBER__/images/logo/{$val.face}.png" alt="">
+                            </a>
+                        </div>
+                        <div class="txt">
+                            <!--客人提问，主人点击按钮-->
+                            <div class="txIn">
+                                <div class="tHd">
+                                    <img class="q_usergroup" style="display: inline-block" src="__MEMBER__/images/user_group/{$val.user_group_id}.png" alt="用户组头像">
+                                    <span class="name q_username">{$val.username}</span>
+                                </div>
+                                <p class="wz q_content">{$val.question}</p>
+
+                                <div class="hand">
+                                    <span class="time q_addtime">{$val.addtime}</span>
+                                    <a href="javascript:;" class="mesIco mesIcoT" flag=true onclick="mesIco($(this),'.question_list','.anAreaT', 'show')"><i></i>(<span class="reply_count">{$val.count}</span>)</a>
+                                </div>
+                            </div>
+
+                            <div class="anArea anAreaT" >
+                                <form action="" method="post">
+                                    <textarea class="q_reply_content" placeholder=""></textarea>
+                                    <div class="bot">
+                                        <a href="javascript:;" class="cancleBtn" onclick="fromCancel( $(this),'.question_list','.anAreaT','.mesIcoT','show')">取消</a>
+                                        <a href="javascript:;" data-answer-id="0" onclick="replyQuestion($(this))" class="subBtn">提交</a>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!--主人回复内容,客人点击按钮-->
+                            <volist name="val.answer" id="v">
+
+                                <div class="item itemX">
+                                    <div class="tp fl">
+                                        <a href="javascript:;">
+                                            <img src="__MEMBER__/images/logo/{$v.face}.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="txIn txInB">
+                                            <div class="tHd">
+                                                <img style="display: inline-block" src="__MEMBER__/images/user_group/{$v.user_group_id}.png">
+                                                <span class="name">{$v.username}</span>
+                                                <php>
+                                                    if($v['reply_user_id'] != 0){
+                                                        echo '回复 <span><img class="reply_user_group" style="display: inline-block" src="__MEMBER__/images/user_group/'.$v['reply_user_group_id'].'.png"> <span class="name reply_username">'.$v['reply_username'].'</span></span></span>';
+                                                    }
+
+                                                </php>
+
+
+                                                ：<span class="ask">{$v.answer}</span>
+                                            </div>
+                                            <div class="hand">
+                                                <span class="time">{$v.addtime}</span>
+                                                <php>
+                                                    if($v['user_id'] != $user_id){
+                                                        echo '<a href="javascript:;" flag=true  class="mesIco mesIcoB" onclick="mesIco($(this),\'.itemX\',\'.anAreaB\',\'show\')"><i></i></a>';
+                                                    }
+                                                </php>
+
+                                            </div>
+                                        </div>
+                                        <div class="anArea anAreaB">
+                                            <form action="" method="post">
+                                                <textarea class="q_reply_content" placeholder=""></textarea>
+                                                <div class="bot">
+                                                    <a href="javascript:;" class="cancleBtn" onclick="fromCancel( $(this),'.itemX','.anAreaB','.mesIcoB','show')">取消</a>
+                                                    <a href="javascript:;" onclick="replyQuestion($(this))" data-answer-id="{$v.id}" class="subBtn">提交</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </volist>
+                            <!--加载更多-->
+                            <notempty name="val.is_show_more">
+                                <div data-limit-end-id="{$val.limit_end_id}" onclick="answer_page($(this))">加载更多</div>
+                            </notempty>
+                        </div>
+
+                    </div>
+                </li>
+            </volist>
+
+
+            <!--加载更多-->
+            <notempty name="question.is_show_more">
+                <div onclick="question_page($(this))" class="clickMore">
+                    <img src="__MOBILE__/images/loadingIco.gif" alt="">
+                    <a href="javascript:;" style="color: #ccc;">加载更多</a>
+                </div>
+            </notempty>
+            <empty name="question.question">
+                <!--没有数据：-->
+                <div id="question_noData" class="noData" style="text-align: center;">
+                    <img style="margin: 0 auto;" src="__MEMBER__/images/errorTp.png" alt="没有数据">
+                    <p>数据为空</p>
+                </div>
+            </empty>
+
+        </ul>
+    </div>
+<!--问答E-->
+
+
+
+<!--笔记S-->
+    <div class="questionMain" id="noteMain" style="min-height: 500px">
+        <div class="Hfrom">
+            <form action="" method="post">
+                <textarea id="noteContent" placeholder=""></textarea>
+                <div class="tijiao">
+                    <a href="javascript:;" onclick="writeNote()" class="subBtn">发表笔记</a>
+                </div>
+            </form>
+        </div>
+
+<!-- 每一块S -->
+        <empty name="noteList.noteList">
+            <!--没有数据：-->
+            <div id="note_noData" class="noData" style="text-align: center;">
+                <img style="margin: 0 auto;" src="__MEMBER__/images/errorTp.png" alt="没有数据"  width="" height="">
+                <p>数据为空</p>
+            </div>
+        </empty>
+
+        <volist name="noteList.noteList" id="val">
+            <div class="noteItem" id="{$val.id}" data-noteid={$val.id}>
+                <a href="javascript;" class="noteA">
+                    <p class="pp">{$val.content}</p>
+                </a>
+                <!--文本框S-->
+                <div class="anArea mt0 bgColor ">
+                    <form action="" method="post">
+                        <textarea placeholder="" ></textarea>
+                        <div class="bot mt20 mr42 mb25">
+                            <a href="javascript:;" class="cancleBtn subBtn1" onclick="cancleBtn($(this),'active')">取消</a>
+                            <a href="javascript:;" class="subBtn subBtn1" onclick="subBtn($(this),'active')">提交</a>
+                        </div>
+                    </form>
+                </div>
+                <!--文本框E-->
+                <div class="noteFoot fc clearfix mt4">
+                    <span class="fl ">{$val.addtime}</span>
+                    <div class="fr operate">
+                        <span class="revise" onclick="xiugai($(this),'active');"><i class="iconfont icon-bianxie"></i>修改</span>
+                        <span class="delete" onclick="subDel($(this))"><i class="iconfont icon-del"></i>删除</span>
+                        <span><i class="iconfont icon-bofang"></i><em>{$val.playtime}</em></span>
+                    </div>
+                </div>
+            </div>
+        </volist>
+
+        <!--加载更多-->
+        <notempty name="noteList.is_show_more">
+            <div onclick="notePage($(this))" class="clickMore"><img src="__MOBILE__/images/loadingIco.gif" alt=""> 加载更多</div>
+        </notempty>
+
+<!-- 每一块E -->
+
+        <!-- 遮罩层 -->
+        <div class="Hmask" id="Hmask">
+            <div class="maskDel">
+                <p class="deleWZ">您确定删除吗？</p>
+                <div class="maskFrom">
+                    <a href="#" class="Hcancel mr15">取消</a>
+                    <a href="#" class="Hsubmit" onclick="subDel($(this));">确定</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!--笔记E-->
+
+
+
+<!--模板HTML start-->
+
+    <!--发表问题模板-->
+    <li style="display: none;" class="mt16" data-question-id="3885" id="question_templates">
+        <div data-last-answer-id="{$val.limit_end_id}" class="item question_list">
+            <div class="tp fl">
+                <a href="javascript:;">
+                    <img class="q_userface" src="/Public/Member/images/logo/8.png" alt="">
+                </a>
+            </div>
+            <div class="txt">
+                <!--客人提问，主人点击按钮-->
+                <div class="txIn">
+                    <div class="tHd">
+                        <img class="q_usergroup" style="display: inline-block" src="/Public/Member/images/user_group/1.png" alt="用户组头像">
+                        <span class="name q_username">111aaa</span>
+                    </div>
+                    <p class="wz q_content">撒打算</p>
+
+                    <div class="hand">
+                        <span class="time q_addtime">2017-06-21 11:44</span>
+                        <a href="javascript:;" class="mesIco mesIcoT" flag=true onclick="mesIco($(this),'.question_list','.anAreaT','show')"><i></i></a>
+                    </div>
+                </div>
+
+                <div class="anArea anAreaT">
+                    <form action="" method="post">
+                        <textarea class="q_reply_content" placeholder=""></textarea>
+                        <div class="bot">
+                            <a href="javascript:;" class="cancleBtn" onclick="fromCancel( $(this),'.question_list','.anAreaT','.mesIcoT','show')">取消</a>
+                            <a href="javascript:;" data-answer-id="0" onclick="replyQuestion($(this))" class="subBtn">提交</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!--主人回复内容,客人点击按钮-->
+            </div>
+        </div>
+    </li>
+
+
+    <!--回复问题模板-->
+    <div style="display: none" class="item itemX" id="reply_question_templates">
+        <div class="tp fl">
+            <a href="javascript:;">
+                <img class="q_userface" src="/Public/Member/images/logo/8.png" alt="">
+            </a>
+        </div>
+        <div class="txt">
+            <div class="txIn txInB">
+                <div class="tHd">
+                    <img class="q_usergroup" style="display: inline-block" src="/Public/Member/images/user_group/1.png">
+                    <span class="name q_username"></span>：
+                    <span class="ask q_content">萨达</span>
+                </div>
+                <div class="hand">
+                    <span class="time q_addtime">2017-06-21</span>
+                    <!--<a href="javascript:;" class="mesIco mesIcoB"><i></i></a>-->
+                </div>
+            </div>
+            <div class="anArea anAreaB">
+                <form action="" method="post">
+                    <textarea class="q_content q_reply_content" placeholder=""></textarea>
+                    <div class="bot">
+                        <a href="javascript:;" class="cancleBtn" onclick="fromCancel( $(this),'.itemX','.anAreaB','.mesIcoB','show')">取消</a>
+                        <a href="javascript:;" data-answer-id="5028" class="subBtn q_answer_id" onclick="replyQuestion($(this))">提交</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--回复评论模板-->
+    <div style="display: none" class="item itemX" id="reply_answer_templates">
+        <div class="tp fl">
+            <a href="javascript:;">
+                <img class="q_userface" src="/Public/Member/images/logo/8.png" alt="">
+            </a>
+        </div>
+        <div class="txt">
+            <div class="txIn txInB">
+                <div class="tHd">
+                    <img class="q_usergroup" style="display: inline-block" src="/Public/Member/images/user_group/1.png">
+                    <span class="name"><span class="q_username">回复者</span> 回复 <span><img class="reply_user_group" style="display: inline-block" src="/Public/Member/images/user_group/1.png"> <span class="name reply_username">啥的</span></span></span>：
+                    <span class="ask q_content">萨达</span>
+                </div>
+                <div class="hand">
+                    <span class="time reply_addtime">2017-06-21</span>
+                    <!--<a href="javascript:;" class="mesIco mesIcoB"><i></i></a>-->
+                </div>
+            </div>
+            <div class="anArea anAreaB">
+                <form action="" method="post">
+                    <textarea class="q_content q_reply_content" placeholder=""></textarea>
+                    <div class="bot">
+                        <a href="javascript:;" class="cancleBtn" onclick="fromCancel( $(this),'.itemX','.anAreaB','.mesIcoB','show')">取消</a>
+                        <a href="javascript:;" data-answer-id="5028" class="subBtn q_answer_id" onclick="replyQuestion($(this))">提交</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--笔记加载更多模板-->
+    <div style="display: none" class="noteItem" id="note_templates" data-noteid="21204">
+        <a href="javascript;" class="noteA">
+            <p class="pp q_content">111阿斯达萨达asd </p>
+        </a>
+        <!--文本框S-->
+        <div class="anArea mt0 bgColor ">
+            <form action="" method="post">
+                <textarea placeholder=""></textarea>
+                <div class="bot mt20 mr42 mb25">
+                    <a href="javascript:;" class="cancleBtn subBtn1" onclick="cancleBtn($(this),'active')">取消</a>
+                    <a href="javascript:;" class="subBtn subBtn1" onclick="subBtn($(this),'active')">提交</a>
+                </div>
+            </form>
+        </div>
+        <!--文本框E-->
+        <div class="noteFoot fc clearfix mt4">
+            <span class="fl q_addtime">2017-06-21 12:45</span>
+            <div class="fr operate">
+                <span class="revise" onclick="xiugai($(this),'active');"><i class="iconfont icon-bianxie"></i>修改</span>
+                <span class="delete" onclick="subDel($(this))"><i class="iconfont icon-del"></i>删除</span>
+                <span><i class="iconfont icon-bofang"></i><em class="q_playtime">00:00:02</em></span>
+            </div>
+        </div>
+    </div>
+<!--模板HTML END-->
+
+
+
+</setion>
+<include file="Public:footerMenu"/>
+
+<script src="__MOBILE__/js/jquery-1.11.3.min.js"></script>
+<script src="__MOBILE__/js/zepto_plus.js"></script>
+<script src="__MOBILE__/js/touch.js"></script>
+<script src="__MOBILE__/js/base.js"></script>
+
+
+<script src="__MOBILE__/js/main.js"></script>
+<script>
+    var Url = "{:U('Login/loginOut')}";//退出登陆url
+    //执行退出登陆操作
+    function loginOut(){
+        //底部对话框
+        var index = layer.open({
+            content: '确定要退出当前登陆吗？'
+            ,btn: ['确定', '取消']
+            ,skin: 'footer'
+            ,yes: function(index){
+                layer.close(index);
+                $.post(Url,{},function(data){
+                    if(data.status==0){
+                        return false;
+                    }
+                    if(data.url!=''){
+                        location.href = data.url;
+                    }
+                },'json');
+            }
+        });
+    }
+</script>
+
+
+<script src="__MOBILE__/js/swipe.js"></script>
+<!--提示插件-->
+<script src="__MOBILE__/pugins/layer-mobile-2.0/layer.js"></script>
+
+<script>
+    var _writeNoteUrl = "{:U(MODULE_NAME.'/Study/writeNote')}";    //发表笔记接口地址
+    var _editNoteUrl = "{:U(MODULE_NAME.'/Study/editNote')}";    //修改笔记接口地址
+    var _deleteNoteUrl = "{:U(MODULE_NAME.'/Study/deleteNote')}";  //删除笔记接口地址
+    var _notePageUrl = "{:U(MODULE_NAME.'/Study/notePage')}";  //加载更多笔记接口地址
+
+    var _writeQuestionUrl = "{:U(MODULE_NAME.'/Study/writeQuestion')}";    //发表问题接口地址
+    var _replyQuestionUrl = "{:U(MODULE_NAME.'/Study/replyQuestion')}";    //回复问题接口地址
+    var _questionListPageUrl = "{:U(MODULE_NAME.'/Study/questionListPage')}";  //加载更多问题接口地址
+    var _questionPageUrl = "{:U(MODULE_NAME.'/Study/questionPage')}";  //加载更多评论接口地址
+
+    var _MEMBER = "__MEMBER__";
+    var _MODULE_NAME = "/{:MODULE_NAME}";
+    var _vid = {$vid};  //视频id
+
+    var _user_id = {:session(C('USER_AUTH_UID'))};  //当前用户id
+    var _user_name = "{:session(C('USER_AUTH_UNAME'))}";  //当前用户名
+    var _user_face = "__MEMBER__/images/logo/{:session(C('USER_FACE'))}.png";  //当前用户头像
+    var _user_group = "__MEMBER__/images/user_group/{:session(C('USER_GROUP_ID'))}.png";  //当前用户组头像
+
+    //查询出的最后一条笔记的id
+    <notempty name="noteList.limit_end_id">
+        var _last_note_id = {$noteList.limit_end_id};
+    </notempty>
+
+    //查询出的最后一条问题的id
+    <notempty name="question.limit_end_id">
+        var _last_question_id = {$question.limit_end_id};
+    </notempty>
+
+
+
+</script>
+
+<!--笔记相关js-->
+<script src="__MOBILE__/js/note.js"></script>
+
+<script src="__MOBILE__/js/main.js"></script>
+<!--问答相关js-->
+<script src="__MOBILE__/js/question.js"></script>
+
+<script>
+    $('.video_shoucang').unbind('click').click(function () {
+        var url = "{:U(MODULE_NAME.'/Video/videoShoucang')}";
+        var thisObj = $(this);
+        var vid = thisObj.attr('data-vid');
+
+
+        $.ajax({
+            type:"post",
+            url:url,
+            data:{"vid":vid},
+            dataType:"json",
+            success:function (data) {
+
+                if(data.status==1){
+                    thisObj.addClass('icon-icon-sel-shixin').removeClass('icon-shoucang');
+                    showMsg('收藏成功');
+                }else if(data.status==0){
+                    thisObj.addClass('icon-shoucang').removeClass('icon-icon-sel-shixin');
+                    showMsg('已取消收藏');
+                }
+            }
+        })
+    });
+
+    $(document).ready(function () {
+        var $ke=$(".Hrow .ke"),
+            Hicon=$(".Hrow .ke .icon-xiala"),
+            introduce=$(".Hrow .introduce");    //介绍的内容块
+
+        $ke.on("click",function () {
+            if(Hicon.hasClass("icon-xiala")){
+
+                Hicon.removeClass("icon-xiala").addClass("icon-guanbi");
+                introduce.show();
+                return false;
+            }else{
+
+                Hicon.removeClass("icon-guanbi").addClass("icon-xiala");
+                introduce.hide();
+                return false;
+            }
+        });
+    });
+</script>
+</body>
+</html>

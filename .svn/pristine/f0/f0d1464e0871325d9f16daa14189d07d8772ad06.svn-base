@@ -1,0 +1,148 @@
+.login_content{
+    width: 100%;
+    height: 804px;
+    background-image: url("../image/login-backgrond.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    font-family: 'Microsoft Sans Serif';
+}
+
+.login_content .h1{
+    position: absolute;
+    top: 18%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    color: #feffff;
+    font-size: 32px;
+    font-weight: bold;
+}
+.login_content .web_qr_login{
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    margin-left: -285px;
+}
+.login_content .web_qr_login .web_login{
+    -moz-box-shadow:-1px 3px 12px #333333;
+    -webkit-box-shadow:-1px 3px 12px #333333;
+    box-shadow:-1px 3px 12px #333333;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.web_qr_login .web_login .tips{
+    color: #00ace9;
+    padding: 32px 160px;
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.web_qr_login .login_form .inputOuter{
+    display: inline-block;
+}
+.web_qr_login .login_form .inputOuter input{
+    border: 1px solid #e5e5e5;
+    width: 240px;
+    height: 36px;
+    border-radius:6px;
+    padding-left: 8px;
+}
+.web_qr_login .login_form .error{
+    padding-top: 12px;
+    text-align: center;
+    color: #ff6100;
+    font-weight: 500;
+}
+.web_qr_login .login_form .fromArea{
+    padding: 15px 90px;
+}
+.login_form .fromArea .input_tips{
+    color: #333333;
+    font-size: 20px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    width: 100px;
+    font-weight: 600;
+}
+.login_form .bottom{
+    width: 260px;
+    height: 22px;
+    line-height: 22px;
+    padding: 10px 0;
+    margin-left: 145px;
+}
+.login_form .bottom .link{
+    display: inline-block;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.login_form .bottom .zhuce_link{
+    color: #00ace9;
+    text-decoration: underline;
+}
+.login_form .submit{
+    padding: 18px 190px;
+    width: 140px;
+    height: 36px;
+    line-height: 36px;
+}
+.login_form .submit .btn{
+    background-color: #ffffff;
+     border: 1px solid #00ace9;
+    color: #00ace9;
+    font-size: 18px;
+}
+.login_form .submit .btn:hover{
+    background-color: #00ace9;
+    color: #ffffff;
+}
+
+.login_form .fromArea .from_btn{
+    width: 98px;
+    /*height: 38px;*/
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #00ace9;
+    color: #00ace9;
+    background-color: #ffffff;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+.login_form .fromArea .from_btn:hover{
+    color: #ffffff;
+    background-color: #00ace9;
+}
+
+.login_form .bottom .from_register input{
+    width:18px;
+    height:18px;
+    line-height: 1;
+    border: 1px solid #cfdadd;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    position: relative;
+    margin-left: 0px;
+}
+.login_form .bottom .from_register input:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+
+

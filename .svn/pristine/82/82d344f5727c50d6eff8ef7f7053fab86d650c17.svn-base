@@ -1,0 +1,250 @@
+
+<include file="Public:content-header" />
+<style>
+.ercode{
+        position: absolute;
+        display: none;
+    }
+.showcatr{
+        cursor: pointer;
+    }
+    .input_text_sech{
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        width: 120px !important;
+    }
+    .input_text_sech:focus{
+        border-bottom: 1px solid #00c0ef;
+    }
+</style>
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">场景管理</a></li>
+            <li class="active">已分配场景</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <section class="content">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <div class="box box-info">
+                    <div style="margin-left: 10px;margin-top: 10px">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="{:U(MODULE_NAME.'/SceneSys/index')}">场景</a></li>
+                            <li><a href="{:U(MODULE_NAME.'/SceneUnassigned/index')}">未分配</a></li>
+                            <li><a href="{:U(MODULE_NAME.'/SceneApproval/index')}">待审核</a></li>
+                            <li><a href="{:U(MODULE_NAME.'/SceneRecycled/index')}">回收站</a></li>
+                            <li><a href="#">采集</a></li>
+                        </ul>
+                    </div>
+                    <div class="box-header">
+                        <form class="form-inline display-inline srech_form" method="get" action="{:U(MODULE_NAME.'/SceneSys/index')}">
+                            <div class="form-group inlineForm display-inline">
+                                <label>开启状态:</label>
+                                <select class="form-control inlineSelect" name="status">
+                                    <option value="2" <if condition='$status eq 2'>selected="selected"</if>> 全部</option>
+                                    <option value="0" <if condition='!$status'>selected="selected"</if>> 正常</option>
+                                    <option value="1" <if condition='$status eq 1'>selected="selected"</if>> 关闭</option>
+                                </select>
+                            </div>&nbsp; &nbsp;
+                            <div class="form-group inlineForm display-inline">
+                                <label>制作者:</label>
+                                <input type="text" class="form-control input_text_sech" name="uname" value="{$uname}" placeholder="输入制作者账号···">
+                            </div>&nbsp;&nbsp;
+                            <div class="form-group inlineForm display-inline">
+                                <label>审核者：</label>
+                                <input type="text" class="form-control input_text_sech" name="approval_uname" value="{$approval_uname}" placeholder="输入审核者账号···">
+                            </div> &nbsp; &nbsp;
+                            <div class="form-group inlineForm display-inline" style="line-height: 33px">
+                                <label>模糊查找:</label>
+                                <input type="text" class="input_text_sech" name="name" value="{$name}" placeholder="场景名称关键字">
+                            </div>&nbsp;&nbsp;
+
+                            <i class="btn fa fa-search inlineSearch display-inline search_btn" style="font-size: 18px; color: rgb(123, 123, 123);"></i>
+                            <if condition="$sid">
+                                <!-- 返回上一页 -->
+                                <include file="Public:content-back" />
+                            </if>
+                        </form>
+                    </div>
+
+                    <!-- 表格开始 -->
+                    <div class="box-body">
+                        <table id="example" class="table table-bordered table-hover">
+                            <th>封面</th>
+                            <th>场景名称</th>
+                            <th>制作者</th>
+                            <th class="msg_del_model">审核者</th>
+                            <th>访问量</th>
+                            <th>页数</th>
+                            <th>模板</th>
+                            <th>专题</th>
+                            <th>发现</th>
+                            <th>关闭状态</th>
+                            <th>功能</th>
+                            <tbody>
+                                <volist name="arr" id="v">
+                                    <tr  title="点击可预览场景 [ 场景ID: {$v.id} ]">
+                                        <td class="showcode" >
+                                            <a data-url="{:U('Home/Preview/manageScene',array('code' => $v['code']))}" href="#" data-toggle="dialog" data-width="322px" data-height="530px" data-title="<i class='fa fa-search'></i> {$v.name} ">
+                                               <img class="ercode" title="扫一扫场景二维码" alt="{$v.name}" style="width:140px; height:100px;" src="/Uploads/{$v.code|createQRcode='system',###,'M',4}">
+                                                <img src="{:C('CAIGE_IMAGE_URL')}<if condition='$v["thumb_src"]'>{$v.thumb_src}<else/>default.jpg</if>" alt="{$v.name}" style="width:140px; height:100px"> 
+                                            </a>
+                                        </td>
+                                        <td>{$v.name}</td>
+                                        <td>
+                                            <if condition='!$v["user_type"]'>
+                                                {$v.user_id|getManageName=###} (系统)
+                                            <elseif condition='$v["user_type"] eq 1'/>
+                                                {$v.user_id|getCenterName=###} (中心)
+                                            <elseif condition='$v["user_type"] eq 2'/>
+                                                {$v.user_id|getMemberName=###} (商户)
+                                            </if>
+                                            <br/>{$v.savetime|date='Y-m-d H:i:s',###}
+                                        </td>
+                                        <td>{$v.user_id|getManageName=###}</td>
+                                        <td><a href="#">{$v.pv}</a></td>
+                                        <td>{$v.page}</td>
+                                        <td>
+                                            
+                                            <a data-url="{:U(MODULE_NAME .'/SceneSys/allotScene',array('sid' => $v['scene_id']))}" href="#" data-toggle="dialog" data-width="96%" data-height="96%" data-title="<i class='fa fa-plus'></i>分配场景模板 （ {$v['name']} ） ">
+                                                <if condition='$v["is_template"]'>已<else/>未</if>分配
+                                            </a>
+                                        </td>
+                                        <td>
+                                            
+                                            <a data-url="{:U(MODULE_NAME .'/SceneSys/allotScene',array('sid' => $v['scene_id'], 'type' => 1))}" href="#" data-toggle="dialog" data-width="96%" data-height="96%" data-title="<i class='fa fa-plus'></i>分配专题场景 （ {$v['name']} ） ">
+                                                <if condition='$v["is_topic"]'>已<else/>未</if>分配
+                                            </a>
+                                        </td>
+                                        <td>
+                                            
+                                            <a data-url="{:U(MODULE_NAME .'/SceneSys/allotScene',array('sid' => $v['scene_id'], 'type' => 2))}" href="#" data-toggle="dialog" data-width="96%" data-height="96%" data-title="<i class='fa fa-plus'></i>分配发现场景 （ {$v['name']} ） ">
+                                                <if condition='$v["is_discovery"]'>已<else/>未</if>分配
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div data-on-label="正常" data-off-label="关闭"  class="switch has-switch" sid="{$v.id}">
+                                                <if condition='!$v["close_status"]'>
+                                                    <input type="checkbox" checked="checked" name="close_status">
+                                                <else/>
+                                                    <input type="checkbox" name="close_status">
+                                                </if>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="scene-operation">
+                                                <a href="{:U(MODULE_NAME.'/SceneSys/editScene',array('sid' => $v['id']))}" class="btn btn-primary">
+                                                    <i class="fa fa-wrench"></i> 设置
+                                                </a>
+                                                <a href="{:U(MODULE_NAME.'/SceneSys/editorScene',array('sid' => $v['id'],'type' => 0),'')}" target="_blank" class="btn btn-success">
+                                                    <i class="fa fa-pencil"></i> 编辑
+                                                </a>
+                                            </span>
+                                            <span class="scene-operation">
+                                                <a onclick="del(this, '{$v.id}')" class="btn btn-danger">
+                                                    <i class="fa fa-times"></i> 删除
+                                                </a>
+                                                
+                                            </span>
+
+                                        </td>
+                                    </tr>
+                                </volist>
+
+                                <if condition="!$arr">
+                                    <tr><td align="center" colspan="11"> 没有数据！</td></tr>
+                                </if>
+                                <if condition="$totalPages gt 1">
+                                    <tr><td align="center" colspan="11"> {$page}</td></tr>
+                                </if>
+                    
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 表格结束 -->
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<style type="text/css">
+    .box-body .scene-operation {
+        display: block;
+    }
+    .box-body .scene-operation a{
+        margin: 7px 20px 7px 0px;
+    }
+</style>
+<!-- 底部 -->
+<include file="Public:content-footer" />
+<script>
+    $(".showcode").hover(function(){
+        $(".ercode",$(this)).show();
+    },function(){
+        $(".ercode",$(this)).hide();
+    });
+    $(".showcatr").on("click",function(){
+        $(this).hide(),$(this).next().show().focus();
+    })
+
+    function del(obj,formSid){
+        
+        var formUrl = "{:U(MODULE_NAME.'/SceneSys/delScene')}";
+        $(this)._model({title:"删除场景提示",html:"删除后可以在回收站恢复，在此期间用户将无法使用该场景，请确认是否继续？",btn_label:"确定",close_label:"取消",callback:function(){
+            $("#myModal").remove(),$(".modal-backdrop").remove();
+            $.ajax({
+                type:'post',
+                dataType:'json',
+                url:formUrl,
+                data:{sid:formSid},
+                success:function(data){
+                    $(".box-body")._alert({type:"s",msg:data.info});
+                    $(obj).parents('tr').remove(); 
+                }
+            });
+
+        }});
+    }
+
+
+    $(".has-switch").on('switch-change', function(event, state) {
+        var formUrl = "{:U(MODULE_NAME.'/SceneSys/saveScene')}";
+        var formSid = $(this).attr('sid');
+        var formSave = state.value ? 0 :1;
+        var swh=$(this);
+        var item = $(this).parent();
+        $(this)._model({title:"操作确认提示",html:"场景关闭后各栏目将无法显示，已分享的用户将无法查看，请确认是否继续？",btn_label:"确定",close_label:"取消",callback:function(){
+            $("#myModal").remove(),$(".modal-backdrop").remove();
+            $.ajax({
+                type:'post',
+                dataType:'json',
+                url:formUrl,
+                data:{sid:formSid,save:formSave},
+                success:function(data){
+                    $(item)._alert({type:"s",msg:data.info});
+                }
+            });
+            $("#myModal").remove(),$(".modal-backdrop").remove();
+            },cancel:function(){
+                swh.bootstrapSwitch('setState', !state.value,false);
+                $("#myModal").remove(),$(".modal-backdrop").remove();
+            }
+        });
+        });
+
+</script>

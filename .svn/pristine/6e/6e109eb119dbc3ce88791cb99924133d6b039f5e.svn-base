@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>嗨推学院-知名网络推广实战培训平台</title>
+    <link rel="stylesheet" href="__MOBILE__/css/base.css">
+    <link rel="stylesheet" href="__MOBILE__/css/common.css">
+    <link rel="stylesheet" href="__MOBILE__/css/style.css">
+</head>
+<body style="background-color: #fff;">
+<style>
+    .askList ul .itemX, .collList ul .itemX{
+        margin: 0;
+    }
+    .askList ul .item .anArea.show{
+        display: block;
+    }
+</style>
+<!--header-->
+<header class="header">
+    <div class="in">
+        <div class="com">
+            <div class="logo">
+                <h1><a href="javascript:;" title="嗨推学院">嗨推学院</a></h1>
+            </div>
+            <div class="txt">
+                <if condition="session(C('USER_GROUP_ID'))">
+                    <a href="{:U('User/my')}" class="ti loginLink">{:session(C('USER_AUTH_UNAME'))}</a>
+                    <a href="javascript:;" onclick="loginOut();" class="ti regLink">[退出]</a>
+                 <else/>
+                    <a href="{:U('Login/index')}" class="ti loginLink">登录</a>
+                    <a href="{:U('Login/register')}" class="ti regLink">注册</a>
+                </if>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--banner-->
+<section class="banner">
+    <div id="slideBox" class="slideBox">
+        <div class="bd">
+            <if condition="$banner">
+                <ul>
+                <volist name="banner" key="k" id="v">
+                    <li>
+                        <a href="{$v['link_url']}" class="pic" >
+                            <img src="{$v['img_url']}" alt="海报展示图">
+                        </a>
+                    </li>
+                </volist>
+                </ul>
+            <else/>
+                <p style="text-align: center;font-size: 20px;color: red;line-height: 200px;background-color: #0aabf5;">正在上传中..</p>
+            </if>
+        </div>
+        <div class="hd hor_center">
+            <ul></ul>
+        </div>
+    </div>
+</section>
+
+<!--mainCom-->
+<section class="mainCom">
+    <div class="gfNot">
+        <if condition="$notice">
+            <div class="tit">
+                <i></i><h6>公告：</h6>
+            </div>
+            <ul>
+                <volist name="notice" key="k" id="v">
+                    <li>
+                        <a href="{:U('Content/webNotice',array('main'=>$v['id']))}">
+                            <p class="ti">{:jiequ($v['title'],0,13,'..')}</p>
+                            <span class="date">{:date('Y/m/d',$v['addtime'])}</span>
+                        </a>
+                    </li>
+                </volist>
+            </ul>
+            <a href="{:U('Content/webNoticeList')}" class="more">&gt;&gt;</a>
+        <else/>
+            <p style="text-align:center;line-height: .6rem; ">^-^ 还没有新公告呦。。</p>
+        </if>
+    </div>
+    <div class="affList">
+       <ul>
+           <li>
+               <div class="tp">
+                   <img src="__MOBILE__/images/aff01.png" alt="">
+               </div>
+               <div class="txt">
+                   <p class="p1">
+                       <span class="num">{$userCount}</span>人
+                   </p>
+                   <p class="p2">
+                       <span>学员人数</span>
+                   </p>
+               </div>
+           </li>
+           <li>
+               <div class="tp">
+                   <img src="__MOBILE__/images/aff02.png" alt="">
+               </div>
+               <div class="txt">
+                   <p class="p1">
+                       <span class="num">{$videoCount}</span>节
+                   </p>
+                   <p class="p2">
+                       <span>专业课程</span>
+                   </p>
+               </div>
+           </li>
+           <li>
+               <div class="tp">
+                   <img src="__MOBILE__/images/aff03.png" alt="">
+               </div>
+               <div class="txt">
+                   <p class="p1">
+                       <span class="num">{$timeCount}</span>分
+                   </p>
+                   <p class="p2">
+                       <span>课程时间</span>
+                   </p>
+               </div>
+           </li>
+       </ul>
+    </div>
+    <div class="column">
+        <ol>
+            <li>
+                <a href="{:U('Index/videoList')}" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco01.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">视频推荐</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Video/videoCategory')}" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco02.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">课程视频</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="courseIntr.html" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco03.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">课程简介</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco04.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">课程回答</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Content/webNoticeList')}" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco05.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">官方资讯</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Student/index')}" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco06.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">精英学员</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco07.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">客服中心</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Content/problemList')}" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco08.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">常见问题</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Content/contactUs')}" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco09.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">联系我们</span>
+                    </div>
+                </a>
+            </li>
+        </ol>
+    </div>
+    <div class="content">
+        <div class="hdTit">
+            <p class="line"></p>
+            <h4 class="tit">课程推荐</h4>
+        </div>
+        <div class="kcIn">
+            <div class="kcL" style="background-image: url(__MOBILE__/images/kfTp01.png)">
+                <p class="tx">权威课程 坏坏主讲</p>
+                <a href="javascript:;" class="linkDet">
+                    <span>课程详情</span>
+                </a>
+            </div>
+            <div class="kcR">
+                <div class="kcList">
+                    <ul>
+                        <volist name="coursePrice" key="k" id="v">
+                            <li>
+                                <a href="{:U('Pay/courseConfirm',array('group_id'=>$v['id']))}" class="item">
+                                    <div class="cName">{$v['name']}</div>
+                                    <div class="cTime">
+                                        <php>$qgtime = floor($v['gqtime']/365);</php>
+                                        <span class="sp1 time">
+                                            <if condition="$qgtime GT 0">
+                                                {$qgtime}年
+                                            <else/>
+                                                {$v['gqtime']}天
+                                            </if>
+                                        </span>
+                                        <span class="sp2">期限</span>
+                                    </div>
+                                    <div class="cGold">
+                                        <span class="sp1 num">{$v['buy_money']}</span>
+                                        <span class="sp2">学习币</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="hdTit">
+            <p class="line"></p>
+            <h4 class="tit">热门视频</h4>
+        </div>
+        <div class="courList courLists" id="myCourList">
+            <ul>
+                <volist name="videoshow" key="k" id="v">
+                    <php>
+                        #判断视频是否有播放权限
+                        $playAuth = $user_id ? videoPlayAuth($v['id']) : '';
+                        #判断视频是否被收藏
+                        if($user_id){
+                        $v['shoucang'] = M('video_shoucang')->where(array('user_id'=>$user_id,'vid'=>$v['id']))->getField('id');
+                        }
+                    </php>
+                    <li>
+                        <div class="item">
+                            <div class="tp">
+                                <a href="{$playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                    <if condition="$v['cover_img']">
+                                        <img class="lazy" src="__MOBILE__/images/loading.gif"   data-src="{$v['cover_img']}" alt="封面图" title="">
+                                    <else/>
+                                        <img class="lazy" src="__MOBILE__/images/loading.gif"   data-src="__MOBILE__/images/courTp01.png" alt="封面图" title="">
+                                    </if>
+                                </a>
+                                <i data-id="" class="ico icoLove"></i>
+                                <span class="lab"></span>
+                            </div>
+                            <div class="txt">
+                                <p class="tiName">
+                                    <a href="javascript:;">{:jiequ($v['title'],0,20,'')}</a>
+                                </p>
+                                <div class="bot">
+                                    <div class="money fl ">
+                                        <em class="num">{$v['buy_money']}</em>学习币
+                                    </div>
+                                    <div class="handle fr">
+                                        <a href="{$playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                            <i class="ico {$playAuth['allow_play']==1?'icoPlay':'icoBuy'}"></i>
+                                            <span class="ti00">{$playAuth['allow_play']==1?'播放':'购买'}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </volist>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="hdTit">
+            <p class="line"></p>
+            <h4 class="tit">最新问答</h4>
+        </div>
+        <div class="askList">
+            <!--全部提问-->
+            <ul id="allquestion">
+                <volist name="allquestion.question" id="val">
+                    <li class="mt16" data-question-id="{$val.id}">
+
+                        <div data-last-answer-id="{$val.limit_end_id}" class="item question_list">
+                            <div class="tp fl">
+                                <a href="javascript:;">
+                                    <img class="q_userface" src="__MEMBER__/images/logo/{$val.face}.png" alt="">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <!--客人提问，主人点击按钮-->
+                                <div class="txIn">
+                                    <div class="tHd">
+                                        <img class="q_usergroup" style="display: inline-block" src="__MEMBER__/images/user_group/{$val.user_group_id}.png" alt="用户组头像">
+                                        <span class="name q_username">{$val.username}</span>
+                                    </div>
+                                    <p class="wz q_content">{$val.question}</p>
+                                    <p class="origin">
+                                            <span>
+                                                <em>来源：</em>
+                                                <a href="/Member/Video/showList/category/{$val.category_id}">{$val.category_name}/</a><a href="/Member/Video/play/vid/{$val.vid}">{$val.video_name}</a>
+                                            </span>
+                                    </p>
+                                    <div class="hand">
+                                        <span class="time q_addtime">{$val.addtime}</span>
+                                        <a href="javascript:;" class="mesIco mesIcoT" flag=true onclick="mesIco($(this),'.question_list','.anAreaT', 'show')"><i></i>(<span class="reply_count">{$val.count}</span>)</a>
+                                    </div>
+                                </div>
+
+                                <div class="anArea anAreaT" >
+                                    <form action="" method="post">
+                                        <textarea class="q_reply_content" placeholder=""></textarea>
+                                        <div class="bot">
+                                            <a href="javascript:;" class="cancleBtn btn" onclick="fromCancel( $(this),'.question_list','.anAreaT','.mesIcoT','show')">取消</a>
+                                            <a href="javascript:;" data-answer-id="0" onclick="replyQuestion($(this))" class="btn subBtn">提交</a>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!--主人回复内容,客人点击按钮-->
+                                <volist name="val.answer" id="v">
+
+                                    <div class="item itemX">
+                                        <div class="tp fl">
+                                            <a href="javascript:;">
+                                                <img src="__MEMBER__/images/logo/{$v.face}.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="txIn txInB">
+                                                <div class="tHd">
+                                                    <img style="display: inline-block" src="__MEMBER__/images/user_group/{$v.user_group_id}.png">
+                                                    <span class="name">{$v.username}</span>
+                                                    <php>
+                                                        if($v['reply_user_id'] != 0){
+                                                        echo '回复 <span><img class="reply_user_group" style="display: inline-block" src="__MEMBER__/images/user_group/'.$v['reply_user_group_id'].'.png"> <span class="name reply_username">'.$v['reply_username'].'</span></span></span>';
+                                                        }
+
+                                                    </php>
+
+
+                                                    ：<span class="ask">{$v.answer}</span>
+                                                </div>
+                                                <div class="hand">
+                                                    <span class="time">{$v.addtime}</span>
+                                                    <php>
+                                                        if($v['user_id'] != $user_id){
+                                                        echo '<a href="javascript:;" flag=true  class="mesIco mesIcoB" onclick="mesIco($(this),\'.itemX\',\'.anAreaB\',\'show\')"><i></i></a>';
+                                                        }
+                                                    </php>
+
+                                                </div>
+                                            </div>
+                                            <div class="anArea anAreaB">
+                                                <form action="" method="post">
+                                                    <textarea class="q_reply_content" placeholder=""></textarea>
+                                                    <div class="bot">
+                                                        <a href="javascript:;" class="btn cancleBtn" onclick="fromCancel( $(this),'.itemX','.anAreaB','.mesIcoB','show')">取消</a>
+                                                        <a href="javascript:;" onclick="replyQuestion($(this))" data-answer-id="{$v.id}" class="btn subBtn">提交</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </volist>
+                                <!--加载更多-->
+                                <notempty name="val.is_show_more">
+                                    <span data-limit-end-id="{$val.limit_end_id}" onclick="answer_page($(this))">加载更多</span>
+                                </notempty>
+                            </div>
+
+                        </div>
+                    </li>
+                </volist>
+
+
+                <!--加载更多-->
+                <notempty name="allquestion.is_show_more">
+                    <div onclick="question_page($(this))" class="clickMore" style="text-align: center;margin-bottom: 0.1rem">
+                        <img src="__MOBILE__/images/loadingIco.gif" alt="">
+                        <a href="javascript:;" style="color: #ccc;">加载更多</a>
+                    </div>
+                </notempty>
+                <empty name="allquestion.question">
+                    <!--没有数据：-->
+                    <div id="question_noData" class="noData" style="text-align: center;">
+                        <img style="margin: 0 auto;" src="__MEMBER__/images/errorTp.png" alt="没有数据">
+                        <p>数据为空</p>
+                    </div>
+                </empty>
+
+            </ul>
+
+
+
+            <!--回复问题模板-->
+            <div style="display: none" class="item itemX" id="reply_question_templates">
+                <div class="tp fl">
+                    <a href="javascript:;">
+                        <img class="q_userface" src="/Public/Member/images/logo/8.png" alt="">
+                    </a>
+                </div>
+                <div class="txt">
+                    <div class="txIn txInB">
+                        <div class="tHd">
+                            <img class="q_usergroup" style="display: inline-block" src="/Public/Member/images/user_group/1.png">
+                            <span class="name q_username"></span>：
+                            <span class="ask q_content">萨达</span>
+                        </div>
+                        <div class="hand">
+                            <span class="time q_addtime">2017-06-21</span>
+                            <!--<a href="javascript:;" class="mesIco mesIcoB"><i></i></a>-->
+                        </div>
+                    </div>
+                    <div class="anArea anAreaB">
+                        <form action="" method="post">
+                            <textarea class="q_content q_reply_content" placeholder=""></textarea>
+                            <div class="bot">
+                                <a href="javascript:;" class="cancleBtn" onclick="fromCancel( $(this),'.itemX','.anAreaB','.mesIcoB','show')">取消</a>
+                                <a href="javascript:;" data-answer-id="5028" class="subBtn q_answer_id" onclick="replyQuestion($(this))">提交</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--回复评论模板-->
+            <div style="display: none" class="item itemX" id="reply_answer_templates">
+                <div class="tp fl">
+                    <a href="javascript:;">
+                        <img class="q_userface" src="/Public/Member/images/logo/8.png" alt="">
+                    </a>
+                </div>
+                <div class="txt">
+                    <div class="txIn txInB">
+                        <div class="tHd">
+                            <img class="q_usergroup" style="display: inline-block" src="/Public/Member/images/user_group/1.png">
+                            <span class="name"><span class="q_username">回复者</span> 回复 <span><img class="reply_user_group" style="display: inline-block" src="/Public/Member/images/user_group/1.png"> <span class="name reply_username">啥的</span></span></span>：
+                            <span class="ask q_content">萨达</span>
+                        </div>
+                        <div class="hand">
+                            <span class="time reply_addtime">2017-06-21</span>
+                            <!--<a href="javascript:;" class="mesIco mesIcoB"><i></i></a>-->
+                        </div>
+                    </div>
+                    <div class="anArea anAreaB">
+                        <form action="" method="post">
+                            <textarea class="q_content q_reply_content" placeholder=""></textarea>
+                            <div class="bot">
+                                <a href="javascript:;" class="cancleBtn" onclick="fromCancel( $(this),'.itemX','.anAreaB','.mesIcoB','show')">取消</a>
+                                <a href="javascript:;" data-answer-id="5028" class="subBtn q_answer_id" onclick="replyQuestion($(this))">提交</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="content">
+        <div class="notBanCom">
+            <div class="notBan">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4 class="tit">授课方式</h4>
+                </div>
+                <div class="banIn">
+                    <a href="javascript:;" class="tp">
+                        <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/home-banner04.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="notBan">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4 class="tit">常见问题</h4>
+                </div>
+                <div class="banIn">
+                    <a href="javascript:;" class="tp">
+                        <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/home-banner05.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="notBan">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4 class="tit">推广技能</h4>
+                </div>
+                <div class="banIn">
+                    <a href="javascript:;" class="tp">
+                        <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/home-banner06.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="notBan">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4 class="tit">干货分享</h4>
+                </div>
+                <div class="banIn">
+                    <a href="javascript:;" class="tp">
+                        <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/home-banner07.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="ewmCom">
+            <ul class="ewmList">
+                <li>
+                    <a href="javascript:;" class="item">
+                        <div class="pic">
+                            <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/ewpTp.jpg" alt="嗨推学院微信公众号">
+                        </div>
+                        <span class="ti">嗨推学院微信公众号</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="item">
+                        <div class="pic">
+                            <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/ewpTp.jpg" alt="嗨推APP客户端下载">
+                        </div>
+                        <span class="ti">嗨推APP客户端下载</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyright">Copyright©2013-2017嗨推学院在线教育学习平台版权所有</p>
+        </div>
+    </div>
+</section>
+
+<include file="Public:footerMenu"/>
+<include file="Public:footer"/>
+<script src="__MOBILE__/pugins/layer-mobile-2.0/layer.js"></script>
+<script src="__MOBILE__/js/TouchSlide.js"></script>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#slideBox",
+        titCell:".hd ul",
+        mainCell:".bd ul",
+        effect:"leftLoop",
+        delayTime:400,
+        interTime:3000,
+        autoPage:true,
+        autoPlay:true
+    });
+</script>
+
+<script>
+
+    var _writeQuestionUrl = "{:U(MODULE_NAME.'/Study/writeQuestion')}";    //发表问题接口地址
+    var _replyQuestionUrl = "{:U(MODULE_NAME.'/Study/replyQuestion')}";    //回复问题接口地址
+    var _questionListPageUrl = "{:U(MODULE_NAME.'/Study/questionListPage')}";  //加载更多问题接口地址
+    var _questionPageUrl = "{:U(MODULE_NAME.'/Study/questionPage')}";  //加载更多评论接口地址
+
+    var _MEMBER = "__MEMBER__";
+
+
+    var _user_id = {:session(C('USER_AUTH_UID'))};  //当前用户id
+    var _user_name = "{:session(C('USER_AUTH_UNAME'))}";  //当前用户名
+    var _user_face = "__MEMBER__/images/logo/{:session(C('USER_FACE'))}.png";  //当前用户头像
+    var _user_group = "__MEMBER__/images/user_group/{:session(C('USER_GROUP_ID'))}.png";  //当前用户组头像
+
+
+    //查询出的最后一条问题的id
+    <notempty name="allquestion.limit_end_id">
+    var _last_question_id = {$allquestion.limit_end_id};
+    </notempty>
+
+
+
+</script>
+
+<!--问答相关js-->
+<script src="__MOBILE__/js/question.js"></script>

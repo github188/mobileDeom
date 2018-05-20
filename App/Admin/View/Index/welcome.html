@@ -1,0 +1,144 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+<style type="text/css">
+	/*系统环境信息的CSS*/
+	.table-td-right{
+		width: 20%;
+		font-weight: 600;
+		color: #555;
+ 	    letter-spacing: 0em;
+	}
+
+</style>
+<div class="wrapper">
+	<!-- 内容标题开始 -->
+	<div id="breadcrumbs" class="breadcrumbs">
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+			<li><a href="#">系统设置</a></li>
+			<li class="active">默认主页</li>
+		</ol>
+	</div>
+	<!-- 内容标题结束 -->
+
+
+	<!-- 主要内容开始 -->
+	<section class="content">
+		<div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+ 			   <div class="info-box">
+	                <span class="info-box-icon bg-aqua"><i class="fa fa-cogs"></i></span>
+	                <div class="info-box-content">
+	                    <span class="info-box-text">用户总数</span>
+	                    <span class="info-box-number">{$user}</span>
+	                </div>
+	            </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+	            <div class="info-box">
+	                <span class="info-box-icon bg-green"><i class="fa fa-bell"></i></span>
+	                <div class="info-box-content">
+	                    <span class="info-box-text">文章总数</span>
+	                    <span class="info-box-number">{$article}</span>
+	                </div>
+	            </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+	            <div class="info-box">
+	                <span class="info-box-icon bg-red"><i class="fa fa-user-plus"></i></span>
+	                <div class="info-box-content">
+	                    <span class="info-box-text">课程视频总数</span>
+	                    <span class="info-box-number">{$video}</span>
+	                </div>
+	            </div>
+            </div>
+			<div class="col-xs-12">
+				<div class="box box-success">
+					<div class="box-header nav-tabs">
+						<h4 class="box-title"><i class="fa fa-desktop"></i> 系统环境信息</h4>
+					</div>
+
+					<!-- 表格开始 -->
+					<div class="box-body">
+						<table id="example" class="table table-bordered">
+							<tbody>
+								<tr>
+									<volist name="info" id="v" offset="0" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+								<tr>
+									<volist name="info" id="v" offset="2" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+								<tr>
+									<volist name="info" id="v" offset="4" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+								<tr>
+									<volist name="info" id="v" offset="6" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+								<tr>
+									<volist name="info" id="v" offset="8" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+								<tr>
+									<volist name="info" id="v" offset="10" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+								<tr>
+									<volist name="info" id="v" offset="12" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+								<tr>
+									<volist name="info" id="v" offset="14" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+								<tr>
+									<volist name="info" id="v" offset="16" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+								<tr>
+									<volist name="info" id="v" offset="18" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+								<tr>
+									<volist name="info" id="v" offset="20" length='2'>
+										<td class="table-td-right">{$key}</td>
+										<td>{$v}</td>
+									</volist>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- 表格结束 -->
+
+				</div>
+			</div>
+	</section>
+	<!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

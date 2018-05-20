@@ -1,0 +1,5 @@
+<div class="pull-right" style="margin:-10px -10px 0 0;">
+	<a class="btn btn-default" title="返回上一页" onclick="javascript:history.back(-1);" href="#">
+		<i class="fa fa-reply"></i>
+	</a>
+</div>

@@ -1,0 +1,233 @@
+/*  toolBar S  */
+.inlineBlock{
+    display: inline-block;
+}
+.barTop{
+    width: 100%;
+    background: #f2f2f2;
+    position: relative;
+    z-index: 3;
+}
+.barTop .headTopMain{
+    width: 1200px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    color: #666;
+    position: relative;
+    background: #f2f2f2;
+}
+.barTop .headTopMain .headMleft .wel{
+    display: inline-block;
+    width: 110px;
+}
+.barTop .headTopMain .headMleft .wel:hover a{
+    color: #ff6666;
+}
+.barTop .headTopMain .headMleft .wel:after{
+    content: "";
+    width: 1px;
+    height: 14px;
+    background-color: #ccc;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 12px;
+}
+.barTop .headTopMain .headMleft .personMsg{
+    display: inline-block;
+    position: relative;
+}
+.barTop .headTopMain .headMleft .personMsg .fatherA{
+    display: inline-block;
+}
+.barTop .headTopMain .headMleft .personMsg .icon-xiala{
+    vertical-align: middle;
+}
+.personMsg .login-option{
+     display: none;
+    position: absolute;
+    top: 28px;
+    width: 84px;
+    left: -9px;
+    z-index: 200;
+    background: #eee;
+    border: #eee 1px solid;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.personMsg  .login-option a{
+    width: 90%;
+    display: inline-block;
+    padding: 0 6px;
+}
+.barTop .headTopMain .headMleft .personMsg .icon-xiala-c-tio{
+    vertical-align: middle;
+    font-size: 15px;
+    margin-left: 5px;
+}
+.barTop .headTopMain .headMright .sp{
+    display: inline-block;
+    float: left;
+}
+.barTop .sp:after{
+    content: "";
+    width: 1px;
+    height: 14px;
+    background-color: #ccc;
+    vertical-align: middle;
+    display: inline-block;
+    margin:0 14px;
+}
+.barTop .sp.wx{
+    margin-left: -4px;
+    _margin-left: -4px;
+    position: relative;
+}
+.barTop .sp.wx a:hover{
+    color: #bfbfbf;
+}
+.barTop .sp.wx a:hover i{
+    color: #4cbf2a;
+}
+.barTop .sp.wx:after,.toolBar .sp.kf:after{
+    display: none;
+}
+.barTop .sp i{
+    font-size: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: #cccccc;
+}
+.barTop .tel a:hover i{
+    color: #ff6666;
+}
+.barTop .sp span{
+    display: inline-block;
+    line-height: 30px;
+    margin-left: -8px;
+}
+.barTop .sp span:hover{
+    color: #ff6666;
+}
+/*  header S  */
+.header{
+    width: 100%;
+    background-color: #ffffff;
+}
+.header .headSearch{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    position: relative;
+    z-index: 2;
+}
+.header .lab{ position: absolute; right: 0; top: 28px;}
+
+.header .headSearch .logo{
+    width: 230px;
+    display: initial;
+}
+.header .headSearch .logo .logoA{
+    display: inline-block;
+    margin-top: 37px;
+}
+.header .headSearch .logo .logoA {
+    display: inline-block;
+    width: 220px;
+    height: 35px;
+    background: url("../images/logo.png") no-repeat;
+}
+.header .headSearch .search{
+    display: initial;
+    width: 410px;
+    height: 42px;
+    margin-top: 34px;
+    position: absolute;
+    right: 425px;
+}
+.header .headSearch .search .search-input{
+    padding-left: 10px;
+    border: 2px solid #ff6666;
+    margin-right: 49px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+.header .headSearch .search .search-input input{
+    border: none;
+    height: 28px;
+    width: 100%;
+    padding: 5px 0;
+    line-height: 26px;
+    outline: none;
+    color: #999;
+}
+.header .headSearch .search a{
+    width: 50px;
+    height: 42px;
+    cursor: pointer;
+    line-height: 38px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #ff6666;
+    outline: none;
+    padding: 0;
+    text-align: center;
+}
+.header .headSearch .search a .icon-sousuo2{
+    color: #ffffff;
+    font-size: 22px;
+    display: inline-block;
+    margin-top: 3px;
+}
+/*  nav S  */
+.head-nav{
+    width: 100%;
+    background: #ff6666;
+}
+.head-nav .nav-main{
+    width: 1200px;
+    height: 44px;
+    margin: 0 auto;
+    font-size: 14px;
+    position: relative;
+    background: #ff6666;
+    line-height: 44px;
+}
+.head-nav .nav-main .nav-list ul li{
+    float: left;
+    position: relative;
+}
+.head-nav .nav-main .nav-list ul li:hover{
+    background: rgba(0,0, 0,0.3);
+}
+.head-nav .nav-main .nav-list ul li:hover a{
+    background: none;
+}
+.head-nav .nav-main .nav-list ul li a{
+    display: block;
+    color: white;
+    padding: 0 30px;
+    font-size: 15px;
+}
+/*.footer*/
+.footer{ width:100%; height: auto; background-color: #3e5165; color: #999; border-top: 4px solid #ff6666; overflow: hidden;  }
+.footer .links{ border-top: 1px solid #505c68; padding-top:35px; padding-bottom:20px;}
+.footer .links .tit h5{ color: #fff; font-size: 14px;}
+.footer .links ul{ margin-left: 130px; overflow: hidden;}
+.footer .links li{ float: left; margin-bottom: 10px; margin-right: 30px;}
+.footer .links li a{ color: #bcbcbc; font-size: 14px;}
+.footer .links li a:hover{ color: #fff;}
+.footer .botCom{ border-top: 1px solid #bcbcbc; padding-bottom:50px; overflow: hidden; }
+.footer .botCom .in{ position: relative; }
+.footer .copyright{ padding-top: 30px;}
+.footer .botCom p{ font-size: 12px; }
+.footer .botCom p a{ color: #999;}
+.footer .botCom p a:hover{ color: #fff;}
+.footer .botCom ul{ overflow: hidden; margin-top:30px; text-align: center; display: inline-block;}
+.footer .botCom ul li{ float: left; margin: 0 8px;}
+.footer .workInf{ position: absolute; right: 0; top: 15px;}
+.footer .workInf .botLog a{ width:220px; height: 60px; background: url("../../public/images/fotLogo.png") no-repeat; display: inline-block; }
+.footer .botTel i{ width: 34px; height: 34px; background: url("../../public/images/phoneIco.png") no-repeat; vertical-align: middle; margin-right: 5px; display: inline-block;}
+.footer .botTel span{ color: #fff; font-size: 26px; vertical-align: middle;}
+.footer .botTime{ font-size: 14px; margin-top: 10px; margin-left: 10px;}

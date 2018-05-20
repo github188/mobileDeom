@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>19.9包邮-优惠券</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_8fzajbkv5cdi.css" />
+    <link rel="stylesheet" href="../../public/css/reset.css" />
+    <link rel="stylesheet" href="../../public/css/search.css" />
+    <style>.original{text-decoration:line-through}</style>
+	</head>
+	<body>
+	<div class="box" id="box" style="background-color: #f6f6f6;">
+		<img src="../../public/images/19.9.jpeg" />
+		<section class="products" style="top:10px;">
+
+            <!-- 商品列表开始 -->
+            <div class="product">
+                <div class="pro-detail" onclick="gotoProduct(11)">
+                        <div class="l-pic">
+                            <img data-url="https://img.alicdn.com/imgextra/i4/1650163732/TB2a5i0sNlmpuFjSZPfXXc9iXXa_!!1650163732.jpg_220x220.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="浸塑衣架 铁丝衣架阳台卧室挂衣服撑衣服儿童成人塑料防风晾衣架"  alt="" />
+                        </div>
+                        <div class="l-title">
+                            <h1>浸塑衣架 铁丝衣架阳台卧室挂衣服撑衣服儿..</h1>
+                        </div>
+                        <div class="l-price">
+                            <div class="original">￥<span>21.80</span></div>
+                            <div class="discount">券后:<span>￥</span><span>16.80</span></div>
+                        </div>
+                    <div class="l-coupon">
+                        <div class="coup1"><a href="javascript:;">领券减<span>5</span>元</a></div>
+                        <div class="gearR"></div>
+                        <div class="gearL"></div>
+                        <div class="coup2"><a href="javascript:;">领券</a></div>
+                    </div>
+               </div>
+                <div class="pro-detail" onclick="gotoProduct(12)">
+                        <div class="l-pic">
+                            <img data-url="https://gd1.alicdn.com/imgextra/i1/2557072813/TB22U9DcNXlpuFjSsphXXbJOXXa_!!2557072813.jpg_220x220.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="【三未】童梦 德国花果茶水果干茶 果粒茶 橙子玫瑰花茶组合包邮"  alt="" />
+                        </div>
+                        <div class="l-title">
+                            <h1>【三未】童梦 德国花果茶水果干茶 果粒茶..</h1>
+                        </div>
+                        <div class="l-price">
+                            <div class="original">￥<span>39.00</span></div>
+                            <div class="discount">券后:<span>￥</span><span>19.00</span></div>
+                        </div>
+                        <div class="l-coupon">
+                            <div class="coup1"><a href="javascript:;">领券减<span>20</span>元</a></div>
+                            <div class="gearR"></div>
+                            <div class="gearL"></div>
+                            <div class="coup2"><a href="javascript:;">领券</a></div>
+                        </div>
+               </div>
+           </div>
+
+            <div class="product">
+                <div class="pro-detail" onclick="gotoProduct(13)">
+                    <div class="l-pic">
+                        <img data-url="https://img.alicdn.com/imgextra/i2/289254746/TB2N0Ercl0lpuFjSszdXXcdxFXa_!!289254746.jpg_220x220.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="虞琳娜 双头自动眉笔 正品防水防汗画眉粉持久不晕染一字眉"  alt="" />
+                    </div>
+                    <div class="l-title">
+                        <h1>虞琳娜 双头自动眉笔 正品防水防汗画眉粉..</h1>
+                    </div>
+                    <div class="l-price">
+                        <div class="original">￥<span>24.90</span></div>
+                        <div class="discount">券后:<span>￥</span><span>14.90</span></div>
+                    </div>
+                    <div class="l-coupon">
+                        <div class="coup1"><a href="javascript:;">领券减<span>10</span>元</a></div>
+                        <div class="gearR"></div>
+                        <div class="gearL"></div>
+                        <div class="coup2"><a href="javascript:;">领券</a></div>
+                    </div>
+                </div>
+                <div class="pro-detail" onclick="gotoProduct(14)">
+                    <div class="l-pic">
+                        <img data-url="https://img.alicdn.com/imgextra/i3/591459236/TB2UyGntilnpuFjSZFgXXbi7FXa_!!591459236.jpg_220x220.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="2赠护理液5礼]卫康X-Blue年抛1片近视隐形眼镜片高含水舒适超薄TX"  alt="" />
+                    </div>
+                    <div class="l-title">
+                        <h1>2赠护理液5礼]卫康X-Blue年抛1片..</h1>
+                    </div>
+                    <div class="l-price">
+                        <div class="original">￥<span>24.00</span></div>
+                        <div class="discount">券后:<span>￥</span><span>19.00</span></div>
+                    </div>
+                    <div class="l-coupon">
+                        <div class="coup1"><a href="javascript:;">领券减<span>5</span>元</a></div>
+                        <div class="gearR"></div>
+                        <div class="gearL"></div>
+                        <div class="coup2"><a href="javascript:;">领券</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="pro-detail" onclick="gotoProduct(15)">
+                    <div class="l-pic">
+                        <img data-url="https://img.alicdn.com/imgextra/i1/TB1rUBTOVXXXXX9apXXXXXXXXXX_!!0-item_pic.jpg_220x220.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="向素大麦若叶青汁20袋组合抹茶清汁碱性食品"  alt="" />
+                    </div>
+                    <div class="l-title">
+                        <h1>向素大麦若叶青汁20袋组合抹茶清汁碱性食..</h1>
+                    </div>
+                    <div class="l-price">
+                        <div class="original">￥<span>45.00</span></div>
+                        <div class="discount">券后:<span>￥</span><span>15.00</span></div>
+                    </div>
+                    <div class="l-coupon">
+                        <div class="coup1"><a href="javascript:;">领券减<span>30</span>元</a></div>
+                        <div class="gearR"></div>
+                        <div class="gearL"></div>
+                        <div class="coup2"><a href="javascript:;">领券</a></div>
+                    </div>
+                </div>
+                <div class="pro-detail" onclick="gotoProduct(16)">
+                    <div class="l-pic">
+                        <img data-url="https://img.alicdn.com/imgextra/i1/1991117674/TB2P_15tJFopuFjSZFHXXbSlXXa_!!1991117674.jpg_220x220.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="女童夏装2017连衣裙儿童碎花无袖小孩裙女童绵绸连衣裙公主女裙子"  alt="" />
+                    </div>
+                    <div class="l-title">
+                        <h1>女童夏装2017连衣裙儿童碎花无袖小孩裙..</h1>
+                    </div>
+                    <div class="l-price">
+                        <div class="original">￥<span>19.60</span></div>
+                        <div class="discount">券后:<span>￥</span><span>16.60</span></div>
+                    </div>
+                    <div class="l-coupon">
+                        <div class="coup1"><a href="javascript:;">领券减<span>3</span>元</a></div>
+                        <div class="gearR"></div>
+                        <div class="gearL"></div>
+                        <div class="coup2"><a href="javascript:;">领券</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品列表结束 -->
+
+            <div style="text-align:center;font-size:14px;color:#333;" id="loadmore"></div>
+		</section>
+	</div>
+    <div class="page-foot">
+        <div class="g-foot-bar">
+            <ul class="m-nav-foot clearfix">
+                <li>
+                    <a href="/">
+                        <p><i></i></p>
+                        <span >首页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/live">
+                        <p><i></i></p>
+                        <span >直播间</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pointmall" style="margin-top: -1px;">
+                        <p><i></i></p>
+                        <span >积分商城</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/user">
+                        <p><i></i></p>
+                        <span>个人中心</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+		<script type="text/javascript" src="../../public/js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="../../public/js/vue.js" ></script>
+        <script type="text/javascript" src="../../public/js/jquery.scrollLoading.js"></script>
+        <script>var pid=false;</script>
+        <script type="text/javascript">
+		$('.search').click(function(){
+			keyword = $("#searchKeywords").val();
+			window.localStorage.setItem(keyword,'1');
+			window.location.href="/index.php?keyword="+keyword;
+		});
+		$(".arrow-down").click(function(){
+			if($(".arrow-down-div").is(":hidden")){
+				$(".arrow-down-div").show();
+				$(".arrow-down i").removeClass("icon-jiantou-copy-copy").addClass("icon-jiantou-copy");
+			}else{
+				$(".arrow-down-div").hide();
+				$(".arrow-down i").removeClass("icon-jiantou-copy").addClass("icon-jiantou-copy-copy");
+			}
+			
+		});
+		$(".scrollLoading").scrollLoading();
+		pagehash = "0f18cdbdc8f4fa7149cb252466193b43";
+		totalpage = "1";
+		sessionPage = sessionStorage.getItem(pagehash+'-next');
+		if(sessionPage>2){
+			var page = sessionPage;
+			var pagedata = "";
+			for(i=2;i<sessionPage;i++){
+				pagedata = sessionStorage.getItem(pagehash+'listP'+i);
+				// $(".products .product:last").after(pagedata); //添加下一页商品
+			}
+		}else{
+			var page = 2;
+		}
+		
+		function pullUpAction(page){
+			var url = '/index.php?p='+page;
+			if(page>totalpage){
+				$('#loadmore').html("没有更多了");
+			}else{
+
+				$.get(url,function(data){
+					sessionStorage.setItem(pagehash+'listP'+page,data);
+					sessionStorage.setItem(pagehash+'-next',parseInt(page)+1);
+					// $(".products .product:last").after(data); //添加下一页商品
+				});
+			}
+		}
+		
+		function gotoProduct(goods_id){
+			pidstr = pid?"&pid="+pid:""
+			window.location.href="/index.php?id="+goods_id+pidstr;
+		}
+		
+		</script>
+        <script>
+		//获取滚动条当前的位置 
+		function getScrollTop() { 
+		var scrollTop = 0; 
+		if (document.documentElement && document.documentElement.scrollTop) { 
+		scrollTop = document.documentElement.scrollTop; 
+		} 
+		else if (document.body) { 
+		scrollTop = document.body.scrollTop; 
+		} 
+		return scrollTop; 
+		} 
+		
+		//获取当前可视范围的高度 
+		function getClientHeight() { 
+		var clientHeight = 0; 
+		if (document.body.clientHeight && document.documentElement.clientHeight) { 
+		clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight); 
+		} 
+		else { 
+		clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight); 
+		} 
+		return clientHeight; 
+		} 
+		
+		//获取文档完整的高度 
+		function getScrollHeight() { 
+		return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight); 
+		} 
+		window.onscroll = function () { 
+			if (getScrollTop() + getClientHeight() == getScrollHeight()) { 
+				pullUpAction(page)
+			}
+		}
+		</script>
+	</body>
+</html>

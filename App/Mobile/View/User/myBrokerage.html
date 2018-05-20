@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>嗨推学院-知名网络推广实战培训平台</title>
+    <link rel="stylesheet" href="__MOBILE__/css/base.css">
+    <link rel="stylesheet" href="__MOBILE__/css/common.css">
+    <link rel="stylesheet" href="__MOBILE__/css/style.css">
+</head>
+<body style="background-color: #fff;">
+
+<!-- myBrokerage-->
+<section class="myAccount myBrokerage">
+    <div class="in">
+        <div class="accHd">
+            <h3 class="tit">我的佣金</h3>
+            <div class="mm">
+                <i class="ico"></i>
+                <em>{$user_account['brokerage']}</em>
+                <span>佣金额</span>
+            </div>
+            <div class="bot">
+                <a href="{:U('User/myTiXian')}" class="joinBtn withdrawBtn">提现</a>
+            </div>
+        </div>
+        <div class="accChg">
+            <div class="tab">
+                <ol>
+                    <li class="{:ACTION_NAME=='myBrokerage'?'cur':''}"><a href="{:U('User/myBrokerage')}">提现记录</a></li>
+                    <li class="{:ACTION_NAME=='myInvite' && $status==1?'cur':''}"><a href="{:U('User/myInvite',array('status'=>1))}">已出佣金</a></li>
+                    <li class="{:ACTION_NAME=='myInvite' && $status==0?'cur':''}"><a href="{:U('User/myInvite')}">未出佣金</a></li>
+                </ol>
+            </div>
+            <div class="list">
+                <ul>
+                    <li>
+                        <div class="tit">
+                            <span class="ti0 ti01">账号</span>
+                            <span class="ti0 ti02">金额</span>
+                            <span class="ti0 ti03">时间</span>
+                            <span class="ti0 ti04">状态</span>
+                        </div>
+                        <div class="itemCom">
+                            <volist name="data" key="k" id="v">
+                                <div class="item {$v['ratify_status']==0?'itemIng':'itemEd'} ">
+                                    <a href="{:U('User/myTiXianDetail',array('order'=>$v['id']))}">
+                                        <span class="ti0 ti01">尾号({:substr($v['number'],-4)})</span>
+                                        <span class="ti0 ti02">{$v['money']}</span>
+                                        <span class="ti0 ti03">{:date('Y.m.d',$v['addtime'])}</span>
+                                        <span class="ti0 ti04">
+                                            <if condition="$v['ratify_status'] eq 0">
+                                                审核中
+                                                <elseif condition="$v['ratify_status'] eq 1"/>
+                                                成功
+                                                <else/>
+                                                失败
+                                            </if>
+                                        </span>
+                                    </a>
+                                </div>
+                            </volist>
+                            <if condition="!$data">
+                                <p style="text-align: center;line-height: 100px;">还没有提现记录哦~</p>
+                            </if>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="__MOBILE__/js/zepto_plus.js"></script>
+<script src="__MOBILE__/js/base.js"></script>
+<script src="__MOBILE__/js/style.js"></script>
+
+</body>
+</html>

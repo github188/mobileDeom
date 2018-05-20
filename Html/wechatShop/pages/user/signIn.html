@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>签到</title>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1fp093uu4xx39pb9.css" />
+<link rel="stylesheet" href="../../public/css/reset.css" />
+<link rel="stylesheet" href="../../public/css/signIn.css" />
+<link rel="stylesheet" href="../../public/css/weui.css"/>
+<style>
+	 #goback{position:fixed;top:10px;left:10px;width:30px;height:30px;text-align:center;line-height:30px;color:#fff;background:rgba(0,0,0,0.6);border-radius:50%;}
+</style>
+</head>
+	<body style="font-family:'微软雅黑'">
+		<div class="signBox">
+			<div class="sign-top">
+				<div class="sign-top-left">
+					<p class="topP"><i></i>积分数量：<em>2</em></p>
+				</div>
+				<div class="sign-top-center">
+                     <div class="singC">
+                          <p>马上签到</p>
+					 </div>
+				</div>
+         	</div>
+			<!--签到进度条-->
+			<div class="sign-center">
+				<h1>
+                    <span>今日签到 <label style="font-weight:bold;color:#F36">0</label> 次，获得积分 <label style="font-weight:bold;color:#F60">0</label></span>
+                </h1>
+			</div>
+		</div>
+        <div id="goback" onClick="window.history.go(-1);"><i class="iconfont icon-icon07-copy"></i></div>
+		<script type="text/javascript" src="../../public/js/jquery-1.11.1.js" ></script>
+		<script>
+			$(function(){
+				//获取本月总天数
+				/*
+				var d = new Date();
+				var curMonthDays = new Date(d.getFullYear(), (d.getMonth()+1), 0).getDate();
+				//获取进度条长度
+				var barwidth =$(".progress-bar").width();
+				//进度条平均进度
+				var avgWidth = barwidth/curMonthDays ;
+				//签到天数
+				var signCount =parseInt("");
+				$("#progress-bar").css({"background":"#ec4a46","width":avgWidth*signCount+"px"})
+				$(".sign-marking").css({"margin-left":avgWidth*signCount+"px"});
+				*/
+				$("#sign-now").click(function(){
+					$(".sign-now").removeClass("signing").addClass("signed");
+					$(".sign-now").html("签到成功");
+					$(".sign-top-center i").removeClass("icon-qiandao").addClass("icon-qiandao1");
+					loading = $(this).attr('loading');
+					if(loading=='yes'){
+						return false;
+					}else{
+						$(this).attr('loading','yes');
+						url = "/index.php?m=home&c=user&a=check_in";
+						$.get(url,{},function(json){
+							$('#check_in').attr('loading','no');
+							$('#loadingToast').hide();
+							if(json.state){
+								$('#check_in_success').show();
+							}else{
+								if(json.msg){
+									$('#check_in_error').show();
+								}
+							}
+							window.location.reload();
+						});
+					}
+					/*
+					$("#progress-bar").css({"background":"#ec4a46","width":avgWidth*(signCount+1)+"px"})
+					$(".sign-marking").css({"margin-left":avgWidth*(signCount+1)+"px"});
+					$("#sign-time").html(signCount+1);
+					*/
+				})
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>搜索</title>
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_8fzajbkv5cdi.css" />
+<link rel="stylesheet" href="../../public/css/reset.css" />
+<link rel="stylesheet" href="../../public/css/search.css" />
+<style>
+.ltop ul li{margin-bottom:8px;}
+</style>
+</head>
+<body style="overflow: hidden;">
+<div class="box" id="box" style="background-color: #f6f6f6;">
+	<!-- 搜索 -->
+	<section class="top-search">
+		<div class="sign-in" onclick="history.go(-1)">
+			<i class="iconfont icon-fanhui"></i>
+		</div>
+		<div class="search-text">
+			<form id="search_form" method="post" action="/index.php?m=home&c=index&a=search">
+			<input id="searchKeywords" type="text" name="keyword" placeholder="搜索你想要的宝贝" value="" />
+			</form>
+		</div>
+		<div class="search">
+			搜索
+		</div>
+	</section>
+
+
+	<!-- 历史搜素-->
+	<section class="search-history">
+		<div>
+			<h1 class="history-tit">历史搜索</h1>
+		</div>
+		<div class="ltop">
+			<ul v-for='search in historySearch'>
+
+
+			</ul>
+		</div>
+		<div class="lbot" id="clear">
+			<h1 style="font-size: 14px;color: #999;"><i class="iconfont icon-1"></i>&nbsp;清除历史记录</h1>
+		</div>
+	</section>
+</div>
+
+<script type="text/javascript" src="../../public/js/jquery-1.11.1.js" ></script>
+<script>
+	$(function(){
+		$('#searchKeywords').focus();
+	});
+	var storage = window.localStorage;
+	for(var i=0;i<storage.length;i++){
+	  //key(i)获得相应的键，再用getItem()方法获得对应的值
+	  if(storage.key(i)){
+		  str = storage.key(i);
+		$('.ltop ul').append("<li><a href='/index.php?a=search&keyword="+storage.key(i)+"'>"+str.substring(0,16)+"</a></li>");
+		 }
+	 }
+
+	 $('#clear').click(function(){
+		storage.clear();
+		window.location.reload();
+		});
+
+	$('.search').click(function(){
+		keyword = $("#searchKeywords").val();
+		if(keyword){
+			window.localStorage.setItem(keyword,'1');
+		}
+		window.location.href="/index.php?a=search&keyword="+keyword;
+	});
+	$('#search_form').submit(function(){
+		keyword = $("#searchKeywords").val();
+		if(keyword){
+			window.localStorage.setItem(keyword,'1');
+		}
+		window.location.href="/index.php?a=search&keyword="+keyword;
+	});
+</script>
+
+</body>
+</html>

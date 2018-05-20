@@ -1,0 +1,195 @@
+
+<!-- Bootstrap 3.3.6 -->
+<script src="__ADMIN__/bootstrap/js/bootstrap.min.js"></script>
+<script src="__STATIC__/js/bootstrap-switch.js"></script>
+<!-- DataTables -->
+<script src="__ADMIN__/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="__ADMIN__/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- FastClick 加速点击-->
+<script src="__ADMIN__/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App  核心-->
+<script src="__ADMIN__/dist/js/app.min.content.js"></script>
+<!--弹窗js 参考 http://layer.layui.com/--> 
+<script src="__ADMIN__/layer/layer.js"></script>
+<!-- icheck插件 --> 
+<script src="__ADMIN__/plugins/iCheck/icheck.js"></script>
+
+<!--表单验证插件 参考http://niceue.com/validator/--> 
+<script src="__ADMIN__/plugins/validator/jquery.validator.js?local=zh-CN"></script>
+<!-- bootstrap datepicker 日期-->
+<script src="__ADMIN__/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="__ADMIN__/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+
+<script type="text/javascript">
+//Table表格
+$(function () {
+  $("#example1").DataTable();
+  $('#example2').DataTable({
+    "paging": true,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": false,
+    "info": true,
+    "autoWidth": false
+  });
+});
+
+//模态弹窗
+$("a[data-toggle='dialog']").on('click', function(){
+    var dataTitle = $(this).attr('data-title');
+    var dataUrl = $(this).attr('data-url');
+    var dataWidth = $(this).attr('data-width');
+    var dataHeight = $(this).attr('data-height');
+    layer.open({
+        type: 2,
+        maxmin: true,
+        title: dataTitle ? dataTitle : $(this).text(),
+        shadeClose: true,
+        shade: 0.8,
+        area: [dataWidth, dataHeight],
+        content: dataUrl,
+    });
+});
+
+//icheck插件
+$(document).ready(function(){
+  $('input[type=radio]').iCheck({
+  	checkboxClass: 'icheckbox_square-blue',
+    radioClass: 'iradio_square-blue',
+    increaseArea: '20%' 
+  });
+});
+
+$(document).ready(function(){
+  $('input[type=checkbox]').iCheck({
+    checkboxClass: 'icheckbox_square-blue',
+    radioClass: 'iradio_square-blue',
+    increaseArea: '20%' 
+  });
+});
+
+//checkbox勾选判断
+$('.data-back-true').on('ifChecked', function(){
+  if ($(this).is(':checked')) {
+      $(".data-back-checkbox input[type=checkbox]").each(function(){
+        $(this).iCheck('check');
+      });
+  }
+});
+$('.data-back-true').on('ifUnchecked', function(){
+    $(".data-back-checkbox input[type=checkbox]").each(function(){
+      $(this).iCheck('uncheck');
+    });
+});
+
+
+//删除询问框
+$(".delete-msg").on('click', function(){
+    var status = confirm('删除后将无法恢复！\n 确定删除吗？？？');
+    if(!status){
+        return false;
+    }
+});
+
+//确认框
+$(".btnEdit").click(function(){
+    var status = confirm("真的确认操作吗？？？");
+    if(!status){
+        return false;
+    }
+});
+
+//AJAX提交
+function ajaxSubmit(obj){
+  formData = $(obj).parents('form').serializeArray();
+  formUrl = $(obj).parents('form').attr('action');
+
+  $.ajax({
+    type:'post',
+    dataType:'json',
+    url:formUrl,
+    data:formData,
+    success:function(data){
+      // alert(JSON.stringify(data));
+      window.parent.callBack(data); 
+    }
+  });
+}
+
+//回调函数
+function callBack(data){
+  if(data.status==1){
+    layer.alert(data.info,{skin: 'layui-layer-molv'});
+    layer.closeAll('iframe');
+    window.location.reload();
+  }else{
+    layer.alert(data.info,{skin: 'layui-layer-lan'});
+    layer.closeAll('iframe');
+  }
+}
+
+//列表的全选和反选
+var select_type = 0;
+function checkall(form) {
+    if(select_type == 0) select_type = 1;
+    else select_type = 0;
+
+    for(var i = 0; i < form.elements.length; i++){
+        var e = form.elements[i];
+        e.checked = select_type;
+        if(select_type){
+            $(e).parent().addClass('checked');
+        }else{
+            $(e).parent().removeClass('checked');
+        }
+
+    }
+}
+
+//列表删除一条记录功能
+function deleteOne(obj,id,url,page,msg){
+    if(!msg) msg= '确定要进行当前的删除操作吗？不可恢复！';
+    if(!page) page= 1;
+
+    var url = url+'?id='+id+'&page='+page;
+    //询问框
+    var index = layer.confirm(msg, {
+        shade:0.6,
+        icon:2,
+        skin: 'layui-layer-lan', //样式类名
+        btn: ['确定','取消']       //按钮
+    }, function(){
+        layer.close(index);
+        location.href = url;
+    }, function(){
+        layer.close(index);
+    });
+}
+
+//列表的选中批量删除功能
+function deleteChecked(obj,url,msg){
+    if(!url) url= '';
+    if(!msg) msg= '确定要进行该批量选择删除操作吗？不可恢复！';
+
+    //询问框
+    var index = layer.confirm(msg, {
+        shade:0.6,
+        icon:2,
+        skin: 'layui-layer-lan', //样式类名
+        btn: ['确定','取消']       //按钮
+    }, function(){
+        layer.close(index);
+        var form = $(obj).parents('form');
+        form.attr('action',url);
+        form.submit();
+    }, function(){
+        layer.close(index);
+    });
+}
+
+
+
+</script>
+
+</body>
+</html>

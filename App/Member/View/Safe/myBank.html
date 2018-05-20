@@ -1,0 +1,221 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myBank-->
+<section class="myCom myAddress myBank" id="myBank">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">绑定银行卡</a>
+                </div>
+            </div>
+            <div class="com basicInf address">
+                <div class="inpCom">
+                    <form  action="" method="post" name="myForm" data-validator-option="{stopOnError:true}" autocomplete="off">
+                        <ul>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">本人姓名<i>*</i></span>
+                                    <input type="text" placeholder="请填写您的姓名" id="name" name="name" data-rule="姓名:required;">
+                                    <p class="tip"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">账户类型<i>*</i></span>
+                                    <div class="selCom selBank">
+                                        <select name="bankType" class="bankType" data-rule="请选择账户类型:required;">
+                                            <option value="">&nbsp;&nbsp;&nbsp;&nbsp;请选择</option>
+                                            <php>$allBankCard = getBankType();</php>
+                                            <volist name="allBankCard" id="v" key="k" offset="0" length=''>
+                                                <option value="{$k}" >&nbsp;&nbsp;&nbsp;&nbsp;{$v}</option>
+                                            </volist>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">账户号码<i>*</i></span>
+                                    <input type="text" placeholder="请填写对应账户号码" id="card" name="number" >
+                                    <p class="tip2"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp bank_address">
+                                    <span class="ti">开户地址<i>*</i></span>
+                                    <div class="selCom selAdd">
+                                        <select name="province">
+                                            <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;请选择省份</option>
+                                            <volist name="province" id="v" key="k" >
+                                                <option value="{$v['id']}" {$info['province']==$v['id']?'selected':''} >&nbsp;&nbsp;&nbsp;&nbsp;{$v['name']}</option>
+                                            </volist>
+                                        </select>
+                                        <select name="city">
+                                            <option value="{$info['city']?$info['city']:0}">&nbsp;&nbsp;&nbsp;&nbsp;{$info['city']?$info['city_']:'请选择城市'}</option>
+                                        </select>
+                                        <select name="county">
+                                            <option value="{$info['county']?$info['county']:0}">&nbsp;&nbsp;&nbsp;&nbsp;{$info['county']?$info['county_']:'请选择地区'}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp bank_address">
+                                    <span class="ti">开户支行</span>
+                                    <input type="text" name="address" placeholder="例：中国工商银行广州支行">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp yzmInp">
+                                    <span class="ti">手机验证码<i>*</i></span>
+                                    <input type="text" name="code" placeholder="请填写短信验证码" data-rule="验证码:required;">
+                                    <button type="button" id="getCode" class="getCode" data-html="获取验证码" data-send="1">获取验证码</button>
+                                    <p class="tip3"></p>
+                                </div>
+                                <div class="sendTip">
+                                    <p><img src="__MEMBER__/images/pro.png">已经发送验证码到您的<span>12345678910</span></p>
+                                </div>
+                                <p>注：(<em>请务必填写真实的账户信息，以免导致提现失败！</em>)</p>
+                            </li>
+                        </ul>
+                        <div class="myBtn keepBtn">
+                            <input type="hidden" name="mobile" value="{:getUserInfo(session(C('USER_AUTH_UID')),'mobile')}">
+                            <button type="submit" class="bbtn" id="subBtnBank">保存修改</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<!--收货地址js文件-->
+<script src="__MEMBER__/js/myAddress.js"></script>
+
+<script>
+    var formActionUrl   = "{:U('Safe/myBank')}";
+    var selectAddressUrl= "{:U('User/getSelectAddress')}";//select框获取地址
+    var successUrl      = "{:U('Safe/myBankList')}";
+    var getCodeUrl    = "{:U('Index/publicSendCode')}";
+
+    $('.bankType').on('change',function(){
+        $this_ = $(this);
+        if($this_.val()==16){
+            $('.bank_address').parent('li').hide();
+        }else{
+            $('.bank_address').parent('li').show();
+        }
+    });
+
+    //发送验证码
+    $('#getCode').on('click',function(){
+        var this_ = $(this);
+        var num = $.trim($('input[name="mobile"]').val());
+        if(!(Regs.mobile.test(num))){
+            show_msg('请输入正确的手机号','error');
+            return false;
+        }
+        $.ajax({
+            url: getCodeUrl,
+            type: 'POST',
+            data: {'num':num},
+            success: function(data){
+                if(data.status==0){
+                    show_msg(data.msg,'error');
+                    return false;
+                }
+                countTime(this_,60);
+                show_msg(data.msg);
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','error');
+            }
+        });
+    });
+
+    //提交表单-添加银行卡
+    $('form[name="myForm"]').bind('valid.form', function(){
+        var bankType = $('.bankType').val();
+        if(bankType!=16 && select_province.val()==0)
+        {
+            show_msg('请选择银行卡开户省份的所在地','error');
+            return;
+        }
+        else if(bankType!=16 && select_city.val()==0)
+        {
+            show_msg('请选择银行卡开户城市的所在地','error');
+            return;
+        }
+        $.ajax({
+            url: formActionUrl,
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(data){
+                if(data.status==0){
+                    show_msg(data.msg,'error');
+                    return false;
+                }
+                else if(data.status==1){
+                    show_msg(data.msg,'info');
+                    setTimeout(function(){
+                        location.href = successUrl;
+                    },1200);
+                }
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','error');
+            }
+        });
+    });
+
+    //nice表单配置
+    $('form').validator({
+        rules: {
+            // 使用函数定义规则-验证银行卡
+            bankcard: function(element) {
+                var value = element.value.replace(/\s/g, ''),
+                        isValid = true,
+                        rFormat = /^[\d]{12,19}$/;
+
+                if ( !rFormat.test(value) ) {
+                    isValid = false;
+                } else {
+                    var arr = value.split('').reverse(),
+                            i = arr.length,
+                            temp,
+                            sum = 0;
+
+                    while ( i-- ) {
+                        if ( i%2 === 0 ) {
+                            sum += +arr[i];
+                        } else {
+                            temp = +arr[i] * 2;
+                            sum += temp % 10;
+                            if ( temp > 9 ) sum += 1;
+                        }
+                    }
+                    if ( sum % 10 !== 0 ) {
+                        isValid = false;
+                    }
+                }
+                return isValid || "请填写有效的银行卡号";
+            }
+        },
+        fields: {
+            // 对字段 number 应用规则 bankcard
+            'number': '账户号码:required;'
+        },
+
+        theme: "yellow_right_effect", //消息皮肤
+        msgStyle: "margin-left:3px; margin-top:5px;" ,//消息自定义样式
+        msgClass: "n-right"   //消息将自动显示在输入框右边
+    });
+</script>

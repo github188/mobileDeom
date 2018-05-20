@@ -1,0 +1,185 @@
+
+<include file="Public:headerAfter"/>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2xxs7sl9jpf7ds4i.css">
+<!--content-->
+<div class="videoContent m0a learnContent">
+    <div class="videoTab mt20">
+        <!--选项卡切换S-->
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <div class="layui-tab-content clearfix layui-tab-content-new">
+
+                <!--我的课程-->
+                <div class="layui-tab-item layui-show learnCourese bgColor m0a">
+
+                    <div class="conditions">
+                        <ul class="condList clearfix ul1">
+                            <p>付款方式：</p>
+                            <a href="{:U('Index/videoList',array('type'=>0, 'search_tg_category'=>$search_tg_category, 'category_id'=>$category_id))}">
+                                <li class="noon dofunc {$type==0?'on':''}">全部</li>
+                            </a>
+                            <a href="{:U('Index/videoList',array('type'=>1, 'search_tg_category'=>$search_tg_category, 'category_id'=>$category_id))}">
+                                <li class="noon dofunc {$type==1?'on':''}">免费</li>
+                            </a>
+                            <a href="{:U('Index/videoList',array('type'=>2, 'search_tg_category'=>$search_tg_category, 'category_id'=>$category_id))}">
+                                <li class="noon dofunc {$type==2?'on':''}">付费</li>
+                            </a>
+                            <input type="hidden">
+                        </ul>
+
+                        <ul class="condList clearfix ul2">
+                            <p>推广方式：</p>
+                            <a href="{:U('Index/videoList',array('type'=>$type, 'search_tg_category'=>0, 'category_id'=>$category_id))}">
+                                <li class="noon dofunc {$search_tg_category==0?'on':''}">全部</li>
+                            </a>
+                            <volist name="tg_category" key="k" id="v">
+                                <a href="{:U('Index/videoList',array('type'=>$type, 'search_tg_category'=>$k, 'category_id'=>$category_id))}">
+                                    <li class="noon dofunc {$k==$search_tg_category?'on':''}">{$v}</li>
+                                </a>
+                            </volist>
+                            <input type="hidden">
+                        </ul>
+
+                        <ul class="condList clearfix ul2">
+                            <p>课程分类：</p>
+                            <a href="{:U('Index/videoList',array('type'=>$type, 'search_tg_category'=>$search_tg_category, 'category_id'=>0))}">
+                                <li class="noon dofunc {$category_id==0?'on':''}">全部</li>
+                            </a>
+                            <volist name="video_category" key="k" id="v" offset="0" length="7">
+                                <a href="{:U('Index/videoList',array('type'=>$type, 'search_tg_category'=>$search_tg_category, 'category_id'=>$v['id']))}">
+                                    <li class="noon dofunc {$v['id']==$category_id?'on':''}">{$v['name']}</li>
+                                </a>
+                            </volist>
+                                <php>
+                                    if(count($video_category) > 8){
+                                        echo '<div class="noon iconNoon"><i class="iconfont icon-xiala-down"></i></div>';
+                                    }
+                                </php>
+                            <input type="hidden">
+                        </ul>
+
+                       <!--下拉块-->
+                        <ul class="screenNone clearfix">
+                            <volist name="video_category" key="k" id="v" offset="8">
+                                <a href="{:U('Index/videoList',array('type'=>$type, 'search_tg_category'=>$search_tg_category, 'category_id'=>$v['id']))}">
+                                    <li class="noon dofunc {$v['id']==$category_id?'on':''}">{$v['name']}</li>
+                                </a>
+                            </volist>
+                        </ul>
+
+                        <!--下拉块S
+                        <ul class="condList clearfix ul3">
+                            <p>地区：</p>
+                                <li class="on"><span>全部</span></li>
+                                <li class="noon"><span>微信</span></li>
+                                <li class="noon"><span>微信</span></li>
+                                <li class="noon"><span>微信</span></li>
+                                <li class="Amore" style="width: 70px">
+                                    <span class="on">微信</span>
+                                </li>
+                                 <li class="noon iconNoon">
+                                     <i class="iconfont icon-xiala-down" style="display: inline-block;line-height: 24px;"></i>
+                                 </li>
+                        </ul>
+                        -->
+                    </div>
+
+                    <div class="CoureseBody">
+                        <ul class="list tab-bd">
+                            <volist name="video" key="k" id="v">
+                                <php>
+                                    #判断视频是否有播放权限
+                                    $playAuth = $user_id ? videoPlayAuth($v['id']) : '';
+                                    $is_tag = getVideoTag($v['is_tag']);
+                                </php>
+                                <li class="item">
+                                    <div class="itemdd">
+                                        <a class="pic" href="{$user_id && $playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}" >
+                                            <img class="img" src="http://f.cdn.xsteach.cn/uploaded/82/3f/d0/823fd09341d7f5ba80613b8e6f9b0452001.jpg" alt="Photoshop人像后期处理基础课程" title="Photoshop人像后期处理基础课程">
+
+                                            <i data-id="{$v['id']}" class="love-btn iconfont icon-shoucang {$user_id && $v['shoucang']?'icon-shoucang_sel-copy':''}"></i>
+
+                                            <div class="p-thumb-taglt">
+                                                <span <if condition="$v['is_tag'] EQ 1">
+                                                    class="ico-lt icon-lt-new"
+                                                <elseif condition="$v['is_tag'] EQ 2"/>
+                                                    class="ico-lt"
+                                                </if>
+                                                >
+                                                    {$is_tag}
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <div class="details">
+                                            <h3>
+                                                <a href="{$user_id && $playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}" class="fonts16">{:jiequ($v['title'],0,27,'')}</a>
+                                            </h3>
+                                            <if condition="$user_id">
+                                                <div class="row clearfix">
+                                                    <span class="fl fonts14 {$playAuth['allow_play']==1?'FtColorV':''}"><em class="{$playAuth['allow_play']==1?'colorStudy':'colorH'}">{$v['buy_money']}</em> 学习币</span>
+                                                    <a class="fr fonts14" href="{$user_id && $playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}" ><i class="iconfont icon-bofang"></i>{$playAuth['allow_play']==1?'播放':'购买'}</a>
+                                                </div>
+                                            <else/>
+                                                <div class="row clearfix">
+                                                    <span class="fl fonts14 "><em class="colorH">{$v['buy_money']}</em> 学习币</span>
+                                                    <a class="fr fonts14" href="{:U('Pay/courseConfirm',array('vid'=>$v['id']))}" ><i class="iconfont icon-216"></i>购买</a>
+                                                </div>
+                                            </if>
+                                        </div>
+                                    </div>
+                                </li>
+                            </volist>
+                        </ul>
+                        <if condition="!$video">
+
+                            <div class="CoureseBodyImg">
+                                <img  src="__MEMBER__/images/chahua.png" alt="" class="m0a mt165">
+                                <p class="textAlign Fthui fonts18 mt30">主人太懒了，暂时还没有上传视频哦~</p>
+                            </div>
+
+                        </if>
+                    </div>
+                    <if condition="$totalPages GT 1">
+                        <div class="pages">{$pages}</div>
+                    </if>
+                </div>
+
+
+             </div>
+            <!--选项卡切换E-->
+         </div>
+  </div>
+</div>
+<!--footer-->
+<include file="Public:footer"/>
+<script src="__ADMIN__/layer/layer.js"></script>
+<script>
+    var user_id = '{$user_id}';
+    var formActionUrl = "{:U('Video/videoShoucang')}";
+    //收藏和取消视频
+    $('.love-btn').on('click',function(e){
+        var this_ = $(this);
+        var vid = this_.attr('data-id');
+        if(!user_id){
+            layer.msg('收藏失败，请先登录');
+            return false;
+        }
+        $.ajax({
+            url: formActionUrl,
+            type: 'POST',
+            data: {'vid':vid},
+            success: function(data){
+                if(data.status==0){
+                    this_.attr('class','love-btn iconfont icon-shoucang');
+                }
+                else if(data.status==1){
+                    this_.attr('class','love-btn iconfont icon-shoucang icon-shoucang_sel-copy');
+                }
+                layer.msg(data.info);
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','error');
+            }
+        });
+    });
+</script>
+

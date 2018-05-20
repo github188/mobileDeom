@@ -1,0 +1,40 @@
+<header class="barTop clearfix ">
+    <div class="headTopMain clearfix">
+        <div class="headMleft fl">
+            <div class="wel">
+                <a href="javascript:;" class="inlineBlock">
+                    <span class="inlineBlock">欢迎:</span>
+                    <span class="inlineBlock">111aaa</span>
+                </a>
+            </div>
+            <div class="personMsg">
+                <div href="javascript:;" class="fatherA">
+                    <span>个人中心 <i class="iconfont icon-xiala"></i></span>
+                    <div class="login-option">
+                        <a href="javascript;" class="mt5">我的推广</a>
+                        <a href="javascript;">退出当前账号</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headMright fr">
+            <div class="sp tel">
+                <a href="javascript:;">
+                    <i class="iconfont icon-telphone-copy "></i>
+                    <span>联系电话&nbsp;&nbsp;020-36700550</span>
+                </a>
+            </div>
+            <div class="sp chat">
+                <a href="javascript:;">
+                    <span>联系我们</span>
+                </a>
+            </div>
+            <div class="sp kf">
+                <a href="javascript:;">
+                    <span>客服中心</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</header>

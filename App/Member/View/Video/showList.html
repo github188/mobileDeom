@@ -1,0 +1,114 @@
+
+<include file="Public:headerAfter"/>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2xxs7sl9jpf7ds4i.css">
+<!--courses-->
+<section class="indexCom mt20 courses" id="courses">
+    <div class="in w1100 m0a">
+        <!--左侧栏-->
+        <include file="Video:leftVideoMenu"/>
+        <div class="inR fr">
+            <div class="cour">
+                <div class="hdT">
+                    <span class="sp1"><a href="javascript:;">我的账户</a></span>
+                    <i></i>
+                    <span class="sp2"><a href="javascript:;">{$categoryPinfo['name']}</a></span>
+                </div>
+                <div class="courCon">
+                    <div class="hdd">
+                        <div class="bbg">
+                            <h4>{$categoryinfo['name']}</h4>
+                            <span class="line"></span>
+                        </div>
+                        <p>{$categoryinfo['remark']}</p>
+                    </div>
+
+                </div>
+                <div class="courLists">
+                    <if condition="$category_video">
+                        <ul>
+                            <volist name="category_video" key="k" id="v">
+                                <php>
+                                    #判断视频是否有播放权限
+                                    $playAuth = videoPlayAuth($v['id']);
+                                    #判断视频是否被收藏
+                                    $shoucang = M('video_shoucang')->where(array('user_id'=>session(C('USER_AUTH_UID')),'vid'=>$v['id']))->getField('id');
+                                </php>
+                                <li>
+                                    <div class="item">
+                                        <div class="tp">
+                                            <a href="{$playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                                <img src="__MEMBER__/images/loading.gif" data-src="__MEMBER__/images/tptp01.png" alt="logo" title="" class="lazy">
+                                            </a>
+                                            <i data-id="{$v['id']}" class="love-btn iconfont icon-shoucang {$shoucang?'icon-shoucang_sel-copy':''}"></i>
+                                            <span class="lab"></span>
+                                        </div>
+                                        <div class="txt">
+                                            <p class="tiName">
+                                                <a href="{$playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                                    {:jiequ($v['title'],0,30,'')}
+                                                </a>
+                                            </p>
+                                            <div class="bot">
+                                                <div class="money fl {$playAuth['allow_play']==1?'delNo':''}">
+                                                    <em>{$v['buy_money']}</em>学习币
+                                                </div>
+                                                <div class="handle fr">
+                                                    <a href="{$playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                                        <i class="iconfont {$playAuth['allow_play']==1?'icon-bofang':'icon-216'}"></i>
+                                                        <span class="ti00">{$playAuth['allow_play']==1?'播放':'购买'}</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </volist>
+                        </ul>
+                    <else/>
+                        <div style="width: 300px;min-height: 100px;margin: 0 auto 100px;text-align: center;">
+                            <img src="__MEMBER__/images/chahua.png" alt="" width="300px" height="210px">
+                            <p style="margin: 30px 0 0 0;">主人太懒了，暂时还没有上传视频哦~</p>
+                        </div>
+                    </if>
+                </div>
+                <if condition="$totalPages GT 1">
+                    <div class="pages">{$pages}</div>
+                </if>
+
+                <!--<div class="load">-->
+                    <!--<a href="javascript:;" class="loadBtn" data-staus="0"><i></i>点击加载更多</a>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer-->
+<include file="Public:footer"/>
+<script src="__ADMIN__/layer/layer.js"></script>
+<script src="__MEMBER__/pugins/libs/jquery.lazyload.mini.js"></script>
+<script>
+    imgLoad();
+    var formActionUrl = "{:U('Video/videoShoucang')}";
+    //收藏和取消视频
+    $('.love-btn').on('click',function(e){
+        var this_ = $(this);
+        var vid = this_.attr('data-id');
+        $.ajax({
+            url: formActionUrl,
+            type: 'POST',
+            data: {'vid':vid},
+            success: function(data){
+                if(data.status==0){
+                    this_.removeClass('icon-shoucang_sel-copy');
+                }
+                else if(data.status==1){
+                    this_.addClass('icon-shoucang_sel-copy');
+                }
+                layer.msg(data.info);
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','error');
+            }
+        });
+    });
+</script>

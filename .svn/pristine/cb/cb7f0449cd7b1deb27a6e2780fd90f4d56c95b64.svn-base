@@ -1,0 +1,97 @@
+
+
+<include file="Public:headerBefore"/>
+
+<!--content-->
+<div class="bodyColor content">
+   <div class="w1100 bgColor m0a mt30 contentHegiht">
+         <div class="backHeader">
+             <a href="#" class="inlineBlock fl hFontColors">找回密码</a>&nbsp;
+             <a href="{:U('Login/index')}" class="inlineBlock fr hFontColors">已有账号？ <span class="commonColor">立即登录</span></a>
+         </div>
+
+        <div class="backBody">
+            <div class="bodyProgress backBodyWidth m0a mt42 mb74">
+                <div class="layui-progress">
+                    <div class="layui-progress-bar layui-bg-blue" lay-percent="25%"></div>
+                    <img src="__MEMBER__/images/one_sel.png" alt="" class="imgIconOne inlineBlock">
+                    <span class="progessText fonts16 TextActive">验证方式</span>
+                    <img src="__MEMBER__/images/two.png" class="imgIconTwo inlineBlock">
+                    <span class="progessTextTwo fonts16 ">重置密码</span>
+                    <img src="__MEMBER__/images/dui.png"  class="imgIconDui inlineBlock">
+                    <span class="progessTextDui fonts16 ">重置成功</span>
+                </div>
+            </div>
+
+            <div class="panel-body backBodyWidth m0a">
+                <form class="fromWidth m0a" action="" name="myForm" method="post" autocomplete="off" data-validator-option="{stopOnError:true}">
+                    <div class="bodyText">
+                        <img src="__MEMBER__/images/pro.png" alt="" class="inlineBlock mr8 imgText"><span class="spanColor">请输入找回密码的方式</span>
+                    </div>
+                    <div class="error" id="error" style="display: none"></div>
+                    <div class="input-group input-group-change">
+                         <span class="input-group-addon">
+                             <i class="iconfont icon-user icon-change"></i>
+                         </span>
+                        <input class="form-control" placeholder="手机号/邮箱" name="mobileORemail" data-tip="可以填写邮箱或手机号码哦~" data-rule="手机号或邮箱:required;email|mobile;">
+                    </div>
+
+                    <div class="input-group borderNone">
+                        <div class="borderChange inlineBlock divWidth input-group-change">
+                                <span class="input-group-addon">
+                             <i class="iconfont icon-yanzhengma icon-change"></i>
+                         </span>
+                            <input class="form-control from-control-change" type="text" placeholder="请输入验证码" name="code" data-rule="验证码:required;">
+                        </div>
+                        <img src="{:U('Login/verify')}" id="captcha_img" alt="验证码" height="38" width="120" class="ml16">
+                    </div>
+                    <input type="submit" class="btn webBtn w-full mt4 mb20" value="下一步" >
+                </form>
+            </div>
+
+         </div>
+   </div>
+</div>
+
+<!--footer-->
+<include file="Public:footer"/>
+
+<script>
+    var formActionUrl = "{:U('Login/passwordWay')}";
+    var NextUrl = "{:U('Login/password')}";
+    //提交表单
+    $('form[name="myForm"]').bind('valid.form', function(){
+        $.ajax({
+            url: formActionUrl,
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(data){
+                if(data.status==0){
+                    show_msg(data.msg,'error');
+                    $("#captcha_img").click();
+                    return false;
+                }
+                else if(data.status==1){
+                    show_msg(data.msg,'info');
+                    setTimeout(function(){
+                        location.href = NextUrl;
+                    },1500);
+                }
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','error');
+            }
+        });
+    });
+
+    // 插件validator.js
+    $('form').validator({
+        theme: "simple_right", //消息皮肤
+        msgClass: "n-bottom"   //消息将自动显示在输入框右边
+    });
+    layui.use('element', function(){
+        var $ = layui.jquery
+            ,element = layui.element();
+    });
+</script>
+

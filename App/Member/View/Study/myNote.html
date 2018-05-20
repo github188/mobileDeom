@@ -1,0 +1,103 @@
+
+<link rel="stylesheet" href="__MEMBER__/css/style.css">
+<include file="Public:headerAfter"/>
+<style>
+    .hpdUl img{
+        display: inline-block!important;
+    }
+  /*  i{font-style: italic}*/
+</style>
+<!--content-->
+<div class="videoContent m0a learnContent">
+    <div class="videoTab mt20">
+        <!--选项卡切换S-->
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <!--top菜单-->
+            <include file="topMenu"/>
+            <div class="layui-tab-content clearfix layui-tab-content-new">
+
+                <!--我的笔记 -->
+                <div class="layui-tab-item layui-show learnNote">
+
+                  <!--内容部分开始-->
+                    <div class="bgColor hpdUl">
+                        <ul id="notelist" data-last-note-id="{$noteList.limit_end_id}">
+                            <empty name="noteList.noteList">
+                                <!--没有数据：-->
+                                <div class="noData" style="text-align: center;">
+                                    <img style="margin: 0 auto;" src="__MEMBER__/images/errorTp.png" alt="没有数据"  width="" height="">
+                                    <p>您目前数据为空</p>
+                                </div>
+                            </empty>
+                            <foreach name="noteList.noteList" item="val">
+                                <li id="note{$val.id}" class="Hpd clearfix">
+
+
+                                    <div class="fonts16 ft16Color" flag="true" style="display: block;">{$val.content}</div>
+
+                                    <div class="source">来源: <a href="/Member/Video/showList/category/{$val.category_id}" class="sorC">{$val.category_name}</a>/ <a class="sorC" href="/Member/Video/play/vid/{$val.vid}">{$val.video_name}</a></div>
+
+                                    <!--文本框S-->
+                                    <div class="anArea mt0 bgColor">
+                                        <form action="" method="post" class="nice-validator n-simple" novalidate="novalidate">
+                                            <textarea placeholder="" id="demo{$val.id}" class="pl15 pt15"></textarea>
+                                            <div class="bot mt20 mr42 mb25">
+                                                <a onclick="quxiao($(this))" class="HcancleBtn subBtn1">取消</a>
+                                                <a data-note-id="{$val.id}" class="HsubBtn subBtn1">提交</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!--文本框E-->
+
+                                    <div class="msgFoot clearfix" style="display: block;">
+                                        <div class="timeL fl mb25 fonts14 mt10">{$val.addtime}</div>
+                                        <div class="fr mb25 fonts15">
+                                            <span class="mr25 revise bb" flag="true" onclick="editNote($(this), 'demo{$val.id}')"><i class="iconfont icon-bianxie iconNote"></i>修改</span>
+                                            <span class="mr25 delete" data-note-id="{$val.id}"><i class="iconfont icon-del iconNote"></i>删除</span>
+                                            <span class="HpdSpan"><a href="/Member/Video/play/vid/{$val.vid}"><i class="iconfont icon-shipin-copy"></i> <i class="Htime">{$val.playtime}</i></a></span>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </foreach>
+
+                            <!-- 遮罩层 -->
+                            <div class="Hmask">
+                                <div class="maskDel">
+                                    <p>您确定删除吗？</p>
+                                    <div class="clearfix mb15 mt10">
+                                        <a href="#" class="Hcancel mr15">取消</a>
+                                        <a href="#" onclick="Hsubmit()" class="Hsubmit">确定</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <notempty name="noteList.is_show_more">
+                        <div class="bgColor textAlign mt-10">
+                            <a onclick="note_page($(this), {$user_id})" class="Hmore m0a">点击加载更多</a>
+                        </div>
+                    </notempty>
+
+                </div>
+
+             </div>
+            <!--选项卡切换E-->
+         </div>
+  </div>
+</div>
+<!--footer-->
+<include file="Public:footer"/>
+<!--学习助手JS-->
+<script src="__MEMBER__/js/replyMssage.js"></script>
+
+<script>
+    // 插件validator.js
+    $('form').validator({
+        theme: "simple_right", //消息皮肤
+        msgClass: "n-bottom"   //消息将自动显示在输入框右边
+    })
+}
+
+</script>

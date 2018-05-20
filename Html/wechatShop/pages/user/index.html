@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>个人中心</title>
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_tmkp3fvcyruanhfr.css" />
+	<link rel="stylesheet" href="../../public/css/reset.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="../../public/css/personalCenter.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+		<!--第一屏 -->
+	<div class="box" id="box">
+		<section class="top-personal">
+		  	<div class="m-info">
+		  		<div class="head-pic">
+		  			<img src="../../public/images/touxiang.png" />
+		  		</div>
+		  		<div class="head-name">
+		  			<h1>小怪兽</h1>
+		  		</div>
+		  		<div class="r-sigin"> 
+					<a href="./signIn.html"><i class="iconfont icon-qiandao"></i>&nbsp;<span>签到</span></a>
+				</div>
+		  	</div>
+		</section>
+		<section class="about-money">
+		  	<div class="ps">
+		  		<p class="p1">账户余额:<span class="balance">0</span>元<em></em></p>
+		  		<p class="p2" onclick="window.location.href='cashDeposit.html'">
+		  			<span class="span1"><i class="iconfont icon-shenqingtixian"></i></span>
+		  			<span class="span2">申请提现 ></span>
+		  		</p>
+		  	</div>
+		</section>
+		<section class="about-jifen">
+		  	<div class="ps">
+		  		<div class="p1">
+		  			<p >
+			  			<span class="jifen">2</span>
+			  			<span class="jifenName">可用积分</span>
+		  			</p>
+			  		<p style="padding-right: 15px;">
+			  			<span class="jifen">0</span>
+			  			<span class="jifenName">未确认积分</span>
+			  		</p>
+                    <em></em>
+		  		</div>
+		  		<p class="p2" onclick="window.location.href='integralDetail.html'">
+		  			<span class="span1"><i class="iconfont icon-jinfenMsg"></i></span>
+		  			<span class="span2">积分详情 ></span>
+		  		</p>
+		  	</div>
+		</section>
+		<section class="about-other">
+			<div class="bot-e1" >
+		  		<div onclick="window.location.href='integral.html'">
+			  		<h2><i class="iconfont icon-shangcheng" style="margin-left: -1px;"></i><label style="margin-left: -1px;">积分商城</label></h2>
+			  		<h2 class="float-right"><i class="iconfont icon-icon07"></i></h2>
+		  		</div>
+		  	</div>
+
+           <div class="bot-e1">
+		  		<div onclick="window.location.href='agent.html'">
+			  		<h2><i class="iconfont icon-hehuoren" style="font-size: 27px;margin-left: -2px;"></i><label style="margin-left: -3px;">合伙人</label></h2>
+			  		<h2 class="float-right"><i class="iconfont icon-icon07"></i></h2>
+		  		</div>
+		  	</div>
+
+            <div class="bot-e1">
+		  		<div onclick="window.location.href='postOrderid.html'">
+			  		<h2><i class="iconfont icon-dingdan" style="font-size: 27px;margin-left: -2px;"></i><label style="margin-left: -3px;">提交单号</label></h2>
+			  		<h2 class="float-right"><i class="iconfont icon-icon07"></i></h2>
+		  		</div>
+		  	</div>
+
+		  	<div class="bot-e1">
+		  		<div  id="logout">
+			  		<h2><i class="iconfont icon-tuichu" style="font-size: 20px;margin-left: 1px"></i>退出账号</h2>
+			  		<h2 class="float-right"><i class="iconfont icon-icon07"></i></h2>
+		  		</div>
+		  	</div>
+
+		</section>
+		<!--退出-->
+		<div id="layoutDiv" class="layoutClass"  style="display: none;"> 
+			<div id="goOutDiv">
+				<div class="god-top">
+					<h1>提示</h1>
+					<p>是否要退出?</p>
+				</div>
+				<div class="god-bot">
+					<p id="toCancel">取消</p><p id="toClose">确定</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- 底部 -->
+		<div class="page-foot">
+			<div class="g-foot-bar">
+				<ul class="m-nav-foot clearfix">
+					<li>
+						<a href="../shop/index.html">
+							<p><i></i></p>
+							<span >首页</span>
+						</a>
+					</li>
+					<li>
+						<a href="../live/index.html">
+							<p><i></i></p>
+							<span >直播间</span>
+						</a>
+					</li>
+					<li>
+						<a href="./integral.html" style="margin-top: -1px;">
+							<p><i></i></p>
+							<span >积分商城</span>
+						</a>
+					</li>
+					<li class="cur">
+						<a href="./index.html">
+							<p><i></i></p>
+							<span>个人中心</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+		<script type="text/javascript" src="../../public/js/jquery-1.11.1.js" ></script>
+		<script>
+			//底部的点击调转
+             var $li=$('.g-foot-bar .m-nav-foot li'),     //点击的li
+                 cur="cur";                              // 当前点击到的li具有的颜色
+
+			 $li.on("click",function () {
+                    $(this).addClass(cur).siblings().removeClass(cur);
+             });
+
+            //退出登录
+			function logout(){
+				$("#layoutDiv").fadeIn(300);
+				$("#layoutDiv").addClass("layoutClass");
+				$("#layoutDiv").css("z-index","1");
+				$("#toClose").mouseover(function(){
+					top.location = "/index.php?m=home&c=user&a=logout";
+		        	return false;
+				});
+				$("#toCancel").mouseover(function(){
+					$("#layoutDiv").removeClass("layoutClass");
+					$("#layoutDiv").css("z-index","0");
+					$("#layoutDiv").slideUp(100);
+				});
+	    	}
+			
+		</script>
+	</body>
+</html>

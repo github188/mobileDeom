@@ -1,0 +1,218 @@
+<include file="Public:content-header" />
+
+<style>
+    @media screen and (max-width:1920px){
+        .new-form-group{
+            width:22%;!important;
+            display: inline-block;!important;
+            margin-bottom: 10px;!important;
+            vertical-align: middle;!important;
+            float: left;
+        }
+    }
+    @media screen and (max-width:1680px){
+        .new-form-group{
+            width:24%;!important;
+            display: inline-block;!important;
+            margin-bottom: 10px !important;
+            vertical-align: middle;!important;
+
+        }
+    }
+    @media screen and (max-width:1440px){
+        .new-form-group{
+            width:44%;!important;
+            display: inline-block;!important;
+            margin-bottom: 10px !important;
+            vertical-align: middle;!important;
+
+        }
+    }
+</style>
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">会员管理</a></li>
+            <li class="active">用户查询</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/User/index')}">
+
+                      <div class="form-group new-form-group inlineForm display-inline" style="margin-bottom: 10px">
+                            <label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qq号码：</b></label>
+                            <input type="text" class="form-control" name="qq" value="{$condition[qq]}" >
+                      </div>&nbsp; &nbsp;
+                      <div class="form-group new-form-group inlineForm display-inline" style="margin-bottom: 10px">
+                            <label><b>手机号码：</b></label>
+                            <input type="text" class="form-control" name="mobile" value="{$condition[mobile]}">
+                      </div>&nbsp; &nbsp;
+                        <div class="form-group new-form-group inlineForm display-inline" style="margin-bottom: 10px">
+                            <label  style="width: 64px;text-align: right;"><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{$condition[username]}" >
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group new-form-group inlineForm display-inline" style="margin-bottom: 10px">
+                            <label><b>真实姓名：</b></label>
+                            <input type="text" class="form-control" name="realname" value="{$condition[realname]}">
+                            <button type="submit" class="btn btn-success inlineSearch display-inline" style="margin-left: 10%">查询</button>
+                        </div>
+                    </form>
+
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td>用户权限</td>
+                                <td>拥有权限</td>
+                                <td>开通时间</td>
+                                <td>过期时间</td>
+                                <td>会员</td>
+                                <td>姓名</td>
+                                <td>qq</td>
+                                <td>手机</td>
+                                <td>注册</td>
+                                <td>邀请人</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <volist name="info" id="v">
+                                    <tr>
+                                        <td><img style="display: inline-block;border-radius: 3px;" src="__MEMBER__/images/user_group/{$v.user_group_id}.png" alt="会员组">{$v.name}</td>
+                                        <td>
+                                            <php>$user_auth_count = M('user_group_ext')->where(array('user_id'=>$v['user_id']))->count('id');</php>
+                                            {$user_auth_count} 个<a href="javascript:;" class="show-userGroup" data-id="{$v['user_id']}" >  [查看]</a>
+                                        </td>
+                                        <td>
+                                            <if condition="$v['start_time']">
+                                                {$v.start_time|date="Y-m-d",###}
+                                            <else/>
+                                                暂无数据
+                                            </if>
+                                        </td>
+                                        <td>{$v.end_time|date="Y-m-d",###}</td>
+                                        <td>{$v.username}</td>
+                                        <td>{$v.realname}</td>
+                                        <td>{$v.qq}</td>
+                                        <td>{$v.mobile}</td>
+                                        <td>{$v.reg_time|date="Y-m-d",###}</td>
+                                        <td>{$v['y_user_id']?getUserInfo($v['y_user_id'],'username'):'---'}</td>
+                                    </tr>
+                             </volist>
+
+                             <if condition="!$info">
+                                 <tr>
+                                     <td colspan="20" align="center"> <i class="fa fa-exclamation-circle" aria-hidden="true" style="font-size: 18px;color: red;">  暂无数据!</i></td>
+                                 </tr>
+                             </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="20" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!--显示用户权限弹窗样式 start-->
+<style>
+    .user-group{width: 400px;min-height: 100px;padding:10px;box-sizing:border-box;background-color: #fff;display: none;font-style: normal;}
+    .user-group a , .user-group c{margin-right: 10px;}
+    .user-group table{width: 100%;}
+    .user-group table tr td{line-height: 40px;}
+    .user-group img{display: inline-block;border-radius: 3px;}
+</style>
+<div class="user-group">
+    <table>
+        <tr>
+            <th><b>用户权限</b></th>
+            <th><b>开通时间</b></th>
+            <th><b>过期时间</b></th>
+        </tr>
+    </table>
+</div>
+<!--显示用户权限弹窗样式 end-->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+<script>
+    var url = "{:U(MODULE_NAME.'/User/getUserGroup')}";
+    //显示更多用户组
+    $('.show-userGroup').on('click',function(){
+        var this_   = $(this);
+        var user_id = this_.attr('data-id');
+        $.post(url,{'user_id':user_id},function(data){
+            if(data.status==0){
+                layer.msg(data.info);
+            }
+            else if(data.status==1){
+                var lang  = data.info.length;
+                var html_ = '';
+                for(var i=0;i<lang;i++){
+                    html_ += '<tr class="user-group-tr">';
+                    html_ += '<td><img src="__MEMBER__/images/user_group/'+data.info[i]['group_id']+'.png" alt="会员组"><a>'+data.info[i]['group_name']+'</a></td>';
+                    html_ += '<td><c>'+getLocalTime(data.info[i]['start_time'])+'</c></td>';
+                    html_ += '<td><c>'+getLocalTime(data.info[i]['end_time'])+'</c></td>';
+                    html_ += '</tr>';
+                }
+                $('.user-group-tr').remove();
+                $('.user-group table').append(html_);
+
+                setTimeout(function(){
+                    //捕获页
+                    layer.open({
+                        type: 1,
+                        shade: 0.5,
+                        shadeClose: true,
+                        title: false, //不显示标题
+                        area:['400px'],
+                        content: $('.user-group'), //捕获的元素，注意：最好该指定的元素要存放在body最外层，否则可能被其它的相对元素所影响
+                        cancel: function(){
+
+                        }
+                    });
+                },100);
+            }
+        },'json');
+    });
+
+    //把时间戳转换为时间  格式为：2010-10-20 10:00:00
+    function getLocalTime(nS) {
+        return  new Date(parseInt(nS) * 1000).Format("yyyy-MM-dd");//Format("yyyy-MM-dd hh:mm")
+    }
+    Date.prototype.Format = function (fmt) { //author: meizz
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+</script>

@@ -1,0 +1,98 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myBrokerage-->
+<section class="myCom myBrokerage" id="myBrokerage">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">我的佣金</a>
+                </div>
+                <div class="moneyHanle">
+                    <div class="mL fl">
+                        <span>账户佣金：</span>
+                        <span class="ye">{$user_account['brokerage']}</span>
+                    </div>
+                    <div class="mR fr">
+                        <button class="btn01 btn03" onclick="location.href='{:U(\'User/myTiXian\')}';">提现</button>
+                        <button class="btn02" onclick="location.href='{:U(\'Pay/courseChoose\')}';">升级</button>
+                    </div>
+                </div>
+            </div>
+            <div class="finance mt20">
+                <div class="hdT">
+                    <span>佣金记录</span>
+                </div>
+                <div class="finRecord">
+                    <div class="tab">
+                        <ol>
+                            <li class="{:ACTION_NAME=='myBrokerage'?'cur':''}"><a href="{:U('User/myBrokerage')}">提现记录</a></li>
+                            <li class="{:ACTION_NAME=='myInvite' && $status==1?'cur':''}"><a href="{:U('User/myInvite',array('status'=>1))}">已出佣金</a></li>
+                            <li class="{:ACTION_NAME=='myInvite' && $status==0?'cur':''}"><a href="{:U('User/myInvite')}">未出佣金</a></li>
+                        </ol>
+                        <div class="dt">
+                            <span class="ti01">提现账户</span>
+                            <span class="ti02">账户类型</span>
+                            <span class="ti03">提现金额(元)</span>
+                            <span class="ti04">提现时间</span>
+                            <span class="ti05">备注</span>
+                            <span class="ti06">状态</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="itemIn">
+                                    <volist name="data" key="k" id="v">
+                                        <div class="item">
+                                            <span class="ti01">{:substr_replace($v['number'],'****',4,strlen($v['number'])-8)} </span>
+                                            <span class="ti02">{:getBankType($v['type'])}</span>
+                                            <span class="ti03">{$v['money']}</span>
+                                            <span class="ti04">{:date('Y/m/d H:i',$v['addtime'])}</span>
+                                            <span class="ti05">{$v['ratify_remark']?htmlspecialchars_decode($v['ratify_remark']):'---'}</span>
+                                            <span class="ti06">
+                                                <if condition="$v['ratify_status'] eq 0">
+                                                    审核中
+                                                <elseif condition="$v['ratify_status'] eq 1"/>
+                                                    成功
+                                                <else/>
+                                                    失败
+                                                </if>
+                                            </span>
+                                        </div>
+                                    </volist>
+                                    <if condition="!$data">
+                                        <p style="text-align: center;line-height: 100px;">还没有提现记录哦~</p>
+                                    </if>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <if condition="$totalPages GT 1">
+                        <!--分页-->
+                        <div class="pages">{$pages}</div>
+                    </if>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<!--分页.js-->
+<script>
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+            ,layer = layui.layer;
+
+        laypage({
+            cont: 'trunPage'
+            ,pages: 10      //总页数
+            ,skin: '#ff6100'
+        });
+    });
+</script>

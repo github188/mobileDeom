@@ -1,0 +1,67 @@
+<include file="Public:header"/>
+<style type="text/css">
+    body{
+        background-color: #fff;
+    }
+</style>
+
+<!--myRecharge-->
+<section class="myRecharge">
+    <div class="in">
+        <div class="withRate">
+            <div class="tp">
+                <img src="__MOBILE__/images/rate02.png">
+            </div>
+            <div class="txt">
+                <div class="tx01 cur">
+                    <span>充值学习币</span>
+                </div>
+                <div class="tx02 cur">
+                    <span>支付方式</span>
+                </div>
+                <div class="tx03">
+                    <span>支付成功</span>
+                </div>
+            </div>
+        </div>
+        <form action="{:U('Pay/payAlipay')}" method="post" class="myForm" name="payForm">
+            <div class="recDet">
+                <p><span>订单编号：</span><span>{$trade_no}</span></p>
+                <p><span>充值数量：</span><span>{$money}学习币</span></p>
+                <p><span>应付总金额：</span><em>¥{$money}元</em></p>
+            </div>
+            <div class="recStyle">
+                <h6 class="tit">充值方式：</h6>
+                <ul>
+                    <li>
+                        <a href="javascript:;" class="tp" data-pay-url="{:U('Pay/payAlipay')}">
+                            <img src="__MOBILE__/images/zfbTp.png">
+                        </a>
+                        <i class="ico"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="tp" data-pay-url="{:U('Pay/payWeixin')}">
+                            <img src="__MOBILE__/images/wxTp.png">
+                        </a>
+                        <i class="ico"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="myBtn">
+                <input type="hidden" name="trade_no" value="{$trade_no}">
+                <input type="hidden" name="money" value="{$money}">
+                <button type="submit">立即充值</button>
+            </div>
+        </form>
+        <div class="txtExp">
+            <h6 class="tit">付款遇到问题：</h6>
+            <p>* 付款完成后请等待页面跳转，系统将自动为您充值学习币</p>
+            <p>* 微信充值方式只适用于微信客户端，支付宝充值方式可适用于网页浏览器</p>
+            <p>* 如您无法使用在线支付，可联系客服选择汇款方式  <a href="javascript:;" class="goLink">联系客服&gt;&gt;</a></p>
+            <p>* 最终解释权归嗨推学院所有。</p>
+        </div>
+    </div>
+</section>
+
+<include file="Public:footerMenu"/>
+<include file="Public:footer"/>

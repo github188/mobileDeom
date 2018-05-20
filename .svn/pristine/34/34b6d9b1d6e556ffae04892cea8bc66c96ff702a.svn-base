@@ -1,0 +1,242 @@
+<?php
+namespace Member\Controller;
+use Think\Controller;
+use Lib\Pay\Wxpay\WxPayConfig;
+use Lib\Pay\Wxpay\WxPayApi;
+use Lib\Pay\Wxpay\NativePay;
+use Lib\Pay\Wxpay\WxLib\WxPayUnifiedOrder;
+use Lib\Pay\Alipay\Web\AlipayTradeService;
+use Lib\Pay\Alipay\Web\Buildermodel\AlipayTradePagePayContentBuilder;
+
+class PayController extends CommonController {
+
+    //充值学习币--充值金额
+    public function payMoney(){
+        $this->money = I('get.money',100,'floatval');
+        $this->display();
+
+    }
+
+    //充值学习币--选择支付方式
+    public function payWay(){
+
+        if(IS_POST){
+
+            $this->money = I('post.money',0,'floatval');
+            $this->trade_no = date("YmdHis") . mt_rand(100, 999);
+            $this->display();
+
+        }else{
+            _404();
+        }
+
+    }
+
+
+    //充值学习币--微信支付
+    public function payWeixin(){
+
+        if(IS_POST){
+
+            $db = M('order_pay');
+            $uid = session(C('USER_AUTH_UID'));
+            $money = I('post.money',0,'floatval');
+            $trade_no = I('post.trade_no','','trim');
+            $config = C('WECHAT_PAY_CONFIG');
+            $public_domain_name = C('PUBLIC_DOMAIN_NAME');
+
+            if (!$money) $this->error('充值金额不正确，请重新输入！');
+
+            $db_trade_no = $db->where(array('trade_no' => $trade_no))->getField('trade_no'); //查询订单号是否存在
+            if (!$trade_no || $db_trade_no) $trade_no = date("YmdHis") . mt_rand(10000, 99999);
+
+            $arr = array(
+                'user_id' => $uid,
+                'pay_type' => 2,
+                'trade_no' => $trade_no,
+                'money' => $money,
+                'currency' => $money,
+                'status' => 0,
+                'remark' => '微信扫码支付PC',
+                'ip' => get_client_ip(),
+                'add_time' => time() 
+                );
+            $db->add($arr); //创建订单
+
+            $notify = new NativePay();
+            $input = new WxPayUnifiedOrder();
+            $input->SetBody("嗨推学院充值学习币");
+            $input->SetAttach("嗨推学院WEB平台");
+            $input->SetOut_trade_no($trade_no);
+            $input->SetTotal_fee($money*100); //正式付款金额，必填
+            $input->SetTime_start(date("YmdHis"));
+            $input->SetTime_expire(date("YmdHis", time() + 7200));
+            $input->SetGoods_tag("");
+            $input->SetNotify_url($public_domain_name.$config['notify_url_pc']);
+            $input->SetTrade_type("NATIVE");
+            $input->SetProduct_id($uid);
+            $result = $notify->GetPayUrl($input);
+            $url_data = $result["code_url"];
+
+            $pic_url = createQRcode($url_data, 'payQRcode', $trade_no, 'M', 7);
+            $this->money = $money;
+            $this->trade_no = $trade_no;
+            $this->pic_url = $pic_url;
+            $this->display();
+
+        }else{
+            _404();
+        }
+
+
+    }
+
+
+    //充值学习币--支付宝
+    public function payAlipay(){
+
+        if(IS_POST){
+
+            $db = M('order_pay');
+            $uid = session(C('USER_AUTH_UID'));
+            $money = I('post.money',0,'floatval');
+            $trade_no = I('post.trade_no','','trim');
+            $config = C('ALIPAY_PAY_CONFIG');
+            $public_domain_name = C('PUBLIC_DOMAIN_NAME');
+
+            if (!$money) $this->error('充值金额不正确，请重新输入！');
+
+            $db_trade_no = $db->where(array('trade_no' => $trade_no))->getField('trade_no'); //查询订单号是否存在
+            if (!$trade_no || $db_trade_no) $trade_no = date("YmdHis") . mt_rand(10000, 99999);
+
+            $arr = array(
+                'user_id' => $uid,
+                'pay_type' => 1,
+                'trade_no' => $trade_no,
+                'money' => $money,
+                'currency' => $money,
+                'status' => 0,
+                'remark' => '支付宝在线支付PC',
+                'ip' => get_client_ip(),
+                'add_time' => time() 
+                );
+            $db->add($arr); //创建订单
+
+            //构造参数
+            $payRequestBuilder = new AlipayTradePagePayContentBuilder();
+            $payRequestBuilder->setBody('嗨推学院WEB平台');  //商品描述，可空
+            $payRequestBuilder->setSubject('嗨推学院充值学习币');  //订单名称，必填
+            $payRequestBuilder->setTotalAmount($money);  //正式付款金额，必填
+            $payRequestBuilder->setOutTradeNo($trade_no);  //商户订单号，商户网站订单系统中唯一订单号，必填
+
+            //支付请求
+            $aop = new AlipayTradeService($config);
+            $response = $aop->pagePay($payRequestBuilder,$public_domain_name.$config['return_url_web'], $public_domain_name.$config['notify_url_web']); 
+            header("Content-type: text/html; charset=utf-8");
+            echo '<br/> 请继续完成付款! 正在跳转到支付页面... ';
+        }else{
+            _404();
+        }
+
+    }
+
+
+
+
+
+    //==============================
+
+
+
+    //账号升级--选择课程
+    public function courseChoose(){
+
+        if(IS_AJAX){
+            $group_id = I('post.group_id',0,'intval');
+            if(!$group_id) $this->error('请选择要购买的课程');
+            $this->success('选择课程成功,请确认订单',U('Pay/courseConfirm',array('group_id'=>$group_id)));
+        }
+        else{
+            $userGroup_db = M('user_group');
+            $this->data   = $userGroup_db->where(array('allow_buy'=>1))->order('sort ASC,buy_money DESC,id DESC')->select();
+            $this->display();
+        }
+    }
+
+
+    //账号升级--购买用户组和单个视频统一生成订单
+    public function courseConfirm(){
+        $userGroup_db  = M('user_group');
+        $video_db      = M('video');
+
+        $group_id = I('group_id',0,'intval');
+        $vid      = I('vid',0,'intval');
+        $user_id  = session(C('USER_AUTH_UID'));
+
+        if(IS_AJAX){
+            $return_order   = I('post.return_order',0,'intval');#是否返回订单信息  0否1是
+            $id   = $group_id?$group_id:$vid; #判断购买用户组还是视频ID
+            $type = $group_id?0:1;            #判断购买类型 用户组还是视频
+
+            $res  = makeCourseOrder($id,$user_id,$type,$return_order); #生成订单
+            if($res['status']==0) $this->error($res['msg']);
+            if($res['status']==1 && $return_order) $this->success($res['info']); #返回订单信息
+
+            $pay_res =  courseOrderPay($res['info'],$user_id); #支付订单
+            if($pay_res['status']==0) $this->error($pay_res['msg'],$pay_res['url']?$pay_res['url']:'');
+            $this->success($pay_res['msg'],$pay_res['url']);
+        }else{
+            if($vid)
+                $videoInfo =  $video_db->where(array('id'=>$vid,'status'=>0))->find();
+            if($group_id)
+                $userGroupInfo =  $userGroup_db->where(array('id'=>$group_id,'allow_buy'=>1))->find();
+            if((!$group_id && !$vid) or ($group_id && $vid)) _404();
+            if(!$userGroupInfo && !$videoInfo) _404();
+
+            $user_account  = M('user')->where(array('id'=>$user_id))->field('currency,integral,brokerage')->find();
+
+            $this->assign('user_account',$user_account);
+            $this->assign('goods_type',$userGroupInfo?0:1);
+            $this->assign('data',$userGroupInfo?$userGroupInfo:$videoInfo);
+            $this->display();
+        }
+    }
+    //账号升级--根据订单ID--支付订单
+    public function payByOrderId(){
+        if(IS_AJAX){
+            $user_id  = session(C('USER_AUTH_UID'));
+            $order_id = I('post.order_id',0,'intval');
+            $pay_res =  courseOrderPay($order_id,$user_id); #支付订单
+            if($pay_res['status']==0) $this->error($pay_res['msg'],$pay_res['url']?$pay_res['url']:'');
+            $this->success($pay_res['msg'],$pay_res['url']);
+        }else{
+            _404();
+        }
+    }
+
+    //账号升级--课程开通结果
+    public function courseResult(){
+        $order_id = I('order',0,'intval');
+        $user_id  = session(C('USER_AUTH_UID'));
+        $order_goods_db = M('order_goods');
+        $user_db        = M('user');
+        $order_info = $order_goods_db->where(array('id'=>$order_id,'user_id'=>$user_id))->find();
+        if(empty($order_id) or empty($order_info)){
+            _404();
+        }
+        if($order_info['goods_type']==0){
+            $order_info['goods_name'] = M('user_group')->where(array('id'=>$order_info['goods_id']))->getField('name');
+        }
+        elseif($order_info['goods_type']==1){
+            $order_info['goods_name'] = M('video')->where(array('id'=>$order_info['goods_id']))->getField('title');
+        }
+
+        $user_account  = $user_db->where(array('id'=>$user_id))->field('currency,brokerage')->find();
+
+
+        $this->assign('order_info',$order_info);
+        $this->assign('user_account',$user_account);
+        $this->display();
+    }
+
+}

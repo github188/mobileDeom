@@ -1,0 +1,162 @@
+@media screen and (max-width: 768px){
+    /*清除浮动标准样式*/
+    .clearfix:before,
+    .clearfix:after{
+        content:'';
+        display:block;
+        line-height: 0;
+        clear:both;
+        visibility:hidden;
+    }
+    body{
+        margin: 0;   /* 1px=0.05rem  */
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-image: -webkit-linear-gradient( 90deg, rgb(30,119,159) 0%, rgb(97,149,174) 30%, rgb(55,173,207) 83%, rgb(43,166,207) 93%, rgb(31,159,206) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(30,119,159) 0%, rgb(97,149,174) 30%, rgb(55,173,207) 83%, rgb(43,166,207) 93%, rgb(31,159,206) 100%);
+    }
+    .login_content{
+        /*position: relative;*/
+        font-family: 'Microsoft Sans Serif';
+    }
+    .login_content .h1{
+        color: #feffff;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 44px;
+        padding-bottom: 30px;
+    }
+    .login_content .web_qr_login{
+        padding: 0 3%;
+        margin-bottom: 230px;
+    }
+    .login_content .web_qr_login .web_login{
+        -moz-box-shadow:-1px 3px 12px #333333;
+        -webkit-box-shadow:-1px 3px 12px #333333;
+        box-shadow:-1px 3px 12px #333333;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    .web_qr_login .web_login .tips{
+        color: #00ace9;
+        text-align: center;
+        font-size: 24px;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 20px 0 20px 0;
+    }
+    .web_qr_login .login_form .fromArea .inputOuter{
+        display: inline-block;
+    }
+    .web_qr_login .login_form .inputOuter input{
+        border: 1px solid #e5e5e5;
+        width: 200px;
+        height: 32px;
+        border-radius:6px;
+        padding-left: 8px;
+    }
+    .web_qr_login .login_form .error{
+        padding-top: 12px;
+        text-align: center;
+        color: #ff6100;
+        font-weight: 500;
+    }
+    .web_qr_login .login_form .fromArea{
+        padding-left:3%;
+        padding-top: 7%;
+    }
+    .login_form .fromArea .input_tips{
+        color: #333333;
+        font-size: 14px;
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        width: 21%;
+        font-weight: 600;
+    }
+    .login_form .bottom{
+        width: 78%;
+        height: 22px;
+        line-height: 22px;
+        padding: 10px 0;
+        margin-left: 21%;
+        font-size: 14px;
+    }
+    .login_form .bottom .link{
+        display: inline-block;
+    }
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }
+    .login_form .bottom .zhuce_link{
+        color: #00ace9;
+        text-decoration: underline;
+    }
+    .login_form .submit{
+        width: 140px;
+        height: 36px;
+        line-height: 36px;
+        padding-left: 38%;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+    .login_form .submit .btn{
+        background-color: #ffffff;
+        border: 1px solid #00ace9;
+        color: #00ace9;
+        font-size: 18px;
+        border-radius: 4px;
+        padding: 4px 15px;
+    }
+    .login_form .submit .btn:hover{
+        background-color: #00ace9;
+        color: #ffffff;
+    }
+    .login_form .fromArea .from_btn{
+        width: 66px;
+        line-height: 29px;
+        text-align: center;
+        border: 1px solid #00ace9;
+        color: #00ace9;
+        background-color: #ffffff;
+        border-radius: 6px;
+        display: inline-block;
+        /* float: right; */
+        margin-top: 5px;
+        font-size: 12px;
+        margin-right: 0%;
+    }
+    .login_form .fromArea .from_btn:hover{
+        color: #ffffff;
+        background-color: #00ace9;
+    }
+
+    .login_form .bottom .from_register input{
+        width:18px;
+        height:18px;
+        line-height: 1;
+        border: 1px solid #cfdadd;
+        background-color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 4px;
+        position: relative;
+        margin-left: 0px;
+    }
+    .login_form .bottom .from_register input:before{
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+    }
+
+}

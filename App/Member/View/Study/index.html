@@ -1,0 +1,256 @@
+
+<include file="Public:headerAfter"/>
+<style>
+
+    .ask *,.wz img{
+        display: inline-block;
+    }
+    .ask .time{
+        display: block;
+        font-size: 12px;
+        color: #999;
+    }
+</style>
+
+<style>
+    .Hmore:hover {
+        background-color: #ff6100;
+        color: #fff;
+    }
+    .Hmore {
+        display: inline-block;
+        border: 1px solid #ff6f26;
+        color: #ff6f26;
+        text-align: center;
+        padding: 11px 190px;
+        border-radius: 4px;
+        margin-top: 100px;
+        margin-bottom: 60px;
+        font-size: 18px;
+        transition: all .6s ease;
+        -webkit-transition: all .6s ease;
+        -moz-transition: all .6s ease;
+        -ms-transition: all .6s ease;
+    }
+</style>
+<!--indexCom-->
+<section class="indexCom mt20" id="indexCom">
+    <div class="in w1100 m0a">
+        <!--左侧栏-->
+        <include file="Video:leftVideoMenu"/>
+        <div class="inR fr">
+            <div class="com notice">
+                <div class="notBg">
+                    <div class="txt">
+                        <h5>欢迎来到嗨推学院！</h5>
+                        <p>亲爱的嗨推学院 网络推广精英 学员，昨天有114人比你更努力哦！</p>
+                        <p>抓紧时间学习，多多提问哦！</p>
+                    </div>
+                    <div class="bbtn">
+                        <a href="{:U('Pay/courseChoose')}" class="layui-btn layui-btn-danger">立即升级</a>
+                    </div>
+                </div>
+                <div class="gfNot">
+                    <div class="tit fl">
+                        <i></i>
+                        <h6>官方公告：</h6>
+                    </div>
+                    <ul class="">
+                        <volist name="notice" key="k" id="v">
+                            <li>
+                                <a href="{:U('Content/webNotice',array('main'=>$v['id']))}">
+                                    <p>{$v['title']}</p>
+                                </a>
+                                <span>{:date('Y/m/d',$v['addtime'])}</span>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+            <div class="com record mt20">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4>你的记录</h4>
+                </div>
+                <div class="reList">
+                    <ol>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="__MEMBER__/images/record01.png"  alt="">
+                                <div class="sNum">
+                                    <span class="num">{$AllowSeeVideo}</span>节
+                                </div>
+                                <p>已开通课程数</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="__MEMBER__/images/record02.png"  alt="">
+                                <div class="sNum">
+                                    <span class="num">{$learned}</span>节
+                                </div>
+                                <p>已学习课程数</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="__MEMBER__/images/record03.png"  alt="">
+                                <div class="sNum">
+                                    <span class="num">{$question}</span>条
+                                </div>
+                                <p>你已提问了</p>
+                            </a>
+                        </li>
+                        <li class="lastLi">
+                            <a href="javascript:;">
+                                <img src="__MEMBER__/images/record04.png" alt="">
+                                <div class="sNum">
+                                    <span class="num">{$user_ranking}</span>名
+                                </div>
+                                <p>您的排名</p>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="com webNot mt20">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4>网站公告</h4>
+                </div>
+                <ul>
+                    <volist name="notice" key="k" id="v">
+                        <li>
+                            <a href="{:U('Content/webNotice',array('main'=>$v['id']))}">
+                                <i></i>
+                                <p>{$v['title']}</p>
+                                <span>{:date('Y-m-d',$v['addtime'])}</span>
+                            </a>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="com newsAsk mt20">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4>最新问答</h4>
+                </div>
+                <ul id="questionlist" data-last-question-id="{$newQuestion.end_id}">
+                    <empty name="newQuestion.question">
+                        <!--没有数据：-->
+                        <div class="noData" style="text-align: center;">
+                            <img style="margin: 0 auto;" src="__MEMBER__/images/errorTp.png" alt="没有数据"  width="" height="">
+                            <p>您目前数据为空</p>
+                        </div>
+                    </empty>
+                    <foreach name="newQuestion.question" item="val" key="k">
+                        <li data-last-question-id="{$val.id}">
+                            <div data-last-answer-id="{$val.limit_end_id}" class="item question_list">
+                                <div class="tp">
+                                    <a href="javascript:;">
+                                        <img src="__MEMBER__/images/logo/{$val.face}.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <div class="txIn">
+                                        <div class="tHd">
+                                            <img style="display: inline-block" src="__MEMBER__/images/user_group/{$val.user_group_id}.png" alt="">
+                                            <span class="name">{$val.username}</span>
+                                        </div>
+                                        <p class="wz">{$val.question}</p>
+                                        <p class="from">
+                                            <span>
+                                                <em>来源：</em>
+                                                <a href="/Member/Video/showList/category/{$val.category_id}">{$val.category_name}/</a><a href="/Member/Video/play/vid/{$val.vid}">{$val.video_name}</a>
+                                            </span>
+                                        </p>
+                                        <div class="hand">
+                                            <span class="time">{$val.addtime|date="Y-m-d H:i",###}</span>
+                                            <a onclick="createBox($(this))" class="mesIco mesIcoT"><i></i>(<span class="reply_count">{$val.count}</span>)</a>
+                                        </div>
+                                    </div>
+                                    <div class="anArea anAreaT">
+                                        <form action="" method="post">
+                                            <textarea placeholder="" id="q{$val.id}"></textarea>
+                                            <div class="bot">
+                                                <a href="javascript:;" class="cancleBtn cancel">取消</a>
+                                                <a data-question-id="{$val.id}" onclick="replyMssage($(this),{$val.user_id}, {$user_id})" style="background-color: #0b97c4; color: #fff;">提交</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <foreach name="val.answer" item="v" key="kk">
+                                    <div data-last-answer-id="{$v.id}" class="item itemX">
+                                        <div class="tp">
+                                            <a href="javascript:;">
+                                                <img src="__MEMBER__/images/logo/{$v.face}.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="txIn txInB">
+                                                <div class="tHd">
+                                                    <!--<i style="background-color: #ff7683; border-color: #e55a5a;">试</i>-->
+
+                                                    <php>
+
+                                                        //一级回复
+                                                        if($v['reply_user_id'] == 0){
+                                                        echo '<img style="display: inline-block" src="__MEMBER__/images/user_group/'.$v['user_group_id'].'.png"><span class="name">'.$v['username'].'：</span><span class="ask">'.htmlspecialchars_decode(stripslashes($v['answer'])).'</span>';
+                                                        }else{
+                                                        //二级回复
+                                                        echo '<img style="display: inline-block" src="__MEMBER__/images/user_group/'.$v['user_group_id'].'.png" alt=""><span class="name">'.$v['username'].'：回复#<img style="display: inline-block" src="__MEMBER__/images/user_group/'.$v['reply_user_group_id'].'.png" alt="">'.$v['reply_username'].'：</span><span class="ask">'.htmlspecialchars_decode(stripslashes($v['answer'])).'</span>';
+                                                        }
+
+                                                    </php>
+
+                                                </div>
+                                                <div class="hand">
+                                                    <span class="time">{$v.addtime}</span>
+
+                                                    <php>
+                                                        if($v['user_id'] != $user_id){
+                                                            echo ' <a onclick="createBox($(this))" class="mesIco mesIcoBs"><i></i></a>';
+                                                        }
+                                                    </php>
+                                                </div>
+                                            </div>
+                                            <div class="anArea anAreaB">
+                                                <form action="" method="post">
+                                                    <textarea class="answer" id="e{$v.id}" placeholder=""></textarea>
+                                                    <div class="bot">
+                                                        <a href="javascript:;" class="cancleBtn">取消</a>
+                                                        <a style="background-color: #0b97c4; color: #fff;" data-question-id="{$val.id}" data-answer-id="{$v.id}" onclick="replyMssage($(this),{$v.user_id}, {$user_id})">提交</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreach>
+                                <notempty name="val.is_show_more">
+                                    <a data-limit-end-id="{$val.limit_end_id}" onclick="answer_page($(this), {$val.id}, {$user_id})" style="display:block; text-align: left; margin-left: 80px; margin-top:25px;cursor:pointer;color: rgba(102, 102, 102, 0.65);">查看更多</a>
+                                </notempty>
+                            </div>
+                        </li>
+
+                    </foreach>
+
+                    <notempty name="newQuestion.is_show_more">
+                        <div class="bgColor textAlign mt-10">
+                            <a data-last-limit-id="{$newQuestion.limit_end_id}" class="Hmore m0a" onclick="question_page($(this), {$user_id})">点击加载更多</a></div>
+                    </notempty>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<!--回复评论JS-->
+<script src="__MEMBER__/js/replyMssage.js"></script>
+
+<script>
+
+
+</script>

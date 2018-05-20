@@ -1,0 +1,25 @@
+<div class="noticeLeft fl">
+    <ul class="pb30">
+        <li>
+            <a {:ACTION_NAME=='index'?'class="coR cur"':''} href="{:U('Content/index')}"><em ></em><span>公司简介</span><i class="iconfont icon-xiala-copy-copy"></i></a>
+        </li>
+        <li {:ACTION_NAME=='contactUs'?'class="coR cur"':''}>
+            <a href="{:U('Content/contactUs')}"><em ></em><span>联系我们</span><i class="iconfont icon-xiala-copy-copy"></i></a>
+        </li>
+        <li {:ACTION_NAME=='webNoticeList' || ACTION_NAME=='webNotice'?'class="coR cur"':''}>
+            <a href="{:U('Content/webNoticeList')}"><em {:ACTION_NAME=='webNoticeList'?'class="NhAcitve"':''}></em><span>网站公告</span><i class="iconfont icon-xiala-copy-copy"></i></a>
+        </li>
+        <li {:ACTION_NAME=='problemList' || ACTION_NAME=='problem'?'class="coR cur"':''}>
+            <a href="{:U('Content/problemList')}"><em {:ACTION_NAME=='problemList'?'class="NhAcitve"':''}></em><span>常见问题</span><i class="iconfont icon-xiala-copy-copy"></i></a>
+        </li>
+        <li {:ACTION_NAME=='goodShareList' || ACTION_NAME=='goodShare'?'class="coR cur"':''}>
+            <a href="{:U('Content/goodShareList')}"><em ></em><span>干货分享</span><i class="iconfont icon-xiala-copy-copy"></i></a>
+        </li>
+        <li {:ACTION_NAME=='studentSay'?'class="coR cur"':''}>
+            <a href="{:U('Content/studentSay')}"><em {:ACTION_NAME=='studentSay'?'class="NhAcitve"':''}></em> <span>精英学员</span><i class="iconfont icon-xiala-copy-copy"></i></a>
+        </li>
+        <li {:ACTION_NAME=='studentVideo'?'class="coR cur"':''}>
+            <a href="{:U('Content/openVideo')}"><em {:ACTION_NAME=='studentVideo'?'class="NhAcitve"':''}></em> <span>学员视频</span><i class="iconfont icon-xiala-copy-copy"></i></a>
+        </li>
+    </ul>
+</div>

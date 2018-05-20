@@ -1,0 +1,389 @@
+@charset "utf-8";
+html,body{
+    height:100%;
+}
+body{
+    font-size: 14px;
+    background-color: #f6f6f6;
+    font-family: "microsoft yahei";
+}
+div {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color:#414141;
+    font-size: 12px;
+    text-align: center;
+}
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.moveBox {
+    box-shadow: 0 2px 4px #E1E1E1;
+}
+.box {
+    width: 100%;height:100%;position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+/****************头部信息************************/
+.top-personal{
+    padding: 0 10px 0 20px;
+    -webkit-flex:3;
+    flex:3;
+    display: -webkit-flex;
+    display: flex;
+    background: url("../images/bg_img.png") no-repeat center center;
+    background-size:cover ;
+}
+.m-info {
+    height: 80px;
+    line-height: 80px;
+    -webkit-flex:2;
+    flex:2;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.m-info .head-pic {
+    width: 80px;
+    height: 80px;
+    background: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    border-radius: 100%;
+}
+.m-info .head-pic img{
+    border-radius: 100%;
+}
+.m-info .head-name {
+    -webkit-flex:1 ;
+    flex:1;
+    margin-left: 5px;
+}
+.m-info .head-name h1 {
+    font-size: 18px;
+    color: #FFFFFF;
+    white-space:nowrap ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.m-info .r-sigin {
+    -webkit-flex:1 ;
+    flex:1 ;
+    text-align: right;
+    line-height: 160px;
+}
+.m-info .r-sigin a{
+    background: rgba(0,0,0,0.1);
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+.m-info .r-sigin i{
+    font-size: 20px;
+    vertical-align: middle;
+}
+.m-info .r-sigin .icon-qiandao{
+    color: #ffffff;
+    vertical-align: bottom;
+}
+.about-money,.about-jifen {
+    padding-left: 15px;
+    font-size: 14px;
+    color: #999;
+    -webkit-flex:1;
+    flex:1;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E1E1E1;
+}
+.about-jifen .ps .p1 p{
+    -webkit-flex: 1;
+    flex: 1;
+}
+.about-money .ps .p1,.about-jifen .ps .p1{
+    -webkit-flex: 3;
+    flex: 2;
+}
+.about-money .ps .p1,.about-jifen .ps .pp3{
+    -webkit-flex: 1;
+    flex: 2;
+}
+.about-money .ps .p2,.about-jifen .ps .p2{
+    -webkit-flex: 1;
+    flex: 1;
+}
+.about-money .ps .p1,.about-jifen .ps .p1{
+    border-right: 1px solid #e3e3e3;
+    position: relative;
+}
+.about-money .ps .p1 em:before, .about-money .ps .p1 em:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: "";
+    border: solid transparent;
+    line-height: 0;
+}
+.about-money .ps .p1 em:before{
+    left: 100%;
+    top: 40%;
+    border-bottom: solid #ccc;
+    border-width: 8px;
+    transform: rotate(90deg);
+}
+.about-money .ps .p1 em:after{
+    left: 99%;
+    top: 38%;
+    border-bottom: solid #fff;
+    border-width: 9px;
+    transform: rotate(90deg);
+}
+/*第二部分*/
+.about-jifen .ps .p1 em:before, .about-jifen .ps .p1 em:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: "";
+    border: solid transparent;
+    line-height: 0;
+}
+.about-jifen .ps .p1 em:before{
+    left: 100%;
+    top: 38%;
+    border-bottom: solid #ccc;
+    border-width: 8px;
+    transform: rotate(90deg);
+}
+.about-jifen .ps .p1 em:after{
+    left: 99%;
+    top: 36%;
+    border-bottom: solid #fff;
+    border-width: 9px;
+    transform: rotate(90deg);
+}
+
+.about-jifen {
+    margin-top:5px;
+}
+.about-money .ps,.about-jifen .ps{
+    display: flex;
+    display: -webkit-flex;
+}
+.about-money .ps .p1{
+    text-align: left;
+    line-height: 59px;
+    height: 100%;
+}
+.about-jifen .ps .p1 {
+    line-height: 29px;
+}
+.about-money .ps .p2 span,.about-jifen .ps .p2 span,.about-jifen .ps .p1 p span{
+    display: block;
+    text-align: center;
+}
+.about-money .span2,.about-jifen .jifenName,.about-jifen .span2{
+    font-size: 12px;
+}
+.icon-shenqingtixian,.icon-jinfenMsg{
+    display: block;
+    font-size: 26px;
+    margin-top: 7px;
+    color: #999;
+    margin-bottom: 4px;
+}
+.icon-shenqingtixian{
+    font-size: 23px;
+    color: #76bdff;
+}
+.icon-jinfenMsg{
+    color: #ff7a7d;
+}
+.about-money .balance {
+    font-size: 20px;
+    color: #fc4c4c;
+    font-weight: bold;
+    margin: 0 5px;
+}
+.about-jifen .ps .p1{
+    display: flex;
+    display: -webkit-flex;
+}
+.about-jifen .ps .p1 p{
+    -webkit-flex: 1;
+    flex: 1;
+}
+.jifen{
+    font-size: 18px;
+    font-weight: bold;
+    color:#ff4479;
+    margin-top: 9px;
+}
+.jifenName{
+    margin-top: -3px;
+}
+
+/*右侧箭头*/
+h2.float-right {
+    float: right;
+}
+h2.float-right i{
+    font-size: 30px;
+    text-align: center;
+}
+.bot-e1 .icon-shangcheng{
+    color: #ff7a7d;
+}
+.bot-e1 .icon-hehuoren{
+    color: #76bdff;
+}
+.bot-e1 .icon-tuichu{
+    color: #9dd46f;
+    font-size: 23px!important;
+}
+.bot-e1 .icon-dingdan{
+    color: #fdbd4d;
+}
+.about-other {
+    -webkit-flex:6;
+    flex:6;
+    background: #F6F6F6;
+}
+.about-other div.bot-e1{
+    padding: 0 15px;
+    width: 100%;
+    line-height: 42px;
+    border-bottom: 1px solid #E1E1E1;
+    margin:5px auto;
+    background: #FFFFFF;
+}
+.about-other div h2{
+    font-size: 15px;
+    color: #666;
+    display: inline-block;
+}
+.about-other div h2:nth-child(1) i{
+    margin-right: 10px;
+}
+.about-other div h2 span {
+    color: #f7941d;
+    margin-left: 10px;
+}
+.about-other div h2 i{
+    vertical-align: middle;
+    font-size: 24px;
+}
+.about-other .float-right i{
+    color: #b2b2b2;
+    font-size: 22px;
+}
+
+/****************退出弹框*************************/
+#goOutDiv{
+    text-align: center;
+    line-height: 25px;
+    background: #FFFFFF;width: 75%;height: 122px;
+    border: none;
+    border-radius: 20px;
+    position: absolute;
+    top: 35%;left: 12.5%;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+}
+#goOutDiv .god-top{
+    border-radius: 20px 20px 0 0;
+    -webkit-flex: 3;flex: 3;
+}
+#goOutDiv .god-top h1 {font-size: 17px;font-weight: bold;margin-top: 17px;}
+#goOutDiv .god-top p{font-size: 14px;margin-bottom: 5px;margin-top: -1px;}
+#goOutDiv .god-bot{
+    text-align: center;
+    border-top: 1px solid #E1E1E1;
+    border-radius: 0 0 20px 20px;
+    -webkit-flex: 1.5;flex: 1.5;
+    display: -webkit-flex;
+    display: flex;
+    line-height: 40px;
+}
+#goOutDiv .god-bot p{
+    font-size: 18px; cursor: pointer;-webkit-flex: 1;flex: 1;color: #248CFE;}
+#goOutDiv .god-bot p:nth-child(1){
+    height: 100%;
+    border-right: 1px solid #E1E1E1;
+}
+.layoutClass{
+    width: 100%;height: 100%;
+    background:rgba(0,0,0,0.5);
+    position: absolute;top: 0;
+}
+/****************footer*************************/
+.page-foot{
+    width:100%;
+    height: 48px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.page-foot .g-foot-bar{
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #D6D6D6;
+    background-color: #fff;
+    z-index: 1000;
+}
+ul.m-nav-foot{
+    width: 100%;
+    height: 100%;
+}
+ul.m-nav-foot li{
+    float:left;
+    width: 25%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+.m-nav-foot li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.m-nav-foot li p{ padding-top: 2px; line-height: 1;}
+.m-nav-foot li i{
+    width: 25px;
+    height:25px;
+    background: url("../../public/images/navIco.png") no-repeat;
+    background-size: 50px 100px;
+    display: inline-block;
+}
+.m-nav-foot li:nth-of-type(2) i{ background-position: 0 -25px;}
+.m-nav-foot li:nth-of-type(3) i{ background-position: 0 -50px;}
+.m-nav-foot li:nth-of-type(4) i{ background-position: 0 bottom;}
+.m-nav-foot li:first-of-type.cur i{ background-position: right top;}
+.m-nav-foot li:nth-of-type(2).cur i{ background-position: right -25px;}
+.m-nav-foot li:nth-of-type(3).cur i{ background-position: right -50px;}
+.m-nav-foot li:nth-of-type(4).cur i{ background-position: right bottom;}
+
+.m-nav-foot li.cur a{
+    color: #ff4479;
+}
+

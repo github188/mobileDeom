@@ -1,0 +1,106 @@
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">栏目管理</a></li>
+            <li class="active">栏目分类</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+            <!-- 标签选项卡开始 -->
+            <ul class="nav nav-tabs">
+                <foreach name="group_list" item="v" key="k">
+                    <li <if condition="$k eq $gid">class="active"</if>><a href="{:U(MODULE_NAME.'/Category/index',array('gid' =>$k))}">{$v}</a></li>
+                </foreach>
+            </ul>
+            <!-- 标签选项卡结束 -->
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_{$gid}" class="tab-pane active">
+                    <div class="pull-right" style="display:block;">
+                        <a  style="display:block;" class="btn btn-info" href="{:U(MODULE_NAME.'/Category/addCate', array('gid' => $gid))}" >
+                            <i class="fa fa-plus"></i> 添加顶级分类
+                        </a>
+                    </div>
+                    <h4 align="center"><i class="fa fa-list-ul"></i> {$gid|getGroupCategory=###}栏目分类管理</h4>
+                    <form action="{:U(MODULE_NAME.'/Category/editCate',array('sortCate' => 1, 'gid' => $gid))}" method='post'>
+                        <!-- 表格开始 -->
+                        <table id="example" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>分类名称</th>
+                                    <th>文章数量</th>
+                                    <th>显示状态</th>
+                                    <th>分类排序</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <volist name="cate" id="v">
+                                    <tr>
+                                        <td>{$v.id}</td>
+                                        <td>
+                                            {$v.html}<b>{$v.name}</b>
+                                        </td>
+                                        <td>{$v.count_article} 条</td>
+                                        <td><if condition='!$v["status"]'>显示 <else/>隐藏 </if></td>
+                                        <td>
+                                            <input type="number" name='sortArr[{$v.id}]' value='{$v.sort}' class="form-control" style="width:100px;" data-rule="required;digits"/>
+                                        </td>
+                                        <td>
+                                            <if condition="$v['level'] lt 2">
+                                                <a href="{:U(MODULE_NAME. '/Category/addCate', array('pid' => $v['id'], 'gid' => $gid))}"  class="btn btn-info">
+                                                    <i class="fa fa-plus"></i> 添加
+                                                </a>&nbsp;
+                                            <else/>
+                                                <span style="margin-left: 77px;"></span>
+                                            </if>
+                                            <a href="{:U(MODULE_NAME.'/Category/editCate', array('pid'=>$v['id'], 'gid' => $gid))}" class="btn btn-primary">
+                                                <i class="fa fa-pencil"></i>  改
+                                            </a>&nbsp;
+                                            <a href="{:U(MODULE_NAME.'/Category/delCate', array('pid'=>$v['id'], 'gid' => $gid))}" class="btn btn-danger delete-msg"><i class="fa fa-times"></i>  删</a>
+
+                                        </td>
+                                    </tr>
+                                </volist>
+                                <if condition="!$cate">
+                                    <tr>
+                                        <td colspan="6" align="center"> 没有数据！</td>
+                                    </tr>
+                                <else />
+                                    <tr>
+                                        <td colspan="6" height="50" align="center">
+                                            <button class="btn btn-success" type="submit" style="margin-right:328px;">
+                                            <i class="fa fa-check"></i> 修改排序</button>
+                                        </td>
+                                    </tr>
+                                </if>
+                            </tbody>
+                        </table>
+                        <!-- 表格结束 -->
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

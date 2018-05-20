@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>嗨推学院-知名网络推广实战培训平台</title>
+    <link rel="stylesheet" href="__MOBILE__/css/base.css">
+    <link rel="stylesheet" href="__MOBILE__/css/common.css">
+    <link rel="stylesheet" href="__MOBILE__/css/style.css">
+</head>
+<body style="background-color: #fff;">
+
+<!--header-->
+<header class="header">
+    <div class="in">
+        <div class="com">
+            <div class="logo">
+                <h1><a href="javascript:;" title="嗨推学院">嗨推学院</a></h1>
+            </div>
+            <div class="txt">
+                <if condition="session(C('USER_GROUP_ID'))">
+                    <a href="{:U('User/my')}" class="ti loginLink">{:session(C('USER_AUTH_UNAME'))}</a>
+                    <a href="javascript:;" onclick="loginOut();" class="ti regLink">[退出]</a>
+                 <else/>
+                    <a href="{:U('Login/index')}" class="ti loginLink">登录</a>
+                    <a href="{:U('Login/register')}" class="ti regLink">注册</a>
+                </if>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--banner-->
+<section class="banner">
+    <div id="slideBox" class="slideBox">
+        <div class="bd">
+            <if condition="$banner">
+                <ul>
+                <volist name="banner" key="k" id="v">
+                    <li>
+                        <a href="{$v['link_url']}" class="pic" >
+                            <img src="{$v['img_url']}" alt="海报展示图">
+                        </a>
+                    </li>
+                </volist>
+                </ul>
+            <else/>
+                <p style="text-align: center;font-size: 20px;color: red;line-height: 200px;background-color: #0aabf5;">正在上传中..</p>
+            </if>
+        </div>
+        <div class="hd hor_center">
+            <ul></ul>
+        </div>
+    </div>
+</section>
+
+<!--mainCom-->
+<section class="mainCom">
+    <div class="gfNot">
+        <if condition="$notices">
+            <div class="tit">
+                <i></i><h6>公告：</h6>
+            </div>
+            <ul>
+                <volist name="notice" key="k" id="v">
+                    <li id="firstLi"><a style="display: inline-block; height: 100%" href="" target="_blank">公告：{:jiequ($v['title'],0,13,'..')}</a></li>
+                    <li>
+                        <a href="noticeDet.html">
+                            <p class="ti">1.嗨推学院精英班涨价通知！【重要】</p>
+                            <span class="date">2017/06/23</span>
+                        </a>
+                    </li>
+                </volist>
+            </ul>
+            <a href="notice.html" class="more">&gt;&gt;</a>
+        <else/>
+            <p style="text-align:center;line-height: .6rem; ">^-^ 还没有新公告呦。。</p>
+        </if>
+    </div>
+    <div class="affList">
+       <ul>
+           <li>
+               <div class="tp">
+                   <img src="__MOBILE__/images/aff01.png" alt="">
+               </div>
+               <div class="txt">
+                   <p class="p1">
+                       <span class="num">{$userCount}</span>人
+                   </p>
+                   <p class="p2">
+                       <span>学员人数</span>
+                   </p>
+               </div>
+           </li>
+           <li>
+               <div class="tp">
+                   <img src="__MOBILE__/images/aff02.png" alt="">
+               </div>
+               <div class="txt">
+                   <p class="p1">
+                       <span class="num">{$videoCount}</span>节
+                   </p>
+                   <p class="p2">
+                       <span>专业课程</span>
+                   </p>
+               </div>
+           </li>
+           <li>
+               <div class="tp">
+                   <img src="__MOBILE__/images/aff03.png" alt="">
+               </div>
+               <div class="txt">
+                   <p class="p1">
+                       <span class="num">{$timeCount}</span>分
+                   </p>
+                   <p class="p2">
+                       <span>课程时间</span>
+                   </p>
+               </div>
+           </li>
+       </ul>
+    </div>
+    <div class="column">
+        <ol>
+            <li>
+                <a href="javascript:;" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco01.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">视频推荐</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco02.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">课程视频</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="courseIntr.html" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco03.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">课程简介</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco04.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">课程回答</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco05.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">官方资讯</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco06.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">精英学员</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco07.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">客服中心</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco08.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">常见问题</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="item">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/mIco09.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span class="ti">联系我们</span>
+                    </div>
+                </a>
+            </li>
+        </ol>
+    </div>
+    <div class="content">
+        <div class="hdTit">
+            <p class="line"></p>
+            <h4 class="tit">课程推荐</h4>
+        </div>
+        <div class="kcIn">
+            <div class="kcL" style="background-image: url(__MOBILE__/images/kfTp01.png)">
+                <p class="tx">权威课程 坏坏主讲</p>
+                <a href="javascript:;" class="linkDet">
+                    <span>课程详情</span>
+                </a>
+            </div>
+            <div class="kcR">
+                <div class="kcList">
+                    <ul>
+                        <volist name="coursePrice" key="k" id="v">
+                            <li>
+                                <a href="{:U('Pay/courseConfirm',array('group_id'=>$v['id']))}" class="item">
+                                    <div class="cName">{$v['name']}</div>
+                                    <div class="cTime">
+                                        <php>$qgtime = floor($v['gqtime']/365);</php>
+                                        <span class="sp1 time">
+                                            <if condition="$qgtime GT 0">
+                                                {$qgtime}年
+                                            <else/>
+                                                {$v['gqtime']}天
+                                            </if>
+                                        </span>
+                                        <span class="sp2">期限</span>
+                                    </div>
+                                    <div class="cGold">
+                                        <span class="sp1 num">{$v['buy_money']}</span>
+                                        <span class="sp2">学习币</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="hdTit">
+            <p class="line"></p>
+            <h4 class="tit">热门视频</h4>
+        </div>
+        <div class="courList courLists" id="myCourList">
+            <ul>
+                <volist name="videoshow" key="k" id="v">
+                    <php>
+                        #判断视频是否有播放权限
+                        $playAuth = $user_id ? videoPlayAuth($v['id']) : '';
+                        #判断视频是否被收藏
+                        if($user_id){
+                        $v['shoucang'] = M('video_shoucang')->where(array('user_id'=>$user_id,'vid'=>$v['id']))->getField('id');
+                        }
+                    </php>
+                    <li>
+                        <div class="item">
+                            <div class="tp">
+                                <a href="{$playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                    <if condition="$v['cover_img']">
+                                        <img class="lazy" src="__MOBILE__/images/loading.gif"   data-src="{$v['cover_img']}" alt="封面图" title="">
+                                    <else/>
+                                        <img class="lazy" src="__MOBILE__/images/loading.gif"   data-src="__MOBILE__/images/courTp01.png" alt="封面图" title="">
+                                    </if>
+                                </a>
+                                <i data-id="" class="ico icoLove"></i>
+                                <span class="lab"></span>
+                            </div>
+                            <div class="txt">
+                                <p class="tiName">
+                                    <a href="javascript:;">{:jiequ($v['title'],0,20,'')}</a>
+                                </p>
+                                <div class="bot">
+                                    <div class="money fl ">
+                                        <em class="num">{$v['buy_money']}</em>学习币
+                                    </div>
+                                    <div class="handle fr">
+                                        <a href="{$playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                            <i class="ico {$playAuth['allow_play']==1?'icoPlay':'icoBuy'}"></i>
+                                            <span class="ti00">{$playAuth['allow_play']==1?'播放':'购买'}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </volist>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="hdTit">
+            <p class="line"></p>
+            <h4 class="tit">最新问答</h4>
+        </div>
+        <div class="askList">
+            <ul>
+                <li>
+                    <div class="item">
+                        <div class="tp">
+                            <a href="javascript:;">
+                                <img src="__MOBILE__/images/tx01.png" alt="">
+                            </a>
+                        </div>
+                        <div class="txt">
+                            <div class="txIn">
+                                <div class="tHd">
+                                    <i style="background-color: #ff7683; border-color: #e55a5a;">试</i>
+                                    <span class="name">会飞的小鸟</span>
+                                </div>
+                                <p class="wz">能否给出一个分佣现级别的图文教程，怕之后会忘记</p>
+                                <p class="origin">
+                                    <span>
+                                        <em>来源：</em>
+                                        <a href="javascript:;">新人学习指导/</a><a href="javascript:;">代理分佣软件详情</a>
+                                    </span>
+                                </p>
+                                <div class="hand">
+                                    <span class="time">2017-04-15 17:11</span>
+                                    <a href="javascript:;" class="mesIco mesIcoT"><i></i>(<span>2</span>)</a>
+                                </div>
+                            </div>
+                            <div class="anArea anAreaT">
+                                <form action="" method="post">
+                                    <textarea placeholder=""></textarea>
+                                    <div class="bot">
+                                        <a href="javascript:;" class="btn cancleBtn">取消</a>
+                                        <a href="javascript:;" class="btn subBtn">提交</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item itemX">
+                            <div class="tp">
+                                <a href="javascript:;">
+                                    <img src="__MOBILE__/images/tx02.png" alt="">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <div class="txIn txInB">
+                                    <div class="tHd">
+                                        <i style="background-color: #ff7683; border-color: #e55a5a;">试</i>
+                                        <span class="name">坏坏：</span>
+                                        <span class="ask">咨询金数据客服</span>
+                                    </div>
+                                    <div class="hand">
+                                        <span class="time">2017-04-20 10:55</span>
+                                        <a href="javascript:;" class="mesIco mesIcoB"><i></i></a>
+                                    </div>
+                                </div>
+                                <div class="anArea anAreaB">
+                                    <form action="" method="post">
+                                        <textarea placeholder=""></textarea>
+                                        <div class="bot">
+                                            <a href="javascript:;" class="btn cancleBtn">取消</a>
+                                            <a href="javascript:;" class="btn subBtn">提交</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="tp">
+                            <a href="javascript:;">
+                                <img src="__MOBILE__/images/tx01.png" alt="">
+                            </a>
+                        </div>
+                        <div class="txt">
+                            <div class="txIn">
+                                <div class="tHd">
+                                    <i style="background-color: #76bdff; border-color: #76bdff;">软</i>
+                                    <span class="name">麦兜兜</span>
+                                </div>
+                                <p class="wz">能否给出一个分佣现级别的图文教程，怕之后会忘记</p>
+                                <p class="origin">
+                                    <span>
+                                        <em>来源：</em>
+                                        <a href="javascript:;">新人学习指导/</a><a href="javascript:;">代理分佣软件详情</a>
+                                    </span>
+                                </p>
+                                <div class="hand">
+                                    <span class="time">2017-04-15 17:11</span>
+                                    <a href="javascript:;" class="mesIco mesIcoT"><i></i>(<span>2</span>)</a>
+                                </div>
+                            </div>
+                            <div class="anArea anAreaT">
+                                <form action="" method="post">
+                                    <textarea placeholder=""></textarea>
+                                    <div class="bot">
+                                        <a href="javascript:;" class="btn cancleBtn">取消</a>
+                                        <a href="javascript:;" class="btn subBtn">提交</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item itemX">
+                            <div class="tp">
+                                <a href="javascript:;">
+                                    <img src="__MOBILE__/images/tx02.png" alt="">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <div class="txIn txInB">
+                                    <div class="tHd">
+                                        <i style="background-color: #ff7683; border-color: #e55a5a;">试</i>
+                                        <span class="name">坏坏：</span>
+                                        <span class="ask">咨询金数据客服</span>
+                                    </div>
+                                    <div class="hand">
+                                        <span class="time">2017-04-20 10:55</span>
+                                        <a href="javascript:;" class="mesIco mesIcoB"><i></i></a>
+                                    </div>
+                                </div>
+                                <div class="anArea anAreaB">
+                                    <form action="" method="post">
+                                        <textarea placeholder=""></textarea>
+                                        <div class="bot">
+                                            <a href="javascript:;" class="btn cancleBtn">取消</a>
+                                            <a href="javascript:;" class="btn subBtn">提交</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="notBanCom">
+            <div class="notBan">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4 class="tit">授课方式</h4>
+                </div>
+                <div class="banIn">
+                    <a href="javascript:;" class="tp">
+                        <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/home-banner04.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="notBan">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4 class="tit">常见问题</h4>
+                </div>
+                <div class="banIn">
+                    <a href="javascript:;" class="tp">
+                        <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/home-banner05.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="notBan">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4 class="tit">推广技能</h4>
+                </div>
+                <div class="banIn">
+                    <a href="javascript:;" class="tp">
+                        <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/home-banner06.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="notBan">
+                <div class="hdTit">
+                    <p class="line"></p>
+                    <h4 class="tit">干货分享</h4>
+                </div>
+                <div class="banIn">
+                    <a href="javascript:;" class="tp">
+                        <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/home-banner07.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="ewmCom">
+            <ul class="ewmList">
+                <li>
+                    <a href="javascript:;" class="item">
+                        <div class="pic">
+                            <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/ewpTp.jpg" alt="嗨推学院微信公众号">
+                        </div>
+                        <span class="ti">嗨推学院微信公众号</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="item">
+                        <div class="pic">
+                            <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/ewpTp.jpg" alt="嗨推APP客户端下载">
+                        </div>
+                        <span class="ti">嗨推APP客户端下载</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyright">Copyright©2013-2017嗨推学院在线教育学习平台版权所有</p>
+        </div>
+    </div>
+</section>
+
+<include file="Public:footerMenu"/>
+<include file="Public:footer"/>
+<script src="__MOBILE__/pugins/layer-mobile-2.0/layer.js"></script>
+<script src="__MOBILE__/js/TouchSlide.js"></script>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#slideBox",
+        titCell:".hd ul",
+        mainCell:".bd ul",
+        effect:"leftLoop",
+        delayTime:400,
+        interTime:3000,
+        autoPage:true,
+        autoPlay:true
+    });
+</script>
+

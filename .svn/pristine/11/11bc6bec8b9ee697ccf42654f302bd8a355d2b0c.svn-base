@@ -1,0 +1,134 @@
+<include file="Public:content-header" />
+<style>
+    .status-wait , .status-fail , .status-success{
+        font-style: normal;padding: 3px;border-radius: 2px;color: #fff;font-size: 12px;
+    }
+    .status-wait , .status-fail{background-color: orangered;}
+    .status-success{background-color: #00a65a;}
+</style>
+<div class="wrapper" style="font-family: '微软雅黑';">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">财务管理</a></li>
+            <li class="active">消费订单管理</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+
+                    <h4 align="center"><i class="fa fa-list-ul"></i> 消费订单管理</h4>
+
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="">
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>商品类型：</b></label>
+                            <select name="goods_type" style="min-height: 30px;">
+                                <option value="2" {$goods_type==0?'selected':''} >&nbsp;会员组</option>
+                                <option value="1" {$goods_type==1?'selected':''} >&nbsp;单个视频</option>
+                            </select>
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>支付状态：</b></label>
+                            <input name="status" type="radio" value="1" {$status==1?'checked':''} >已支付
+                            <input name="status" type="radio" value="2" {$status==0?'checked':''} >待支付
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{:cookie('username')}">
+                        </div>&nbsp; &nbsp;
+
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查找</button>
+
+                    </form>
+                    <table id="example" class="table table-bordered table-hover" >
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>用户名</td>
+                                <td>商品类型</td>
+                                <td>商品名称</td>
+                                <td>商品价格</td>
+                                <td>消费学习币</td>
+                                <td>消费佣金</td>
+                                <td>优惠券</td>
+                                <td>状态</td>
+                                <td>支付时间</td>
+                                <if condition="$status NEQ 1">
+                                <td>订单生成</td>
+                                <td>操作</td>
+                                </if>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <php>
+                                $curr_page = I('get.p',1,'intval');
+                            </php>
+                             <volist name="data" id="v" key="k" >
+                                 <php>
+                                     $userGroup = getUserGroup($v['user_id']);
+                                 </php>
+                                    <tr>
+                                        <td>{$v['id']}</td>
+                                        <td><img style="display: inline-block;border-radius: 3px;" src="/Public/Member/images/user_group/{$userGroup['group_id']}.png" width="18px" height="18px" alt="图片">{:getUserInfo($v['user_id'],'username')}</td>
+                                        <td><if condition="$v['goods_type'] EQ 0">会员组<elseif condition="$v['goods_type'] EQ 1"/>单个视频<else/>其他</if></td>
+                                        <td>{$v['goods_name']}</td>
+                                        <td>{$v['total_money']}</td>
+                                        <td>{$v['pay_currency']}</td>
+                                        <td>{$v['pay_brokerage']}</td>
+                                        <td>{$v['ticket_money']}</td>
+                                        <td>
+                                            <if condition="$v['status'] eq 0">
+                                                <em class="status-wait">待支付</em>
+                                            <elseif condition="$v['status'] eq 1"/>
+                                                <em class="status-success">已支付</em>
+                                            </if>
+                                        </td>
+                                        <td>{$v['paytime']?date('Y/m/d H:i:s',$v['paytime']):'---'}</td>
+                                        <if condition="$status NEQ 1">
+                                            <td>{:date('Y/m/d H:i:s',$v['addtime'])}</td>
+                                            <td>
+                                                <a class="btn btn-xs btn-danger" href="javascript:;" onclick="deleteOne(this,{$v['id']},'{:U(MODULE_NAME.\'/Money/consumerOrderDelete\',array(\'p\'=>$curr_page))}');" title="删除">
+                                                    <i class="fa fa-times"></i>
+                                                    删除
+                                                </a>
+                                            </td>
+                                        </if>
+                                    </tr>
+                             </volist>
+
+                            <if condition="!$data">
+                                <tr>
+                                    <td colspan="20" align="center"> <i class="fa fa-exclamation-circle" aria-hidden="true" style="font-size: 18px;color: red;">  暂无数据!</i></td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="9" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

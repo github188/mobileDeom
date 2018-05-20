@@ -1,0 +1,144 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">优惠券管理</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <h4 align="center"><i class="fa fa-list-ul"></i> 用户组优惠券管理</h4>
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="#">
+                         <div class="form-group inlineForm display-inline">
+                            <label><b>类型：</b></label>
+                            <input name="type" type="radio" value="2" {$type ==2?'checked':'checked'} >未使用
+                            <input name="type" type="radio" value="1" {$type ==1?'checked':''}>已使用
+                            <input name="type" type="radio" value="3" {$type ==3?'checked':''}>已过期
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline" {$type==1?'style="display: inline-block;"':'style="display: none;"'} >
+                            <label><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{:cookie('username')}" >
+                        </div>&nbsp; &nbsp;
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查询</button>
+                        <div class="pull-right" style="display:block;margin:15px 0px 10px 0px;">
+                        <a class="btn btn-info" href="{:U(MODULE_NAME.'/Money/userGroupTicketAdd')}" >
+                            <i class="fa fa-plus"></i> 添加新优惠卷
+                        </a>
+                    </div>
+                    </form>
+                    <h6>优惠券数量：总计[<font color="red">{$count}</font>]张  优惠金额：总计[<font color="red">{$count_money?$count_money:0}</font>]元</h6>
+                    <form method="post" action="" name="myform" id="myform">
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="header" align="center">
+                                <td width="6%" align="center">选择</td>
+                                <if condition='$type eq 1'>
+                                <td width="10%" align="center">购买商品</td>
+                                <td width="10%" align="center">用户</td>
+                                <td width="10%" align="center">使用时间</td>
+                                <else/>    
+                                <td width="13%" align="center">适用范围</td>
+                                </if>
+                                <td width="9%" align="center">优惠价格(元)</td>
+                                <td width="7%" align="center">状态</td>
+                                <td width="10%" align="center">使用口令</td>
+                                <td width="10%" align="center">生成时间</td>
+                                <td width="10%" align="center">过期时间</td>
+                                <td width="15%" align="center">备注信息</td>     
+                                <if condition='$type neq 1'>
+                                <td width="20%" align="center">操作</td>
+                                </if>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <php>
+                                $curr_page = I('get.p',1,'intval');
+                            </php>
+                            <input type="hidden" name="page" value="{$curr_page}">
+                            <volist name="info" id="v">
+                                <tr class="altbg2" onmouseover="this.className = 'altbg1'" onmouseout="this.className = 'altbg2'">
+                                    <td style="border-bottom:1px dotted #EDEDED">
+                                        <input name="id[]" class="checkbox" type="checkbox" value="{$v.id}"> {$v.id}
+                                    </td>
+                                    <if condition='$type eq 1'>
+                                    <td width="10%" align="center">{$v.good_name}</td>
+                                    <td width="10%" align="center">{$v.username}</td>
+                                    <td width="10%" align="center"><?php echo $v['user_time']?date('Y-m-d',$v['user_time']):''; ?></td>
+                                    <else/>    
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.group_name}</td>
+                                    </if>  
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.price}</td>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">
+                                    {$v['status']==0?($v['end_time'] && $v['end_time']<time()?'<font color="red">已过期</font>':'<font color="#1e90ff">可使用</font>'):'<font color="#ff8c00">已使用</font>'}     
+                                    </td>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.code}</td>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED"><?php echo $v['creat_time']?date('Y-m-d',$v['creat_time']):''; ?></td>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED"><?php echo $v['end_time']?date('Y-m-d',$v['end_time']):'长期有效'; ?></td>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.remark?$v.remark:'无'}</td>              
+                                    <if condition='$type neq 1'>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">
+                                        <a class="btn btn-sm btn-primary" href="{:U(MODULE_NAME.'/Money/userGroupTicketEdit',array('id'=>$v['id'],'page'=>$curr_page))}" title="编辑">
+                                            <i class="fa fa-pencil"></i>
+                                            编辑
+                                        </a>
+                                        <a class="btn btn-sm btn-danger delete-msg-find" href="{:U(MODULE_NAME.'/User/ticket_delete',array('id'=>$v['id'],'page'=>$curr_page))}" onclick="return confirm('确实要删除吗?不可恢复');" title="删除">
+                                            <i class="fa fa-times"></i>
+                                            删除
+                                        </a> 
+                                    </td>
+                                    </if>
+                                </tr>
+                            </volist>
+                            <if condition="!empty($info) && $type eq 2">
+                                <tr>
+                                <td colspan="8">
+                                <input type="button" class="btn btn-sm btn-primary" onclick="checkall(this.form)" value="反选"/>
+                                <input type="submit" class="btn btn-sm btn-danger" name="dosubmit" onclick="document.myform.action='{:U(MODULE_NAME.\'/Money/userGroupTicketDelete\')}';return confirm('确实要删除吗?不可恢复')" value="批量删除"/>
+                                </td>
+                                </tr>
+                            </if>
+                            <if condition="!$info">
+                                <tr>
+                                    <td colspan="20" align="center"> <i class="fa fa-exclamation-circle" aria-hidden="true" style="font-size: 18px;color: red;">  暂无数据!</i></td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="9" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+
+
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

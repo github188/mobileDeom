@@ -1,0 +1,181 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myRank-->
+<section class="myCom myRank" id="myRank">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">积分排名</a>
+                </div>
+                <div class="com rank">
+                    <div id="main" style="width:100%;height:150px;"></div>
+                    <!--学习排名统计图-->
+                    <div id="echart-box" style="width: 90%;height: 350px;margin: 0 auto;"></div>
+
+                    <!--底部-->
+                    <p class="rankP">积分来源</p>
+                    <ul class="rFoot">
+                        <li class="rCom mm2">
+                            <img src="__MEMBER__/images/icon_yaoqing.png" alt="" class="m0a">
+                            <p class="rComP">邀请注册</p>
+                        </li>
+                        <li class="rCom mm2">
+                            <img src="__MEMBER__/images/icon_tiwen_q.png" alt="" class="m0a">
+                            <p class="rComP">发表提问</p>
+                        </li>
+                        <li class="rCom mm2">
+                            <img src="__MEMBER__/images/icon_huifu.png" alt="" class="m0a">
+                            <p class="rComP">回复问题</p>
+                        </li>
+                        <li class="rCom">
+                            <img src="__MEMBER__/images/icon_biji.png" alt="" class="m0a">
+                            <p class="rComP">记录笔记</p>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<!--echarts-->
+<script src="__ADMIN__/plugins/echarts/echarts.3.5.2.min.js"></script>
+<script src="__ADMIN__/plugins/echarts/echarts-liquidfill.js"></script>
+
+
+<script type="text/javascript">
+    window.onload=function(){
+        //波浪圆圈
+        var myChart1 = echarts.init(document.getElementById('main'));
+        option = {
+            series: [{
+                type: 'liquidFill',
+                animation: true,
+                waveAnimation: true,
+                data: [0.3],
+                color: ['#c2e3ff','#a9d8ff','#c2e3ff'],
+                center: ['50%', '50%'],
+                waveLength: '60%',
+                amplitude: '3%',//波浪的振幅
+                waveLength: '60%',//波长
+
+                radius: '60%',
+                label: {
+                    normal: {
+                        formatter: function() {
+                            return '100';
+                        },
+                        textStyle: {
+                            fontSize: 17,
+                            color: '#7bc0ff'
+                        },
+                        position: ['50%', '50%']
+                    }
+                },
+            outline: {
+                itemStyle: {
+                    borderColor: '#7bc0ff',
+                    borderWidth: 3
+                },
+                borderDistance: 0
+            },
+                itemStyle: {
+                    normal: {
+                        backgroundColor: '#fff'
+                    }
+                }
+            }]
+        };
+        myChart1.setOption(option);
+
+        // 学习排名图表
+        var myChart2 = echarts.init(document.getElementById('echart-box'));
+        var option = {
+            title: {
+                text: '用户学习排名',
+                subtext: '详情'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['名次']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    dataView: {readOnly: false},
+                    magicType: {type: ['line', 'bar']},
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            xAxis:  {
+                type: 'category',
+                boundaryGap: false,
+                data: [{$time_str}] //x轴 时间
+            },
+            yAxis: {
+                type: 'value',
+                axisLabel: {
+                    formatter: '{value} (名)'
+                }
+            },
+            series: [
+                {
+                    name:'用户学习排名',
+                    type:'line',
+                    //颜色区域
+                    areaStyle: {normal: {
+                        color: '#ff6100',
+                        shadowColor: '#ff6100',
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowOffsetY: 0,
+                        opacity: 0.2,
+                    }},
+                    data:[{$data}],
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: '最大值'},
+                            {type: 'min', name: '最小值'}
+                        ]
+                    },
+                    markLine: {
+                        data: [
+                            {type: 'average', name: '平均值'}
+                        ]
+                    },
+                    smooth:true,//平滑曲线
+                    smoothMonotone:'x',
+                },
+
+            ],
+            //曲线颜色
+            color:['#ff6100',]
+
+        };
+        myChart2.setOption(option);
+    }
+
+</script>
+
+<!--图标插件-->
+
+
+</body>
+</html>

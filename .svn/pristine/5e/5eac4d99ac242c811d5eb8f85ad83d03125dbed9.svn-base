@@ -1,0 +1,529 @@
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/*.header {*/
+    /*height:80px;*/
+    /*width: 100%;*/
+    /*position:fixed;*/
+    /*top: 0px;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*z-index: 999999999;*/
+    /*-webkit-transition: height .5s;*/
+    /*transition: height .5s;*/
+    /*border-bottom: 1px solid #e5e5e5;*/
+    /*background-color: #ffffff;*/
+/*}*/
+ /*.container {*/
+    /*position: relative;*/
+    /*height: 100%;*/
+    /*width: 1200px;*/
+    /*margin: 0 auto;*/
+    /*border: none;*/
+/*}*/
+/*.header .logo{*/
+    /*padding: 20px 0;*/
+    /*width: 180px;*/
+    /*height: 40px;*/
+    /*-webkit-transition: width .5s,height .5s,margin-top .5s;*/
+    /*transition: width .5s,height .5s,margin-top .5s;*/
+/*}*/
+/*.header .logo .logo_img {*/
+    /*display: block;*/
+    /*background: url("../image/LOGO.png") no-repeat ;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-size: contain;*/
+/*}*/
+/*.header .button_from{*/
+    /*padding: 25px 0;*/
+/*}*/
+/*.header .button_from .login{*/
+    /*display: inline-block;*/
+    /*margin-right: 20px;*/
+    /*width: 60px;*/
+    /*height: 30px;*/
+    /*border: none;*/
+    /*border-radius: 4px;*/
+    /*/!* background-color: #00ace9; *!/*/
+    /*background-color: #ffffff;*/
+    /*color: #00ace9;*/
+    /*border: 1px solid #00ace9;*/
+    /*text-align: center;*/
+    /*line-height: 28px;*/
+    /*/!* color: #fff; *!/*/
+    /*font-size: 14px;*/
+    /*cursor: pointer;*/
+    /*-webkit-transition: background-color .1s;*/
+    /*transition: background-color .1s;*/
+/*}*/
+/*.header .button_from .login:hover{*/
+    /*background-color: #00ace9;*/
+    /*color: #ffffff;*/
+/*}*/
+/*.content{*/
+    /*z-index: 1;*/
+    /*width: 100%;*/
+    /*height: 880px;*/
+    /*position: absolute;*/
+    /*top: 80px;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*background: url("../image/background.png") center center no-repeat;*/
+    /*background-size: cover;*/
+/*}*/
+/*.content .bannerText{*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top:105px;*/
+    /*width: 600px;*/
+    /*margin-left: -300px;*/
+/*}*/
+/*.content .bannerText h1{*/
+    /*font-size: 60px;*/
+    /*color: #00ace9;*/
+    /*line-height: 60px;*/
+    /*margin-bottom: 40px;*/
+    /*text-align: center;*/
+/*}*/
+/*.fadeInB {*/
+    /*-webkit-animation: i 1s ease-in-out forwards;*/
+    /*animation: i 1s ease-in-out forwards;*/
+/*}*/
+/*.content .bannerText .searchBox {*/
+    /*position: relative;*/
+    /*width: 480px;*/
+    /*margin: 0 auto;*/
+/*}*/
+/*.kf_mod_searchBox {*/
+    /*position: relative;*/
+    /*width: auto;*/
+/*}*/
+/*.kf_mod_searchBox .searchBar {*/
+    /*width: 100%;*/
+    /*height: 40px;*/
+    /*position: relative;*/
+    /*background-color: #fff;*/
+/*}*/
+/*.kf_mod_searchBox .searchBar input {*/
+    /*border: 1px solid #dedede;*/
+    /*background-color: transparent;*/
+    /*height: 38px;*/
+    /*line-height: 38px;*/
+    /*width: 87%;*/
+    /*padding-left: 2%;*/
+    /*padding-right: 10%;*/
+    /*font-size: 14px;*/
+    /*color: #666;*/
+    /*-webkit-transition: border-color .3s;*/
+    /*transition: border-color .3s;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*border: none;*/
+/*}*/
+/*.kf_mod_searchBox .searchBar button {*/
+    /*width: 45px;*/
+    /*height: 40px;*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    /*display: inline-block;*/
+    /*border: none;*/
+    /*cursor: pointer;*/
+    /*background-color: #00ace9;*/
+    /*color: #fff;*/
+    /*z-index: 600;*/
+/*}*/
+/*.kf_mod_searchBox .searchBar button:before{*/
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*width: 20px;*/
+    /*height: 20px;*/
+    /*z-index: 600;*/
+    /*background-image: url("../image/icon-soushuo.png");*/
+    /*background-repeat: no-repeat;*/
+    /*margin-top: 5px;*/
+    /*background-position: center center;*/
+/*}*/
+.content .bannerText .searchBox p {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 11px;
+}
+.content .bannerText .searchBox p a {
+    margin-right: 21px;
+}
+.content .bannerText .searchBox p a:hover {
+    color: #00ace9;
+}
+.content .container_main {
+    position: relative;
+    height: 300px;
+}
+.content .container_main .ul {
+    margin: 0 auto;
+    position: absolute;
+    top: 110%;
+    left: 0%;
+}
+.content .container_main ul li {
+    float: left;
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s,-webkit-transform .4s;
+}
+.content .container_main ul li .item {
+    display: block;
+    height: 300px;
+    background-color: #fff;
+    padding: 15px 39px 5px 39px;
+    border-radius: 10px;
+}
+.content .container_main ul li .item i {
+    position: relative;
+    left: 48px;
+    top: 0px;
+}
+.content .container_main ul li .item i.icon-save_kecheng:before{
+   content: "";
+    display: inline-block;
+    width: 82px;
+    height: 82px;
+    background-image: url("../image/icon-peixunkecheng.png");
+    background-repeat: no-repeat;
+}
+.content .container_main ul li .item i.icon-save_weixing:before{
+    content: "";
+    display: inline-block;
+    width: 82px;
+    height: 82px;
+    background-image: url("../image/icon-weishang.png");
+    background-repeat: no-repeat;
+}
+.content .container_main ul li .item i.icon-save_xinmeiti:before{
+    content: "";
+    display: inline-block;
+    width: 82px;
+    height: 82px;
+    background-image: url("../image/icon-xinmeiti.png");
+    background-repeat: no-repeat;
+}
+.content .container_main ul li .item i.icon-save_taobaoke:before{
+    content: "";
+    display: inline-block;
+    width: 82px;
+    height: 82px;
+    background-image: url("../image/icon-taobaoke.png");
+    background-repeat: no-repeat;
+}
+i.iconfont {
+    text-indent: 0;
+}
+.content .container_main ul li .item h3 {
+    font-size: 22px;
+    text-align: -webkit-center;
+    color: #00ace9;
+    line-height: 19px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+}
+.content .container_main ul li .item p {
+    color: #333333;
+    font-size: 14px;
+    margin: 5px 0;
+    width: 182px;
+    height: 21px;
+}
+.content .container_main ul li .item i.icon-right {
+    font-size: 16px;
+    color: #00ace9;
+    left: 0;
+    top: 0;
+    float: left;
+    margin-top: 7px;
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s,-webkit-transform .4s;
+}
+.content .container_main ul li .item i.icon-right:before{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    background-image: url("../image/icon-jiantou.png");
+    background-repeat: no-repeat;
+}
+/* 悬浮窗样式star*/
+.layer {
+    position: fixed;
+    right: 70px;
+    top: 50%;
+    margin-top: -97px;
+    z-index: 800;
+}
+@media screen and (min-width: 1281px){
+    .layer {
+        right: 120px!important;
+    }
+}
+.layer ul {
+    border-radius: 5px;
+    box-shadow: 0 0 6px #dbdbdb;
+    position: relative;
+}
+.layer ul li {
+    position: relative;
+    z-index: 7;
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+.layer ul li a {
+    display: inline-block;
+    width: 38px;
+    height: 46px;
+    text-align: center;
+    line-height: 48px;
+    background-color: #fff;
+    position: relative;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    font-size: 17px;
+}
+/* 鼠标悬移改变样式*/
+.layer ul li a:hover {
+    background-color: #00ace9;
+    color: #fff;
+    text-decoration: none;
+}
+.layer ul li a.icon-qq {
+    border-radius: 5px 5px 0 0;
+}
+.layer ul li .icon-qq{
+    display: inline-block;
+    background: url("../image/icon-nor-QQ.png") no-repeat;
+    background-size: 19px 20px;
+    background-color: #fff;
+    background-position: center;
+}
+.layer ul li .icon-qq:hover{
+    z-index: 900;
+    background-image: url("../image/icon-sel-QQ.png");
+    background-repeat: no-repeat;
+    background-color: #00ace9;
+    background-position: center;
+}
+.layer ul li .icon-weixin{
+    display: inline-block;
+    background: url("../image/icon-nor-weixin.png") no-repeat;
+    background-size: 20px 16px;
+    background-color: #fff;
+    background-position: center;
+}
+.layer ul li .icon-weixin:hover{
+    z-index: 900;
+    background-image: url("../image/icon-sel-weixin.png");
+    background-repeat: no-repeat;
+    background-color: #00ace9;
+    background-position: center;
+}
+.layer ul li .icon-phone{
+    display: inline-block;
+    background: url("../image/icon-nor-dianhua.png") no-repeat;
+    background-size: 20px 20px;
+    background-color: #fff;
+    background-position: center;
+}
+.layer ul li .icon-phone:hover{
+    z-index: 900;
+    background-image: url("../image/icon-sel-dianhua.png");
+    background-repeat: no-repeat;
+    background-color: #00ace9;
+    background-position: center;
+}
+.layer ul li .icon-throw{
+    display: inline-block;
+    background: url("../image/icon-nor-fanhui.png") no-repeat;
+    background-size: 18px 20px;
+    background-color: #fff;
+    background-position: center;
+}
+.layer ul li .icon-throw:hover{
+    z-index: 900;
+    background-image: url("../image/icon-sel-fanhui.png");
+    background-repeat: no-repeat;
+    background-color: #00ace9;
+    background-position: center;
+}
+.layer ul li .layer_box{
+    display: none;
+}
+
+/* 悬窗 */
+.layer ul li:hover .layer_box {
+    display: block;
+    /*background-color: #ffffff;*/
+    -webkit-animation: g .3s ease-in-out forwards;
+    animation: g .3s ease-in-out forwards;
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+}
+.layer ul li .qq_box:after, .layer ul li .qq_box:before, .layer ul li .wechat_box:after, .layer ul li .wechat_box:before {
+    top: 73px;
+}
+.layer ul li .layer_box:after, .layer ul li .layer_box:before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: '';
+    bottom: inherit;
+    left: 100%;
+    margin-left: -1px;
+    font-size: 0;
+}
+/*定位悬窗样式*/
+.layer ul li:hover .wechat_box{
+    position: absolute;
+    right: 60px;
+    top: -29px;
+    width: 104px;
+    height: 120px;
+}
+.layer ul li:hover .qq_box{
+    position: absolute;
+    right: 60px;
+    top: -29px;
+    width: 104px;
+    height: 120px;
+}
+.layer ul li:hover .phone_box{
+    position: absolute;
+    right: 60px;
+    top: -29px;
+    width: 225px;
+    height: 150px;
+}
+.layer ul li .phone_box {
+    left: -269px;
+    top: -52px;
+    width: 223px;
+}
+.layer ul li:hover .phone_box {
+    -webkit-transform-origin: right 40%;
+    transform-origin: right 40%;
+}
+.layer ul li:hover .layer_box {
+    display: block;
+    -webkit-animation: g .3s ease-in-out forwards;
+    animation: g .3s ease-in-out forwards;
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+}
+.layer ul li .phone_box dl {
+    line-height: 22px;
+}
+.layer ul li .phone_box dl dd {
+    color: #333;
+}
+.layer ul li .phone_box dl dd em {
+    width: 100px;
+    display: inline-block;
+}
+.layer ul li .phone_box dl dt {
+    margin-top: 5px;
+    padding-top: 5px;
+    color: #999;
+    border-top: 1px solid #e2e2e2;
+    font-size: 13px;
+}
+.layer ul li .layer_box:before {
+    /*border: 8px dashed transparent;*/
+    /*border-left-color: #d7d7d7;*/
+    /*border-left-style: solid;*/
+    /*position: absolute;*/
+    /*top: 50px*/
+}
+/*悬窗的二维码S*/
+.layer ul li .wechat_box i.wechat_code{
+    display: inline-block;
+    width: 94px;
+    height: 94px;
+    background: url("../erweima/wechat_code.png") no-repeat;
+    background-size: 90% 90%;
+    background-position: center;
+    margin-left: 4px;
+}
+.layer ul li .qq_box i.qq_code{
+    display: inline-block;
+    width: 94px;
+    height: 85px;
+    background: url("../erweima/wechat_code_hitui.jpg") no-repeat;
+    background-size: 90% 90%;
+    background-position: center;
+    margin-left: 4px;
+}
+.layer ul li .wechat_box span {
+    line-height:20px;
+    text-align: center;
+    display: block;
+    color: #999;
+}
+
+/*底部样式star*/
+/*.footer {*/
+    /*z-index: 800;*/
+    /*height: 120px;*/
+    /*width: 100%;*/
+    /*position: absolute;*/
+    /*top: 860px;*/
+    /*left: 0;*/
+    /*background-color: #fff;*/
+/*}*/
+/*.footer .container .leftArea {*/
+    /*float: left;*/
+    /*padding: 30px 0 20px 0px;*/
+/*}*/
+/*.footer .container .leftArea p {*/
+    /*line-height: 20px;*/
+    /*margin-bottom: 15px;*/
+    /*color: #333333;*/
+/*}*/
+/*.footer .container .leftArea p a {*/
+    /*margin-right: 27px;*/
+    /*font-size: 14px;*/
+    /*color: #000;*/
+/*}*/
+/*.footer .container .leftArea p#copyright {*/
+    /*color: #999;*/
+/*}*/
+/*.footer .container .rightArea {*/
+    /*float: right;*/
+    /*padding-top: 20px;*/
+/*}*/
+/*.footer .container .rightArea .codes {*/
+    /*overflow: hidden;*/
+/*}*/
+/*.footer .container .rightArea .codes li {*/
+    /*float: left;*/
+    /*text-align: center;*/
+/*}*/
+/*.footer .container .rightArea .codes li .codeBox {*/
+    /*display: inline-block;*/
+    /*width: 92px;*/
+    /*height: 92px;*/
+/*}*/
+/*.footer .container .rightArea .codes li .codeBox:before{*/
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*width: 80px;*/
+    /*height: 80px;*/
+    /*background-image: url("../erweima/app_code.png");*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.footer .container .rightArea .codes li span {*/
+    /*display: block;*/
+/*}*/

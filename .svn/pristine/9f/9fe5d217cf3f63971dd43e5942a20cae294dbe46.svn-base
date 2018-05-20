@@ -1,0 +1,121 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">用户列表</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/User/lists')}">
+
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qq号码：</b></label>
+                            <input type="text" class="form-control" name="qq" value="{$condition[qq]}" >
+                        </div>&nbsp; &nbsp;
+                      <div class="form-group inlineForm display-inline">
+                            <label><b>手机号码：</b></label>
+                            <input type="text" class="form-control" name="mobile" value="{$condition[mobile]}">
+                      </div><p></p>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{$condition[username]}" >
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>真实姓名：</b></label>
+                            <input type="text" class="form-control" name="realname" value="{$condition[realname]}">
+                        </div><p></p>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户组：</b></label>
+                            <select class="form-control inlineSelect" name="ugid">
+                                <option value="0" >  ---  请选择用户组  --- </option>
+                                 <volist name="group" id="v">
+                                 <option value="{$v.ugid}" <if condition="$condition[ugid] == $v[ugid]">selected="selected"</if>>{$v.name}</option>
+                                 </volist>
+                            </select>
+                        </div>&nbsp; &nbsp;&nbsp; 
+                         <div class="form-group inlineForm display-inline">
+                            <label><b>时间类型：</b></label>
+                            <input name="time_type" type="radio" value="0" {$condition[time_type] ==0?'checked=checked':''}>全部
+                            <input name="time_type" type="radio" value="1" {$condition[time_type] ==1?'checked=checked':''}>即将过期
+                            <input name="time_type" type="radio" value="2" {$condition[time_type] ==2?'checked=checked':''}>已经过期
+                        </div>&nbsp; &nbsp;
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查询</button>
+                        <div class="pull-right" style="display:block;margin:15px 0px 10px 0px;">
+                        <a class="btn btn-info" href="{:U(MODULE_NAME.'/User/list_add')}" >
+                            <i class="fa fa-plus"></i> 添加新会员
+                        </a>
+                    </div>
+
+                    </form>
+
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td width="5%" align="center">会员名称</td>
+                                <td width="5%" align="center">邀请总人数</td>
+                                <td width="5%" align="center">一级人数</td>
+                                <td width="5%" align="center">二级人数</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <volist name="info" id="v">
+                                <tr>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.username}</td>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">
+                                        <a href="{:U(MODULE_NAME.'/User/lists',array('user_id'=>$v[user_invite_id]))}">{$v.num}</a>
+                                    </td>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.one_num}</td>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.two_num}</td>
+                                </tr>
+                             </volist>
+                            <if condition="!$info">
+                                <tr>
+                                    <td colspan="14" align="center"> 没有数据！</td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="14" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+  //删除询问框
+$(".delete-msg-find").on('click', function(){
+    var status = confirm('确定删除本条文章？\n \n 删除后将无法恢复！\n 确定删除吗？？？\n \n ');
+    if(!status){
+        return false;
+    }
+});  
+
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

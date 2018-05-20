@@ -1,0 +1,6 @@
+
+<include file="Public:headerBefore"/>
+
+
+<!--footer-->
+<include file="Public:footer"/>  

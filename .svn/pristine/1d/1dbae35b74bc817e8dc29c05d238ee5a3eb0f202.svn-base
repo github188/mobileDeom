@@ -1,0 +1,68 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myPortrait-->
+<section class="myCom myPortrait" id="myPortrait">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">修改头像</a>
+                </div>
+            </div>
+            <div class="com portrait">
+                <div class="porIn">
+                    <ul>
+                        <for start="1" end="40" comparison="ELT" step="1" name="i" >
+                            <li {:session(C('USER_FACE'))==$i?'class="cur"':''} >
+                                <a href="javascript:;">
+                                    <img src="__MEMBER__/images/logo/{$i}.png" alt="个人头像" face="{$i}" >
+                                </a>
+                            </li>
+                        </for>
+                    </ul>
+                    <div class="myBtn keepBtn">
+                        <button type="button" class="bbtn setLogoBtn">保存修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<script>
+    var formActionUrl = "{:U('User/myLogo')}";
+    //用户修改头像
+    $('.setLogoBtn').on('click', function(){
+        var face = $('li[class="cur"]').find('img').attr('face');
+        if(!face){
+            show_msg('请选择要修改的头像');
+            return;
+        }
+        $.ajax({
+            url: formActionUrl,
+            type: 'POST',
+            data: {'face':face},
+            success: function(data){
+                if(data.status==0){
+                    show_msg(data.msg,'error');
+                    return false;
+                }
+                else if(data.status==1){
+                    show_msg(data.msg);
+                    setTimeout(function(){
+                        location.reload();
+                    },1200);
+                }
+            }
+        });
+    });
+
+
+</script>

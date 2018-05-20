@@ -1,0 +1,75 @@
+<include file="Public:header"/>
+<style>
+    body{background: #fff}
+</style>
+<!--myCollect-->
+<section class="myCollect">
+    <div class="in">
+        <div class="tab">
+            <ol>
+                <li><a href="{:U('User/faqQuestion')}">问题收藏</a></li>
+                <li class="cur"><a href="javascript:;">课程收藏</a></li>
+            </ol>
+        </div>
+        <div class="askList collList">
+
+            <ul class="ul02" style="display: block">
+                <empty name="dataList">
+                    <!--没有数据：-->
+                    <div class="noData" style="text-align: center;">
+                        <img style="margin: 0 auto;" src="__MEMBER__/images/errorTp.png" alt="没有数据"  width="" height="">
+                        <p>您目前数据为空</p>
+                    </div>
+                </empty>
+
+                <foreach name="dataList" item="val" key="k">
+                <li>
+                    <i class="ico"></i>
+                    <a href="{:U('Video/play', array('vid' => $val['vid']))}" class="tx">{$val.title}</a>
+                    <div class="bot">
+                        <span class="collectIco" data-vid="{$val.vid}"><s></s>取消</span>
+                        <span class="date">{$val.addtime|date="Y-m-d H:i",###}</span>
+                    </div>
+                </li>
+                </foreach>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<script src="__MOBILE__/js/jquery-1.11.3.min.js"></script>
+
+<script src="__MOBILE__/js/base.js"></script>
+<!--提示插件-->
+<script src="__MOBILE__/pugins/layer-mobile-2.0/layer.js"></script>
+
+
+<script>
+    $('.collectIco').click(function () {
+        var url = "{:U('Video/videoShoucang')}";
+        var vid = $(this).attr('data-vid');
+        var thisObj = $(this);
+
+        $.ajax({
+            type:"post",
+            url:url,
+            data:{"vid":vid},
+            dataType:"json",
+            success:function (data) {
+
+                layer.open({
+                    time: 2,
+                    skin: "msg",
+                    content:'已取消收藏'
+                })
+
+                thisObj.parents('li').slideUp();
+
+            }
+        })
+    })
+</script>

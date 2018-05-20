@@ -1,0 +1,11 @@
+<!--悬浮菜单-->
+<section class="btn_mark" id="markFix">
+    <div class="btn_home">
+        <i class="ico ico00"></i>
+    </div>
+    <div class="btn_mark_bg"></div>
+    <a href="javascript:;" class="btn_menu btn_video"> <i onclick="location.href='{:U(\'Index/videoList\')}';" class="ico ico02"></i></a>
+    <a href="javascript:;" class="btn_menu btn_course"><i onclick="location.href='{:U(\'Content/courseList\')}';" class="ico ico03"></i></a>
+    <a href="javascript:;" class="btn_menu btn_index"> <i onclick="location.href='{:U(\'Index/index\')}';" class="ico ico01"></i></a>
+    <a href="javascript:;" class="btn_menu btn_my" >   <i onclick="location.href='{:U(\'User/my\')}';" class="ico ico04"></i></a>
+</section>

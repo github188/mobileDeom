@@ -1,0 +1,240 @@
+@media screen and (max-width: 768px){
+    /*清除浮动标准样式*/
+    .clearfix:before,
+    .clearfix:after{
+        content:'';
+        display:block;
+        line-height: 0;
+        clear:both;
+        visibility:hidden;
+    }
+    body{
+        margin: 0;   /* 1px=0.05rem  */
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    li, ol, ul {
+        list-style: none;
+    }
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }
+    /*头部样式S*/
+    .common_header{
+        position: relative;
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        font-family: "Microsoft YaHei";
+        background-color: #ffffff;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .common_header .icon-LOGO{
+        color: #eb5500;
+        font-size: 50px;
+        height: 70px;
+    }
+    .common_header a{
+        color: #fff;
+    }
+    .common_header .logo{
+        display: inline-block;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        margin-top: -15px;
+        padding: 0;
+        width: 155px;
+        height: 38px;
+        background: url('../image/LOGO.png') no-repeat 0 0;
+        background-size: 85% 85%;
+    }
+    .common_header .denglu{
+        float: right;
+        display: block;
+        margin: 0 15px 0 0;
+        color: #eb5500;
+        font-size: 20px;
+        text-indent: 25px;
+        text-decoration: none;
+    }
+    .common_header .h_denglu{
+        vertical-align: middle;
+        display: inline-block;
+        width: 31px;
+        height: 34px;
+        background: url('../image/icon-denglu.png') no-repeat 0 0;
+        background-size: 70% 70%;
+    }
+    /*头部样式E*/
+    .indexBanner {
+        /*position: relative;*/
+        width: 100%;
+        height: 270px;
+        overflow: hidden;
+        background: url("../image/moblie_image/bg@2x.png") no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .indexBanner .bannerText {
+        width: 100%;
+        text-align: center;
+    }
+
+    .indexBanner .bannerText h1 {
+        font-size: 30px;
+        color: #00ace9;
+        margin-bottom: 26px;
+        text-align: center;
+        margin-top: 16%;
+    }
+
+    .indexBanner .bannerText .searchBox {
+        margin: 0 auto;
+        padding: 0 5%;
+    }
+    .kf_mod_searchBox .searchBar {
+        width: 100%;
+        height: 40px;
+        position: relative;
+        background-color: #fff;
+    }
+    .kf_mod_searchBox .searchBar input {
+        border: 1px solid #dedede;
+        background-color: transparent;
+        height: 38px;
+        line-height: 38px;
+        width: 87%;
+        padding-left: 2%;
+        padding-right: 10%;
+        font-size: 14px;
+        color: #666;
+        -webkit-transition: border-color .3s;
+        transition: border-color .3s;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .kf_mod_searchBox .searchBar button {
+        width: 45px;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+        background-color: #00ace9;
+        color: #fff;
+    }
+    .indexBanner .bannerText .searchBox p {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-left: 11px
+    }
+    .indexBanner .bannerText .searchBox p a {
+        margin-right: 21px
+    }
+    .moblie_content{
+        padding: 0 4%;
+        background-color: #f7f7f7;
+        padding-top: 20px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .moblie_content .ftColor{
+        color: #00ace9;
+    }
+    [class^="moblieBgc-"], [class*=" moblieBgc-"]{
+        display: inline-block;
+        width: 22%;
+        height:70px;
+        float: left;
+        margin-top: 16%;
+    }
+    .moblie_content .item_content{
+        padding:10px 0;
+        background-color: #ffffff;
+        padding-left: 4%;
+        margin-bottom: 15px;
+    }
+    .moblie_content .item_content .item_content_left{
+        float: right;
+        width: 75%;
+    }
+    .moblie_content .item_content .item_content_left p{
+        font-size: 13px;
+    }
+
+    .moblie_content .item_content .moblieBgc-kecheng{
+        background: url("../image/moblie_image/icon-peixunkecheng.png") no-repeat;
+        background-size: 90% 90%;
+    }
+    .moblie_content .item_content .moblieBgc-weishang{
+        background: url("../image/moblie_image/icon-weishang.png") no-repeat;
+        background-size: 90% 90%;
+    }
+    .moblie_content .item_content .moblieBgc-icon-xinmeiti{
+        background: url("../image/moblie_image/icon-xinmeiti.png") no-repeat;
+        background-size: 90% 90%;
+    }
+    .moblie_content .item_content .moblieBgc-icon-icon-taobaoke{
+        background: url("../image/moblie_image/icon-taobaoke.png") no-repeat;
+        background-size: 90% 90%;
+    }
+    .moblie_footer{
+        margin-top: 24px;
+        margin-right: 4%;
+    }
+    .moblie_footer .rightArea .codes{
+        overflow: hidden;
+    }
+    .moblie_footer .rightArea .codes li {
+        float: left;
+        width: 44%;
+        text-align: center;
+    }
+    .moblie_footer .rightArea .codes li .codeBox {
+        display: inline-block;
+        width: 92px;
+        height: 92px;
+    }
+    .moblie_footer .rightArea .codes li .codeBox img {
+        width: 100%;
+        height: 100%;
+    }
+    .moblie_footer .rightArea .codes li span {
+        display: block;
+        margin-top: 5px;
+        font-size: 13px;
+        color: #959595;
+    }
+    .moblie_footer .leftArea {
+        float: left;
+        padding-left: 12%;
+        margin-top: -6px;
+    }
+    .moblie_footer .leftArea p {
+        line-height: 16px;
+        color: #999;
+        font-size: 13px;
+    }
+
+
+    .common_header a{
+        text-decoration:none;
+    }
+    .common_header a.uname{
+        color: #999;
+    }
+    .common_header a.logout{
+        color: #eb5500;
+    }
+    .moblie_content a{
+        text-decoration:none;
+        color: #333;
+    }
+}

@@ -1,0 +1,86 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myAccount-->
+<section class="myCom myAccount" id="myAccount">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">账户余额</a>
+                </div>
+                <div class="moneyHanle">
+                    <div class="mL fl">
+                        <span>学习币金额：</span>
+                        <span class="ye">{$user_account['currency']}</span>
+                    </div>
+                    <div class="mR fr">
+                        <button class="btn01" onclick="location.href='{:U(\'Pay/payMoney\')}';">充值</button>
+                        <button class="btn02" onclick="location.href='{:U(\'Pay/courseChoose\')}';">升级</button>
+                    </div>
+                </div>
+            </div>
+            <div class="finance mt20">
+                <div class="hdT">
+                    <span>财务记录</span>
+                </div>
+                <div class="finRecord">
+                    <div class="tab">
+                        <ol>
+                            <li class="cur"><a href="{:U('User/myAccount')}">充值记录</a></li>
+                            <li><a href="{:U('User/myAccountPurchase')}">消费记录</a></li>
+                        </ol>
+                        <div class="dt">
+                                <span class="ti01">订单号</span>
+                                <span class="ti02">支付类型</span>
+                                <span class="ti03">金额(元)</span>
+                                <span class="ti04">学习币(元)</span>
+                                <span class="ti05">充值时间</span>
+                                <span class="ti06">状态</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="itemIn">
+                                    <volist name="order_pay" id="v">
+                                        <div class="item">
+                                            <span class="ti01">{$v.trade_no} </span>
+                                            <span class="ti02">
+                                                <if condition="$v['pay_type'] eq 2">
+                                                微信支付
+                                                <elseif condition="$v['pay_type'] eq 1" />
+                                                支付宝
+                                                <else />
+                                                人工充值
+                                                </if>
+                                            </span>
+                                            <span class="ti03">{$v.buyer_pay_money}</span>
+                                            <span class="ti04">{$v.currency}</span>
+                                            <span class="ti05">{$v['pay_time'] ? date('Y/m/d',$v['pay_time']):'---'}</span>
+                                            <span class="ti06">
+                                                <if condition="$v['status'] eq 2">
+                                                成功
+                                                <elseif condition="$v['status'] eq 1" />
+                                                失败
+                                                <else />
+                                                待付款
+                                                </if>
+                                            </span>
+                                        </div>
+                                    </volist>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>

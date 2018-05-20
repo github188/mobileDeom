@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no,height=device-height"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>直播间-优惠券</title>
+    <link rel="stylesheet" href="../../public/css/live/reset.css"/>
+    <link rel="stylesheet" href="../../public/css/live/iconfont.css"/>
+    <link rel="stylesheet" href="../../public/css/live/index.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_b7th20p89ofxbt9.css">
+    <style type="text/css" media="all">
+        body {
+            font-size: 12px;
+            -webkit-user-select: none;
+            -webkit-text-size-adjust: none;
+            font-family: helvetica;
+        }
+
+        #wrapper {
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            background: none;
+            overflow: auto;
+            background: #ccc;
+        }
+
+        #scroller {
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            position: absolute;
+            z-index: 1;
+            /*  -webkit-touch-callout:none;*/
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            width: 100%;
+            padding: 0;
+        }
+
+        #scroller ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            text-align: left;
+        }
+
+        #scroller li {
+            padding: 0 10px;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #fff;
+            background-color: #fafafa;
+            font-size: 14px;
+        }
+
+        .pullDownLabel {
+            text-align: center;
+            color: #fff;
+            padding: 10px 0;
+            line-height: 21px;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <!--top -->
+    <div id="top">
+        <div class="top_header">
+            <div class="header_left" onClick="window.location.href='/user'">
+                <img class="headPic"
+                     src="http://wx.qlogo.cn/mmopen/JNuRBiaPVBT830Ub3WzMLPd7vLdOPZStJhjMENOy3K5PzGEAXJK3YmAn9gibKhVXQU9BnOZM99ZqjMFhzEXnmhyn1P9hZASjwg/0"/>
+                <h1>嗨推助理包包---资源对接</h1>
+                <h2>其他</h2>
+            </div>
+            <div class="header_right">
+                <div class="wrap">
+                    <ul id="avatar">
+                        <li><img class="headPics" src="../../public/images/touxiang-1.jpg">
+                        </li>
+                        <li><img class="headPics" src="../../public/images/touxiang-1.jpg">
+                        </li>
+                        <li><img class="headPics" src="../../public/images/touxiang-1.jpg">
+                        </li>
+                        <li><img class="headPics" src="../../public/images/touxiang-1.jpg">
+                        </li>
+                        <li><img class="headPics" src="../../public/images/touxiang-1.jpg">
+                        </li>
+                        <li><img class="headPics" src="../../public/images/touxiang-1.jpg">
+                        </li>
+                        <li><img class="headPics" src="../../public/images/touxiang-1.jpg">
+                        </li>
+                        <li style="display:none"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- aboutNum-->
+        <div class="statistics">
+            <div class="balance">
+                <h1><span class="bl_name"> 余额：</span><span id="bl_num">0元</span></h1>
+            </div>
+            <div class="focus">
+                <h1><span>关注：</span><span id="fc_num">3771</span><span class="people">人</span><a
+                        href="javascript:void(0);"><i class="iconfont icon-icon07"></i></a></h1>
+            </div>
+        </div>
+        <!-- /aboutNum-->
+    </div>
+    <!--/top -->
+    <div class="clearFloatDiv"></div>
+    <!--content-->
+    <div id="wrapper">
+        <div id="scroller">
+            <div id="content">
+                <div class="pullDownLabel"></div>
+
+                <div class="goods-box">
+                    <div class="publishTime">11:17</div>
+                    <div class="contentImg">
+                        <img class="headPic" src="../../public/images/touxiang-1.jpg"/>
+                        <a href="../shop/goodsDetail.html">
+                            <img class="conPic" src="http://img.alicdn.com/imgextra/i1/3012507952/TB2zx.9mItnpuFjSZFvXXbcTpXa_!!3012507952.jpg_220x220.jpg"/>
+                        </a>
+                    </div>
+                    <div class="contents">
+                        <img class="triangle" src="../../public/images/jtIco.png"/>
+                        <img class="headPic" src="../../public/images/touxiang-1.jpg"/>
+                        <p>【买一赠一】新西兰Whittaker's/惠特克进口霍克湾苹果巧克力100g原价39.00元<span style="text-decoration:underline">【券后仅需19.00元】</span><br/><span
+                                style="font-weight:bold">推荐理由：</span>甄选全球优质辅料，细腻浓滑的白巧克力融入汤加纯粹的香草气息，让人回味绵长、纯而不腻~【赠运费险】
+                            PS：内有花生、坚果和麦麸，过敏者慎食</p>
+                        <div class="purchase">
+                            <a href="../shop/goodsDetail.html">
+                                <div class="buy">领券购买<i class="iconfont icon-bofang"></i></div>
+                            </a>
+                            <div class="num"><span>654</span>号</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="goods-box">
+                    <div class="publishTime">11:36</div>
+                    <div class="contentImg">
+                        <img class="headPic" src="../../public/images/touxiang-1.jpg"/>
+                        <a href="/index.php?m=home&a=detail&id=1867&pid="><img class="conPic" src="https://img.alicdn.com/imgextra/i3/834813138/TB2w0sFpbJkpuFjy1zcXXa5FFXa_!!834813138.jpg_220x220.jpg"/></a>
+                    </div>
+                    <div class="contents">
+                        <img class="triangle" src="../../public/images/jtIco.png"/>
+                        <img class="headPic" src="../../public/images/touxiang-1.jpg"/>
+                        <p>美拉奇充气床家用双人气垫床单人充气床垫加厚户外双人折叠床气垫原价58.00元<span
+                                style="text-decoration:underline">【券后仅需38.00元】</span><br/><span
+                                style="font-weight:bold">推荐理由：</span>加厚户外折叠床气垫，办公室休息，亲肤材质，双重缝边，稳固耐用，无毒无害</p>
+                        <div class="purchase">
+                            <a href="/index.php?m=home&a=detail&id=1867&pid=">
+                                <div class="buy">领券购买<i class="iconfont icon-bofang"></i></div>
+                            </a>
+                            <div class="num"><span>673</span>号</div>
+                        </div>
+                    </div>
+                </div>        <!--撑高主体内容 使得与最底部有空隙的div -->
+
+            </div>
+        </div>
+    </div>
+    <!--/content -->
+</div>
+<div class="hongbao">
+    <img class="headPic" src="../../public/images/touxiang-1.jpg"/>
+    <p></p>
+</div>
+<!--<div class="dLeft mobile-menu-left">-->
+    <!--<ul class="discuss">-->
+        <!--<div id="msg_end"></div>-->
+    <!--</ul>-->
+<!--</div>-->
+<div class="bg-box"></div>
+<!--bottom -->
+<div id="bottom">
+    <div class="barrage no-bg">弹</div>
+    <div class="textInput">
+        <input id="searchKeywords" type="search" name="searchKeywords" placeholder="说点什么吧" spellcheck="false" value=""
+               style="width:160px;"/>
+    </div>
+    <div class="gift"><a href="/"><i class="iconfont icon-liwu1"></i></a></div>
+    <div class="sendmsg"
+         style="height:35px;line-height:35px;background:#ff4479;color:#fff;padding:0 15px;border-radius:18px;float:right;margin-right:10px;">
+        <a href="javascript:void(0);">发送</a></div>
+</div>
+<!--/bottom -->
+<div id="newgoods_notice"><span>0</span>条新消息</div>
+<script type="text/javascript" src="../../public/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="../../public/js/iscroll.js"></script>
+<script type="text/javascript" src="../../public/js/live/index.js?v=522"></script>
+<script>
+    url = "/index.php?m=home&c=index&a=detail";
+    more_url = "/index.php?m=home&c=live&a=live_more";
+    var myScroll, pullDownEl, pullDownOffset;
+    var user_name = "嗨推助理包包---资源对接";
+    var live_head_img = "http://www.t5166.com";
+    if (!live_head_img) {
+        live_head_img = "../../public/images/touxiang-1.jpg";
+    }
+</script>
+<script src="../../public/js/live/message.js?v=522"></script>
+<script>var pid = false;</script>
+<script type="text/javascript">
+    hongbao_id = "672";
+
+    var default_time;
+    if (hongbao_id) {
+        $('.hongbao p').html("红包在" + hongbao_id + "号商品中");
+        $('.hongbao').css({"left": 0})
+        default_time = setTimeout(function () {
+            $('.hongbao').css({"left": -400})
+        }, 25000);
+    }
+</script>
+</body>
+</html>

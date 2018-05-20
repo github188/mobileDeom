@@ -1,0 +1,395 @@
+/**
+ * Created by lfm81 on 2017/6/20.
+ */
+
+/**
+ * 发表问题
+ */
+function writeQuestion(){
+    var content = $('#questionContent').val();
+    if (isEmpty(content) === false){
+        showMsg('请输入发表内容！');return;
+    }
+    var use_append_content = content;
+    content = encodeURI(content);
+
+    // 复制一份问题的模板
+    var li_clone = $('#question_templates').clone();
+
+    $.ajax({
+        type: "post",
+        url: _writeQuestionUrl,
+        data: {"vid": _vid, "content":content},
+        dataType: "json",
+        success: function (json) {
+            if (json.status == 1) {
+                var data = json.data;
+                showMsg('发表成功！');
+                li_clone.css('display','block');
+                li_clone.removeAttr('id');
+                li_clone.attr('data-question-id', data.question_id);
+                li_clone.find('.q_userface').attr('src', _user_face);
+                li_clone.find('.q_usergroup').attr('src', _user_group);
+                li_clone.find('.q_username').attr('src', _user_name);
+                li_clone.find('.q_content').html(use_append_content);
+                li_clone.find('.q_addtime').html(data.addtime);
+
+                $('#questionList').prepend(li_clone);
+                $('#question_noData').hide();  //隐藏数据为空的提示
+                $('#questionContent').val(''); //清空输入内容
+            }else{
+                showMsg(json.msg);
+            }
+        }
+    })
+}
+
+
+/**
+ * 回复问题 或者 回复问题的回复
+ * @param obj 当前点击对象
+ */
+
+function replyQuestion(thisObj) {
+    if(_user_id == ''){
+        window.location.href = "/Mobile/Login/index";
+        return;
+    }
+    var content     = thisObj.parent().siblings('.q_reply_content').val();  //回复内容
+    var question_id = thisObj.parents('li').attr('data-question-id');      //回复的问题id
+    var answer_id   = thisObj.attr('data-answer-id');                     //回复的评论id
+
+    var txtArea=thisObj.parents("li").find(".anAreaT");    //这里是mesIcoT对应的回复框
+    var mesIcoT=thisObj.parents("li").find(".mesIcoT");    //mesIcoT按钮
+    var flag;
+
+     if(txtArea.hasClass("show")){
+         txtArea.removeClass("show");
+         flag=mesIcoT.attr("flag","true").attr("flag");       //flag的状态值 true
+     }
+
+    var txtAreaB=thisObj.parents(".itemX").find(".anAreaB");   //anAreaB按钮回复框
+    var mesIcoB=thisObj.parents(".itemX").find(".mesIcoB");   //mesIcoB按钮
+
+    if(txtAreaB.hasClass("show")){
+        txtAreaB.removeClass("show");
+        flag=mesIcoB.attr("flag","true").attr("flag");
+    }
+
+
+    if(!question_id){
+        showMsg('question_id为空');return;
+    }
+    if (isEmpty(content) === false){
+        showMsg('请输入回复内容！');return;
+    }
+
+    var use_append_content = content;
+    content = encodeURI(content);
+    $.ajax({
+        type: "POST",
+        url: _replyQuestionUrl,
+        data: {question_id:question_id, answer_id:answer_id,content:content},
+        dataType: "json",
+        success: function(json){
+
+            if (json.status == 1) {
+                var data = json.data;
+
+                showMsg("回复成功！");
+                if (answer_id == 0){  //如果回复的是问题
+                    // 追加内容的模板
+                    var reply_question_clone = $('#reply_question_templates').clone();
+                    reply_question_clone.css('display','block');
+                    reply_question_clone.removeAttr('id');
+                    reply_question_clone.find('.q_answer_id').attr('data-answer-id', data.answer_id);
+                    reply_question_clone.find('.q_userface').attr('src', _user_face);
+                    reply_question_clone.find('.q_usergroup').attr('src', _user_group);
+                    reply_question_clone.find('.q_username').text(_user_name);
+                    reply_question_clone.find('.q_content').html(use_append_content);
+                    reply_question_clone.find('.q_addtime').html(data.addtime);
+                    thisObj.parents('.anAreaT').after(reply_question_clone);
+
+                    thisObj.parent().siblings('.q_reply_content').val('');  //清空回复内容
+                    var count = thisObj.parents('.question_list').find('.reply_count').text();
+                    count = parseInt(count) + 1;
+                    thisObj.parents('.question_list').find('.reply_count').text(count);
+                }else{  //回复的是评论
+                    // 追加内容的模板
+                    var reply_question_clone = $('#reply_answer_templates').clone();
+                    reply_question_clone.css('display','block');
+                    reply_question_clone.removeAttr('id');
+                    reply_question_clone.find('.q_answer_id').attr('data-answer-id', data.answer_id);
+                    reply_question_clone.find('.q_userface').attr('src', _user_face);
+                    reply_question_clone.find('.q_usergroup').attr('src', _user_group);
+                    reply_question_clone.find('.q_username').text(_user_name);
+                    reply_question_clone.find('.q_content').html(use_append_content);
+                    reply_question_clone.find('.q_addtime').html(data.addtime);
+
+                    reply_question_clone.find('.reply_user_group').html(data.reply_user_group_id);
+                    reply_question_clone.find('.reply_username').html(data.reply_username);
+                    reply_question_clone.find('.reply_addtime').html(data.addtime);
+                    reply_question_clone.prop('outerHTML');
+                    thisObj.parents('.itemX').siblings('span').before(reply_question_clone);
+                    thisObj.parent().siblings('.q_reply_content').val('');  //清空回复内容
+                    var count = thisObj.parents('.question_list').find('.reply_count').text();
+                    count = parseInt(count) + 1;
+                    thisObj.parents('.question_list').find('.reply_count').text(count);
+                }
+
+            }else{
+                showMsg(json.msg);
+            }
+        },
+        error:function(){
+            showMsg('网络繁忙，请稍后重试');
+        }
+    });
+}
+
+
+/**
+ * 问题查看更多
+ * @param thisObj  当前点击对象
+ * @param login_user_id  当前登录用户id
+ */
+function question_page(thisObj, type) {
+
+
+    if(type == 1 || type == undefined){ // 获取所有问答
+        var url = _questionListPageUrl;
+    }else if(type == 2){ //获取我的问答
+        var url = _myQuestionPageUrl;
+    }else{
+        showMsg('question_page分页type错误');
+    }
+    $.ajax({
+        type: "get",
+        url: url,
+        data: {"last_limit_id":_last_question_id},
+        dataType: "json",
+        success: function (json) {
+            if (json.code == 1) {
+                var data = json.data.question;
+                var html = '';
+
+                $.each(data, function (k,val) {
+                    html += '<li class="mt16" data-question-id="'+val.id+'">';
+                    html += '<div data-last-answer-id="val.limit_end_id" class="item question_list">';
+                    html += '<div class="tp fl">';
+                    html += '<a href="javascript:;">';
+                    html += '<img class="q_userface" src="'+_MEMBER+'/images/logo/'+val.face+'.png" alt="">';
+                    html += '</a>';
+                    html += '</div>';
+                    html += '<div class="txt q_txt">';
+
+                    html += '<div class="txIn">';
+                    html += '<div class="tHd">';
+                    html += '<img class="q_usergroup" style="display: inline-block" src="'+_MEMBER+'/images/user_group/'+val.user_group_id+'.png" alt="用户组头像">';
+                    html += '<span class="name q_username">'+val.username+'</span>';
+                    html += '</div>';
+                    html += '<p class="wz q_content">'+val.question+'</p>';
+                    html += '<p class="origin"><span><em>来源：</em><a href="'+_MODULE_NAME+'/Video/play/category_id/'+val.category_id+'">'+val.category_name+'/</a><a href="'+_MODULE_NAME+'/Video/play/vid/'+val.vid+'">'+val.video_name+'</a> </span> </p>';
+                    html += '<div class="hand">';
+                    html += '<span class="time q_addtime">'+val.addtime+'</span>';
+                    html += '<a href="javascript:;" flag=true onclick="mesIco($(this),\'.question_list\',\'.anAreaT\',\'show\')" class="mesIco mesIcoT"><i></i>(<span class="reply_count">'+val.count+'</span>)';
+                   if (type != undefined){
+                       html += '(<span class="reply_count">'+val.count+'</span>)';
+                   }
+                    html += '</a></div>';
+                    html += '</div>';
+
+                    html += '<div class="anArea anAreaT">';
+                    html += '<form action="" method="post">';
+                    html += '<textarea class="q_reply_content" placeholder=""></textarea>';
+                    html += '<div class="bot">';
+                    html += '<a href="javascript:;" class="btn cancleBtn" onclick="fromCancel( $(this),\'.question_list\',\'.anAreaT\',\'.mesIcoT\',\'show\')">取消</a>';
+                    html += '<a href="javascript:;" data-answer-id="0" onclick="replyQuestion($(this))" class="btn subBtn">提交</a>';
+                    html += '</div>';
+                    html += '</form>';
+                    html += '</div>';
+
+
+                    if (val.answer.length > 0) {
+                        $.each(val.answer, function (kk, v) {
+                            html += '<div class="item itemX">';
+                            html += '<div class="tp fl">';
+                            html += '<a href="javascript:;">';
+                            html += '<img src="'+_MEMBER+'/images/logo/' + v.face + '.png" alt="">';
+                            html += '</a>';
+                            html += '</div>';
+                            html += '<div class="txt">';
+                            html += '<div class="txIn txInB">';
+                            html += '<div class="tHd">';
+                            html += '<img style="display: inline-block" src="'+_MEMBER+'/images/user_group/' + v.user_group_id + '.png">';
+                            html += '<span class="name">' + v.username + '</span>';
+
+                            if (v.reply_user_id != 0) {
+                                html += '回复 <span><img class="reply_user_group" style="display: inline-block" src="'+_MEMBER+'/images/user_group/' + v.reply_user_group_id + '.png"> <span class="name reply_username">' + v.reply_username + '</span></span></span>';
+                            }
+
+
+                            html += '：<span class="ask">' + v.answer + '</span>';
+                            html += '</div>';
+                            html += '<div class="hand">';
+                            html += '<span class="time">' + v.addtime + '</span>';
+
+
+                            if (v.user_id != _user_id) {
+                                html += '<a href="javascript:;" flag=true  class="mesIco mesIcoB" onclick="mesIco($(this),\'.itemX\',\'.anAreaB\',\'show\')"><i></i></a>';
+                            }
+
+
+                            html += '</div>';
+                            html += '</div>';
+                            html += '<div class="anArea anAreaB">';
+                            html += '<form action="" method="post">';
+                            html += '<textarea class="q_reply_content" placeholder=""></textarea>';
+                            html += '<div class="bot">';
+                            html += '<a href="javascript:;" class="btn cancleBtn"  onclick="fromCancel( $(this),\'.itemX\',\'.anAreaB\',\'.mesIcoB\',\'show\')">取消</a>';
+                            html += '<a href="javascript:;" onclick="replyQuestion($(this))" data-answer-id="{$v.id}" class="btn subBtn">提交</a>';
+                            html += '</div>';
+                            html += '</form>';
+                            html += '</div>';
+                            html += '</div>';
+                            html += '</div>';
+                        })
+                    }
+
+                            html += '</div>';
+                            html += '</div>';
+                            html += '</li>';
+                })
+
+                thisObj.before(html);
+                _last_question_id = json.data.limit_end_id;
+
+            }else{
+                thisObj.text(json.msg);
+            }
+        }
+    })
+}
+
+
+/**
+ * 问题内评论的查看更多
+ * @param thisObj  当前点击对象
+ * @param question_id 问答id
+ * @param login_user_id  当前登录用户id
+ */
+function answer_page(thisObj) {
+    var question_id = thisObj.parents('li.mt16').attr('data-question-id');
+    var limit_end_id = thisObj.attr('data-limit-end-id');
+    if (!limit_end_id){
+        showMsg('limit_end_id为空！');return;
+    }
+
+    $.ajax({
+        type: "get",
+        url: _questionPageUrl,
+        data: {question_id: question_id, limit_end_id: limit_end_id},
+        dataType: "json",
+        success: function (json) {
+            if (json.code == 1) {
+                var data = json.data.answerList;
+                var str_html = '';
+                $.each(data, function (k,v) {
+                    var str_html = '<div data-last-answer-id="'+v.id+'" class="item itemX"><div class="tp fl"><a href="javascript:;"><img src="/Public/Member/images/logo/'+v.face+'.png" alt="">';
+                    str_html += '</a></div><div class="txt"><div class="txIn txInB"><div class="tHd">';
+
+                    if(v.reply_user_id == 0){
+                        str_html += '<img style="display: inline-block" src="/Public/Member/images/user_group/'+v.user_group_id+'.png">';
+                        str_html += '<span class="name">'+v.username+'：</span><span class="ask">'+v.answer+'</span>';
+                    }else{
+                        //二级回复
+                        str_html += '<img style="display: inline-block" src="/Public/Member/images/user_group/'+v.user_group_id+'.png" alt="">';
+                        str_html += '<span class="name">'+v.username+'：回复#<img style="display: inline-block" src="/Public/Member/images/user_group/'+v.reply_user_group_id+'.png" alt="">';
+                        str_html += v.reply_username+'：</span><span class="ask">'+v.answer+'</span>';
+                    }
+
+                    str_html += '</div><div class="hand"><span class="time">'+v.addtime+'</span>';
+                    if(_user_id != v.user_id){
+                        str_html += '<a id="'+v.id+'" class="mesIco mesIcoBs mesIcoB"><i></i></a>';
+                    }
+
+                    str_html += '</div></div><div class="anArea anAreaB"><form action="" method="post"><textarea id="e'+v.id+'" class="answer" placeholder=""></textarea><div class="bot">';
+                    str_html += '<a href="javascript:;" class="cancleBtn cancel"  onclick="fromCancel( $(this),\'.itemX\',\'.anAreaB\',\'.mesIcoB\',\'show\')">取消</a>';
+                    str_html += '<a style="background-color: #0b97c4; color: #fff;" data-question-id="'+question_id+'" data-answer-id="'+v.id+'" onclick="replyMssage($(this)">提交</a>';
+                    str_html += '</div></form></div></div></div>';
+
+                    thisObj.before(str_html);
+
+                })
+                if(!json.data.is_show_more){
+                    thisObj.hide();
+                }else{
+                    thisObj.attr('data-limit-end-id', json.data.limit_end_id);
+                }
+
+                // 更新last-answer-id
+                thisObj.parents('.question_list').attr('data-last-answer-id', json.data.limit_end_id);
+            }else{
+                thisObj.html(json.msg).attr('disabled','disabled');
+            }
+        }
+    })
+}
+
+
+// 判断输入是否为空
+function isEmpty(content){
+    if (content == undefined){
+        return false;
+    }
+    content = content.replace(/&nbsp;/ig, "");  //将所有空格替换为空字符串
+    content = $.trim(content);  //去除首尾空格
+    if(content.length > 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function showMsg($msg){
+    layer.open({
+        time: 2,
+        skin: "msg",
+        content:$msg
+    })
+}
+
+/*--------------------------------  hehuihua  ----------------------------------*/
+
+/* ----------------------------------点击 .mesIco 回复 --------------------------------------  */
+function mesIco(obj,father,thisArea,show) {
+    if(_user_id==""){
+        location.href=_MODULE_NAME+"/Login/index";
+        return false;
+    }
+
+    var flag=obj.attr("flag");      //默认是true
+    if(flag=="true"){
+        obj.parents(father).find(thisArea).addClass(show);
+        flag=obj.attr("flag","false").attr("flag");
+        //console.log(flag);       //flase
+    }else if(flag=="false"){
+        obj.parents(father).find(thisArea).removeClass(show);
+        flag=obj.attr("flag","true").attr("flag");
+    }
+};
+
+
+/*----------------------   问答块-点击取消 -------------------------*/
+function fromCancel(obj,Father,anArea,btn,show) {
+    var father=obj.parents(Father).find(anArea);           //anAreaT文本框
+    var btn=obj.parents(Father).find(btn);             //mesIcoT按钮
+    var flag=btn.attr("flag");     //false的状态
+
+    if(flag=="false"){
+        father.removeClass(show);
+        flag=btn.attr("flag","true").attr("flag");
+    }
+};
+
+

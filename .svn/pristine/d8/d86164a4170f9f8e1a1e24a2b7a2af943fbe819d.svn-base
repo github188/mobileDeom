@@ -1,0 +1,88 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myWxBind-->
+<section class="myCom myWxBind" id="myWxBind">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">微信绑定</a>
+                </div>
+            </div>
+            <div class="com wxBind">
+                <if condition="$userinfo['weixin_openid'] || $userinfo['weixin_unionid']">
+                    <div class="wxBindYes">
+                        <div class="tp">
+                            <img src="{$userinfo['logo']}" alt="头像">
+                        </div>
+                        <div class="txt">
+                            <h3 class="name">{:htmlspecialchars_decode($userinfo['weixin_username'])}</h3>
+                            <div class="tx">
+                                <div class="ti"><img src="__MEMBER__/images/right.png">恭喜您已成功绑定微信！</div>
+                                <a href="javascript:;" class="unbind">解除绑定</a>
+                            </div>
+                        </div>
+                    </div>
+                <else/>
+                    <div class="wxEwm">
+                        <div class="tp" style="position: relative;">
+                            <img style="position: absolute;left: 50%;top:50%;margin: -25px 0 0 -25px" src="__MEMBER__/images/weixin-icon.png" alt="二维码" width="60px" height="50px">
+                            <img src="{:U('Weixin/weixinErweima')}" alt="二维码" width="250px" height="250px">
+                            <script>
+                                //检查微信绑定情况
+                                window.onload = function(){
+                                    var Interval = window.setInterval(function(){checkedWeixin();},1000);
+                                    function checkedWeixin(){
+                                        $.post(url,{'bind':1},function(data){
+                                            if(data.status==1){
+                                                clearInterval(Interval);
+                                                show_msg(data.info);
+                                                setTimeout(function(){
+                                                    window.location.reload();
+                                                },2000);
+                                            }
+                                        },'json');
+                                    }
+                                }
+                            </script>
+                        </div>
+                        <p>扫一扫绑定微信吧</p>
+                    </div>
+                </if>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<script src="__ADMIN__/layer/layer.js"></script>
+<script>
+    var url = "{:U('Safe/weixin')}";
+    //解除绑定微信
+    $('.unbind').on('click',function(){
+        //询问框
+        var pople = layer.confirm('确定要解除微信绑定吗？解除后将无法观看视频!', {
+            icon: 2,
+            btn: ['解绑','取消'] //按钮
+        }, function(){
+            $.post(url,{'bind':2},function(data){
+                if(data.status==1){
+                    show_msg(data.info);
+                    setTimeout(function(){
+                        window.location.reload();
+                    },2000);
+                }
+            },'json');
+            layer.close(pople);
+        }, function(){
+            layer.close(pople);
+        });
+    });
+</script>

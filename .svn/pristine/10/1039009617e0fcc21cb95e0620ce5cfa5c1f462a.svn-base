@@ -1,0 +1,246 @@
+<include file="Public:header"/>
+
+<style>
+    body{background-color: #fff;}
+</style>
+<!--myNotes-->
+<section class="myNotes">
+    <div class="in">
+        <div class="notes">
+            <ul id="noteMain">
+
+                <volist name="noteList.noteList" id="val">
+                <li id="{$val.id}" class="noteItem" data-noteid={$val.id}>
+                    <div class="item">
+                        <div class="tit">
+                            <p class="wz js-wz">{$val.content}</p>
+                        </div>
+                        <div class="originate">
+                            <span>来源：</span>
+                            <a href="/Mobile/Video/showList/category/{$val.category_id}" class="link">{$val.category_name}</a>/
+                            <a href="{:U('Video/play', array('vid' => $val['vid']))}" class="link">{$val.video_name}</a>
+                        </div>
+                        <div class="bot">
+                            <span class="fl date">{$val.addtime}</span>
+                            <div class="fr han">
+                                <span class="chg">
+                                    <i class="ico"></i><em class="ti js-chg">修改</em>
+                                </span>
+                                <span class="del">
+                                    <i class="ico"></i><em class="ti js-del">删除</em>
+                                </span>
+                                <a href="{:U('Video/play',array('vid'=>$val['vid']))}" class="time">
+                                    <i class="ico"></i>
+                                    <em class="num">{$val.playtime}</em>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="txtArea js-txtArea">
+                        <textarea  class="area js-area"></textarea>
+                        <div class="btns">
+                            <a href="javascript:;" class="btn canBtn js-canBtn">取消</a>
+                            <a href="javascript:;" class="btn subBtn js-subBtn">提交</a>
+                        </div>
+                    </div>
+                </li>
+                </volist>
+
+                <!--加载更多-->
+                <notempty name="noteList.is_show_more">
+                    <span onclick="myNotePage($(this))">加载更多</span>
+                </notempty>
+
+
+                <empty name="noteList.noteList">
+                    <!--没有数据：-->
+                    <div id="note_noData" class="noData" style="text-align: center;">
+                        <img style="margin: 0 auto;" src="__MEMBER__/images/errorTp.png" alt="没有数据"  width="" height="">
+                        <p>数据为空</p>
+                    </div>
+                </empty>
+
+
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!--笔记加载更多模板-->
+
+<li style="display: none" id="note_templates" class="noteItem" data-noteid="笔记id">
+    <div class="item">
+        <div class="tit">
+            <p class="wz js-wz q_content">笔记内容</p>
+        </div>
+        <div class="originate">
+            <span>来源：</span>
+            <a href="视频分类url" class="link category_name">分类名</a>/
+            <a href="视频播放url" class="link video_name">视频名</a>
+        </div>
+        <div class="bot">
+            <span class="fl date q_addtime">添加时间</span>
+            <div class="fr han">
+                                <span class="chg">
+                                    <i class="ico"></i><em class="ti js-chg">修改</em>
+                                </span>
+                <span class="del">
+                                    <i class="ico"></i><em class="ti js-del">删除</em>
+                                </span>
+                <a href="视频播放链接" class="time">
+                    <i class="ico"></i>
+                    <em class="num q_playtime">播放时长</em>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="txtArea js-txtArea">
+        <textarea class="area js-area"></textarea>
+        <div class="btns">
+            <a href="javascript:;" class="btn canBtn js-canBtn">取消</a>
+            <a href="javascript:;" class="btn subBtn js-subBtn">提交</a>
+        </div>
+    </div>
+</li>
+
+<!--模板HTML END-->
+<include file="Public:footerMenu"/>
+
+
+<script src="__MOBILE__/js/zepto_plus.js"></script>
+<script src="__MOBILE__/js/base.js"></script>
+
+
+<!--提示插件-->
+<script src="__MOBILE__/pugins/layer-mobile-2.0/layer.js"></script>
+
+<!--笔记相关js-->
+<script src="__MOBILE__/js/note.js"></script>
+
+
+<script>
+
+    //查询出的最后一条笔记的id 用于分页
+    <notempty name="noteList.limit_end_id">
+        var _last_note_id = {$noteList.limit_end_id};
+    </notempty>
+
+    var _writeNoteUrl = "{:U(MODULE_NAME.'/Study/writeNote')}";    //发表笔记接口地址
+    var _editNoteUrl = "{:U(MODULE_NAME.'/Study/editNote')}";    //修改笔记接口地址
+    var _deleteNoteUrl = "{:U(MODULE_NAME.'/Study/deleteNote')}";  //删除笔记接口地址
+    var _notePageUrl = "{:U(MODULE_NAME.'/Study/notePage')}";  //加载更多笔记接口地址
+    var _videoCategoryUrl = "{:U(MODULE_NAME.'/Video/showlist','',false)}";  //视频分类url地址
+    var _videoPlayUrl = "{:U(MODULE_NAME.'/Video/play','',false)}";  //视频播放url地址
+    var _vid = 0;
+
+
+    // 笔记点击加载更多
+    function myNotePage(thisObj) {
+        $.ajax({
+            type:'get',
+            url: _notePageUrl,
+            data:{'last_note_id':_last_note_id, 'vid':_vid},
+            dataType:'json',
+            success:function (json) {
+                if (json.status == 1){
+                    var note_templates = $('#note_templates').clone();
+                    var html = '';
+                    $.each(json.data.noteList, function (k,val) {
+                        var note_templates2 = note_templates;
+
+                        note_templates2.css('display','block');
+                        note_templates2.removeAttr('id');
+                        note_templates2.attr('data-noteid', val.id);
+                        note_templates2.find('.q_content').html(val.content);
+                        note_templates2.find('.category_name').text(val.category_name);
+                        note_templates2.find('.category_name').attr("href",_videoCategoryUrl+'/category/'+val.category_id);
+                        note_templates2.find('.video_name').text(val.video_name);
+                        note_templates2.find('.video_name').attr("href",_videoPlayUrl +'/vid/'+ val.vid);
+                        note_templates2.find('.q_playtime').html(val.playtime);
+                        note_templates2.find('.q_addtime').html(val.addtime);
+
+                        html += note_templates2.prop("outerHTML");
+
+                    })
+
+                    thisObj.before(html);
+                    _last_note_id = json.data.limit_end_id;
+                }else{
+                    thisObj.text(json.msg);
+                }
+            }
+        })
+    }
+
+//    删除笔记
+    $('#noteMain').on('click','.del',function () {
+
+        var $e = $(this),
+            $eLi =$e.parents('li');
+        if(confirm("确认删除吗？") === false){
+            return;
+        };
+
+        var dataNoteid = $eLi.attr("data-noteid");
+
+//      发送请求
+        var is_success=deleteNote(dataNoteid);
+        if (is_success === true){
+            showMsg('删除成功');
+            $eLi.remove();
+        }else{
+            showMsg('删除失败,请刷新后重试！');
+        }
+    })
+
+
+//    修改笔记
+    $('#noteMain').on('click','.chg',function () {
+        var $e = $(this),
+            //笔记编辑
+            wzs = '.js-wz',
+            txtAreas = '.js-txtArea',
+            areas ='.js-area',
+            $eLi =$e.parents('li');
+
+        $(txtAreas).hide();
+        $eLi.find(txtAreas).show();
+        var theTxt = $eLi.find(wzs).text();
+        $eLi.find(areas).val(theTxt);
+    })
+
+    //点击确认按钮
+    $('#noteMain').on('click','.js-subBtn',function () {
+        var $e = $(this),
+            txtAreas = '.js-txtArea',
+            areas ='.js-area',
+            wzs = '.js-wz',
+            $eLi =$e.parents('li');
+        var dataNoteid = $eLi.attr("data-noteid");
+        var content = $eLi.find("textarea").val();
+
+//                  发送请求
+        var is_success=editNote(dataNoteid,content);
+        if (is_success === true){
+            showMsg('修改成功');
+            $eLi.find(txtAreas).hide();
+            var txVal =$eLi.find(areas).val();
+            $eLi.find(wzs).text(txVal);
+        }else{
+            showMsg('修改失败,请刷新后重试！');
+        }
+    })
+
+//    点击取消
+    $('#noteMain').on('click','.js-canBtn',function () {
+        var $e = $(this),
+            txtAreas = '.js-txtArea',
+            $eLi =$e.parents('li');
+        $eLi.find(txtAreas).hide();
+    })
+</script>
+
+</body>
+</html>

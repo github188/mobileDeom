@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge，chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>嗨推学院-知名网络推广实战培训平台</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_8pyf275gzycwstt9.css">
+    <!--[if lt IE9]>
+    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../public/css/base.css">
+    <link rel="stylesheet" href="../public/css/common.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/goods.css">
+    <link rel="stylesheet" href="../public/css/layer.css">
+</head>
+<body>
+
+<!--toolBar-->
+<script type="text/html" id="myToolBar"></script>
+
+<!--header-->
+<script type="text/html" id="myHeader"></script>
+
+<!--nav-->
+<script type="text/html" id="myNav"></script>
+
+<!--旧版 copy-->
+<div class="detail-wrap">
+    <div class="detail-content-l">
+        <div class="detail-content-l-main fixed">
+            <div class="goods-img">
+                <div class="goods-big-img">
+                    <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=16367" target="_blank" rel="nofollow">
+                        <img src="https://img.alicdn.com/bao/uploaded/i3/TB1i4y0RXXXXXXhXpXXXXXXXXXX_!!0-item_pic.jpg">
+                    </a>
+                </div>
+                <div class="goods-small-img">
+                    <ul>
+                        <li class="cur">
+                            <img src="https://img.alicdn.com/bao/uploaded/i3/TB1i4y0RXXXXXXhXpXXXXXXXXXX_!!0-item_pic.jpg">
+                            <div class="cover"> <span>点击预览</span> </div>
+                        </li>
+                        <li> <img src="https://img.alicdn.com/bao/uploaded/i3/TB1i4y0RXXXXXXhXpXXXXXXXXXX_!!0-item_pic.jpg">
+                            <div class="cover"> <span>点击预览</span> </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="release-tag">
+                <span class="release-time"><i></i>发布时间：2017-05-20 </span>
+            </div>
+        </div>
+    </div>
+    <div class="detail-content-r">
+        <div class="goods-info">
+            <div class="goods-tit">
+                <h1>
+                    <a href="https://detail.tmall.com/item.htm?id=544893439192" target="_blank" title="情侣装T恤女学生百搭半袖" rel="nofollow">
+                        情侣装T恤女学生百搭半袖			</a>
+                </h1>
+                <p>时尚潮流，2017年夏季新款情侣短袖，采用纯棉材质细腻优质。为简单的生活，释放轻松的心情。精致领形，简约大方。</p>
+                <div class="goods-bug clearfix">
+                    <a class="fl goods-bug-btn" target="_blank" href="index.php?m=www&amp;c=index&amp;a=jiucuo&amp;goods_id=16367">
+                        <i></i>商品纠错
+                    </a>
+                    <div class="goods-type fl"> <i class="tag-tmall"></i> </div>
+                </div>
+            </div>
+            <div class="price-num-status clearfix">
+                <div class="new-price fl">
+                    <span style="font-size: 14px;">券后价<b style="font-size: 30px; font-weight: bold;"><i>￥</i>19.9</b></span>
+                </div>
+                <div class="old-price fl">
+                    <span style="font-size: 14px;">原价<b style="font-family: Arial"><i>￥</i>39.9</b></span>
+                </div>
+                <div class="sale-num fl">
+                    <span style="font-size: 14px;">销量<b style="font-size: 14px;">73</b></span>
+                </div>
+            </div>
+            <div class="yong-quan-comment">
+                <div class="yong fl"> <span>佣金<b>30.5%</b></span>
+                    <p>
+                        <span class="yong-trans-attention"></span>通用					  </p>
+                    <div id="yong-attention"> <b>转换成功</b>
+                        <h1>请确认您已申请了高佣计划</h1>
+                        <p>当前网页不能为您自动申请高佣计划</p>
+                        <p>您可以使用大淘客助手或插件辅助申请</p>
+                        <div class="iknow"> <span>我知道了</span> </div>
+                        <div class="not-any-more"> <a href="javascript:void(0)">不再提醒</a> </div>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="quan fl"> <span>优惠券<b><i>￥</i>20</b></span>
+                    <p> 已领取 <b style="color: #6b6b6b">95</b>/		  <a target="_blank" href="http://shop.m.taobao.com/shop/coupon.htm?seller_id=3069766543&amp;activity_id=c116070dbbf74fd882afb7f9d0b850c0">（立即领取）</a> </p>
+                </div>
+                <div class="comment fr"> <span data-id="16367" class="comment commentBtn" id="comment"></span>
+                </div>
+                <div class="bottom-dot"></div>
+            </div>
+            <div class="tui-trans tui-trans-cur">
+                <div class="tui"> <span class="add-tui J_add_tui"><i></i>加入推广</span> <b><em></em></b> </div>
+                <div class="trans clearfix">
+                    <div class="trans-ehy" id="J_trans_ehy" title="点击转换二合一短链"><span><i></i>转二合一</span><b><em></em></b></div>
+                    <div class="trans-tkl" id="J_trans_tkl" title="点击转换微信淘口令"><span><i></i>转淘口令</span><b><em></em></b></div>
+                </div>
+            </div>
+        </div>
+        <div class="marketing-mod">
+            <div class="marketing-top">
+                <div class="marketing-tit">
+            <span style="font-size: 16px;"><i></i>营销模板
+                <a href="http://www.dataoke.com/help/?id=1&amp;cid=158" target="_blank" title="使用帮助"></a>
+            </span>
+                </div>
+                <div class="zdy_mb set-tui">
+                    <span class="setTui J_set_mod" title="点击自定义模版"><i></i>自定义模板</span>
+                    <div class="arrow"></div>
+                    <div class="arrow-cover"></div>
+                </div>
+            </div>
+            <div class="copy-tui copy-tui-soon">
+                <div class="qq-tui">
+                    <div class="tui-tit"> <span>QQ文案</span> </div>
+                    <div class="qq-tui-main clearfix">
+                        <div class="tui-content"><img src="https://img.alicdn.com/bao/uploaded/i3/TB1i4y0RXXXXXXhXpXXXXXXXXXX_!!0-item_pic.jpg"><br></div>
+                        <div class="tui-author"></div>
+                    </div>
+                    <div class="qq-copy copy">一键复制</div>
+                </div>
+                <div class="wechat-tui">
+                    <div class="tui-tit"> <span>微信文案</span> </div>
+                    <div class="wechat-tui-content">
+
+                        <div class="wechat-tui-img clearfix">
+                            <div class="tui-content"><img src="https://img.alicdn.com/bao/uploaded/i3/TB1i4y0RXXXXXXhXpXXXXXXXXXX_!!0-item_pic.jpg"></div>
+                            <div class="tui-author"></div>
+                        </div>
+
+
+                    </div>
+                    <div class="wechat-copy copy">一键复制</div>
+                </div>
+                <div class="use-help">
+                    <a href="http://www.dataoke.com/help/?id=1&amp;cid=158" target="_blank">不知道怎么用？点这里&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+        <div class="promote-mod">
+            <div class="promote-top">
+                <div class="promote-tit"> <span><i></i>精品推荐</span> </div>
+                <div class="promote-more"> <a href="index.php?m=www&amp;c=index&amp;a=zhibo">查看更多&gt;</a> </div>
+            </div>
+            <div class="promote-list">
+                <ul>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=1" target="_blank">
+                                    <img src="https://gd1.alicdn.com/imgextra/i1/1686519540/TB2eH3mgylnpuFjSZFgXXbi7FXa_!!1686519540.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=1" target="_blank">夏季新款小脚裤显瘦九分裤薄款打底裤</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 8 张">
+					<span class="slider">
+						<em data-width="0.16%" style="width: 0.16%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>36</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 10.8 元"> <span>通用</span>
+                                        <p>30<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>3</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>5267</b></span>
+                                    <div class="tag clearfix"> <i class="tag-taobao"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=2" target="_blank">
+                                    <img src="https://img.alicdn.com/imgextra/i2/1119831634/TB2lJuXo4hmpuFjSZFyXXcLdFXa_!!1119831634.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=2" target="_blank">艺福堂桂花莲子西湖藕粉300g</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 2 张">
+					<span class="slider">
+						<em data-width="0.2%" style="width: 0.2%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>16.8</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 5.208 元"> <span>通用</span>
+                                        <p>30.5<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>3</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>2547</b></span>
+                                    <div class="tag clearfix"> <i class="tag-tmall"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=3" target="_blank">
+                                    <img src="https://img.alicdn.com/imgextra/i1/2355529640/TB2WRQgtctnpuFjSZFKXXalFFXa_!!2355529640.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=3" target="_blank">海福盛-淮南牛肉汤粉丝6桶装</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 29 张">
+					<span class="slider">
+						<em data-width="0.29%" style="width: 0.29%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>21.8</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 6.758 元"> <span>通用</span>
+                                        <p>30.5<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>5</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>7263</b></span>
+                                    <div class="tag clearfix"> <i class="tag-tmall"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=4" target="_blank">
+                                    <img src="https://img.alicdn.com/imgextra/i3/2468062242/TB2zbafjxlmpuFjSZPfXXc9iXXa_!!2468062242.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=4" target="_blank">【Jamieson健美生海外旗舰店】葡萄籽精华片</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 4 张">
+					<span class="slider">
+						<em data-width="0.04%" style="width: 0.04%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>39</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 11.7 元"> <span>通用</span>
+                                        <p>30<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>20</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>3489</b></span>
+                                    <div class="tag clearfix"> <i class="tag-tmall"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=5" target="_blank">
+                                    <img src="https://img.alicdn.com/imgextra/i1/2454060579/TB2DG49eipnpuFjSZFkXXc4ZpXa_!!2454060579.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=5" target="_blank">南极人按摩披肩捶打肩膀按摩器腰部仪</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 2 张">
+					<span class="slider">
+						<em data-width="0.04%" style="width: 0.04%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>59</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 11.8 元"> <span>通用</span>
+                                        <p>20.3<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>30</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>7330</b></span>
+                                    <div class="tag clearfix"> <i class="tag-tmall"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=6" target="_blank">
+                                    <img src="https://img.alicdn.com/imgextra/i3/1837380913/TB2J0bvp9BjpuFjy1XdXXaooVXa_!!1837380913.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=6" target="_blank">正品伊帕尔汗天然薰衣草纯露祛痘印化妆水</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 3 张">
+					<span class="slider">
+						<em data-width="0.06%" style="width: 0.06%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>58</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 25.52 元"> <span>鹊桥</span>
+                                        <p>43.7<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>30</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>457</b></span>
+                                    <div class="tag clearfix"> <i class="tag-tmall"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=7" target="_blank">
+                                    <img src="https://gd3.alicdn.com/imgextra/i2/2115302567/TB2NSHKntBopuFjSZPcXXc9EpXa_!!2115302567.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=7" target="_blank">情侣睡衣短袖纯棉可爱家居服套装</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 1 张">
+					<span class="slider">
+						<em data-width="0.1%" style="width: 0.1%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>39.9</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 7.98 元"> <span>通用</span>
+                                        <p>20<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>10</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>605</b></span>
+                                    <div class="tag clearfix"> <i class="tag-taobao"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=8" target="_blank">
+                                    <img src="//img.alicdn.com/bao/uploaded/i3/281066853/TB2oQMClxXkpuFjy0FiXXbUfFXa_!!281066853.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=8" target="_blank">艾米恋雪纺阔腿裤女夏七分高腰雪纺裤</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 1433 张">
+					<span class="slider">
+						<em data-width="14.33%" style="width: 14.33%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>49</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 15.19 元"> <span>通用</span>
+                                        <p>30.5<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>10</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>3875</b></span>
+                                    <div class="tag clearfix"> <i class="tag-tmall"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=9" target="_blank">
+                                    <img src="https://img.alicdn.com/imgextra/i4/52758576/TB2HP9klUdnpuFjSZPhXXbChpXa_!!52758576.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=9" target="_blank">洁丽雅旗舰店5双礼盒装袜子</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 740 张">
+					<span class="slider">
+						<em data-width="14.8%" style="width: 14.8%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>24.9</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 7.968 元"> <span>鹊桥</span>
+                                        <p>32.3<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>15</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>3502</b></span>
+                                    <div class="tag clearfix"> <i class="tag-tmall"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=10" target="_blank">
+                                    <img src="https://img.alicdn.com/imgextra/i1/2772500405/TB2thYMpNtmpuFjSZFqXXbHFpXa_!!2772500405.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=10" target="_blank">平板拖把家用瓷砖木地板大号拖布托把</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 0 张">
+					<span class="slider">
+						<em data-width="0%" style="width: 0%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>16.9</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 5.07 元"> <span>通用</span>
+                                        <p>30<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>3</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>12921</b></span>
+                                    <div class="tag clearfix"> <i class="tag-tmall"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=11" target="_blank">
+                                    <img src="https://img.alicdn.com/imgextra/i2/2837347093/TB2gDLmpC0jpuFjy0FlXXc0bpXa_!!2837347093.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=11" target="_blank">洁丽雅纯棉吸水面巾全棉毛巾</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 4 张">
+					<span class="slider">
+						<em data-width="0.01%" style="width: 0.01%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>9.9</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 3.168 元"> <span>鹊桥</span>
+                                        <p>32.3<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>3</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>1251</b></span>
+                                    <div class="tag clearfix"> <i class="tag-tmall"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-item-content">
+                            <div class="goods-img">
+                                <a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=12" target="_blank">
+                                    <img src="http://img.alicdn.com/imgextra/i3/TB1e8KpRXXXXXbbaXXXXXXXXXXX_!!0-item_pic.jpg">
+                                </a>
+                            </div>
+                            <div class="goods-info-tj">
+				<span class="goods-tit">
+					<a href="index.php?m=www&amp;c=index&amp;a=item&amp;id=12" target="_blank">夏季新款带帽宽松百搭防晒衫</a>
+				</span>
+                                <div class="goods-slider" title="优惠券已领取 4 张">
+					<span class="slider">
+						<em data-width="0.04%" style="width: 0.04%;"></em>
+					</span>
+                                </div>
+                                <div class="goods-qjy">
+                                    <div class="goods-price"> <span>券后价</span>
+                                        <p><b><i class="rmb-style">￥</i>68</b></p>
+                                    </div>
+                                    <div class="goods-yj" title="佣金 21.08 元"> <span>通用</span>
+                                        <p>30.5<b>%</b></p>
+                                    </div>
+                                </div>
+                                <div class="goods-sale clearfix">
+                                    <div class="goods-quan fl">
+                                        <p>券<b><i class="rmb-style">￥</i>30</b></p>
+                                    </div>
+                                    <span class="fl">销量<b>99</b></span>
+                                    <div class="tag clearfix"> <i class="tag-tmall"></i><i class="tag-trans"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="diy-mod" style="display: none;" class="layui-layer-wrap">
+    <div class="mod-left">
+        <div class="mod-eg mod-item">
+            <div class="mod-msg"><span>模板使用说明</span></div>
+            <p>模板： 原价<b>#原价#</b>元，领券<b>#券金额#</b>元，只要<b>#券后价#</b>啦</p>
+            <p>效果： 原价<b><i>249</i></b>元，领券<b><i>50</i></b>元，只要<b><i>199</i></b>啦</p>
+        </div>
+        <div class="mod-normal mod-item">
+            <div class="mod-msg"><span>通用标签</span></div>
+            <ul>
+                <li> <span class="mod_tag">#标题#</span> <span class="mod_main">商品短标题</span> </li>
+                <li> <span class="mod_tag">#券后价#</span> <span class="mod_main">商品用券后价格</span> <span class="mod_eg">如 199</span> </li>
+                <li> <span class="mod_tag">#原价#</span> <span class="mod_main">商品原价</span> <span class="mod_eg">如 249</span> </li>
+                <li> <span class="mod_tag">#券金额#</span> <span class="mod_main">优惠券金额</span> <span class="mod_eg">如 50</span> </li>
+                <li> <span class="mod_tag">#商品链接#</span> <span class="mod_main">商品的购买链接地址</span> </li>
+                <li> <span class="mod_tag">#领券链接#</span> <span class="mod_main">领取优惠券链接地址</span> </li>
+                <li> <span class="mod_tag">#销量#</span> <span class="mod_main">当前的累积销售总量</span> <span class="mod_eg">如 1619</span> </li>
+                <li> <span class="mod_tag">#文案#</span> <span class="mod_main">商品的介绍推广文案</span> </li>
+            </ul>
+        </div>
+        <div class="mod-high mod-item">
+            <div class="mod-msg"><span>高级标签</span></div>
+            <div class="mod-msg"><span>高级标签</span></div>
+            <ul class="mod-high-qq">
+                <li> <span class="mod_tag">#QQ二合一#</span> <span class="mod_main">使用QQ推广PID生成的官方二合一短链</span> </li>
+                <li> <span class="mod_tag">#QQ淘口令#</span> <span class="mod_main">使用QQ推广PID生成的淘口令</span> </li>
+            </ul>
+            <ul class="mod-high-wx hide">
+                <li> <span class="mod_tag">#微信淘口令#</span> <span class="mod_main">使用微信推广PID生成的淘口令</span> </li>
+            </ul>
+        </div>
+        <div class="attention">
+            <p>*高级标签，需点击“转换二合一”或者“转换淘口令” 后才可以获得</p>
+            <p>*如您未操作，将无法输出对应的信息
+                <a class="trans-help-qq" href="http://www.dataoke.com/help/?id=1&amp;cid=158" target="_blank">还没看懂？查看教程&gt;&gt;</a>
+            </p>
+        </div>
+    </div>
+    <div class="mod-right">
+        <div class="mod-set-center">
+            <div class="mod-choice"> <span class="mod-qq cur">QQ模板</span> <span class="mod-wechat">微信模板</span> </div>
+            <div class="mod-main">
+                <textarea class="mod-qq-main"></textarea>
+                <textarea class="mod-wechat-main hide"></textarea>
+            </div>
+        </div>
+        <button class="modSetBtn">保存</button>
+        <div class="mod-bot-btn">
+            <span class="bot-btn reset"><i></i>恢复系统模板</span>
+            <span class="bot-btn discard-changes"><i></i>放弃修改</span>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<script type="text/html" id="myFooter"></script>
+
+<script src="../public/js/jquery-1.11.2.min.js"></script>
+<script src="../public/js/style.js"></script>
+
+<script src="../public/js/layer.js"></script>
+<script src="../public/js/detail.js"></script>
+
+
+</body>
+</html>

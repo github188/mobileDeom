@@ -1,0 +1,114 @@
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">骨广告管理</a></li>
+            <li class="active">广告列表</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="">
+
+                        <div class="pull-right" style="display:block;">
+                            <a class="btn btn-info" href="{:U(MODULE_NAME.'/Ad/adAdd')}" >
+                                <i class="fa fa-plus"></i> 添加新广告
+                            </a>
+                        </div>
+                    </form>
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/ArticleOther/index')}">
+                        <ul id="myTab" class="nav nav-tabs">
+                            <foreach name="area" item="v" key="k">
+                            <li <if condition="$k eq $self_area" > class="active" </if> >
+                                <a href="{:U(MODULE_NAME.'/Ad/adList', array('area' => $k))}">
+                                    {$v}
+                                </a>
+                            </li>
+                            </foreach>
+                        </ul>
+
+                    </form>
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>图片</th>
+                                <th>显示顺序</th>
+                                <th>广告区域</th>
+                                <th>类型</th>
+                                <th>链接地址</th>
+                                <th>状态</th>
+                                <th>添加时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="body">
+                        <php>
+                            $page = I('get.page',1,'intval');
+                        </php>
+                            <volist name="data" key="k" id="v">
+                                <tr>
+                                    <td>{$v.id}</td>
+                                    <td>
+                                        <if condition="$v['img_url']">
+                                            <img src="{$v['img_url']}" width="400px" height="100px" alt="logo">
+                                        <else/>
+                                            暂无封面
+                                        </if>
+                                    </td>
+                                    <td>{$v['sort']}</td>
+                                    <td>{$v['area']}</td>
+                                    <td>{$v['is_alert']==1?'弹窗广告':'轮播图'}</td>
+                                    <td><a href="{$v['link_url']}">{$v['link_url']}</a></td>
+                                    <td>{$v['is_show']==1?'显示':'隐藏'}</td>
+                                    <td>{$v.addtime|date="Y-m-d H:i",###}</td>
+                                    <php>
+                                        $url = U(MODULE_NAME.'/Ad/adEdit', array('id'=>$v['id'],'page'=>$page));
+                                    </php>
+                                    <td>
+                                        <a href="{:U(MODULE_NAME.'/Ad/adEdit', array('id'=>$v['id'],'page'=>$page))}" class="btn btn-primary btn-xs" title="编辑">
+                                            <i class="fa fa-pencil"></i>编辑
+                                        </a>&nbsp;
+                                        <a href="javascript:;" onclick="deleteOne(this,{$v['id']},'{:U(MODULE_NAME.\'/Ad/adDelete\')}',{$page});" class="btn btn-danger delete-msg-find btn-xs" title="删除"><i class="fa fa-times btn-xs"></i> 删除</a>
+                                    </td>
+                                </tr>
+                            </volist>
+                            <if condition="!$data">
+                                <tr>
+                                    <td colspan="6" align="center"> 没有数据！</td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages GT 1">
+                                <tr>
+                                    <td colspan="20" align="center"><div class="pages">{$pages}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

@@ -1,0 +1,127 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myAddress-->
+<section class="myCom myAddress" id="myAddress">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">收货地址</a>
+                </div>
+            </div>
+            <div class="com basicInf address">
+                <div class="inpCom">
+                    <form action="" method="post" name="myForm" data-validator-option="{stopOnError:true}" autocomplete="off">
+                        <ul>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">收货人<i>*</i></span>
+                                    <input type="text" value="{$info['name']}" name="name" placeholder="收货人姓名" data-rule="收货人:required;">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">所在城市<i>*</i></span>
+                                    <div class="selCom">
+                                        <select name="province">
+                                            <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;请选择省份</option>
+                                            <volist name="province" id="v" key="k" >
+                                                <option value="{$v['id']}" {$info['province']==$v['id']?'selected':''} >&nbsp;&nbsp;&nbsp;&nbsp;{$v['name']}</option>
+                                            </volist>
+                                        </select>
+                                        <select name="city">
+                                            <option value="{$info['city']?$info['city']:0}">&nbsp;&nbsp;&nbsp;&nbsp;{$info['city']?$info['city_']:'请选择城市'}</option>
+                                        </select>
+                                        <select name="county">
+                                            <option value="{$info['county']?$info['county']:0}">&nbsp;&nbsp;&nbsp;&nbsp;{$info['county']?$info['county_']:'请选择地区'}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">详细地址<i>*</i></span>
+                                    <input type="text" name="address" value="{$info['address']?htmlspecialchars_decode($info['address']):''}" placeholder="建议您填写详细地址，例如街道名称，门牌号码，等信息" style="width: 488px;" data-rule="详细地址:required;">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">手机号码<i>*</i></span>
+                                    <input type="text" name="mobile" value="{$info['mobile']?$info['mobile']:''}" placeholder="必须填写手机号码" data-rule="手机号:required;mobile;">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">邮政号码</span>
+                                    <input type="text" name="postalcode" value="{$info['postalcode']?$info['postalcode']:''}" placeholder="如你不清楚邮递区号，请填写000000" >
+                                </div>
+                            </li>
+                        </ul>
+                        <input type="hidden" name="edit" value="{$id}">
+                        <div class="myBtn keepBtn">
+                            <button type="submit" class="bbtn">确定提交</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<!--收货地址js文件-->
+<script src="__MEMBER__/js/myAddress.js"></script>
+
+<script>
+    var formActionUrl   = "{:U('User/myAddress')}";
+    var selectAddressUrl= "{:U('User/getSelectAddress')}";
+    var successUrl      = "{:U('User/myAddressList')}";
+
+    //提交表单-添加收货地址
+    $('form[name="myForm"]').bind('valid.form', function(){
+        if(select_province.val()==0)
+        {
+            show_msg('请选择所在省的所在地','error');
+            return;
+        }
+        else if(select_city.val()==0)
+        {
+            show_msg('请选择所在城市的所在地','error');
+            return;
+        }
+        $.ajax({
+            url: formActionUrl,
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(data){
+                if(data.status==0){
+                    show_msg(data.msg,'error');
+                    return false;
+                }
+                else if(data.status==1){
+                    show_msg(data.msg,'info');
+                    setTimeout(function(){
+                        location.href = successUrl;
+                    },1200);
+                }
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','error');
+            }
+        });
+    });
+
+    //nice表单验证-提示语样式
+    $('form').validator({
+        theme: "yellow_right_effect", //消息皮肤
+        msgStyle: "margin-left:3px; margin-top:5px;" ,//消息自定义样式
+        msgClass: "n-right"   //消息将自动显示在输入框右边
+    });
+</script>
+

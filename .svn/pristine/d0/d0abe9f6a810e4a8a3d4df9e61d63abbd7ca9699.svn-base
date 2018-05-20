@@ -1,0 +1,318 @@
+<include file="Public:header"/>
+<style>
+    body{background: #fff}
+</style>
+<!--myCollect-->
+<section class="myCollect">
+    <div class="in">
+        <div class="tab">
+            <ol>
+                <li class="cur"><a href="javascript:;">问题收藏</a></li>
+                <li><a href="javascript:;">课程收藏</a></li>
+            </ol>
+        </div>
+        <div class="askList collList">
+
+            <!--问题收藏-->
+            <ul class="ul01">
+                <!--<li>-->
+                    <!--<div class="item">-->
+                        <!--<div class="tp">-->
+                            <!--<a href="javascript:;">-->
+                                <!--<img src="../../public/images/tx01.png" alt="">-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="txt">-->
+                            <!--<div class="txIn">-->
+                                <!--<div class="tHd">-->
+                                    <!--<i style="background-color: #ff7683; border-color: #e55a5a;">试</i>-->
+                                    <!--<span class="name">会飞的小鸟</span>-->
+                                <!--</div>-->
+                                <!--<p class="wz">能否给出一个分佣现级别的图文教程，怕之后会忘记</p>-->
+                                <!--<p class="origin">-->
+                                    <!--<span>-->
+                                        <!--<em>来源：</em>-->
+                                        <!--<a href="javascript:;">新人学习指导/</a><a href="javascript:;">代理分佣软件详情</a>-->
+                                    <!--</span>-->
+                                <!--</p>-->
+                                <!--<div class="hand">-->
+                                    <!--<span class="time">2017-04-15 17:11</span>-->
+                                    <!--<a href="javascript:;" class="mesIco mesIcoT"><i></i>(<span>2</span>)</a>-->
+                                    <!--<span class="collectIco"><s></s>取消</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="anArea anAreaT">-->
+                                <!--<form action="" method="post">-->
+                                    <!--<textarea placeholder=""></textarea>-->
+                                    <!--<div class="bot">-->
+                                        <!--<a href="javascript:;" class="btn cancleBtn">取消</a>-->
+                                        <!--<a href="javascript:;" class="btn subBtn">提交</a>-->
+                                    <!--</div>-->
+                                <!--</form>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="item itemX">-->
+                            <!--<div class="tp">-->
+                                <!--<a href="javascript:;">-->
+                                    <!--<img src="../../public/images/tx02.png"  alt="">-->
+                                <!--</a>-->
+                            <!--</div>-->
+                            <!--<div class="txt">-->
+                                <!--<div class="txIn txInB">-->
+                                    <!--<div class="tHd">-->
+                                        <!--<i style="background-color: #ff7683; border-color: #e55a5a;">试</i>-->
+                                        <!--<span class="name">坏坏：</span>-->
+                                        <!--<span class="ask">咨询金数据客服</span>-->
+                                    <!--</div>-->
+                                    <!--<div class="hand">-->
+                                        <!--<span class="time">2017-04-20 10:55</span>-->
+                                        <!--<a href="javascript:;" class="mesIco mesIcoB"><i></i></a>-->
+                                        <!--<span class="collectIco"><s></s>取消</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="anArea anAreaB">-->
+                                    <!--<form action="" method="post">-->
+                                        <!--<textarea placeholder=""></textarea>-->
+                                        <!--<div class="bot">-->
+                                            <!--<a href="javascript:;" class="btn cancleBtn">取消</a>-->
+                                            <!--<a href="javascript:;" class="btn subBtn">提交</a>-->
+                                        <!--</div>-->
+                                    <!--</form>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<div class="item">-->
+                        <!--<div class="tp">-->
+                            <!--<a href="javascript:;">-->
+                                <!--<img src="../../public/images/tx01.png" alt="">-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="txt">-->
+                            <!--<div class="txIn">-->
+                                <!--<div class="tHd">-->
+                                    <!--<i style="background-color: #76bdff; border-color: #5a99e5;">软</i>-->
+                                    <!--<span class="name">葫芦娃</span>-->
+                                <!--</div>-->
+                                <!--<p class="wz">能否给出一个分佣现级别的图文教程，怕之后会忘记</p>-->
+                                <!--<p class="origin">-->
+                                    <!--<span>-->
+                                        <!--<em>来源：</em>-->
+                                        <!--<a href="javascript:;">新人学习指导/</a><a href="javascript:;">代理分佣软件详情</a>-->
+                                    <!--</span>-->
+                                <!--</p>-->
+                                <!--<div class="hand">-->
+                                    <!--<span class="time">2017-04-15 17:11</span>-->
+                                    <!--<a href="javascript:;" class="mesIco mesIcoT"><i></i>(<span>2</span>)</a>-->
+                                    <!--<span class="collectIco"><s></s>取消</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="anArea anAreaT">-->
+                                <!--<form action="" method="post">-->
+                                    <!--<textarea placeholder=""></textarea>-->
+                                    <!--<div class="bot">-->
+                                        <!--<a href="javascript:;" class="btn cancleBtn">取消</a>-->
+                                        <!--<a href="javascript:;" class="btn subBtn">提交</a>-->
+                                    <!--</div>-->
+                                <!--</form>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+
+                <volist name="allquestion.question" id="val">
+                    <li class="mt16" data-question-id="{$val.id}">
+
+                        <div data-last-answer-id="{$val.limit_end_id}" class="item question_list">
+                            <div class="tp fl">
+                                <a href="javascript:;">
+                                    <img class="q_userface" src="__MEMBER__/images/logo/{$val.face}.png" alt="">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <!--客人提问，主人点击按钮-->
+                                <div class="txIn">
+                                    <div class="tHd">
+                                        <img class="q_usergroup" style="display: inline-block" src="__MEMBER__/images/user_group/{$val.user_group_id}.png" alt="用户组头像">
+                                        <span class="name q_username">{$val.username}</span>
+                                    </div>
+                                    <p class="wz q_content">{$val.question}</p>
+                                    <p class="origin">
+                                            <span>
+                                                <em>来源：</em>
+                                                <a href="{:U(MODULE_NAME.'/Video/play', array('category_id' => $val['category_id']))}">{$val.category_name}/</a><a href="{:U(MODULE_NAME.'/Video/play', array('vid' => $val['vid']))}">{$val.video_name}</a>
+                                            </span>
+                                    </p>
+                                    <div class="hand">
+                                        <span class="time q_addtime">{$val.addtime}</span>
+                                        <a href="javascript:;" class="mesIco mesIcoT" flag=true onclick="mesIco($(this),'.question_list','.anAreaT', 'show')"><i></i>(<span class="reply_count">{$val.count}</span>)</a>
+                                    </div>
+                                </div>
+
+                                <div class="anArea anAreaT" >
+                                    <form action="" method="post">
+                                        <textarea class="q_reply_content" placeholder=""></textarea>
+                                        <div class="bot">
+                                            <a href="javascript:;" class="cancleBtn btn" onclick="fromCancel( $(this),'.question_list','.anAreaT','.mesIcoT','show')">取消</a>
+                                            <a href="javascript:;" data-answer-id="0" onclick="replyQuestion($(this))" class="btn subBtn">提交</a>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!--主人回复内容,客人点击按钮-->
+                                <volist name="val.answer" id="v">
+
+                                    <div class="item itemX">
+                                        <div class="tp fl">
+                                            <a href="javascript:;">
+                                                <img src="__MEMBER__/images/logo/{$v.face}.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="txIn txInB">
+                                                <div class="tHd">
+                                                    <img style="display: inline-block" src="__MEMBER__/images/user_group/{$v.user_group_id}.png">
+                                                    <span class="name">{$v.username}</span>
+                                                    <php>
+                                                        if($v['reply_user_id'] != 0){
+                                                        echo '回复 <span><img class="reply_user_group" style="display: inline-block" src="__MEMBER__/images/user_group/'.$v['reply_user_group_id'].'.png"> <span class="name reply_username">'.$v['reply_username'].'</span></span></span>';
+                                                        }
+
+                                                    </php>
+
+
+                                                    ：<span class="ask">{$v.answer}</span>
+                                                </div>
+                                                <div class="hand">
+                                                    <span class="time">{$v.addtime}</span>
+                                                    <php>
+                                                        if($v['user_id'] != $user_id){
+                                                        echo '<a href="javascript:;" flag=true  class="mesIco mesIcoB" onclick="mesIco($(this),\'.itemX\',\'.anAreaB\',\'show\')"><i></i></a>';
+                                                        }
+                                                    </php>
+
+                                                </div>
+                                            </div>
+                                            <div class="anArea anAreaB">
+                                                <form action="" method="post">
+                                                    <textarea class="q_reply_content" placeholder=""></textarea>
+                                                    <div class="bot">
+                                                        <a href="javascript:;" class="btn cancleBtn" onclick="fromCancel( $(this),'.itemX','.anAreaB','.mesIcoB','show')">取消</a>
+                                                        <a href="javascript:;" onclick="replyQuestion($(this))" data-answer-id="{$v.id}" class="btn subBtn">提交</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </volist>
+                                <!--加载更多-->
+                                <notempty name="val.is_show_more">
+                                    <span data-limit-end-id="{$val.limit_end_id}" onclick="answer_page($(this))">加载更多</span>
+                                </notempty>
+                            </div>
+
+                        </div>
+                    </li>
+                </volist>
+
+
+                <!--加载更多-->
+                <notempty name="allquestion.is_show_more">
+                    <div onclick="question_page($(this))" class="clickMore" style="text-align: center">
+                        <img src="__MOBILE__/images/loadingIco.gif" alt="">
+                        <a href="javascript:;" style="color: #ccc;">加载更多</a>
+                    </div>
+                </notempty>
+                <empty name="allquestion.question">
+                    <!--没有数据：-->
+                    <div id="question_noData" class="noData" style="text-align: center;">
+                        <img style="margin: 0 auto;" src="__MEMBER__/images/errorTp.png" alt="没有数据">
+                        <p>数据为空</p>
+                    </div>
+                </empty>
+
+            </ul>
+
+
+            <ul class="ul02">
+                <li>
+                    <i class="ico"></i>
+                    <a href="javascript:;" class="tx">NO.2项目分享/视频新媒体独特视频新媒体独特视频新媒体独特视频新媒体独特视频新媒体独特</a>
+                    <div class="bot">
+                        <span class="collectIco"><s></s>取消</span>
+                        <span class="date">2017.06.01</span>
+                    </div>
+                </li>
+                <li>
+                    <i class="ico"></i>
+                    <a href="javascript:;" class="tx">NO.2项目分享/视频新媒体独特视频新媒体独特视频新媒体独特视频新媒体独特视频新媒体独特</a>
+                    <div class="bot">
+                        <span class="collectIco"><s></s>取消</span>
+                        <span class="date">2017.06.01</span>
+                    </div>
+                </li>
+                <li>
+                    <i class="ico"></i>
+                    <a href="javascript:;" class="tx">NO.2项目分享/视频新媒体独特视频新媒体独特视频新媒体独特视频新媒体独特视频新媒体独特</a>
+                    <div class="bot">
+                        <span class="collectIco"><s></s>取消</span>
+                        <span class="date">2017.06.01</span>
+                    </div>
+                </li>
+                <li>
+                    <i class="ico"></i>
+                    <a href="javascript:;" class="tx">NO.2项目分享/视频新媒体独特视频新媒体独特视频新媒体独特视频新媒体独特视频新媒体独特</a>
+                    <div class="bot">
+                        <span class="collectIco"><s></s>取消</span>
+                        <span class="date">2017.06.01</span>
+                    </div>
+                </li>
+                <li>
+                    <i class="ico"></i>
+                    <a href="javascript:;" class="tx">NO.2项目分享/视频新媒体独特视频新媒体独特视频新媒体独特视频新媒体独特视频新媒体独特</a>
+                    <div class="bot">
+                        <span class="collectIco"><s></s>取消</span>
+                        <span class="date">2017.06.01</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<include file="Public:footer"/>
+<!--提示插件-->
+<script src="__MOBILE__/pugins/layer-mobile-2.0/layer.js"></script>
+
+<script>
+
+    var _writeQuestionUrl = "{:U(MODULE_NAME.'/Study/writeQuestion')}";    //发表问题接口地址
+    var _replyQuestionUrl = "{:U(MODULE_NAME.'/Study/replyQuestion')}";    //回复问题接口地址
+    var _questionListPageUrl = "{:U(MODULE_NAME.'/Study/questionListPage')}";  //加载更多问题接口地址
+    var _questionPageUrl = "{:U(MODULE_NAME.'/Study/questionPage')}";  //加载更多评论接口地址
+
+    var _MEMBER = "__MEMBER__";
+    var _MODULE_NAME = "/{:MODULE_NAME}";
+
+
+    var _user_id = {:session(C('USER_AUTH_UID'))};  //当前用户id
+    var _user_name = "{:session(C('USER_AUTH_UNAME'))}";  //当前用户名
+    var _user_face = "__MEMBER__/images/logo/{:session(C('USER_FACE'))}.png";  //当前用户头像
+    var _user_group = "__MEMBER__/images/user_group/{:session(C('USER_GROUP_ID'))}.png";  //当前用户组头像
+
+
+    //查询出的最后一条问题的id
+    <notempty name="allquestion.limit_end_id">
+    var _last_question_id = {$allquestion.limit_end_id};
+    </notempty>
+
+
+
+</script>
+
+<script src="__MOBILE__/js/main.js"></script>
+<!--问答相关js-->
+<script src="__MOBILE__/js/question.js"></script>

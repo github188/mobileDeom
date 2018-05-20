@@ -1,0 +1,81 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myBrokerage-->
+<section class="myCom myBrokerage" id="myBrokerage">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">我的佣金</a>
+                </div>
+                <div class="moneyHanle">
+                    <div class="mL fl">
+                        <span>账户佣金：</span>
+                        <span class="ye">{$user_account['brokerage']}</span>
+                    </div>
+                    <div class="mR fr">
+                        <button class="btn01 btn03" onclick="location.href='{:U(\'User/myTiXian\')}';">提现</button>
+                        <button class="btn02" onclick="location.href='{:U(\'Pay/courseChoose\')}';">升级</button>
+                    </div>
+                </div>
+            </div>
+            <div class="finance mt20">
+                <div class="hdT">
+                    <span>佣金记录</span>
+                </div>
+                <div class="finRecord">
+                    <div class="tab">
+                        <ol>
+                            <li><a href="{:U('User/myBrokerage')}">提现记录</a></li>
+                            <li class="{:I('get.status',0,'intval')==1?'cur':''}"><a href="{:U('User/myInvite',array('status'=>1))}">已出佣金</a></li>
+                            <li class="{:I('get.status',0,'intval')==0?'cur':''}"><a href="{:U('User/myInvite')}">未出佣金</a></li>
+                        </ol>
+                        <div class="dt">
+                            <span class="ti01">用户名</span>
+                            <span class="ti02">注册时间</span>
+                            <span class="ti03">用户组</span>
+                            <span class="ti04">佣金提成</span>
+                            <span class="ti05">审核时间</span>
+                            <span class="ti06">状态</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="itemIn">
+                                    <volist name="data" id="v">
+                                        <div class="item">
+                                            <span class="ti01">{$v['username']}</span>
+                                            <span class="ti02">{:date('Y/m/d',$v['reg_time'])}</span>
+                                            <span class="ti03">
+                                                <img style="display: inline-block;border-radius: 3px;" src="__MEMBER__/images/user_group/{$v['group_id']}.png" width="18px" height="18px" alt="图片">
+                                                {$v['group_name']}
+                                            </span>
+                                            <span class="ti04">{$v['type_money']*$v['type_unit']/100}</span>
+                                            <span class="ti05">{$v['ratify_time']?date('Y/m/d',$v['ratify_time']):'---'}</span>
+                                            <span class="ti06">{$v['ratify_status']==1?'已审核':'待审核'}</span>
+                                        </div>
+                                    </volist>
+                                    <if condition="!$data">
+                                            <p style="text-align: center;line-height: 100px;">邀请用户注册并开通课程，就可获得佣金哦~</p>
+                                    </if>
+                                </div>
+                            </li>
+                        </ul>
+                        <if condition="$totalPages GT 1">
+                            <!--分页-->
+                            <div class="pages">{$pages}</div>
+                        </if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+

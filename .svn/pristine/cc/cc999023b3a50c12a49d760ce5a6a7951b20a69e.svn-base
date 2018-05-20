@@ -1,0 +1,129 @@
+<include file="Public:content-header" />
+<div class="wrapper" style="font-family: '微软雅黑';">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">图表统计</a></li>
+            <li class="active">提问详情</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <h4 align="center"><i class="fa fa-list-ul"></i> 观看视频提问统计</h4>
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="">
+
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>开始时间：</b></label>
+                            <input type="text" class="form-control date-time" data-date-format="yyyy-mm-dd" name="start_time" value="{:cookie('question_start_time')}" >
+                        </div>
+
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>结束时间：</b></label>
+                            <input type="text" class="form-control date-time" data-date-format="yyyy-mm-dd" name="end_time" value="{:cookie('question_end_time')}" >
+                        </div>&nbsp; &nbsp;
+
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">提交查询</button>
+                    </form>
+                    <div id="container" style="min-width:300px;max-width:100%;height:500px;margin: 100px auto;"></div>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+
+</body>
+<script src="__ADMIN__/plugins/echarts/echarts.3.5.2.min.js"></script>
+<!-- bootstrap datepicker 日期-->
+<script src="__ADMIN__/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="__ADMIN__/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script type="text/javascript">
+    //日期插件
+    $('.date-time').datepicker({
+        weekStart: 1,
+        autoclose: true
+    });
+
+    window.onload=function(){
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('container'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title : {
+                text: '视频提问统计',
+                subtext: '详情如图：'
+            },
+            tooltip : {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['提问次数']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            xAxis : [
+                {
+                type : 'category',
+                boundaryGap : false,
+                data : [{$time_str}]
+            }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value} (次)'
+                    }
+                }
+            ],
+            series : [{
+                name:'提问次数',
+                type:'line',
+                data:[{$data}],
+                markPoint : {
+
+                    data : [
+                        {type : 'max', name: '最大值'},
+                        {type : 'min', name: '最小值'}
+                    ]
+                },
+                markLine : {
+                    data : [
+                        {type : 'average', name: '平均值'}
+                    ]
+                },
+                smooth:true,//平滑曲线
+            }],
+            //曲线颜色
+            color:['#1ac',]
+    };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    }
+</script>
+</html>

@@ -1,0 +1,176 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper" style="font-family: '微软雅黑';">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">视频管理</a></li>
+            <li class="active">视频列表</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <div class="pull-right" style="display:block;">
+                        <a  style="display:block;" class="btn btn-info" href="{:U(MODULE_NAME.'/Video/videoAdd')}" >
+                            <i class="fa fa-plus"></i> 添加视频
+                        </a>
+                    </div>
+                    <h4 align="center"><i class="fa fa-list-ul"></i> 视频管理</h4>
+
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/Video/index')}">
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>视频分组：</b></label>
+                            <select name="category_id" style="min-height: 30px;">
+                                <option value="0" selected>&nbsp;全部</option>
+                                <foreach name='video_group' item='v' key="k">
+                                    <option {:cookie('category_id') == $v['id']?'selected':''} value="{$v['id']}">&nbsp;{$v.name}</option>
+                                </foreach>
+                            </select>
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>允许提问：</b></label>
+                            <select name="is_reply" style="min-height: 30px;">
+                                <option value="0">&nbsp;全部</option>
+                                <option {:cookie('is_reply') == 1 ? 'selected':''} value="1">&nbsp;允许</option>
+                                <option {:cookie('is_reply') == 2 ? 'selected':''} value="2">&nbsp;禁止</option>
+                            </select>
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>视频标题：</b></label>
+                            <input type="text" class="form-control" name="title" value="{:cookie('title')}">
+                        </div>&nbsp; &nbsp;
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查找视频</button>
+
+                    </form>
+                    <h6>数据统计：总计[<font color="red">{$count}</font>]条记录</h6>
+                    <table id="example" class="table table-bordered table-hover" >
+                        <thead>
+                            <tr>
+                                <td align="center">ID</td>
+                                <td align="center">视频分组</td>
+                                <td align="center">视频标题</td>
+                                <td align="center">视频时间</td>
+                                <td align="center">单价(学习币)</td>
+                                <!--<td align="center">视频简介</td>-->
+                                <td align="center">最后更新</td>
+                                <td align="center">允许提问</td>
+                                <td align="center">视频标签</td>
+                                <td align="center">状态</td>
+                                <td align="center">操作</td>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <php>$curr_page = I('get.p',1,'intval');</php>
+                             <volist name="video_data" id="v" key="k" >
+                                    <tr>
+                                        <td>{$v.id}</td>
+                                        <td>{$v.group}</td>
+                                        <td>{$v.title|jiequ=0,20,''}</td>
+                                        <td>{$v.video_time|video_time_change}</td>
+                                        <td>{$v.buy_money}</td>
+                                        <!--<td>{$v.remark|htmlspecialchars_decode|jiequ=0,40,''}</td>-->
+                                        <td>{$v.save_time|date="Y-m-d H:i",###}</td>
+                                        <td>{$v['is_reply']==1?'允许':'禁止'}</td>
+                                        <td>{$video_tag[$v['is_tag']]}</td>
+                                        <td>
+                                            <switch name="v.status" >
+
+                                                    <case value="0">
+                                                        <a class="btn btn-xs btn-success">
+                                                            已审核
+                                                        </a>
+                                                    </case>
+
+                                                    <case value="1">
+                                                        <a class="btn btn-xs btn-warning">
+                                                            未审核
+                                                        </a>
+                                                    </case>
+
+                                                    <case value="2">
+                                                        <a disabled class="btn btn-xs btn-info" style="background: #c2ccd1; border-color: #c2ccd1;">
+                                                            已下架
+                                                        </a>
+                                                    </case>
+                                            </switch>
+                                       </td>
+                                        <td>
+                                            <switch name="v.status" >
+                                                <case value="0">
+                                                    <a href="{:U(MODULE_NAME.'/Video/videoShenhe', array('vid'=>$v['id'],'status'=>1,'p'=>$curr_page))}"  class="btn btn-xs btn-info">
+                                                        <!--<i class="fa fa-eye"></i>-->
+                                                        取审
+                                                    </a>&nbsp;
+                                                </case>
+                                                <case value="1">
+                                                    <a href="{:U(MODULE_NAME.'/Video/videoShenhe', array('vid'=>$v['id'],'status'=>0,'p'=>$curr_page))}"  class="btn btn-xs btn-info">
+                                                        <!--<i class="fa fa-eye"></i>-->
+                                                        审核
+                                                    </a>&nbsp;
+                                                </case>
+                                                <case value="2">
+                                                    <a disabled href="javascrit:;" class="btn btn-xs btn-info"  style="background: #c2ccd1; border-color: #c2ccd1;">
+                                                        <!--<i class="fa fa-eye"></i>-->
+                                                        已经下架
+                                                    </a>&nbsp;
+                                                </case>
+                                            </switch>
+
+
+                                            <a href="{:U(MODULE_NAME.'/Video/videoQuestion', array('vid'=>$v['id']))}"  class="btn btn-xs btn-info">
+                                                <!--<i class="fa fa-eye"></i> -->
+                                                答疑
+                                            </a>&nbsp;
+
+                                            <a href="{:U(MODULE_NAME.'/Video/videoEdit', array('vid'=>$v['id'],'p'=>$curr_page))}" class="btn btn-xs btn-primary">
+                                                <!--<i class="fa fa-pencil"></i>-->
+                                                编辑
+                                            </a>&nbsp;
+                                            <a onclick="deleteOne(this,{$v['id']},'{:U(MODULE_NAME.\'/Video/videoDelete\',array(\'p\'=>$page))}',{$curr_page},'确定要删除该视频吗？包含用户已经购买的记录、该视频下面的评论以及回复一切都会被删除，不可恢复！请慎重选择！');" class="btn btn-xs btn-danger">
+                                                <!--<i class="fa fa-remove"></i>-->
+                                                删除
+                                            </a>
+                                        </td>
+                                    </tr>
+                             </volist>
+
+                            <if condition="!$video_data">
+                                <tr>
+                                    <td colspan="9" align="center"> <i class="fa fa-exclamation-circle" aria-hidden="true" style="font-size: 18px;color: red;">  暂无数据!</i></td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="9" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>嗨推学院-知名网络推广实战培训平台</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_pa4jl08eia6mvx6r.css">
+    <link rel="stylesheet" href="../../public/css/base.css">
+    <link rel="stylesheet" href="../../public/css/common.css">
+    <link rel="stylesheet" href="../../public/css/main.css">
+
+</head>
+<body class="bgcC">
+<!--Head-->
+<section class="headCom">
+    <div class="topmeun">
+        <i class="meunIcon"></i>
+    </div>
+
+    <div class="com">
+        <ul class="clearfix" id="hUl">
+            <li>
+                <a href="#">坏坏说</a>
+            </li>
+            <li><a class="active" href="#">课程视频</a></li>
+            <li><a href="#">课程简介</a></li>
+            <li><a href="#">官方资讯</a></li>
+            <li><a href="#">团队风采</a></li>
+            <li><a href="#">1212</a></li>
+            <li><a href="#">3333</a></li>
+            <li><a href="#">44444</a></li>
+        </ul>
+    </div>
+</section>
+
+<!--背景图-->
+<setion class="img">
+    <img src="#{$imgUrl}curriculum-banner-01.png" alt="">
+</setion>
+
+<!--主要内容-->
+<setion class="mianCont">
+    <div class="contHear">
+        <ul class="clearfix">
+            <li>平台公告</li>
+            <li>官方资讯</li>
+            <li class="cur">常见问题</li>
+        </ul>
+    </div>
+
+    <!--平台公告-->
+    <div class="comQuestion Hshow">
+        <ul>
+            <li>
+               <div class="main clearfix">
+                   <div class="fl imgImg"></div>
+                   <div class="fl wz">
+                       <p class="wz1">关于禁止与他人共享使用嗨推学院付费账号的通知</p>
+                   </div>
+                   <div class="content" style="color: #999999">
+                       嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新......
+                   </div>
+                   <div class="time">2107-03-17</div>
+               </div>
+            </li>
+
+            <li>
+                <div class="main clearfix">
+                    <div class="fl imgImg"></div>
+                    <div class="fl wz">
+                        <p class="wz1">关于禁止与他人共享使用嗨推学院付费账号的通知</p>
+                    </div>
+                    <div class="content" style="color: #999999">
+                        嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新......
+                    </div>
+                    <div class="time">2107-03-17</div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <!--官方资讯-->
+    <div class="comQuestion">
+        <ul>
+            <li>
+                <div class="one">
+                    <i class="nes"></i>
+                    <span class="text">给大家一个超高的微商加好有验证活术</span>
+                </div>
+                <div class="content">
+                    嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新......
+                </div>
+                <div class="time">2107-03-17</div>
+            </li>
+            <li>
+                <div class="one">
+                    <i class="nes"></i>
+                    <span class="text">给大家一个超高的微商加好有验证活术</span>
+                </div>
+                <div class="content">
+                    嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新......
+                </div>
+                <div class="time">2107-03-17</div>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <!--常见问题-->
+     <div class="comQuestion ">
+         <ul>
+             <li>
+                <div class="one">
+                    <i class="Q"></i>
+                    <span class="text">嗨推学院5月份将大面积更新淘宝客系统</span>
+                </div>
+                 <div class="content">
+                     嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新......
+                 </div>
+                 <div class="time">2107-03-17</div>
+             </li>
+
+             <li>
+                 <div class="one">
+                     <i class="Q"></i>
+                     <span class="text">嗨推学院5月份将大面积更新淘宝客系统</span>
+                 </div>
+                 <div class="content">
+                     嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新嗨推学院5月份将大面积更新......
+                 </div>
+                 <div class="time">2107-03-17</div>
+             </li>
+         </ul>
+     </div>
+
+
+</setion>
+
+<script src="../../public/js/zepto_plus.js"></script>
+<script src="../../public/js/base.js"></script>
+<!--<script src="../../public/js/common.js"></script>-->
+
+<script src="../../public/js/swipe.js"></script>
+<script src="../../public/js/main.js"></script>
+
+</body>
+</html>

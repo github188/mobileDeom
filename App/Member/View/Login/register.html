@@ -1,0 +1,139 @@
+
+
+<include file="Public:headerBefore"/>
+
+<!--content-->
+<div class="content bgColor">
+    <div class="login-bg"></div>
+    <div class="webLogin" id="web_qr_login">
+        <div class="panel-header">
+            <span class="panel-title-register">注册用户</span>
+        </div>
+
+        <div class="panel-body padder-md-login">
+            <form action="{:U('Login/register')}" method="post" name="myForm" id="regMyForm" data-validator-option="{stopOnError:true}" autocomplete="off">
+                <div class="error"></div>
+                <div class="input-group input-group-change">
+                         <span class="input-group-addon">
+                             <i class="iconfont icon-user icon-change"></i>
+                         </span>
+                    <input class="form-control" placeholder="请输入用户名" name="username" maxlength="12" data-rule="用户名:required;username;">
+                </div>
+                <div class="input-group input-group-change">
+                         <span class="input-group-addon">
+                             <i class="iconfont icon-mima icon-change"></i>
+                         </span>
+                    <input class="form-control last-passsword" type="password" placeholder="请输入登录密码，6-16个字符" maxlength="16" name="pwd" data-rule="密码: required;password;length(6~16);">
+                </div>
+                <div class="input-group input-group-change">
+                         <span class="input-group-addon">
+                             <i class="iconfont icon-mima icon-change"></i>
+                         </span>
+                    <input class="form-control last-passsword" type="password" placeholder="请再次输入登录密码" maxlength="16" name="confirm_pwd" data-rule="确认密码: match(pwd);">
+                </div>
+                <div class="input-group input-group-change">
+                         <span class="input-group-addon">
+                             <i class="iconfont icon-shoujihao1 icon-change icon-change-new"></i>
+                         </span>
+                    <input class="form-control last-passsword" type="text" placeholder="请输入手机号" maxlength="11" name="mobile"  data-rule="手机号:required;mobile;">
+                </div>
+                <div class="input-group borderNone">
+                    <div class="borderChange inlineBlock divWidth61 input-group-change">
+                         <span class="input-group-addon">
+                            <i class="iconfont icon-duanxinyanzhengma icon-change"></i>
+                         </span>
+                        <input class="form-control from-control-change" type="text" maxlength="6"  placeholder="请输入验证码" name="mobile_code" data-rule="验证码:required;" >
+                    </div>
+
+                    <input type="button" href="javascript:;" class="layui-btn layui-btn-primary  layui-btn-primary-new ml32" value="获取验证码" id="sendMobileCode" />
+                </div>
+
+                <div class="form-group clearfix">
+                    <label class="checkbox i-checks text-left ft13">
+                        <input name="" id="rmb" type="checkbox" value="" checked class="ck js-ck"><i></i>
+                        <input id="rememberme" name="rememberme" value="" type="hidden">
+                        我已经阅读并接受<span class="">《用户协议》</span>
+                    </label>
+                </div>
+                <input type="hidden" value="1" name="register">
+                <button type="submit" class="btn webBtn w-full mt18 mb20" id="submit_btn">立即注册</button>
+            </form>
+        </div>
+
+        <div class="panel-footer clearfix mb20 textRight">
+            <p  class="mr50  clearfix">
+                <a href="#" class="ft16">已有账号？ </a>
+                <a href="{:U('Login/index')}" class="commonColor ft16">立即登录</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!--footer-->
+<include file="Public:footer"/>
+
+<script>
+
+    var getCodeUrl    = "{:U('Login/getMobileCode')}";
+    //发送验证码
+    $('#sendMobileCode').on('click',function(){
+        var mobile = $.trim($('input[name="mobile"]').val());
+        if(!(/^1[34578]\d{9}$/.test(mobile))){
+            show_msg('请输入正确手机号码','error');
+            return false;
+        }
+        $.ajax({
+            url: getCodeUrl,
+            type: 'POST',
+            data: {'mobile':mobile},
+            success: function(data){
+                if(data.status==0){
+                    show_msg(data.msg,'error');
+                    return false;
+                }
+                show_msg(data.msg);
+                daojishi($('#sendMobileCode'));
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','info');
+            }
+        });
+    });
+
+    //用户注册
+    $('#regMyForm').bind('valid.form', function(){
+        var item = $(this);
+        $.ajax({
+            url: item.attr('action'),
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(data){
+                item.find('.error').text(data.msg);
+                if(data.status==1){
+                    // show_msg(data.msg,'info');
+                    $('#submit_btn').text('正在注册中..');
+                    setTimeout(function(){
+                        location.href = "{:U('Study/index')}";
+                    },1200);
+                    return false;
+                }else{
+                    // show_msg(data.msg,'error');
+                    $('input[name="pwd"]').val('');
+                    $('input[name="confirm_pwd"]').val('');
+                }
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','info');
+            }
+        });
+    });
+
+    //nice表单验证-提示语样式
+    $('form').validator({
+        //theme: "yellow_right_effect", //消息皮肤
+        //msgStyle: "margin-left:3px; margin-top:5px;" ,//消息自定义样式
+        msgClass: "n-bottom"   //消息将自动显示在输入框右边
+    });
+</script>
+

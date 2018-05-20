@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- jQuery 2.2.0 -->
+    <script src="__ADMIN__/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+    <!--弹窗js 参考文档 http://layer.layui.com/-->
+    <script src="__ADMIN__/layer/layer.js"></script>
+</head>
+<body>
+
+<style>
+    body{
+        background-color:#ecf0f5;
+    }
+    /*初始化样式S*/
+    body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{
+        margin:0;padding:0;border:none; outline: none;
+    }
+    h1,h2,h3,h4,h5,h6{font-size:100%;}
+    address,cite,dfn,em,var{
+        font-style:normal;
+    }
+    code,kbd,pre,samp{
+        font-family:courier new,courier,monospace;
+    }
+    ul,ol{
+        list-style:none;
+    }
+    a{
+        text-decoration:none;
+    }
+    a:hover, a:visited, a:link, a:active{
+        text-decoration:none;
+    }
+    sup{
+        vertical-align:text-top;
+    }
+    sub{
+        vertical-align:text-bottom;
+    }
+    legend{
+        color:#000;
+    }
+    fieldset,img{
+        border:0;
+    }
+    button,input,select,textarea{
+        font-size:100%;
+    }
+    table{
+        border-collapse:collapse;
+        border-spacing:0;
+    }
+    .clear{
+        clear: both;
+        float: none;
+        height: 0;
+        overflow: hidden;
+    }
+    body{
+        color:#333;
+        font: 12px/1.3 'Arial','Microsoft YaHei';
+    }
+    /*初始化样式E*/
+    #pn{
+        width: 700px;
+        height: auto;
+        background: #fff;
+        margin: 0 auto;
+    }
+    .list0{
+        padding: 20px 0;
+        position: relative;
+        border-top: 1px solid #eee;
+    }
+    .head{
+        width: 15%;
+        float: left;
+    }
+    .head img{
+        width: 60px;
+        height: 60px;
+    }
+    .close{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #696e78;
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+    }
+    .close:hover{
+        color: #eb7350;
+    }
+    .content{
+        width: 85%;
+        line-height: 20px;
+        font-size: 14px;
+        margin-left: 70px;
+    }
+    .name{
+        color: #eb7350;
+    }
+    .pic{
+        margin: 5px 0;
+    }
+    .good:after{
+        clear:both;
+        content:'';
+        display:block;
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+    .good{
+        *zoom:1;
+    }
+    .date{
+        float:left;
+        color: #808080;
+    }
+    .good a{
+        float: right;
+        color: #808080;
+    }
+    .people{
+        background: #F7F7F7;
+        height: 28px;
+        line-height: 28px;
+        padding-left: 10px;
+        margin: 5px 0;
+    }
+    /*用户回复样式S*/
+    .comment:after{
+        clear:both;
+        content:'';
+        display:block;
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+    .comment{
+        *zoom:1;
+        padding: 10px 0;
+        border-top: 1px solid #eee;
+    }
+    .comment-left{
+        width: 6%;
+        float: left;
+        display: inline;
+        margin-right: 10px;
+    }
+    .comment-left img{
+        width: 30px;
+        height: 30px;
+    }
+    .comment-right{
+        float: left;
+        width: 92%;
+    }
+    .comment-text{
+        line-height: 18px;
+    }
+    .comment-text span{
+        color:#eb7350;
+    }
+    .comment-date{
+        font-size: 12px;
+        line-height: 14px;
+        color: #ccc;
+        position: relative;
+    }
+    .comment-date a:hover{color: orangered;text-decoration: underline;}
+    .comment-zan{
+        position: absolute;
+        right: 70px;
+        bottom: 0;
+        color: #808080;
+    }
+    .comment-dele{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: #808080;
+    }
+    .comment-reply{
+        position: absolute;
+        right: 35px;
+        bottom: 0;
+        color: #808080;
+    }
+    /*回复框*/
+    .hf:after{
+        clear:both;
+        content:'';
+        display:block;
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+    .hf{
+        *zoom:1;
+    }
+    .hf-text{
+        border: 1px solid #eee;
+        display: block;
+        height: 15px;
+        width: 99%;
+        padding: 5px;
+        resize: none;
+        color: #ccc;
+        font-size:12px;
+    }
+    .hf-on .hf-text{
+        height: 60px;
+        color: #333;
+        border:1px solid #ff8140;
+    }
+    .hf-btn{
+        float: right;
+        width: 65px;
+        height: 26px;
+        background: #f7f7f7;
+        color: #ccc;
+        font-size: 12px;
+        display: none;
+    }
+    .hf-btn-on{
+        background: #ff8140;
+        color: #fff;
+    }
+    .hf-nub{
+        float: right;
+        padding: 3px 5px;
+        color: #666;
+        display: none;
+    }
+    .hf-on .hf-btn{
+        display: inline;
+    }
+    .hf-on .hf-nub{
+        display: inline;
+    }
+</style>
+<ul id="pn">
+    <li class="list0">
+        <a class="close" href="javascript:;">X</a>
+        <div class="head"><img src="__MEMBER__/images/logo/{$question_info.userinfo.face}.png" alt=""/></div>
+        <div class="content">
+            <p class="text"><span class="name"><img src="__MEMBER__/images/user_group/{$question_info.userinfo.group_id}.png" alt=""/>{$question_info.userinfo.username}：</span>{$question_info.question}</p>
+            <div class="good"><span class="date">{:date('m-d H:i',$question_info['addtime'])}</span><a class="dzan" href="javascript:;">赞</a></div>
+            <if condition="$question_info['zan']">
+                <div class="people" total="{$question_info['zan']}">{$question_info['zan']}人觉得很赞</div>
+            <else/>
+                <div class="people" total=""></div>
+            </if>
+            <if condition="$question_info['answer']">
+                <volist name="question_info['answer']" id="v" key="k" >
+                    <div class="comment-list">
+                        <div class="comment" user="self">
+                            <div class="comment-left"><img src="__MEMBER__/images/logo/{$v['a_userinfo']['face']}.png" alt=""/></div>
+                            <div class="comment-right">
+                                <div class="comment-text">
+                                    <span class="user"><img src="__MEMBER__/images/user_group/{$v['a_userinfo']['group_id']}.png" alt=""/>{$v['a_userinfo']['username']}：</span>
+                                    <if condition="$v['reply_user_id']">
+                                        回复#<span class="user"><img src="__MEMBER__/images/user_group/{$v['b_userinfo']['group_id']}.png" alt=""/>{$v['b_userinfo']['username']}</span>:
+                                    </if>
+                                    {:htmlspecialchars_decode($v['answer'])}
+                                </div>
+                                <div class="comment-date">
+                                    {:date('m-d H:i',$v['addtime'])}
+                                    <!--<a class="comment-zan" href="javascript:;" total="{$v['zan']}" my="1">{$v['zan']}  取消赞</a>-->
+                                    <if condition="$v['a_userinfo']['id'] neq $bind_reply_id">
+                                        <a class="comment-reply" href="javascript:;" aid="{$v['id']}" >回复</a>
+                                    </if>
+                                    <a class="comment-dele" href="javascript:;" aid="{$v['id']}" onclick="delete_answer(this,{$v['id']});">删除</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </volist>
+            </if>
+            <input type="hidden" name="question_id" value="{$question_info.id}">
+            <input type="hidden" name="answer_id" value=""><!--这里动态获取回答的ID-->
+
+            <div class="hf">
+                <textarea type="text" name="answer" class="hf-text" autocomplete="off" placeholder="说点什么吧…" maxlength="200"></textarea>
+                <button class="hf-btn" onclick="reply(this);">回复</button>
+                <span class="hf-nub">0/200</span>
+            </div>
+        </div>
+    </li>
+
+</ul>
+
+</body>
+</html>
+
+<script>
+    //回复评论
+    function reply(obj){
+        var question_id  = $('input[name="question_id"]').val();
+        var answer_id    = $('input[name="answer_id"]').val();
+        var answer       = $('textarea[name="answer"]').val();
+
+        if($.trim(answer) == ''){
+            layer.msg('请输入回复的内容');
+            return false;
+        }
+
+        var url = "/Admin/Video/videoQuestionShow";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {question_id:question_id, answer_id:answer_id,answer:answer},
+            dataType: "json",
+            success: function(data){
+                if (data.code == 1) {
+                    layer.msg('回复成功！');
+
+                    // 还原输入框状态
+                    var hf = $('.hf-text');
+                    hf.val('');
+                    hf.attr('placeholder','说点什么吧！');
+                    hf.parent().removeClass('hf-on');
+
+                    var hf_str = '<div class="comment-list">';
+                        hf_str += '<div class="comment" user="self">';
+                        hf_str += '<div class="comment-left"><img src="__MEMBER__/images/logo/'+ data.userdata.face +'.png" alt=""/></div>';
+                        hf_str += '<div class="comment-right">';
+                        hf_str += '<div class="comment-text">';
+                        hf_str += '<span class="user"><img src="__MEMBER__/images/user_group/'+ data.userdata.group_id +'.png" alt=""/>'+ data.userdata.username +'：</span>';
+
+                        if (data.userdata.reply_user_id) {
+                            hf_str += '回复#<span class="user"><img src="__MEMBER__/images/user_group/'+ data.userdata.reply_user_group_id +'.png" alt=""/>'+ data.userdata.reply_username +'</span>:';
+                        }
+
+                        hf_str += answer;
+                        hf_str += '</div>';
+                        hf_str += '<div class="comment-date">';
+                        hf_str += data.userdata.addtime;
+                        // hf_str += '<a class="comment-reply" href="javascript:;" aid="'+ data.userdata.answer_id +'" >回复</a>';
+                        hf_str += '<a class="comment-dele" href="javascript:;" aid="'+ data.userdata.answer_id +'" onclick="delete_answer(this,{$v['id']});">删除</a>';
+                        hf_str += '</div></div></div></div>';
+                    // 将回复内容动态添加到回复列表里
+                    $('input[name="question_id"]').before(hf_str);
+                    // 将父窗口对应提问记录的状态修改为已回复
+                    $('#' + question_id, parent.document).text('已回复');
+                }else{
+                    layer.msg(data.msg);
+
+                }
+            },
+            error:function(){
+                layer.msg('网络繁忙，请稍后重试');
+            }
+        });
+    }
+
+    //删除回复
+    function delete_answer(obj,id){
+        //console.log(question_id+' '+answer_id+' '+answer);
+
+        //询问框
+        var index = layer.confirm('确定要删除该回复吗？不可恢复！', {
+            shade:0,
+            icon:2,
+            skin: 'layui-layer-molv', //样式类名
+            btn: ['确定','取消']       //按钮
+        }, function(){
+            $.ajax({
+                type: "POST",
+                url: '/Admin/Video/videoAnswerDelete',
+                data: {answer_id:id},
+                dataType: "json",
+                success: function(data){
+                    layer.msg(data.msg);
+                    if(data.code == 1){
+                        $(obj).parents('.comment-list').remove();
+                    }
+                },
+                error:function(){
+                    layer.msg('网络繁忙，请稍后重试');
+                }
+            });
+            layer.close(index);
+        }, function(){
+            layer.close(index);
+        });
+
+
+    }
+
+    /**
+     * Created by Administrator on 2017/4/19.
+     */
+//在页面加载完后立即执行多个函数。
+    function addloadEvent(func){
+        var oldonload=window.onload;
+        if(typeof window.onload !="function"){
+            window.onload=func;
+        }
+        else{
+            window.onload=function(){
+                if(oldonload){
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+    addloadEvent(b);
+    function b(){
+        var pn=document.getElementById("pn");
+        var lists=pn.children;
+        //删除当前节点
+        function remove(node){
+            node.parentNode.removeChild(node);
+        }
+        //上面的点赞
+        function praisebox(box,el){
+            //获取赞数量容器
+            var praise=box.getElementsByClassName("people")[0];
+            //获取容器当前total值
+            var total=parseInt(praise.getAttribute("total"));
+            //获取点击的innerHTML
+            var txt=el.innerHTML;
+            //创建一个新的total存储用
+            var newtotal;
+            //判断点击的文字内容
+            if(txt=="赞"){
+                //total值+1 因为我还没点击赞，所以要点击的时候就多了一个人 total+1
+                newtotal=total+1;
+                //判断赞数量 把相应文字放到赞容器里
+                praise.innerHTML=newtotal==1 ? "我觉得很赞" : "我和" + total +"个人觉得很赞";
+                el.innerHTML="取消赞";
+            }
+            else{
+                //反之total值-1
+                newtotal=total-1;
+                praise.innerHTML=newtotal==0 ? "" : newtotal +"个人觉得很赞";
+                el.innerHTML="赞";
+            }
+            //更新total值
+            praise.setAttribute("total",newtotal);
+            //如果没有人点赞容器隐藏
+            praise.style.display=(newtotal==0) ? "none" : "block";
+        }
+
+        //获取当前时间回复评论时调用
+        function getTime(){
+            var t=new Date();
+            var y=t.getFullYear();
+            var m=t.getMonth()+1;
+            var d=t.getDate();
+            var h=t.getHours();
+            var mi=t.getMinutes();
+            m=m<10?"0"+m:m;
+            d=d<10?"0"+d:d;
+            h=h<10?"0"+h:h;
+            mi=mi<10?"0"+mi:mi;
+            return y+"-"+m+"-"+d+""+h+":"+mi;
+        }
+        //回复里点赞
+        function praiseReply(el){
+            //获取当前total值 也就是所有点赞数量
+            var total=parseInt(el.getAttribute("total"));
+            //获取当前my值 我的点赞
+            var my=parseInt(el.getAttribute("my"));
+            //创建新的total
+            var newtotal;
+            //判断my=0就是我准备要点赞
+            if(my==0){
+                //我点了赞总数量就要+1
+                newtotal=total+1;
+                //更新total值
+                el.setAttribute("total",newtotal);
+                //更新my值
+                el.setAttribute("my",1);
+                //更新文字 就是我点了后 文字就是取消赞了
+                el.innerHTML=newtotal+" 取消赞";
+            }else{
+                //反之-1
+                newtotal=total-1;
+                el.setAttribute("total",newtotal);
+                el.setAttribute("my",0);
+                el.innerHTML=(newtotal==0)?" 赞":newtotal+" 赞";
+            }
+        }
+        //操作回复
+        function operateReply(el){
+            //每条评论
+            var comment=el.parentNode.parentNode.parentNode;
+            //整个状态
+            var box=comment.parentNode.parentNode.parentNode;
+            //评论框
+            var textarea=box.getElementsByTagName("textarea")[0];
+            //名字
+            var user=comment.getElementsByClassName("user")[0];
+            //点击的innerHTML
+            var txt=el.innerHTML;
+
+            var answer_id = el.getAttribute("aid");
+
+            //判断当前点击的是否为回复
+            if(txt=="回复"){
+                $('input[name="answer_id"]').val(answer_id);
+                //评论框触发焦点事件 也就是变高
+                textarea.onfocus();
+                textarea.setAttribute('placeholder',"回复# "+user.innerText);
+                //内容变为回复+当前人的名字
+                //textarea.value="回复 "+user.innerHTML;
+                //调用键盘事件
+                textarea.onkeyup();
+            }else{
+                //否则就是删除节点
+                remove(comment);
+            }
+        }
+        //遍历所有状态消息
+        for(var i=0;i<lists.length;i++){
+            //全部事件代理
+            lists[i].onclick=function(e){
+                //获取当前点击事件
+                var e=e||window.event;
+                var el=e.srcElement;
+                if(!el){
+                    el=e.target;//兼容火狐
+                }
+
+                //判断点击的类名
+                switch(el.className){
+                    //关闭整个状态
+                    case "close":
+                        remove(el.parentNode);
+                        break;
+                    //上面的点赞
+                    case "dzan":
+                        praisebox(el.parentNode.parentNode.parentNode,el);
+                        break;
+                    //每条评论中点赞
+                    case "comment-zan":
+                        praiseReply(el);
+                        break;
+                    case "comment-reply":
+                        operateReply(el);
+                        break;
+                }
+            }
+            var textarea=lists[i].getElementsByClassName("hf-text")[0];
+            //焦点事件
+            textarea.onfocus=function(){
+                this.parentNode.className='hf hf-on';
+                //this.value = this.value == '评论…' ? '' : this.value;
+            }
+            //失焦事件
+            textarea.onblur=function(){
+                if(this.value==''){
+                    this.parentNode.className='hf';
+                    //this.value ='评论…';
+                }
+            }
+            //键盘事件
+            textarea.onkeyup=function(){
+                var len=this.value.length;
+                var textParentNode=this.parentNode;
+                var textBtn=textParentNode.children[1];
+                var textNub=textParentNode.children[2];
+                if(len==0 /*|| len>100*/){
+                    textBtn.className="hf-btn";
+                }else{
+                    textBtn.className="hf-btn hf-btn-on";
+                    /*this.style.color="#333"; */
+                }
+                textNub.innerHTML=len+"/200";
+            }
+        }
+        //遍历结束
+    }
+</script>

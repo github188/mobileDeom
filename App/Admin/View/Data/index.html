@@ -1,0 +1,78 @@
+
+<include file="Public:content-header" />
+<div class="wrapper">
+
+	<!-- 内容标题开始 -->
+	<div id="breadcrumbs" class="breadcrumbs">
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+			<li><a href="#">系统设置</a></li>
+			<li class="active">数据库备份</li>
+		</ol>
+	</div>
+
+	<!-- 内容标题结束 -->
+
+	<!-- 主要内容开始 -->
+	<section class="content">
+		<div class="row">
+			<form action="{:U(MODULE_NAME.'/Data/back')}" method="post">
+				<div class="col-xs-12">
+					<div class="box box-info">
+						<div class="box-header">
+							<button class="btn btn-success" type="submit"><i class="fa fa-folder-open-o"></i> 备份数据库</button>
+						</div>
+
+						<!-- 表格开始 -->
+						<div class="box-body">
+							<table id="example" class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th width="80" height="25">
+											<input type="checkbox" class="data-back-true" value="0"> 勾选
+										</th>
+										<th >数据库表名</th>
+										<th >记录数</th>
+										<th >存储大小 KB</th>
+										<th >引擎类型</th>
+										<th >编码</th>
+										<th >最后操作时间</th>
+										<th >操作数据库</th>
+									</tr>
+								</thead>
+								<tbody class="data-back-checkbox">
+									<volist id="v" name="rem">
+										<tr>
+											<td>
+												&nbsp; <input type="checkbox" data-toggle="icheck" name="myBack[]" value="{$v['name']}">
+											</td>
+											<td>{$v['name']}</td>
+											<td>&nbsp;{$v.rows} </td>
+											<td><php> $data_a = round(($v['data_length']+$v['index_length'])/1024,0);</php> &nbsp;{$data_a}K</td>
+											<td>{$v.engine}</td>
+											<td>{$v.collation}</td>
+											<td>{$v.update_time}</td>
+											<td>
+												<a href="{:U(MODULE_NAME .'/Data/click',array('do' => 'optimize','name'=>$v['name']))}" class="btnEdit">优化表</a> &nbsp;
+												<a href="{:U(MODULE_NAME .'/Data/click',array('do' => 'repair','name'=>$v['name']))}" class="btnEdit">修复表</a> &nbsp;
+												<!-- <a href="{:U(MODULE_NAME .'/Data/click',array('do' => 'viewinfo','name'=>$v['name']))}" class="btnEdit">结构</a> -->
+											</td>
+										</tr>
+									</volist>
+								</tbody>
+							</table>
+						</div>
+						<!-- 表格结束 -->
+
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</section>
+	<!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

@@ -1,0 +1,31 @@
+<!--footNav-->
+<footer class="footNav">
+    <div class="in">
+        <ul class="nav">
+            <li {:ACTION_NAME=='index'?'class="cur"':''} >
+                <a href="{:U('Index/index')}" class="item">
+                    <img src="__MOBILE__/images/nav01.png" rel="__MOBILE__/images/nav01-hover.png" alt="">
+                    <span class="ti">首页</span>
+                </a>
+            </li>
+            <li {:ACTION_NAME=='videoList'?'class="cur"':''}>
+                <a href="{:U('Index/videoList')}" class="item">
+                    <img src="__MOBILE__/images/nav02.png" rel="__MOBILE__/images/nav02-hover.png" alt="">
+                    <span class="ti">视频</span>
+                </a>
+            </li>
+            <li {:ACTION_NAME=='allQuestion'?'class="cur"':''} {:ACTION_NAME=='myQuestion'?'class="cur"':''}>
+                <a href="{:U('Study/allQuestion')}" class="item">
+                    <img {:ACTION_NAME=='allQuestion'?'src="__MOBILE__/images/nav03-hover.png"':'src="__MOBILE__/images/nav03.png'}" rel="__MOBILE__/images/nav03-hover.png" alt="">
+                    <span class="ti">问答</span>
+                </a>
+            </li>
+            <li {:ACTION_NAME=='my'?'class="cur"':''}>
+                <a href="{:U('User/my')}" class="item">
+                    <img src="__MOBILE__/images/nav04.png" rel="__MOBILE__/images/nav04-hover.png" alt="">
+                    <span class="ti">我的</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>

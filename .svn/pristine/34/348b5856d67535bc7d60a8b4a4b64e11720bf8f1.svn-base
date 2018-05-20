@@ -1,0 +1,65 @@
+<include file="Public:header"/>
+<style type="text/css">
+    body{
+        background-color: #fff;
+    }
+</style>
+
+<!--myRecharge-->
+<section class="myRecharge">
+    <div class="in">
+        <div class="withRate">
+            <div class="tp">
+                <img src="__MOBILE__/images/rate02.png">
+            </div>
+            <div class="txt">
+                <div class="tx01 cur">
+                    <span>充值学习币</span>
+                </div>
+                <div class="tx02 cur">
+                    <span>确认支付</span>
+                </div>
+                <div class="tx03">
+                    <span>支付成功</span>
+                </div>
+            </div>
+        </div>
+        <div class="recDet">
+            <p><span>订单编号：</span><span>{$trade_no}</span></p>
+            <p><span>充值数量：</span><span>{$money}学习币</span></p>
+            <p><span>应付总金额：</span><em>¥{$money}元</em></p>
+        </div>
+        <div class="myBtn">
+            <a href="javascript:;" onclick="callpay()">微信支付</a>
+        </div>
+    </div>
+</section>
+
+
+<include file="Public:footer"/>
+    <script type="text/javascript">
+    //调用微信JS api 支付
+    function jsApiCall(){
+        WeixinJSBridge.invoke(
+            'getBrandWCPayRequest',
+            <?php echo $jsApiParameters; ?>,
+            function(res){
+                WeixinJSBridge.log(res.err_msg);
+                alert(res.err_code+res.err_desc+res.err_msg);
+            }
+        );
+    }
+
+    function callpay(){
+        if (typeof WeixinJSBridge == "undefined"){
+            if( document.addEventListener ){
+                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+            }else if (document.attachEvent){
+                document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+            }
+        }else{
+            jsApiCall();
+        }
+    }
+    </script>

@@ -1,0 +1,16 @@
+<!--theMenu-->
+<section class="theMenu">
+    <div class="tabMenu">
+        <div class="tabMenu_left">
+            <div class="tabMenu_list">
+                <ul>
+                    <li><a href="{:U('Index/index')}">首页</a></li>
+                    <li {:ACTION_NAME=='courseList'?'class="cur"':''} ><a href="{:U('Content/courseList')}">课程简介</a></li>
+                    <li {:ACTION_NAME=='videoList'?'class="cur"':''} ><a href="{:U('Index/videoList')}">课程视频</a></li>
+                    <li {:ACTION_NAME=='contactUs'?'class="cur"':''} ><a href="{:U('Content/contactUs')}">联系我们</a></li>
+                    <li {:ACTION_NAME=='webNoticeList'?'class="cur"':''} ><a href="{:U('Content/webNoticeList')}">平台公告</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

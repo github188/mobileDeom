@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+html,body{
+    height:100%;
+}
+body{
+    font-size: 14px;overflow: hidden;
+    font-family: "microsoft yahei";
+}
+div {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color:#414141;
+    font-size:14px;
+    text-align: center;
+}
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    text-align: left;
+    line-height: 25px;
+    color:#DADADA; /*修改webkit中input的planceholder样式*/
+}
+input:focus::-webkit-input-placeholder {
+    text-align: left;
+    line-height: 25px;
+    font-size: 14px;
+    color:#DADADA; /*修改webkit中focus状态下input的planceholder样式*/
+}
+.csQrcode{width:30%;display:block;margin:50px auto 10px;}
+#goback{position:fixed;top:10px;left:10px;width:30px;height:30px;text-align:center;line-height:30px;color:#fff;background:rgba(0,0,0,0.5);border-radius:50%;}
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.drawBox {
+    width: 100%;
+    height: 100%;
+    background: #F6F6F6;
+}
+.drawTitle {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0 20px;
+    font-size: 14px;
+}
+.drawRecord{
+    padding: 0;
+}
+.drawTitle .drawTitle-item {
+    -webkit-flex: 1;
+    flex: 1;
+}
+.drawTitle .drawTitle-item a{
+    font-size: 14px;
+    color: #999999;
+}
+.drawTitle .drawTitle-item span{
+    color: #EF4A46;
+}
+.drawTitle .drawTitle-item i{
+    color: #fdbd4d;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.borda{width: 1px;height: 40px;background: #DADADA;margin: auto;}
+.record{text-align: right;}
+.balance,.recorded  {text-align: center;color: #333;}
+.recorded span.ffb700{color: #FFB700;}
+
+.weui_panel {margin: 0;}
+.weui-cells ,.weui-cell {
+    margin: 0 ;
+    padding: 0;
+}
+.weui-cells:after,.weui-cell:before{
+    border: none;
+}
+.weui-cells .weui-cell {
+    border-bottom:1px solid #E1E1E1 ;
+    width: 100%;
+    padding:15px 20px;
+}
+.font14333 {
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333333;
+}
+.weui-input{
+    padding-left: 10px;
+}
+.weui-btn {
+    padding: 4px 0;
+    font-size: 15px;
+}
+.weui-btn:after{
+    border: none;
+}
+.weui-btn_primary {
+    border: none;
+    background-color: #ff4479;
+}
+.weui-btn_primary:not(.weui-btn_disabled):active {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #FFB700;
+}
+.weui-btn_primary:visited {
+    background-color: #FFB700;
+}
+.draw-tips {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #999999;
+}
+/*提取纪录*/
+.yyFlex {
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid #E1E1E1;
+    display: -webkit-flex;
+    display: flex;
+}
+.yyFlex-item1 {
+    -webkit-flex: 1;
+    flex: 1;
+}
+.yyFlex-item2{
+    text-align: right;
+    line-height: 40px;
+    font-size:14px ;
+    font-weight: bold;
+    color: #FFB700;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.weui-updown i{font-size: 38px;color:#FDB800 ; }
+.weui_media_box.weui_media_appmsg .weui_media_hd{width: 40px; height: 40px;line-height: 40px;}
+.weui_media_box{padding: 0;margin: 0;text-align: left;vertical-align: middle;}
+.weui_media_box .weui_media_title{color: #666666;font-size: 14px;}
+.weui_media_box .weui_media_desc{color: #999;font-size: 12px;}
+
+

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="Keywords" content=" 嗨推学院客服，嗨推在线客服，嗨推客服中心，嗨推客服网站，嗨推客服在线，，嗨推客服电话，嗨推客服，嗨推客服网站，嗨推客服首页，嗨推客服官网，嗨推官网客服，嗨推客服中心，嗨推客户服务，嗨推客服电话"/>
+    <meta name="description" content="嗨推客服官网网站，为您解决使用嗨推产品过程中遇到的问题，嗨推客服中心提醒您：谨防网络骗术，教您如何识别网络骗术"/>
+    <meta http-equiv="Content-Language" content="zh-cn"/>
+    <meta name="robots" content="all"/>
+    <meta name="author" content="Tencent-OUI"/>
+    <meta name="Copyright" content="Tencent"/>
+
+    <link rel="stylesheet" type="text/css" href="__HOME__/css/kefu_public.css">
+    <!--  引入首页的部分样式-->
+    <link rel="stylesheet" type="text/css" href="__HOME__/css/index.css"/>
+    <!-- Font Awesome 图标字体 -->
+    <link rel="stylesheet" href="__ADMIN__/bootstrap/font-awesome/font-awesome.min.css">
+    <title>{:getConfig('web_name')} - 客服中心官网首页</title>
+</head>
+<body class="home" id="home">
+
+<include file="Public:header"/>
+
+<!--头部引入-->
+<!--banner-->
+<!--横幅区域begin-->
+<div class="indexBanner">
+    <div class="bannerText">
+        <h1 class="fadeInB" >服务, 因为用心而温暖</h1>
+        <div class="searchBox">
+            <div class="kf_mod_searchBox">
+                <form action="{:U('Index/searchList')}" method="post">
+                <div class="searchBar">
+                    <input type="text" class="name" name="name" id="current_search_key" value="" placeholder="请输入关键字或问题搜索">
+                    <button class="fa fa-search" type="submit" id="kf_search_index_btn"></button>
+                </div>
+                </form>
+                <div class="search_key_suggest" id="kf_search_index_key_suggest" style="display: none">
+                </div>
+                <p>热门搜索：
+                    <a href="{:U('Index/searchList',array('name' => '淘宝客'))}" >淘宝客</a>
+                    <a href="{:U('Index/searchList',array('name' => '微商'))}" >微商</a>
+                    <a href="{:U('Index/searchList',array('name' => '新媒体'))}" >新媒体</a>
+                    <a href="{:U('Index/searchList',array('name' => '网络推广'))}" >网络推广</a>
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容icon块-->
+    <div class="container container_main" style="height: 350px;position: absolute;left: 50%;bottom: 100px;margin-left: -550px;">
+        <ul class="ul">
+            <li>
+                <a href="{:U('Index/articleList')}" class="item item1" >
+                    <i class="icon-save_taobaoke"></i>
+                    <h3>淘宝客</h3>
+                    <p></p>
+                    <i class="iconfont icon-right">  了解更多</i>
+                </a>
+            </li>
+
+            <li>
+                <a href="{:U('Index/articleList')}" class="item item1" >
+                    <i class="icon-save_weixing"></i>
+                    <h3>微商</h3>
+                    <p></p>
+                    <i class="iconfont icon-right">  了解更多</i>
+                </a>
+            </li>
+
+            <li>
+                <a href="{:U('Index/articleList')}" class="item item1" >
+                    <i class="icon-save_kecheng"></i>
+                    <h3>嗨推服务</h3>
+                    <p></p>
+                    <i class="iconfont icon-right">  了解更多</i>
+                </a>
+            </li>
+
+            <li>
+                <a href="{:U('Index/articleList')}" class="item item1" >
+                    <i class="icon-save_xinmeiti"></i>
+                    <h3>网络基础</h3>
+                    <p></p>
+                    <i class="iconfont icon-right">  了解更多</i>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+
+<!--横幅区域end-->
+<include file="Public:fuchuang"/>
+<include file="Public:footer"/>

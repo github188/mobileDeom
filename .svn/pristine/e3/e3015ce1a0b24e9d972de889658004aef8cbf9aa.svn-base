@@ -1,0 +1,145 @@
+<include file="Public:content-header" />
+
+<style>
+    @media screen and (max-width:1920px){
+        .new-form-group{
+            width:22%;!important;
+            display: inline-block;!important;
+            margin-bottom: 10px;!important;
+            vertical-align: middle;!important;
+            float: left;
+        }
+    }
+    @media screen and (max-width:1680px){
+        .new-form-group{
+            width:24%;!important;
+            display: inline-block;!important;
+            margin-bottom: 10px !important;
+            vertical-align: middle;!important;
+
+        }
+    }
+    @media screen and (max-width:1440px){
+        .new-form-group{
+            width:44%;!important;
+            display: inline-block;!important;
+            margin-bottom: 10px !important;
+            vertical-align: middle;!important;
+
+        }
+    }
+</style>
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">会员管理</a></li>
+            <li class="active">用户查询</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/User/index')}">
+
+                      <div class="form-group new-form-group inlineForm display-inline" style="margin-bottom: 10px">
+                            <label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qq号码：</b></label>
+                            <input type="text" class="form-control" name="qq" value="{$condition[qq]}" >
+                      </div>&nbsp; &nbsp;
+                      <div class="form-group new-form-group inlineForm display-inline" style="margin-bottom: 10px">
+                            <label><b>手机号码：</b></label>
+                            <input type="text" class="form-control" name="mobile" value="{$condition[mobile]}">
+                      </div>&nbsp; &nbsp;
+                        <div class="form-group new-form-group inlineForm display-inline" style="margin-bottom: 10px">
+                            <label  style="width: 64px;text-align: right;"><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{$condition[username]}" >
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group new-form-group inlineForm display-inline" style="margin-bottom: 10px">
+                            <label><b>真实姓名：</b></label>
+                            <input type="text" class="form-control" name="realname" value="{$condition[realname]}">
+                            <button type="submit" class="btn btn-success inlineSearch display-inline" style="margin-left: 10%">查询</button>
+                        </div>
+                    </form>
+
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td width="50">用户权限</td>
+                                <td width="120" align="center">开通时间</td>
+                                <td width="120" align="center">过期时间</td>
+                                <td width="30" align="center">会员</td>
+                                <td width="50" align="center">姓名</td>
+                                <td width="50" align="center">qq</td>
+                                <!--<td width="100" align="center">城市</td>-->
+                                <td width="50" align="center">手机</td>
+                                <td width="50" align="center">注册</td>
+                                <td width="50" align="center">邀请人</td>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <volist name="info" id="v">
+                                    <tr>
+                                        <td width="50">{$v.name}</td>
+                                        <td width="120" align="center">
+                                            <if condition="$v['start_time']">
+                                                {$v.start_time|date="Y-m-d",###}
+                                            <else/>
+                                                暂无数据
+                                            </if>
+                                        </td>
+                                        <td width="120" align="center">{$v.gqtime|date="Y-m-d",###}</td>
+                                        <td width="30" align="center">{$v.username}</td>
+                                        <td width="50" align="center">{$v.realname}</td>
+                                        <td width="50" align="center">{$v.qq}</td>
+                                        <!--<td width="100" align="center">{$v.city}</td>-->
+                                        <td width="50" align="center">{$v.mobile}</td>
+                                        <td width="50" align="center">{$v.regtime|date="Y-m-d",###}</td>
+                                        <td width="50" align="center">{$v.username_a}</td>
+                                    </tr>
+                             </volist>
+
+                            <if condition="!$info">
+                                <tr>
+                                    <td colspan="9" align="center"> 没有数据！</td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="9" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+  //删除询问框
+$(".delete-msg-find").on('click', function(){
+    var status = confirm('确定删除本条文章？\n \n 删除后将无法恢复！\n 确定删除吗？？？\n \n ');
+    if(!status){
+        return false;
+    }
+});
+
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

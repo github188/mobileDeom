@@ -1,0 +1,25 @@
+
+<include file="Public:headerAfter"/>
+
+<!--indexCom-->
+<section class="indexCom mt32" id="indexCom">
+    <div class="in w1100 m0a bodyColor hNotice">
+
+        <!--左侧共用菜单-->
+        <include file="leftMenu"/>
+
+        <div class="noticeRigth fr  ml15">
+             <p class="p pl50">
+                <span class="fonts18 textColor">{$position_name}</span>
+            </p>
+            <p style="line-height: 50px;text-align: center;font-size: 20px;">{$data['title']}</p>
+             <div class="nContent pl30  fonts17 pr30 pb50">
+                {:htmlspecialchars_decode($data['content'])}
+             </div>
+        </div>
+
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>

@@ -1,0 +1,892 @@
+[ 2017-04-24T09:31:10+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+
+[ 2017-04-24T09:31:31+08:00 ] 127.0.0.1 /Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-24T09:32:54+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+
+[ 2017-04-24T09:33:15+08:00 ] 127.0.0.1 /Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-24T09:34:07+08:00 ] 127.0.0.1 /Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+SQL: SELECT `web_name` FROM `ht_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:3.085776s ]
+INFO: [ view_parse ] --END-- [ RunTime:3.085776s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-24T09:34:07+08:00 ] 127.0.0.1 /Admin/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-24T09:34:21+08:00 ] 127.0.0.1 /Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_manage` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_manage` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0090s ]
+SQL: UPDATE `ht_manage` SET `login_time`='1492997661',`login_ip`='127.0.0.1',`login_count`='62' WHERE `id` = 1 [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: type E:\wwwroot\www\kf.hitui.com\App\Admin\Controller\LoginController.class.php Á¨¨ 38 Ë°å.
+
+[ 2017-04-24T09:34:21+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-24T09:34:21+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: select VERSION() [ RunTime:0.0070s ]
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:34:29+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-24T09:34:30+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: select VERSION() [ RunTime:0.0080s ]
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:34:32+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-24T09:34:32+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: select VERSION() [ RunTime:0.0090s ]
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:03+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-24T09:35:03+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: select VERSION() [ RunTime:0.0070s ]
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:43+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0090s ]
+SQL: SELECT `web_name` FROM `ht_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-24T09:35:43+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: select VERSION() [ RunTime:0.0080s ]
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:43+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-24T09:35:43+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-24T09:35:43+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-24T09:35:43+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: select VERSION() [ RunTime:0.0070s ]
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:46+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:48+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:48+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:48+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:49+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:49+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:49+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:50+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:50+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:50+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:50+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:50+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:51+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:51+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:35:52+08:00 ] 127.0.0.1 /Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+ERR: 1146:Table 'ihitui_px.v5_user' doesn't exist
+ [ SQLËØ≠Âè• ] : SHOW COLUMNS FROM `v5_user`
+
+[ 2017-04-24T09:59:33+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+SQL: SELECT `web_name` FROM `ht_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-24T09:59:34+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: select VERSION() [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `v5_user` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `v5_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `v5_video` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `v5_video` LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-24T09:59:34+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-24T09:59:34+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: select VERSION() [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `v5_user` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `v5_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `v5_video` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `v5_video` LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-24T16:19:15+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='18' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+SQL: SELECT `web_name` FROM `ht_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-24T16:19:37+08:00 ] 127.0.0.1 /Admin/User/userHack.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-24T16:19:58+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-24T16:29:49+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: SHOW COLUMNS FROM `ht_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_menu` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='1' ) ORDER BY sort  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='2' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='15' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='5' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='10' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='16' ) ORDER BY sort  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='17' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`level`,`menu_id`,`sort`,`url` FROM `ht_node` WHERE ( status=1 AND menu_status=1 AND menu_id='18' ) ORDER BY sort  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_node` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`menu_id`,`menu_status` FROM `ht_node`  [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+SQL: SELECT `web_name` FROM `ht_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-24T16:29:49+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php Á¨¨ 1263 Ë°å.
+SQL: select VERSION() [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `v5_user` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `v5_user` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `v5_video` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `v5_video` LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

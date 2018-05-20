@@ -1,0 +1,410 @@
+<include file="Public:header"/>
+
+<!--theMenu-->
+<section class="theMenu">
+    <div class="tabMenu">
+        <div class="tabMenu_left">
+            <div class="tabMenu_list">
+                <ul>
+                    <li class="cur"><a href="javascript:;">坏坏说</a></li>
+                    <li><a href="javascript:;">官方资讯</a></li>
+                    <li><a href="javascript:;">课程简介</a></li>
+                    <li><a href="javascript:;">团队风采</a></li>
+                    <li><a href="javascript:;">最新视频</a></li>
+                    <li><a href="javascript:;">每日更新</a></li>
+                    <li><a href="javascript:;">新人求助</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--theSearch-->
+<section class="theSearch">
+    <div class="in">
+        <div class="inp">
+            <form id="key_word_form" action="{:U('Index/videoList')}">
+                <input type="text" name="key_word" value="{:cookie('key_word')}" placeholder="请输入关键字或视频名称搜索">
+                <a href="javascript:;"  onclick="$('#key_word_form').submit();" class="btn"></a>
+            </form>
+        </div>
+    </div>
+</section>
+<style>
+    /*让a的宽高撑满li，点击li时才能触发到a*/
+    .js-ul li a{
+        display: block;
+    }
+</style>
+<!--courses-->
+<section class="courses">
+    <div class="in">
+        <div class="findSel">
+            <div class="tabHd">
+                <ol>
+                    <li class="js-li">
+                        <a href="javascript:;">
+                            <span class="ti">付款方式</span><i class="ico"></i>
+                        </a>
+                    </li>
+                    <li class="js-li">
+                        <a href="javascript:;">
+                            <span class="ti">推广方式</span><i class="ico"></i>
+                        </a>
+                    </li>
+                    <li class="js-li">
+                        <a href="javascript:;">
+                            <span class="ti">课程分类</span><i class="ico"></i>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+            <div class="listBd">
+                <div class="wrap"></div>
+
+                <!--付款方式-->
+                <ul class="js-ul">
+                    <li class="{$type==0?'cur':''}">
+                        <a href="{:U('Index/videoList',array('type'=>0, 'search_tg_category'=>$search_tg_category, 'category_id'=>$category_id))}">全部</a>
+                    </li>
+                    <li class="{$type==1?'cur':''}">
+                        <a href="{:U('Index/videoList',array('type'=>1, 'search_tg_category'=>$search_tg_category, 'category_id'=>$category_id))}">免费</a>
+                    </li>
+                    <li class="{$type==2?'cur':''}">
+                        <a href="{:U('Index/videoList',array('type'=>2, 'search_tg_category'=>$search_tg_category, 'category_id'=>$category_id))}">付费</a>
+                    </li>
+                </ul>
+
+                <!--推广方式-->
+                <ul class="js-ul">
+                    <li class="{$search_tg_category==0?'cur':''}">
+                        <a href="{:U('Index/videoList',array('type'=>$type, 'search_tg_category'=>0, 'category_id'=>$category_id))}">全部</a>
+                    </li>
+
+                    <volist name="tg_category" key="k" id="v">
+                        <li class="{$k==$search_tg_category?'cur':''}">
+                            <a href="{:U('Index/videoList',array('type'=>$type, 'search_tg_category'=>$k, 'category_id'=>$category_id))}">{$v}</a>
+                        </li>
+                    </volist>
+                </ul>
+
+                <!--课程分类-->
+                <ul class="js-ul">
+                    <li class="{$category_id==0?'cur':''}">
+                        <a href="{:U('Index/videoList',array('type'=>$type, 'search_tg_category'=>$search_tg_category, 'category_id'=>0))}">全部</a>
+                    </li>
+
+                    <volist name="video_category" key="k" id="v">
+                    <li class="{$v['id']==$category_id?'cur':''}">
+                        <a href="{:U('Index/videoList',array('type'=>$type, 'search_tg_category'=>$search_tg_category, 'category_id'=>$v['id']))}">{$v['name']}</a>
+                    </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="courList">
+            <ul id="courList-ul">
+
+                <!--视频列表-->
+                <volist name="video" key="k" id="v">
+                    <php>
+                        #判断视频是否有播放权限
+                        $playAuth = $user_id ? videoPlayAuth($v['id']) : '';
+                        $is_tag = getVideoTag($v['is_tag']);
+                    </php>
+                    <li id="{$v.id}">
+                        <div class="item">
+                            <div class="tp">
+                                <a href="javascript:;">
+                                    <img class="lazy" src="__MOBILE__/images/loading.gif" data-src="__MOBILE__/images/courTp01.png" alt="" title="">
+                                </a>
+                                <i data-id="{$v['id']}" class="ico icoLove {$user_id && $v['shoucang']?'icoLove-hover':''}"></i>
+                                <span <if condition="$v['is_tag'] EQ 1">
+                                    class="lab labNew"
+                                <elseif condition="$v['is_tag'] EQ 2"/>
+                                    class="lab labTj"
+                                </if>>
+
+                                </span>
+                            </div>
+                            <div class="txt">
+                                <p class="tiName">
+                                    <a href="{$user_id && $playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">{:jiequ($v['title'],0,27,'')}</a>
+                                </p>
+
+                                <if condition="$user_id">
+                                    <div class="bot">
+                                        <div class="money fl {$playAuth['allow_play']==1?'moneyNo':''} ">
+                                            <em class="num">{$v['buy_money']}</em>学习币
+                                        </div>
+                                        <div class="handle fr">
+                                            <a href="{$user_id && $playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}" ><i class="iconfont icon-bofang"></i>
+                                                <i class="ico {$playAuth['allow_play']==1?'icoPlay':'icoBuy'}"></i>
+                                                <span class="ti00">{$playAuth['allow_play']==1?'播放':'购买'}</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <else />
+                                    <div class="bot">
+                                        <div class="money moneyNo fl">
+                                            <em class="num">{$v['buy_money']}</em>学习币
+                                        </div>
+                                        <div class="handle fr">
+                                            <a href="{:U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                                <i class="ico icoPlay"></i>
+                                                <span class="ti00">购买</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </if>
+                            </div>
+                        </div>
+                    </li>
+
+                </volist>
+
+
+            </ul>
+            <div id="getMore" style="text-align: center; display: none">
+                <img src="/Public/Mobile/images/loadingIco.gif" alt="">
+                <a href="javascript:;" style="color: #666;">加载中</a>
+            </div>
+        </div>
+
+        <!--searchNo-->
+        <if condition="!$video">
+
+            <div class="searchNo">
+                <div class="in">
+                    <div class="tp">
+                        <img src="__MOBILE__/images/serNone.png" alt="">
+                    </div>
+                    <div class="tx">
+                        <p>没有查找到您要的内容哦！</p>
+                        <p>请更换关键词重新搜索！</p>
+                    </div>
+                </div>
+            </div>
+
+        </if>
+
+
+    </div>
+</section>
+
+<!--footNav-->
+
+
+<include file="Public:footerMenu"/>
+<include file="Public:footer"/>
+<script src="__MOBILE__/js/menuSilder.js"></script>
+<script src="__MOBILE__/js/theMenu.js"></script>
+<script src="__MOBILE__/pugins/layer-mobile-2.0/layer.js"></script>
+<script>
+    var user_id = '{$user_id}';
+    var formActionUrl = "{:U('Video/videoShoucang')}";
+    //收藏和取消视频
+    $('#courList-ul').on('click','.icoLove',function(e){
+        var this_ = $(this);
+        var vid = this_.attr('data-id');
+        if(!user_id){
+            layer.open({
+                time: 2,
+                skin: "msg",
+                content:'收藏失败，请先登录'
+            });
+            return false;
+        }
+        $.ajax({
+            url: formActionUrl,
+            type: 'POST',
+            data: {'vid':vid},
+            success: function(data){
+                if(data.status==0){
+                    this_.removeClass('icoLove-hover');
+                }
+                else if(data.status==1){
+                    this_.addClass('icoLove-hover');
+                }
+                layer.open({
+                    time: 2,
+                    skin: "msg",
+                    content:data.info
+                });
+            },
+            error:function(data){
+                layer.open({
+                    time: 2,
+                    skin: "msg",
+                    content:'网络繁忙请稍后重试'
+                });
+            }
+        });
+    });
+
+    //数据不为空才
+    <if condition="$video">
+
+    var _pageSize = 1;
+    <if condition="$user_id">
+        var _user_id = {$user_id};
+    <else/>
+        var _user_id = '';
+    </if>
+
+    var _MOBILE = "__MOBILE__";
+    var _PLAY_URL = "{:U('Video/play', '', false)}";
+    var _PAY_URL  = "{:U('Pay/courseConfirm', '', false)}";
+    url = "{:U(MODULE_NAME.'/index/videoListPage')}";
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+                $('#getMore').show();
+                $.ajax({
+                    type:"get",
+                    url:url,
+                    data:{'pageSize':_pageSize},
+                    dataType:"json",
+                    success:function (json) {
+
+                        if (json.status == 1){
+
+                            var str_html = '';
+
+                            $.each(json.data, function (k, v) {
+
+                                str_html += '<li id="'+v.id+'">';
+                                str_html += '<div class="item">';
+                                str_html += '<div class="tp">';
+                                str_html += '<a href="javascript:;">';
+                                str_html += '<img class="lazy" src="'+_MOBILE+'/images/courTp01.png" data-src="'+_MOBILE+'/images/courTp01.png" alt="" title="">';
+                                str_html += '</a>';
+                                str_html += '<i data-id="'+v.id+'" class="ico icoLove ';
+                                if(_user_id && v.shoucang){
+                                    str_html += 'icoLove-hover';
+                                }
+                                str_html += '"></i>';
+                                str_html += '<span ';
+                                if(v.is_tag == 1){
+                                    str_html += 'class="lab labNew"';
+                                }else if(v.is_tag == 2){
+                                    str_html += 'class="lab labTj"';
+                                }
+                                str_html += '>';
+
+
+                                str_html += '</span>';
+                                str_html += '</div>';
+                                str_html += '<div class="txt">';
+                                str_html += '<p class="tiName">';
+                                str_html += '<a href="';
+                                if (_user_id && v.playAuth.allow_play == 1){
+                                    str_html += _PLAY_URL+'/vid/'+ v.id;
+                                }else{
+                                    str_html += _PAY_URL+'/vid/'+ v.id;
+                                }
+                                str_html += '">';
+                                str_html += v.title;
+                                str_html += '</a>';
+
+                                str_html += '</p>';
+
+
+                                if(_user_id){
+                                    str_html += '<div class="bot">';
+                                    str_html += '<div class="money fl ';
+                                    if (_user_id && v.playAuth.allow_play == 1){
+                                        str_html += 'moneyNo';
+                                    }
+                                    str_html += '">';
+
+                                    str_html += '<em class="num">'+v.buy_money+'</em>学习币';
+                                    str_html += '</div>';
+                                    str_html += '<div class="handle fr">';
+                                    str_html += '<a href="';
+                                    if (_user_id && v.playAuth.allow_play == 1){
+                                        str_html += _PLAY_URL+'/vid/'+ v.id;
+                                    }else{
+                                        str_html += _PAY_URL+'/vid/'+ v.id;
+                                    }
+
+
+                                    str_html += '" ><i class="iconfont icon-bofang"></i>';
+
+                                    if (_user_id && v.playAuth.allow_play == 1){
+                                        str_html += '<i class="ico icoPlay"></i>';
+                                        str_html += '<span class="ti00">播放</span>';
+                                    }else{
+                                        str_html += '<i class="ico icoBuy"></i>';
+                                        str_html += '<span class="ti00">购买</span>';
+                                    }
+
+
+                                    str_html += '</a>';
+                                    str_html += '</div>';
+                                    str_html += '</div>';
+                                }else{
+                                    str_html += '<div class="bot">';
+                                    str_html += '<div class="money moneyNo fl">';
+                                    str_html += '<em class="num">'+v.buy_money+'</em>学习币';
+                                    str_html += '</div>';
+                                    str_html += '<div class="handle fr">';
+                                    str_html += '<a href="'+_PAY_URL+'/vid/'+ v.id+'">';
+                                    str_html += '<i class="ico icoPlay"></i>';
+                                    str_html += '<span class="ti00">购买</span>';
+                                    str_html += '</a>';
+                                    str_html += '</div>';
+                                    str_html += '</div>';
+                                }
+
+
+                                str_html += '</div>';
+                                str_html += '</div>';
+                                str_html += '</li>';
+                            });
+
+
+                            $('#courList-ul').append(str_html);
+
+                            function controlStyle() {
+                                var h1 = $('.theMenu').height(),
+                                    h2 = $('.theSearch').height();
+                                h3 = $('.findSel .tabHd').height();
+                                $('.listBd').css("top",(h1+h2+h3)+'px');
+                                $('.listBd').height($(window).height()-h1-h2);
+                                var  couLi = '.courList li',
+                                    couLiWid = ($('body').width()-parseInt($('.courList').css('padding-left'))*2)*0.47,
+                                    couLiMr = ($('body').width()-couLiWid*2)/2;
+                                $(couLi).css("marginBottom",couLiMr);
+                                $(couLi+':nth-of-type(odd)').css("marginRight",couLiMr);
+                                $(couLi).width(couLiWid);
+                                var couLiHig = couLiWid*1.09;
+                                $(couLi).height(couLiHig);
+                                var couTpWid = couLiWid*.95;
+                                $(couLi+' .tp').width(couTpWid);
+                                $(couLi+' .tp').height(couTpWid/1.6);
+                            }
+
+                            $(window).on('resize', function () {
+                                controlStyle();
+                            }).trigger('resize');
+
+
+                            _pageSize = _pageSize + 1;
+                            $('#getMore').hide();
+                        }else{
+                            $('#getMore').css('color','#999');
+                            $('#getMore').html('<span style="color: #c2ccd1;">───────</span>&nbsp&nbsp&nbsp&nbsp我是有底线的&nbsp&nbsp&nbsp&nbsp<span style="color: #c2ccd1;">───────</span>');
+
+                        }
+                    }
+                })
+            }
+        });
+    });
+
+    </if>
+</script>
+
+</body>
+</html>

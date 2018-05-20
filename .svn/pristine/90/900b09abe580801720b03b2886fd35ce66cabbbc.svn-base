@@ -1,0 +1,199 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+             <li><a href="#">用户管理</a></li>
+            <li class="active">编辑会员</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+            <style>
+                .table img {
+                    margin-top: 8px;
+                    margin-left: 2px;
+                }
+            </style>
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                   <form method="post" action="" enctype="multipart/form-data" id="form1">
+                    <table id="example" class="table table-bordered table-hover" align="center" cellpadding="4" cellspacing="1" width="100%">
+                        <tbody>
+                            <tr class="header">
+                                <td colspan="3">{$position_name}</td>
+                            </tr>
+                            <tr>
+                                <td width="10%">会员主用户组:</td>
+                                <td colspan="2">
+                                    <select name="info[group_id]" class='select' >
+                                        <volist name='user_groups' id='cg'>
+                                            <option value='{$cg.id}'>{$cg['name']}</option>
+                                        </volist>
+                                    </select>
+                                    <font color="red">(注意：会员只有一个用户组的时候，扩展用户组无需打钩)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#F8F8F8" colspan="3">会员扩展用户组:</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><strong>用户组</strong></td>
+                                <td>
+                                    <input type="text" disabled value="开通时间">----
+                                    <input type="text" disabled value="过期时间"><font color="red">(注意：开通时间和过期时间均为选填，若填写则选择填写的时间。不填写则默认选择对应用户组的时间。只需要打一个勾即可！)</font>
+                                </td>
+                            </tr>
+                             <volist name="user_groups" id="cg">
+                                    <tr>
+                                        <td></td>
+                                        <td  width="10%">
+                                            <input type="checkbox" name="ex[id][{$cg.id}]"> {$cg['name']}
+                                        </td>
+                                        <td>
+                                            <input type="text" name="ex[start_time][{$cg['id']}]" value="{$start_time}">----
+                                            <input type="text" name="ex[updatetime][{$cg.id}]" value="{$updatetime}">
+                                        </td>
+                                    </tr>
+                            </volist>
+                            <tr>
+                                <td></td>
+                                <td width="10%">会员名称:</td>
+                                <td>
+                                    <input name="info[username]" type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                               <td >&nbsp;</td>
+                                <td width="10%">密码:</td>
+                                <td>
+                                    <input name="info[password]" id="password" type="password" value="" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">确认密码:</td>
+                                <td>
+                                    <input name="info[passwordok]" id="passwordok" type="password" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">头像:</td>
+                                <td width="66%">
+                                    <for start = "1" end= "20"> 
+                                            
+                                    <img src="/Public/images/face/{$i}.png">
+                                    <input type="radio" name="info[face]" value="{$i}">
+
+                                     </for>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">真实姓名:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[realname]" type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">qq:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[qq]" type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">城市:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[city]" type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">行业:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[trade]" type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">公司:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[company]" type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">手机:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[mobile]" type="text" value="">
+                                </td>
+                            </tr>
+                              <!--以下为地址信息-->
+                            <tr>
+                                <td></td>
+                                <td width="10%">email:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[email]" type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">开通时间:</td>
+                                <td width="66%">
+                                    <input style="width:200px;" name="info[start_time]" type="text" value="">
+                                    &nbsp;&nbsp;&nbsp;例：<?php echo date('Y-m-d'); ?><font color="red">(选填)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td width="10%">过期时间:</td>
+                                <td width="66%">
+                                    <input name="info[end_time]" type="text" value="">
+                                    &nbsp;&nbsp;&nbsp;例：<?php echo date('Y-m-d'); ?>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                   <br>
+                  <center>
+                      <button class="btn btn-success inlineSearch display-inline" name='dosubmit' type="submit">提 交</button>
+                  </center>
+                   </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+  //删除询问框
+$(".delete-msg-find").on('click', function(){
+    var status = confirm('确定删除本条文章？\n \n 删除后将无法恢复！\n 确定删除吗？？？\n \n ');
+    if(!status){
+        return false;
+    }
+});  
+
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

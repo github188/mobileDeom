@@ -1,0 +1,108 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myBasicInf-->
+<section class="myCom myBasicInf" id="myBasicInfe">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">基本信息</a>
+                </div>
+                <div class="com basicInf">
+                    <div class="inpCom">
+                        <form action="" method="post" name="myForm" data-validator-option="{stopOnError:true}" autocomplete="off">
+                            <ul>
+                                <li>
+                                    <div class="inp">
+                                        <span class="ti">教研账号</span>
+                                        <input type="text" placeholder="" name="uc_username" value="{$user_info['uc_username']}">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inp">
+                                        <span class="ti">教研室密码</span>
+                                        <input type="password" placeholder="" name="uc_password" value="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inp">
+                                        <span class="ti">真实姓名</span>
+                                        <input type="text" placeholder="" name="realname" value="{$user_info['realname']}">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inp">
+                                        <span class="ti">公司名称</span>
+                                        <input type="text" placeholder="" name="company" value="{$user_info['company']}">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inp">
+                                        <span class="ti">所在行业</span>
+                                        <input type="text" placeholder="" name="trade" value="{$user_info['trade']}">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inp qqInp">
+                                        <span class="ti">QQ号码<i>*</i></span>
+                                        <input type="text" placeholder="" name="qq" id="qq" data-rule="QQ号:required;" value="{$user_info['qq']}">
+                                        <p class="tip"></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inp wxInp">
+                                        <span class="ti">微信号<i>*</i></span>
+                                        <input type="text" placeholder="" name="weixin_username" id="wx" data-rule="微信号:required;" value="{$user_info['weixin_username']}">
+                                        <p class="tip2"></p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="tipTx">（注：标红星处必填，否则无法查看视频）</div>
+                            <div class="myBtn keepBtn">
+                                <button type="submit" class="bbtn" id="subBtn3">保存修改</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+
+<script>
+    var formActionUrl = "{:U('User/myInfo')}";
+    //用户资料修改
+    $('form[name="myForm"]').bind('valid.form', function(){
+        $.ajax({
+            url: formActionUrl,
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(data){
+                if(data.status==0){
+                    show_msg(data.msg,'error');
+                    return false;
+                }
+                else if(data.status==1){
+                    show_msg(data.msg);
+                    setTimeout(function(){
+                        location.reload();
+                    },1200);
+                }
+            }
+        });
+    });
+    //nice表单验证-提示语样式
+    $('form').validator({
+        theme: "yellow_right_effect", //消息皮肤
+        msgStyle: "margin-left:3px; margin-top:5px;" ,//消息自定义样式
+        msgClass: "n-right"   //消息将自动显示在输入框右边
+    });
+</script>

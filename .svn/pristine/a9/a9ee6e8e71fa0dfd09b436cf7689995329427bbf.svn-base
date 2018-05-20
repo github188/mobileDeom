@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>嗨推学院-知名网络推广实战培训平台</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_449iiaxohgbn8kt9.css">
+    <link rel="stylesheet" href="../../public/css/base.css">
+    <link rel="stylesheet" href="../../public/css/common.css">
+    <link rel="stylesheet" href="../../public/css/main.css">
+
+
+</head>
+<body >
+<!--Head-->
+<section class="headCom">
+    <div class="topmeun">
+        <i class="iconfont icon-icon-back-left"></i>
+    </div>
+
+    <div class="com">
+        <ul class="clearfix" id="hUl">
+            <li>
+                <a href="#">坏坏说</a>
+            </li>
+            <li><a class="active" href="#">课程视频</a></li>
+            <li><a href="#">课程简介</a></li>
+            <li><a href="#">官方资讯</a></li>
+            <li><a href="#">团队风采</a></li>
+            <li><a href="#">1212</a></li>
+            <li><a href="#">3333</a></li>
+            <li><a href="#">44444</a></li>
+        </ul>
+    </div>
+</section>
+
+<!--背景图-->
+<setion class="img">
+    <img src="#{$imgUrl}curriculum-banner-01.png" alt="">
+</setion>
+
+<!--主要内容-->
+<setion class="mianCont">
+    <div class="HcontHeard" style="border-bottom: 1px solid #e5e5e5;">
+        <ul class="clearfix">
+            <li class="cur">学员介绍</li>
+            <li>学员视频</li>
+        </ul>
+    </div>
+
+ <!-- 学员介绍s -->
+    <div class="matter show introduction">
+       <ul>
+           <li>
+              <div class="heightImg">
+                  <!--<img src="../../public/images/home-banner02.png" alt="">-->
+              </div>
+               <div class="bottom">
+                   <div class="txt01">小蚂蚁</div>
+                   <div class="txt02" flag="true">我是16期的拿铁，13奇偶好僵尸洞你技术的东方红上大方啥都技哈师大繁花似锦打客服</div>
+               </div>
+           </li>
+
+           <li>
+               <div class="heightImg">
+
+               </div>
+               <div class="bottom">
+                   <div class="txt01">小蚂蚁</div>
+                   <div class="txt02" flag="true">我是16期的拿铁，13年初次知道嗨和抖擞fOS是点击开发撒打开金凤凰啊速度快几乎都是术的....</div>
+               </div>
+           </li>
+           <li>
+               <div class="heightImg">
+
+               </div>
+               <div class="bottom">
+                   <div class="txt01">小蚂蚁</div>
+                   <div class="txt02" flag="true">我是16期的拿铁，13年初次知道嗨和抖擞ifOS东方红上大方啥都技哈师大繁花似锦打客服是点击开发撒打开金凤凰啊速度快几乎都是术的....</div>
+               </div>
+           </li>
+       </ul>
+    </div>
+
+
+<!-- 学员视频S -->
+   <div class="matter">
+       <div class="stuVideo">
+           <div class="video">
+               <div class="playVideo">
+                   <a href="javascript;">
+                       <i></i>
+                       <img src="../../public/images/videoImg.png" alt="">
+                   </a>
+               </div>
+               <div class="videoTxt clearfix">
+                   <p class="fl wzwz">嗨推学员: 不烦，参与一次线下...</p>
+                   <div class="fr more">更多 <i class="iconfont icon-xiala"></i></div>
+               </div>
+           </div>
+           <!--下拉块-->
+           <div class="detail">
+               <p>嗨推学员:不烦，残云烧电费来开黑莱克斯顿发啥电缆附件烧电费杀独立房间撒代理分撒旦法乐山大佛</p>
+           </div>
+       </div>
+       <div class="stuVideo">
+           <div class="video">
+               <div class="playVideo">
+                   <a href="javascript;">
+                       <i></i>
+                       <img src="../../public/images/videoImg.png" alt="">
+                   </a>
+               </div>
+               <div class="videoTxt clearfix">
+                   <p class="fl wzwz">嗨推学员: 不烦，参与一次线下...</p>
+                   <div class="fr more">更多 <i class="iconfont icon-xiala"></i></div>
+               </div>
+           </div>
+           <!--下拉块-->
+           <div class="detail">
+               <p>嗨推学员:不烦，残云烧电费来开黑莱克斯顿发啥电缆附件烧电费杀独立房间撒代理分撒旦法乐山大佛</p>
+           </div>
+       </div>
+   </div>
+<!--学员视频E-->
+
+</setion>
+
+<script src="../../public/js/zepto_plus.js"></script>
+<script src="../../public/js/base.js"></script>
+<!--<script src="../../public/js/common.js"></script>-->
+
+<script src="../../public/js/swipe.js"></script>
+<script src="../../public/js/main.js"></script>
+
+<script>
+    $(document).ready(function () {
+        /*
+         1.需要进行滑动的父容器：swipeDom:指需要进行滑动的元素的父元素
+         2.方向:swipeType  x/y
+         3.弹簧区间 swipeDistance
+         * */
+        hua.iScroll({
+            swipeDom:document.querySelector(".com"),
+            swipeType:"x",
+            swipeDistance:50
+        });
+
+    })
+
+</script>
+
+</body>
+</html>

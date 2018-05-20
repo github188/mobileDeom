@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>优惠券</title>
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_v4ysagdsyxmvx6r.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../public/css/reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../public/css/swiper.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../public/css/index.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1fp093uu4xx39pb9.css">
+</head>
+<body>
+
+<!--第一屏 -->
+<div class="box">
+    <!-- 搜索 -->
+    <section class="top-search">
+        <div class="sign-in" id="sign-in" onClick="window.location.href='/index.php?m=home&c=user&a=check_info'">
+            <i class="iconfont icon-qiandao"></i>
+            <p><span>签到</span></p>
+        </div>
+        <div class="search-text">
+            <input type="text" placeholder="搜索你想要的宝贝" />
+        </div>
+        <div class="search">
+            <i class="iconfont icon-sousuo"></i>
+        </div>
+    </section>
+    <!--/搜索 -->
+    <!-- 幻灯片 -->
+    <section class="index-swiper">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="javascript:;"><img class="swiper-lazy" data-src="../../public/images/d_banner1.jpg" /></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;"><img class="swiper-lazy" data-src="../../public/images/d_banner2.jpg" /></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;"><img class="swiper-lazy" data-src="../../public/images/d_banner3.jpg" /></a>
+            </div>
+        </div>
+    </div>
+     <div class="xgt-pagination"></div>
+    </section>
+    <!-- /幻灯片 -->
+    <!-- 商品分类导航 -->
+    <section class="index-topic">
+        <div class="ltop">
+            <a href="./goodsList.html">
+                <div class="f1">
+                    <div class="d1">
+                      <img src="../../public/images/nvzhuang.png"/>
+                    </div>
+                    <div class="d2">女装饰品</div>
+                </div>
+            </a>
+            <a href="./goodsList.html">
+                <div class="f1">
+                    <div class="d1">
+                        <img src="../../public/images/nanzhuang.png"/>
+                    </div>
+                    <div class="d2">精品男士</div>
+                </div>
+            </a>
+            <a href="./goodsList.html">
+                <div class="f1">
+                    <div class="d1">
+                        <img src="../../public/images/neiyi.png"/>
+                    </div>
+                    <div class="d2">内衣配饰</div>
+                </div>
+            </a>
+            <a href="./goodsList.html">
+                <div class="f1">
+                    <div class="d1">
+                        <img src="../../public/images/muying.png"/>
+                    </div>
+                    <div class="d2">母婴童装</div>
+                </div>
+            </a>
+            <a href="./goodsList.html">
+                <div class="f1">
+                    <div class="d1">
+                        <img src="../../public/images/meizhuang.png"/>
+                    </div>
+                    <div class="d2">美容护肤</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="lbot">
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=4">
+                <div class="f1">
+                    <div class="d1">
+                        <img src="../../public/images/jujia.png"/>
+                    </div>
+                    <div class="d2">居家百货</div>
+                </div>
+            </a>
+             <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=6">
+                <div class="f1">
+                    <div class="d1">
+                        <img src="../../public/images/shipin.png"/>
+                    </div>
+                    <div class="d2">食品美味</div>
+                </div>
+            </a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=5">
+                <div class="f1">
+                    <div class="d1">
+                        <img src="../../public/images/xiangbao.png"/>
+                    </div>
+                    <div class="d2">鞋类箱包</div>
+                </div>
+            </a>
+             <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=7">
+                <div class="f1">
+                    <div class="d1">
+                        <img src="../../public/images/cheshi.png"/>
+                    </div>
+                    <div class="d2">家装车品</div>
+                </div>
+            </a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=8">
+                <div class="f1">
+                    <div class="d1">
+                        <img src="../../public/images/jiadian.png"/>
+                    </div>
+                    <div class="d2">数码家电</div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- /商品分类导航 -->
+    <section class="index-choice">
+        <div class="lleft">
+            <a href="./jiukuaijiu.html">
+                <div class="f1">
+                    <div class="d1">
+                      <div><img src="../../public/images/9.9.png"/></div>
+                    </div>
+                    <div class="d2">
+                        <h1>9块9包邮</h1>
+                        <p>Free shipping</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="lmiddle" style="width: 5px;height: 100%;background: #f6f6f6;"></div>
+         <div class="lright">
+            <a href="./shijiukuaijiu.html">
+                <div class="f1">
+                    <div class="d1">
+                      <div><img src="../../public/images/jingxuan.png"/></div>
+                    </div>
+                    <div class="d2">
+                        <h1>19块9包邮</h1>
+                        <p>Free shipping</p>
+                    </div>
+                </div>
+            </a>
+         </div>
+    </section>
+    <section class="index-img">
+        <div class="img-container">
+            <img src="../../public/images/banner2.jpg">
+        </div>
+    </section>
+</div>
+
+<!--第二屏-->
+<!--第2屏 导航-->
+<section class="type-nav">
+    <div class="totalNav">
+        <div class="navs">
+            <div class="nav">
+                <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=1" style="border-bottom: 2px solid #ffb700;color: #ffb700;">女装</a>
+            </div>
+            <div class="nav">
+                <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=9">男装</a>
+            </div>
+            <div class="nav">
+                <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=10">内衣</a>
+            </div>
+            <div class="nav">
+                <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=2">母婴</a>
+            </div>
+            <div class="nav">
+                <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=3">美容</a>
+            </div>
+            <div class="nav">
+                <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=4">居家</a>
+            </div>
+            <div class="nav">
+                <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=6">食品</a>
+            </div>
+            <div class="nav">
+                <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=5">鞋包</a>
+            </div>
+            <div class="nav">
+                <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=7">车品</a>
+            </div>
+            <div class="nav">
+                <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=8">数码家电</a>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-down">
+        <a href="javascript:void(0);"><i class="iconfont icon-jiantou-copy-copy"></i></a>
+    </div>
+</section>
+
+<div class="arrow-down-div">
+    <div class="arrow-down-list">
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=1" class="arrawOn">女装</a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=9">男装</a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=10">内衣</a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=2">母婴</a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=3">美容</a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=4">居家</a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=6">食品</a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=5">鞋包</a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=7">车品</a>
+            <a href="/index.php?m=home&c=index&a=goods_by_cid&cid=8">数码家电</a>
+        </div>
+</div>
+
+<!--女装展示	-->
+<div class="container" id="container">
+	<div class="content" onclick="gotoProduct(67070)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/imgextra/i4/1650163732/TB2a5i0sNlmpuFjSZPfXXc9iXXa_!!1650163732.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="浸塑衣架 铁丝衣架阳台卧室挂衣服撑衣服儿童成人塑料防风晾衣架"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">浸塑衣架 铁丝衣架阳台卧室挂衣服撑衣服儿童成人塑料防风晾衣架</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>16.80</span><small>￥<span>21.80</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>5</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67050)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/bao/uploaded/i3/TB1RsCCQpXXXXbOaXXXXXXXXXXX_!!0-item_pic.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="礼盒24册 宝宝撕不烂早教书籍0-1-2-3-5-6岁启蒙认知婴幼儿翻翻书看图识字拼音教材数字黑白识字早教卡片 幼小衔接儿童益智"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">礼盒24册 宝宝撕不烂早教书籍0-1-2-3-5-6岁启蒙认知婴幼儿翻翻书看图识字拼音教材数字黑白识字早教卡片 幼小衔接儿童益智</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>36.00</span><small>￥<span>39.00</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>3</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67063)">
+        <div class="detail-pic">
+            <img data-url="https://gd4.alicdn.com/imgextra/i2/757284614/TB2mtXjaWzyQeBjSszfXXX7OVXa_!!757284614.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="LED星星灯小彩灯闪灯串灯满天星房间宿舍文艺装饰灯卧室布置灯泡"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">LED星星灯小彩灯闪灯串灯满天星房间宿舍文艺装饰灯卧室布置灯泡</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>7.92</span><small>￥<span>10.92</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>3</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67016)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/imgextra/i3/TB1GD1BKFXXXXXVXVXXXXXXXXXX_!!0-item_pic.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="佰卓 单反相机清洁套装 气吹镜头布纸清洁液 电脑屏幕笔记本工具"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">佰卓 单反相机清洁套装 气吹镜头布纸清洁液 电脑屏幕笔记本工具</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>9.80</span><small>￥<span>19.80</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>10</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67041)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/imgextra/i2/TB1nwcyQVXXXXb9XVXXXXXXXXXX_!!0-item_pic.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="Feature/特写2017年新款无袖针织衫T恤蝴蝶结女款上衣显瘦透夏季"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">Feature/特写2017年新款无袖针织衫T恤蝴蝶结女款上衣显瘦透夏季</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>139.00</span><small>￥<span>169.00</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>30</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67065)">
+        <div class="detail-pic">
+            <img data-url="https://gd1.alicdn.com/imgextra/i1/2557072813/TB22U9DcNXlpuFjSsphXXbJOXXa_!!2557072813.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="【三未】童梦 德国花果茶水果干茶 果粒茶 橙子玫瑰花茶组合包邮"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">【三未】童梦 德国花果茶水果干茶 果粒茶 橙子玫瑰花茶组合包邮</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>19.00</span><small>￥<span>39.00</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>20</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67055)">
+        <div class="detail-pic">
+            <img data-url="https://gd2.alicdn.com/imgextra/i4/0/TB1No6.FVXXXXbQXFXXXXXXXXXX_!!0-item_pic.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="【买5送1 云南民族风帆布绣花手拿小包包  刺绣 手包斜挎小包女包"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">【买5送1 云南民族风帆布绣花手拿小包包  刺绣 手包斜挎小包女包</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>19.90</span><small>￥<span>29.90</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>10</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67018)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/imgextra/i2/2447396418/TB2xqLokHBmpuFjSZFuXXaG_XXa_!!2447396418.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="云南普洱茶 熟茶 普洱熟茶散茶 古树宫廷熟普洱 陈年宫廷普洱散茶"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">云南普洱茶 熟茶 普洱熟茶散茶 古树宫廷熟普洱 陈年宫廷普洱散茶</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>18.00</span><small>￥<span>168.00</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>150</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67032)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/imgextra/i3/1803253299/TB2DXRItd0opuFjSZFxXXaDNVXa_!!1803253299.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="现代儿童电话手表 学生小男女孩360环通话定位触屏拍照天才手机"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">现代儿童电话手表 学生小男女孩360环通话定位触屏拍照天才手机</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>88.00</span><small>￥<span>108.00</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>20</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67071)">
+        <div class="detail-pic">
+            <img data-url="https://gd1.alicdn.com/imgextra/i1/2214023514/TB2U375pl0kpuFjSsppXXcGTXXa_!!2214023514.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="小方包女2017夏季新款韩版时尚潮流单肩斜跨包复古简约链条小包包"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">小方包女2017夏季新款韩版时尚潮流单肩斜跨包复古简约链条小包包</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>39.00</span><small>￥<span>69.00</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>30</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67020)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/imgextra/i1/689823094/TB25lurtHlmpuFjSZFlXXbdQXXa_!!689823094.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="ai&mi瑷媄一触倾心口红持久保湿滋润不易沾杯咬唇妆防水不易掉色"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">ai&mi瑷媄一触倾心口红持久保湿滋润不易沾杯咬唇妆防水不易掉色</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>19.90</span><small>￥<span>39.90</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>20</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67051)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/imgextra/i2/289254746/TB2N0Ercl0lpuFjSszdXXcdxFXa_!!289254746.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="虞琳娜 双头自动眉笔 正品防水防汗画眉粉持久不晕染一字眉"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">虞琳娜 双头自动眉笔 正品防水防汗画眉粉持久不晕染一字眉</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>14.90</span><small>￥<span>24.90</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>10</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67015)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/imgextra/i1/1640514475/TB2kzRWoHxmpuFjSZJiXXXauVXa_!!1640514475.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="格林盈璐灭蚊灯家用电子灭蚊子驱蚊器静音卧室光触媒室内捕蚊器"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">格林盈璐灭蚊灯家用电子灭蚊子驱蚊器静音卧室光触媒室内捕蚊器</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>128.00</span><small>￥<span>168.00</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>40</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67046)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/imgextra/i1/1991117674/TB2P_15tJFopuFjSZFHXXbSlXXa_!!1991117674.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="女童夏装2017连衣裙儿童碎花无袖小孩裙女童绵绸连衣裙公主女裙子"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">女童夏装2017连衣裙儿童碎花无袖小孩裙女童绵绸连衣裙公主女裙子</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>16.60</span><small>￥<span>19.60</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>3</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67069)">
+        <div class="detail-pic">
+            <img data-url="https://img.alicdn.com/imgextra/i3/1116098207/TB2CmsAqB0kpuFjSsppXXcGTXXa_!!1116098207.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="靓朵儿新款夏季女空调衫开衫披肩针织衫薄外搭中袖镂空冰丝防晒衣"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">靓朵儿新款夏季女空调衫开衫披肩针织衫薄外搭中袖镂空冰丝防晒衣</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>34.00</span><small>￥<span>39.00</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>5</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" onclick="gotoProduct(67029)">
+        <div class="detail-pic">
+            <img data-url="https://gd3.alicdn.com/imgextra/i3/92499353/TB24YVKjYplpuFjSspiXXcdfFXa_!!92499353.jpg_400x400.jpg" src="../../public/images/loading.jpg" class="scrollLoading" alt="男婴儿夏装纯棉绅士连体衣 3个月宝宝夏季衣服百日服周岁礼服哈衣"  alt="" />
+        </div>
+        <div class="detail-cont">
+            <div class="introTop">
+                <div class="detail-tit">男婴儿夏装纯棉绅士连体衣 3个月宝宝夏季衣服百日服周岁礼服哈衣</div>
+                <div class="detail-qiang">
+                    <i class="iconfont icon-coupon"></i><p class="qiang">立即抢券</p>
+                </div>
+            </div>
+            <div class="introBot">
+                <div class="coupon-price">券后价￥<span>44.00</span><small>￥<span>59.00</span></small></div>
+                <div class="detail-coupon">
+                    <p>优惠券:￥<span>15</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center;padding-bottom:10px;">正在加载</div>
+    <div style="height: 50px;width: 100%;"></div>
+</div>
+
+<div class="page-foot">
+        <div class="g-foot-bar">
+            <ul class="m-nav-foot clearfix">
+              <li class="cur">
+                <a href="./index.html">
+                    <p><i></i></p>
+                    <span >首页</span>
+                </a>
+              </li>
+              <li>
+                <a href="../live/index.html">
+                    <p><i></i></p>
+                    <span >直播间</span>
+                </a>
+              </li>
+              <li>
+                <a href="../user/integral.html" style="margin-top: -1px;">
+                    <p><i></i></p>
+                    <span >积分商城</span>
+                </a>
+              </li>
+              <li>
+                <a href="../user/index.html">
+                    <p><i></i></p>
+                    <span>个人中心</span>
+                </a>
+              </li>
+            </ul>
+        </div>
+    </div>
+
+<script type="text/javascript" src="../../public/js/jquery-1.11.1.js" ></script>
+<script type="text/javascript" src="../../public/js/swiper.min.js" ></script>
+<script type="text/javascript" src="../../public/js/jquery.scrollLoading.js"></script>
+<script>var pid=false;</script>
+<script type="text/javascript">
+    $(function(){
+        //底部的点击调转
+        var $li=$('.g-foot-bar .m-nav-foot li'),     //点击的li
+            cur="cur";                              // 当前点击到的li具有的颜色
+
+        $li.on("click",function () {
+            $(this).addClass(cur).siblings().removeClass(cur);
+        });
+
+
+        $(".arrow-down").click(function(){
+            if($(".arrow-down-div").is(":hidden")){
+                $(".arrow-down-div").show();
+                $(".arrow-down i").removeClass("icon-jiantou-copy-copy").addClass("icon-jiantou-copy");
+            }else{
+                $(".arrow-down-div").hide();
+                $(".arrow-down i").removeClass("icon-jiantou-copy").addClass("icon-jiantou-copy-copy");
+            }
+
+        });
+        $(".scrollLoading").scrollLoading();        //轮播图
+        var mySwiper = new Swiper('.swiper-container',{
+            pagination: '.xgt-pagination',    //导航小圆点
+            paginationClickable: true,        //导航小圆点（可点击）
+            nextButton: '.swiper-button-next',//下一张按钮
+            prevButton: '.swiper-button-prev',//上一张按钮
+            //direction: 'vertical',//Slides的滑动方向:垂直
+            autoplay : 3000,//自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
+            speed:300,//滑动速度，即slider自动滑动开始到结束的时间（单位ms）
+
+            loop: true,        //可循环
+            grabCursor: true,//设置为true时，鼠标覆盖Swiper时指针会变成手掌形状，拖动时指针会变成抓手形状。（根据浏览器形状有所不同）
+            mousewheelControl:true,//鼠标滚轮
+            lazyLoading:true,//图片懒加载    http://www.swiper.com.cn/api/Images/2015/0308/213.html
+            onLazyImageLoad: function(swiper, slide, image){
+                //alert('延迟加载图片');
+                //console.log(swiper);//Swiper实例
+                //console.log(slide);//哪个slide里面的图片在加载
+                //console.log(image);//哪个图片在加载
+            }
+        });
+        //获取视口高度
+        var vh = document.body.clientHeight;
+        $(window).on('scroll', function(){
+            if($(window).scrollTop() >=1){
+                $('.container').addClass("scrollTop");
+                if($(window).scrollTop() >=vh*(4/5)){
+                    $('.type-nav').addClass("type-nav-show");
+                }else {
+                    $('.type-nav').removeClass("type-nav-show");
+                }
+            }
+
+        });
+        $("#sign-in").mouseover(function(){
+            window.location.href="";
+        });
+        $(".search-text").mouseover(function(){
+            window.location.href="/search";
+        });
+        $(".search").mouseover(function(){
+            window.location.href="/search";
+        });
+    });
+
+    pagehash = "6a992d5529f459a44fee58c733255e86";
+    sessionPage = sessionStorage.getItem(pagehash+'-next');
+    if(sessionPage>2){
+        var page = sessionPage;
+        var pagedata = "";
+        for(i=2;i<sessionPage;i++){
+            pagedata = sessionStorage.getItem(pagehash+'listP'+i);
+            $("#container .content:last").after(pagedata);
+        }
+    }else{
+        var page = 2;
+    }
+
+    function pullUpAction(page){
+        var url = 'index.php?m=home&c=index&p='+page;
+        $.get(url,function(data){
+            sessionStorage.setItem(pagehash+'listP'+page,data);
+            sessionStorage.setItem(pagehash+'-next',parseInt(page)+1);
+            $("#container .content:last").after(data);
+        });
+    }
+    function gotoProduct(goods_id){
+        pidstr = pid?"&pid="+pid:"";
+        window.location.href="/index.php?m=home&a=detail&id="+goods_id+pidstr;
+    }
+</script>
+
+<script>
+    //获取滚动条当前的位置
+    function getScrollTop() {
+        var scrollTop = 0;
+        if (document.documentElement && document.documentElement.scrollTop) {
+        scrollTop = document.documentElement.scrollTop;
+        }
+        else if (document.body) {
+        scrollTop = document.body.scrollTop;
+        }
+        return scrollTop;
+    }
+
+    //获取当前可视范围的高度
+    function getClientHeight() {
+        var clientHeight = 0;
+        if (document.body.clientHeight && document.documentElement.clientHeight) {
+        clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight);
+        }
+        else {
+        clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight);
+        }
+        return clientHeight;
+    }
+
+    //获取文档完整的高度
+    function getScrollHeight() {
+        return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    }
+    window.onscroll = function () {
+        if (getScrollTop() + getClientHeight() == getScrollHeight()) {
+            pullUpAction(page)
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>余额提现</title>
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_ryjv6tgfhnsqyqfr.css" />
+	<link rel="stylesheet" href="../../public/css/weui.css" />
+	<link rel="stylesheet" href="../../public/css/draw.css" />
+</head>
+<body>
+<!--提取现金-->
+<div class="drawBox">
+	<div class="drawTitle">
+		<div class="drawTitle-item">现金余额:<span>1.95</span>元</div>
+		<div class="drawTitle-item record"><a href=""><i class="iconfont icon-tixianjilu"></i>提现记录</a></div>
+	</div>
+	<form id="form">
+		<div class="weui-cells weui-cells_form">
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui_label font14333">支付宝账号:</label>
+				</div>
+				<div class="weui-cell__bd weui-cell_primary">
+					<input class="weui-input" id="ali_account" placeholder="请输入支付宝账号" type="text" />
+				</div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui_label font14333">可提取金额:</label>
+				</div>
+				<div class="weui-cell__bd weui-cell_primary">
+					<input class="weui-input" value="0" readonly type="text" />
+				</div>
+			</div>
+		</div>
+		<div class="weui-btn-area">
+			<a id="formSubmitBtn" class="weui-btn weui-btn_primary" href="javascript:;">
+				确认提取
+			</a>
+		</div>
+	</form>
+	<img src="http://www.t5166.com/Uploads/csqrcode/2017-04-26/5900783071e7a.png" class="csQrcode" />
+	<div class="draw-tips">提交后，长按二维码添加客服微信，处理提现申请<br/>确认提取后,预计1-3个工作日内到账</div>
+</div>
+<div id="goback" onClick="window.location.href='/user';"><i class="iconfont icon-fanhui"></i></div>
+<script type="text/javascript" src="../../public/js/jquery-1.11.1.js" ></script>
+<script>
+	var url = "/index.php?m=home&c=user&a=tixian";
+	var tixian_limit = parseFloat("1000000")*100;
+	var my_amount = parseInt("195.00");
+	$('#formSubmitBtn').click(function(){
+		if(tixian_limit>my_amount){
+			alert("满1000000元可提现");
+		}else{
+			ali_account = $("#ali_account").val();
+			if(!ali_account){
+				alert("请填写支付宝账号");
+				return false;
+			}
+			$.get(url,{ali_account:ali_account},function(json){
+				if(json.state){
+					alert("已申请成功");
+					window.location.reload();
+				}else{
+					alert(json.msg);
+				}
+			})
+		}
+
+	});
+</script>
+</body>
+</html>

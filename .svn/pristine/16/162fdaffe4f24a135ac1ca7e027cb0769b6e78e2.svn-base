@@ -1,0 +1,82 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+<div class="wrapper">
+	<!-- 内容标题开始 -->
+	<div id="breadcrumbs" class="breadcrumbs">
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">会员分组</li>
+		</ol>
+
+	</div>
+	<!-- 内容标题结束 -->
+
+	<!-- 主要内容开始 -->
+	<section class="content">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="box box-info"> <!-- box-info天空蓝、 box-primary蓝色、  box-success绿色-->
+					<div class="box-header nav-tabs">
+						<h4 class="box-title"><i class="fa fa-plus"></i> 添加会员黑名单</h4>
+						<!-- 返回上一页 -->
+						<include file="Public:content-back" />
+					</div>
+					<!-- 表格开始 -->
+					<div class="box-body">
+						<form action="" method="post">
+							<table id="example" class="table table-bordered">
+								<tbody>
+
+									<tr>
+										<td class="table-td-right"> 用户名：</td>
+										<td><input type="text" disabled value="{$user_info['username']}" name="" class="form-control" size="30" data-rule="required"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 开始时间：</td>
+										<td><input type="text" name="start_time" class="date-time" size="20" data-date-format="yyyy-mm-dd" value=""><font style="font-size: 12px;color: red;" >(不填写时间为永久拉黑)</font><td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 结束时间：</td>
+										<td><input type="text" name="end_time" class="date-time" size="20" data-date-format="yyyy-mm-dd" value=""><font style="font-size: 12px;color: red;" >(不填写时间为永久拉黑)</font><td>
+									</tr>
+
+									<tr>
+										<td class="table-td-right"> 拉黑理由：</td>
+										<td>
+											<textarea data-rule="required" name="remark" style="width: 266px;min-height: 100px;"></textarea>
+										</td>
+									</tr>
+									<input type="hidden" name="user_id" value="{$user_info['id']}">
+									<input type="hidden" name="username" value="{$user_info['username']}">
+									<tr height="60">
+										<td colspan="2" align="center">
+											<button class="btn btn-success" type="submit"><i class="fa fa-check"></i> 确定添加</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+					<!-- 表格结束 -->
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+
+<script>
+	//日期插件
+	$('.date-time').datepicker({
+		weekStart: 1,
+		autoclose: true
+	});
+</script>

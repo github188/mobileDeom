@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
+    <title>后台登录页</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="logo" id="logo">
+   <div class="hd">
+       <span class="renew" >
+             <i class="reBtn" title="刷新背景图"></i>
+       </span>
+       <h2>嗨推后台管理登录</h2>
+   </div>
+    <div class="com">
+        <form action="" method="" name="" id="" class="forms">
+            <div class="inpCom">
+                <div class="item item01">
+                    <div class="inp inp01">
+                        <span class="tp">
+                            <img src="img/xico01.png" alt="">
+                        </span>
+                        <input type="text" placeholder="请输入用户名" value=""  name="" id="username">
+                    </div>
+                    <p class="tip" id="tip01"></p>
+                </div>
+                <div class="item item02">
+                    <div class="inp inp02">
+                        <span class="tp">
+                            <img src="img/xico02.png" alt="">
+                        </span>
+                        <input type="password" placeholder="请输入登录密码" value="" name="" id="password" >
+                    </div>
+                    <p class="tip" id="tip02"></p>
+                </div>
+                <div class="item item03">
+                    <div class="inp inp03">
+                        <span class="tp">
+                            <img src="img/xico03.png" alt="">
+                        </span>
+                        <input type="text" placeholder="请输入验证码" value="" name="" id="verCode" >
+                        <div class="getCode">
+                            <img src="img/codeTp.png" alt="">
+                        </div>
+                    </div>
+                    <p class="tip" id="tip03"></p>
+                </div>
+            </div>
+            <div class="remPwd">
+                <i class="che js-che"></i>
+                <input type="checkbox" class="cheBox" style="display: none;">
+                <span>记住密码</span>
+            </div>
+            <div class="btn">
+                <a href="javascript:;" class="loginBtn">登录</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="copyright">
+    <p>2016©嗨推版权所有</p>
+</div>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/style.js"></script>
+<script src="js/forms.js"></script>
+
+</body>
+</html>

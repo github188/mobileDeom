@@ -1,0 +1,121 @@
+<include file="Public:content-header" />
+<style>
+    .pages div{
+        margin-left: 0px;
+    }
+    .newTd a{
+        cursor: pointer;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 250px;
+        word-break: keep-all;
+    }
+</style>
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">微信管理</a></li>
+            <li class="active">自动回复</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/Wechat/index')}">
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>文章标题：</b></label>
+                            <input type="text" class="form-control" name="title" value="{$title}" placeholder="输入标题关键字···">
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>显示状态：</b></label>
+                            <select class="form-control inlineSelect" name="status">
+                                <option value="2" <if condition='$status eq 2'>selected="selected"</if>>全部</option>
+                                <option value="0" <if condition='!$status'>selected="selected"</if>>显示</option>
+                                <option value="1" <if condition='$status eq 1'>selected="selected"</if>>隐藏</option>
+                            </select>
+                        </div>&nbsp; 
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查询</button>
+                        <div class="pull-right" style="display:block;">
+                            <a class="btn btn-info" href="{:U(MODULE_NAME.'/Wechat/addWechatArticle')}" >
+                                <i class="fa fa-plus"></i> 添加文章
+                            </a>
+                        </div>
+                    </form>
+
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>图片</th>
+                                <th>标题</th>
+                                <th>状态</th>
+                                <th>添加时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="body">
+                            <volist name="arr" id="v">
+                                <tr>
+                                    <td>{$v.id}</td>
+                                    <td><img src="{$v.img_url}" width="40" height="30"></td>
+                                    <td class="newTd">
+                                        <a href="#" title="{$v.title}">{$v.title}</a>
+                                    </td>
+                                    <td><if condition="$v['status']"><b>隐藏</b><else />显示</if></td>
+                                    <td>{$v.add_time|date="Y-m-d",###}</td>
+                                    <td>
+                                        <a href="{:U(MODULE_NAME.'/Wechat/editWechatArticle', array('aid'=>$v['id']))}" class="btn btn-primary" title="修改文章">
+                                            <i class="fa fa-pencil"></i>改</a>&nbsp;
+                                        <a href="{:U(MODULE_NAME.'/Wechat/delWechatArticle', array('aid'=>$v['id']))}" class="btn btn-danger delete-msg-find" title="删除本条文章"><i class="fa fa-times"></i> 删</a>
+                                    </td>
+                                </tr>
+                            </volist>
+
+                            <if condition="!$arr">
+                                <tr>
+                                    <td colspan="6" align="center"> 没有数据！</td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="6" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+  //删除询问框
+$(".delete-msg-find").on('click', function(){
+    var status = confirm('确定删除本条文章？\n \n 删除后将无法恢复！\n 确定删除吗？？？\n \n ');
+    if(!status){
+        return false;
+    }
+});  
+
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

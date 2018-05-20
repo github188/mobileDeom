@@ -1,0 +1,34 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>页面不存在 - 嗨推学院平台</title>
+    <link rel="shortcut icon" href="/Public/Member/images/favicon.ico">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_lemhis1loyqcwhfr.css">
+    <!--[if lt IE9]>
+    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="/Public/Member/css/base.css">
+    <link rel="stylesheet" href="/Public/Member/css/loginBefore.css">
+</head>
+<style>
+    body{background-color: #fff;}
+</style>
+<body>
+
+<!--content-->
+<div class="nullContent bgColor ">
+       <div class="img"></div>
+        <p class="mt30">&nbsp;Error 404抱歉，<span>您要访问的页面不存在</span></p>
+        <p class="mb50">可能我们的网页正在维护或者您输入的网址不正确</p>
+        <div class="alink clearfix">
+            <a href="<?php echo U('Index/index');?>" class="fl"><i class="icon_  shouye"></i>返回首页</a>
+            <a href="javascript:history.back();" class="fr"><i class="icon_  backA"></i>返回上一页</a>
+        </div>
+</div>
+
+</body>
+</html>

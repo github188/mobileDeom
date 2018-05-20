@@ -1,0 +1,142 @@
+<include file="Public:content-header" />
+
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">文章管理</a></li>
+            <li class="active">文章列表</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/User/tiwen')}">
+                            <input type="hidden" name="uid" value="{$uid}">
+                            <input type="hidden" name="vid" value="{$condition[vid]}">
+                        <div class="form-group inlineForm display-inline ">
+                            <label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qq号码：</b></label>
+                            <input type="text" class="form-control" name="qq" value="{$condition[qq]}" >
+                        </div>&nbsp; &nbsp;
+                      <div class="form-group inlineForm display-inline">
+                            <label><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{$condition[username]}">
+                      </div><p></p>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>关键词：</b></label>
+                            <input type="text" class="form-control" name="kw" value="{$condition[kw]}" >
+                        </div>&nbsp; &nbsp;
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查询</button>
+                    </form>
+                    <form method="post" action="" name="myform" id="myform">
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="header" align="center">
+                              <td width="5%" align="center">选择</td>
+                              <td width="5%" align="center">所属视频</td>
+                              <td width="10%" align="center">用户名</td>
+                              <td width="20%" align="center">问题</td>
+                              <td width="10%" align="center">提问时间</td>
+                              <td width="10%" align="center">是否回复</td>
+                              <td align="center">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <volist name="info" id="v">
+                                    <tr>
+                                        <td style="border-bottom:1px dotted #EDEDED">
+                                            <input name="dyid[]" class="checkbox" type="checkbox" value="{$v.dyid}"> {$v.dyid}
+                                        </td>
+                                        <td align="center" style="border-bottom:1px dotted #EDEDED">
+                                        <a href="/index.php?m=front_new&c=index&a=video&vid={$v.vid}" target="_blank">{$v.title}</a></td>
+                                        <td align="center" style="border-bottom:1px dotted #EDEDED"></td>
+                                        <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.question|stripslashes}</td>
+                                        <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.addtime|date="Y-m-d",###}</td>
+                                        <td align="center" style="border-bottom:1px dotted #EDEDED">
+                                            <if condition="$v.isreply eq 1"> 
+                                                已回复
+                                            <else/>
+                                                未回复
+                                            </if>
+                                        </td>
+                                        <td align="center" style="border-bottom:1px dotted #EDEDED">
+                                            <a href="{:U(MODULE_NAME.'/User/reply',array('dyid'=>$v[dyid]))}">回复</a> &nbsp;
+                                        <if condition="$v.isreply eq 1"> 
+                                            <a href="{:U(MODULE_NAME.'/User/replylist',array('dyid'=>$v[dyid]))}" target=""> 查看回复内容</a>
+                                        </if>
+                                             <a href="{:U(MODULE_NAME.'/User/delete',array('dyid'=>$v[dyid]))}" onclick="return confirm('你确实要删除吗?不可恢复');">删除</a> &nbsp;
+                                        </td>
+                                    </tr>
+                                    
+                             </volist>
+                                <if condition="is_array($info)">
+                                    <tr>
+                                    <td colspan="9">
+                                    <input type="button" onclick="checkall(this.form)" value="反选"/>
+                                    <input type="submit" name="dosubmit" onclick="document.myform.action='{:U(MODULE_NAME.\'/User/delete\')}';return confirm('确认删除这些视频吗？')" value="批量删除"/>
+                                    </td>
+                                    </tr>
+                                </if>
+                            <if condition="!$info">
+                                <tr>
+                                    <td colspan="6" align="center"> 没有数据！</td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="6" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+<!--
+select_type = 0;
+function checkall(form) {
+    if(select_type == 0) select_type = 1;
+    else select_type = 0;
+
+    for(var i = 0; i < form.elements.length; i++)
+    {
+        var e = form.elements[i];
+        e.checked = select_type;
+        if(select_type){
+            $(e).parent().addClass('checked');
+        }else{
+            $(e).parent().removeClass('checked');
+        }
+//        alert(e.parentNode.className);
+//        e.parentNode.className  = select_type;
+    }
+}
+
+function confirmurl(url,message)
+{
+	if(confirm(message)) location.href = url;
+}
+//-->
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

@@ -1,0 +1,31 @@
+<script src="__MOBILE__/js/jquery-1.11.3.min.js"></script>
+<script src="__MOBILE__/js/zepto_plus.js"></script>
+<script src="__MOBILE__/js/base.js"></script>
+<script src="__MOBILE__/js/style.js"></script>
+
+<script>
+    var Url = "{:U('Login/loginOut')}";//退出登陆url
+    //执行退出登陆操作
+    function loginOut(){
+        //底部对话框
+        var index = layer.open({
+            content: '确定要退出当前登陆吗？'
+            ,btn: ['确定', '取消']
+            ,skin: 'footer'
+            ,yes: function(index){
+                layer.close(index);
+                $.post(Url,{},function(data){
+                    if(data.status==0){
+                        return false;
+                    }
+                    if(data.url!=''){
+                        location.href = data.url;
+                    }
+                },'json');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

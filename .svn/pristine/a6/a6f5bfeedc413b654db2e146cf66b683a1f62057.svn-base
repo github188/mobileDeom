@@ -1,0 +1,171 @@
+
+<include file="Public:headerAfter"/>
+
+<!--content-->
+<div class="videoContent m0a learnContent">
+    <div class="videoTab mt20">
+        <!--选项卡切换S-->
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <!--top菜单-->
+            <include file="topMenu"/>
+            <div class="layui-tab-content clearfix layui-tab-content-new">
+
+                <!--我的课程-->
+                <div class="layui-tab-item layui-show learnCourese bgColor m0a">
+                    <div class="CoureseHeader mb30">
+                        <ul class="clearfix">
+                        <volist name="category" id="v">
+                            <li class="courseItem">
+                                <a data-ctegoryid="{$v.id}" down="0"  class="leftTab itemActive">
+                                    {$v.name}<i class="iconfont icon-xiala-copy-copy1"></i>
+                                </a>
+                                <dl class="courseUl" style="display: none;">
+                                <volist name="v.son" id="vv">
+                                    <dd>
+                                        <a data-ctegoryid="{$vv.id}" href="javascript:;" onclick="changeCategory({$vv.id},1)" >{$vv.name}</a>
+                                    </dd>
+                                </volist>
+                            </li>
+                        </volist>
+                        </ul>
+                    </div>
+                    <div class="CoureseBody">
+                        <ul class="list tab-bd" id="videolist">
+
+                            <volist name="video" id="v">
+                                <li class="item">
+                                    <div class="itemdd">
+                                        <a class="pic" href="javascript:;" target="_blank">
+                                            <img class="img" src="{$v.cover_img}" alt="{$v.title}" title="{$v.title}">
+                                            <i class="iconfont icon-shoucang"></i>
+                                            <div class="p-thumb-taglt">
+                                                <switch name="v.is_tag">
+                                                    <case value="1"><span class="ico-lt">推荐</span></case>
+                                                    <case value="2"><span class="ico-lt icon-lt-new">最新视频</span></case>
+                                                    <default />
+                                                </switch>
+                                            </div>
+                                        </a>
+                                        <div class="details">
+                                            <h3>
+                                                <a href="#" class="fonts16">{$v.title}</a>
+                                            </h3>
+                                            <div class="row clearfix">
+                                                <span class="fl fonts14 FtColorV">{$v.buy_money}</span>
+                                                <a class="fr fonts14" href="javascript:;" target="_blank"><i class="iconfont icon-bofang"></i>播放</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
+
+                    <div id="demo2" class="Hpage"> <if condition="$totalPages GT 1">{$pages}</if></div>
+
+                </div>
+            <!-- 当前选择分类 -->
+            <input type="hidden" id="current_category">
+            <!-- 总页数 -->
+            <input type="hidden" id="totalPages" value="{$totalPages}">
+             </div>
+            <!--选项卡切换E-->
+         </div>
+  </div>
+</div>
+<!--footer-->
+<include file="Public:footer"/>
+<script>
+    // 插件validator.js
+    $('form').validator({
+        theme: "simple_right", //消息皮肤
+        msgClass: "n-bottom"   //消息将自动显示在输入框右边
+    });
+    layui.use('element', function(){
+        var $ = layui.jquery
+            ,element = layui.element();
+    });
+    //富文本编辑器
+    layui.use('layedit', function(){
+        var layedit = layui.layedit;
+
+        var index = layedit.build('demo', {
+            // hideTool: ['image']
+            uploadImage: {
+                url: '/upload/test/'
+                ,type: 'post'
+            }
+            //,hideTool: []
+            ,height: 180
+        });
+    });
+
+
+// 切换视频分类
+function changeCategory(category_id, click_page){
+//    if (category_id) {
+        var url = '/Member/Study/myCourse';
+        $.ajax({type:'get', url:url, data:{category_id:category_id, p:click_page}, dataType:'json',
+            success:function(obj){
+                if (obj.code == 1) {
+                    var videoListHtml = '';
+                    if (obj.content.length != 0) {
+                        $.each(obj.content, function(k,v){
+                            videoListHtml += '<li class="item"><div class="itemdd"><a class="pic" href="javascript:;" target="_blank"><img class="img" src="' + v.cover_img + '" alt="' + v.title + '" title="' + v.title + '"><i class="iconfont icon-shoucang"></i><div class="p-thumb-taglt">';
+                                switch(parseInt(v.is_tag)){
+                                    case 1:
+
+                                        videoListHtml += '<span class="ico-lt">推荐</span>';
+                                    break;
+                                    case 2:
+                                        videoListHtml += '<span class="ico-lt icon-lt-new">最新视频</span>';
+                                    break;
+                                }
+                            videoListHtml += '</div></a><div class="details"><h3><a href="#" class="fonts16">' + v.title + '</a></h3><div class="row clearfix"><span class="fl fonts14 FtColorV">' + v.buy_money + '</span><a class="fr fonts14" href="javascript:;" target="_blank"><i class="iconfont icon-bofang"></i>播放</a></div></div></div></li>';
+                        })
+                    }else{
+                        videoListHtml += '<p style="font-size:22px; text-align:center;">该分类下没有视频</p>'
+                    }
+                    if(obj.totalPages > 1){
+                        $('#demo2').html(obj.pages);
+                    }
+
+                    $('#videolist').html(videoListHtml);
+                    $('#current_category').val(category_id);
+                    $('#totalPages').val(obj.totalPages);
+                }else{
+                    layer.msg(obj.msg);
+                }
+            }
+        })
+//    }
+
+    $('#current_category').val(category_id);
+}
+
+// 分页方法
+$('#demo2').on("click","a",function(event){
+    event.preventDefault();
+    var category_id = $('#current_category').val();
+    var current_page = parseInt($('.current').text());
+    var totalPages = $('#totalPages').val();
+    var text = $(this).text();
+    var click_page = 0;
+    switch (text) {
+        case '上一页':
+            click_page = current_page - 1;
+            break;
+        case '下一页':
+            click_page = current_page + 1;
+            break;
+        default:
+            click_page = text;
+    }
+
+    if (click_page < 1 || click_page > totalPages) {
+        return false;
+    }
+
+    changeCategory(category_id, click_page);
+});
+</script>

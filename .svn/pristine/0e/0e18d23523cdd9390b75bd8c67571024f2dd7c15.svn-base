@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>嗨推学院-知名网络推广实战培训平台</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_449iiaxohgbn8kt9.css">
+    <link rel="stylesheet" href="__MOBILE__/css/base.css">
+    <link rel="stylesheet" href="__MOBILE__/css/common.css">
+    <link rel="stylesheet" href="__MOBILE__/css/main.css">
+</head>
+<body >
+<!--Head-->
+<section class="headCom">
+    <div class="topmeun">
+        <i class="iconfont icon-icon-back-left"></i>
+    </div>
+    <div class="com">
+        <ul class="clearfix" id="hUl">
+            <li>
+                <a href="#">坏坏说</a>
+            </li>
+            <li><a class="active" href="#">课程视频</a></li>
+            <li><a href="#">课程简介</a></li>
+            <li><a href="#">官方资讯</a></li>
+            <li><a href="#">团队风采</a></li>
+            <li><a href="#">新人求助</a></li>
+            <li><a href="#">每日更新</a></li>
+            <li><a href="#">44444</a></li>
+        </ul>
+    </div>
+</section>
+
+<!--背景图-->
+<setion class="img">
+    <img src="__MOBILE__/images/curriculum-banner-01.png" alt="">
+</setion>
+
+<!--主要内容-->
+<setion class="mianCont">
+    <div class="HcontHeard" style="border-bottom: 1px solid #e5e5e5;">
+        <ul class="clearfix">
+            <li class="cur">学员介绍</li>
+            <li>学员视频</li>
+        </ul>
+    </div>
+
+<!--学员介绍S-->
+    <div class="matter show introduction">
+       <ul>
+
+           <volist name="studentRemark" id="val">
+               <li>
+                  <div class="heightImg"> </div>
+                   <div class="bottom">
+                       <div class="txt01">{$val.title}</div>
+                       <div class="txt02" flag="true">{$val.content}</div>
+                   </div>
+               </li>
+           </volist>
+
+       </ul>
+    </div>
+ <!--学员介绍E-->
+
+ <!-- 学员视频S -->
+   <div class="matter">
+       <volist name="videoStudent" id="val">
+           <div data-code="{$val.video_code}" data-vid="{$val.id}" class="stuVideo">
+               <div class="video">
+                   <div class="playVideo">
+                       <a href="javascript:;">
+                           <i></i>
+                           <img src="{$val.cover_img}" alt="">
+                       </a>
+                   </div>
+                   <div class="videoTxt clearfix">
+                       <p class="fl wzwz">{$val.title}</p>
+                       <div class="fr more">更多 <i class="iconfont icon-xiala"></i></div>
+                   </div>
+               </div>
+               <!--下拉块-->
+               <div class="detail">
+                   <p>{$val.remark}</p>
+               </div>
+           </div>
+       </volist>
+   </div>
+
+
+</setion>
+
+<style>
+    .layui-layer-demo{
+        left: 0;
+        width: calc(100%);
+    }
+</style>
+
+<script src="__MOBILE__/js/zepto_plus.js"></script>
+<script src="__MOBILE__/js/base.js"></script>
+<script src="__MOBILE__/js/swipe.js"></script>
+
+<script src="__MOBILE__/js/main.js"></script>
+<script src="__MEMBER__/js/jquery-1.11.2.min.js"></script>
+<script src="__ADMIN__/layer/layer.js"></script>
+<script>
+
+    $('.stuVideo').on('click', function () {
+        var vid = $(this).attr('data-vid');
+        var code = $(this).attr('data-code');
+        var w = document.body.clientWidth;
+        var url = "{:U('Student/openVideoPlay','',false)}" + "/vid/"+vid+"/code/"+code+"/w/"+w;
+
+        var h = document.body.clientHeight;
+        h = h/3;
+
+        //播放视频弹窗
+        layer.open({
+            type: 2,
+            title:'学员公开视频',
+            skin: 'layui-layer-demo', //样式类名
+            scrollbar: false,
+            closeBtn: 1, //不显示关闭按钮
+            anim: 2,
+            area: [w, h],
+            shadeClose: true, //开启遮罩关闭
+            shade: 0.5, //遮罩
+            content: url
+        });
+    });
+</script>
+
+</body>
+</html>

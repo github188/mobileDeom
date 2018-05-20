@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="55b35d39-ab0d-4553-bdef-7175fc4b30ae" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.491128">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/Mobile/View/Index/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15795">
+                  <caret line="586" column="23" lean-forward="false" selection-start-line="586" selection-start-column="23" selection-end-line="586" selection-end-column="23" />
+                  <folding>
+                    <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#0;n#if#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="e#3169#3173#0" expanded="true" />
+                    <element signature="e#3173#3177#0" expanded="true" />
+                    <element signature="n#style#0;n#p#0;n#if#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <marker date="1498698871223" expanded="true" signature="19954:20011" ph="..." />
+                    <marker date="1498698871223" expanded="true" signature="27182:27420" ph="..." />
+                    <marker date="1498698871223" expanded="true" signature="27199:27409" ph="{&quot;slideCell&quot;: &quot;##slideBox&quot;...}" />
+                    <marker date="1498698871223" expanded="true" signature="27497:29449" ph="..." />
+                    <marker date="1498698871223" expanded="true" signature="28228:28257" ph="//..." />
+                    <marker date="1498698871223" expanded="true" signature="28483:29437" ph="{...}" />
+                    <marker date="1498698871223" expanded="true" signature="28622:28691" ph="{...}" />
+                    <marker date="1498698871223" expanded="true" signature="28707:29429" ph="{&quot;url&quot;: formActionUrl...}" />
+                    <marker date="1498698871223" expanded="true" signature="28833:29219" ph="{...}" />
+                    <marker date="1498698871223" expanded="true" signature="28869:28944" ph="{...}" />
+                    <marker date="1498698871223" expanded="true" signature="28984:29056" ph="{...}" />
+                    <marker date="1498698871223" expanded="true" signature="29084:29203" ph="{&quot;skin&quot;: &quot;msg&quot;...}" />
+                    <marker date="1498698871223" expanded="true" signature="29253:29419" ph="{...}" />
+                    <marker date="1498698871223" expanded="true" signature="29282:29403" ph="{&quot;skin&quot;: &quot;msg&quot;...}" />
+                    <marker date="1498698871223" expanded="true" signature="29440:29449" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="play.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/Mobile/View/Video/play.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2133">
+                  <caret line="79" column="22" lean-forward="false" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
+                  <folding>
+                    <marker date="1498704955086" expanded="true" signature="27188:27197" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="my.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/Mobile/View/User/my.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1809">
+                  <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/Mobile/View/Public/header.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="378">
+                  <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="58" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="loginReg.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/App/Mobile/View/Login/loginReg.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="664">
+                  <caret line="94" column="49" lean-forward="true" selection-start-line="94" selection-start-column="49" selection-end-line="94" selection-end-column="49" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/Mobile/View/Student/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="70">
+                  <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Public/Mobile/js/main.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2808">
+                  <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#221#237#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.less" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Public/Mobile/css/main.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="567">
+                  <caret line="154" column="20" lean-forward="false" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="note.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Public/Mobile/js/note.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="807">
+                  <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Public/Mobile/js/style.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="675">
+                  <caret line="559" column="23" lean-forward="true" selection-start-line="559" selection-start-column="23" selection-end-line="559" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Hform.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Public/Mobile/js/Hform.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="628">
+                  <caret line="180" column="34" lean-forward="true" selection-start-line="180" selection-start-column="34" selection-end-line="180" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#0#49#0" expanded="false" />
+                    <element signature="e#1922#3764#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="swipe.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Public/Mobile/js/swipe.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="432">
+                  <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="theMenu.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Public/Mobile/js/theMenu.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2160">
+                  <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="touch.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Public/Mobile/js/touch.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="question.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Public/Mobile/js/question.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="9504">
+                  <caret line="354" column="21" lean-forward="false" selection-start-line="354" selection-start-column="21" selection-end-line="354" selection-end-column="21" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                    <marker date="1498633822787" expanded="true" signature="83:211" ph="{...}" />
+                    <marker date="1498633822787" expanded="true" signature="1486:1492" ph="{...}" />
+                    <marker date="1498633822787" expanded="true" signature="7357:7378" ph="..." />
+                    <marker date="1498633822787" expanded="true" signature="9875:9896" ph="..." />
+                    <marker date="1498633822787" expanded="true" signature="10193:10214" ph="..." />
+                    <marker date="1498633822787" expanded="true" signature="13454:13475" ph="..." />
+                    <marker date="1498633822787" expanded="true" signature="13768:13789" ph="..." />
+                    <marker date="1498633822787" expanded="true" signature="13950:13971" ph="..." />
+                    <marker date="1498633822787" expanded="true" signature="14846:14885" ph="..." />
+                    <marker date="1498633822787" expanded="true" signature="16499:16537" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>headCom</find>
+      <find>replyQuestion</find>
+      <find>footNav</find>
+      <find>timer</find>
+      <find>js-chg</find>
+      <find>showMsg</find>
+      <find>gfNot</find>
+      <find>clickMore</find>
+      <find>myNotePage</find>
+      <find>subDel</find>
+      <find>answer_page</find>
+      <find>deletea</find>
+      <find>myBtn</find>
+      <find>subBtn</find>
+      <find>icon-guanbi</find>
+      <find>ke</find>
+      <find>btn_mark</find>
+      <find>active</find>
+      <find>btn_qq_box</find>
+      <find>mesIcoT</find>
+      <find>style</find>
+      <find>.style</find>
+      <find>listBd</find>
+      <find>liRight</find>
+      <find>botm</find>
+      <find>pic</find>
+      <find>isRead</find>
+      <find>ovrd</find>
+      <find>mesIco</find>
+      <find>js-wz</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/App/Member/View/Public/footer.html" />
+        <option value="$PROJECT_DIR$/App/Member/View/Study/faqCourse.html" />
+        <option value="$PROJECT_DIR$/Html/web/huituiPC/pages/loginAfter/learnQuestions.html" />
+        <option value="$PROJECT_DIR$/Public/Member/js/replyMssage.js" />
+        <option value="$PROJECT_DIR$/App/Member/View/Index/videoBuy.html" />
+        <option value="$PROJECT_DIR$/App/Member/View/Study/myNote.html" />
+        <option value="$PROJECT_DIR$/App/Member/View/Login/index.html" />
+        <option value="$PROJECT_DIR$/App/Member/View/Video/play.html" />
+        <option value="$PROJECT_DIR$/App/Member/Controller/IndexController.class.php" />
+        <option value="$PROJECT_DIR$/Public/Member/css/loginAfter.css" />
+        <option value="$PROJECT_DIR$/App/Member/View/Index/videoList.html" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/pages/index.html" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/public/css/main.css" />
+        <option value="$PROJECT_DIR$/Public/Member/css/base.css" />
+        <option value="$PROJECT_DIR$/App/Member/View/Index/course.html" />
+        <option value="$PROJECT_DIR$/Public/Member/css/loginBefore.css" />
+        <option value="$PROJECT_DIR$/Public/Member/js/HloginAftert.js" />
+        <option value="$PROJECT_DIR$/App/Member/View/Public/header.html" />
+        <option value="$PROJECT_DIR$/Public/Member/css/common.css" />
+        <option value="$PROJECT_DIR$/App/Member/View/Index/index.html" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/public/js/main.js" />
+        <option value="$PROJECT_DIR$/App/Mobile/Controller/VideoController.class.php" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/Login/findPwd01.html" />
+        <option value="$PROJECT_DIR$/App/Mobile/Controller/LoginController.class.php" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/Login/findPwd02.html" />
+        <option value="$USER_HOME$/Desktop/d27bfd96103f10d053ae70a1b6e4d9da.php" />
+        <option value="$PROJECT_DIR$/Public/Mobile/css/main.css" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/notice/student.html" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/public/css/main.less" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/pages/courses/learn.html" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/Study/myQuestion.html" />
+        <option value="$PROJECT_DIR$/App/Mobile/Controller/StudyController.class.php" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/pages/notice/guangfang.html" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/pages/courses/videoNull.html" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/pages/courses/listenCourse.html" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/pages/notice/commonQuestion.html" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/pages/courses/buyVideo.html" />
+        <option value="$PROJECT_DIR$/Html/wap/hituiWap/pages/notice/student.html" />
+        <option value="$PROJECT_DIR$/Public/Mobile/js/note.js" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/Study/allQuestion.html" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/Public/header.html" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/Study/myNote.html" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/Index/index.html" />
+        <option value="$PROJECT_DIR$/Public/Mobile/js/main.js" />
+        <option value="$PROJECT_DIR$/Public/Mobile/js/question.js" />
+        <option value="$PROJECT_DIR$/Public/Mobile/css/main.less" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/Video/play.html" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/Login/loginReg.html" />
+        <option value="$PROJECT_DIR$/App/Mobile/View/Student/index.html" />
+        <option value="$PROJECT_DIR$/Public/Mobile/js/style.js" />
+        <option value="$PROJECT_DIR$/Public/Mobile/js/Hform.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1918" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kf.hitui.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kf.hitui.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kf.hitui.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kf.hitui.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kf.hitui.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kf.hitui.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kf.hitui.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kf.hitui.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Html/web" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\wwwroot\www\kf.hitui.com\Public\Mobile\images" />
+      <recent name="E:\wwwroot\www\kf.hitui.com\Html\wap\hituiWap\public\images" />
+      <recent name="E:\wwwroot\www\kf.hitui.com\Public\Member\images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55b35d39-ab0d-4553-bdef-7175fc4b30ae" name="Default" comment="" />
+      <created>1493103073295</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1493103073295</updated>
+      <workItem from="1493103074921" duration="8250000" />
+      <workItem from="1493176068546" duration="3791000" />
+      <workItem from="1493187255209" duration="3604000" />
+      <workItem from="1493195592550" duration="499000" />
+      <workItem from="1493260205651" duration="2299000" />
+      <workItem from="1493271512456" duration="71000" />
+      <workItem from="1493271670488" duration="1241000" />
+      <workItem from="1493891535837" duration="272000" />
+      <workItem from="1493948295923" duration="2841000" />
+      <workItem from="1493956535361" duration="27000" />
+      <workItem from="1493968620559" duration="712000" />
+      <workItem from="1494049763593" duration="152000" />
+      <workItem from="1495446752863" duration="833000" />
+      <workItem from="1496979092977" duration="7335000" />
+      <workItem from="1497064364756" duration="1082000" />
+      <workItem from="1497230903975" duration="23895000" />
+      <workItem from="1497316244358" duration="25411000" />
+      <workItem from="1497402555691" duration="26855000" />
+      <workItem from="1497435250404" duration="2000" />
+      <workItem from="1497489377046" duration="25648000" />
+      <workItem from="1497578159694" duration="23400000" />
+      <workItem from="1497662498046" duration="23202000" />
+      <workItem from="1497834926787" duration="18514000" />
+      <workItem from="1497859359964" duration="4677000" />
+      <workItem from="1497864068799" duration="3241000" />
+      <workItem from="1497920954963" duration="27817000" />
+      <workItem from="1498007409865" duration="164000" />
+      <workItem from="1498008123682" duration="23753000" />
+      <workItem from="1498036390843" duration="4912000" />
+      <workItem from="1498093417557" duration="28512000" />
+      <workItem from="1498180735821" duration="18924000" />
+      <workItem from="1498209227652" duration="2760000" />
+      <workItem from="1498439596488" duration="27495000" />
+      <workItem from="1498526004091" duration="24801000" />
+      <workItem from="1498612247680" duration="24794000" />
+      <workItem from="1498698915050" duration="11554000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="403340000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1" y="1" width="1918" height="1038" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17139852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Public/Member/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="41" column="15" lean-forward="true" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Member/View/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Study/myQuestion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Content/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/Controller/ContentController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/AdminLte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Static/plugins/ueditor/dialogs/map/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Content/problemList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/main-1403.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1296">
+          <caret line="221" column="0" lean-forward="true" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/Controller/VideoController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1986">
+          <caret line="88" column="23" lean-forward="false" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/Controller/StudyController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Public/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Html/wap/hituiWap/pages/courses/listenCourse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3489">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Html/wap/hituiWap/pages/notice/commonQuestion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4158">
+          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="169" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Html/wap/hituiWap/pages/notice/student.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4239">
+          <caret line="157" column="9" lean-forward="false" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Html/wap/hituiWap/pages/notice/guangfang.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/js/menuSilder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2835">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Html/wap/hituiWap/pages/courses/videoNull.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Study/allQuestion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="94" column="11" lean-forward="false" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/User/myAddress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="125" column="13" lean-forward="false" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Html/wap/hituiWap/pages/courses/buyVideo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6264">
+          <caret line="232" column="50" lean-forward="false" selection-start-line="232" selection-start-column="50" selection-end-line="232" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Public/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="502" column="32" lean-forward="false" selection-start-line="502" selection-start-column="32" selection-end-line="502" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Safe/myBank.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Content/contactUs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Study/myNote.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4941">
+          <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Member/View/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1397">
+          <caret line="277" column="56" lean-forward="false" selection-start-line="277" selection-start-column="51" selection-end-line="277" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Member/js/from.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Member/js/myForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1134">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/js/swipe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/js/theMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Login/passwordWay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Public/footerMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/User/my.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1809">
+          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2808">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <element signature="e#221#237#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/js/question.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9504">
+          <caret line="354" column="21" lean-forward="false" selection-start-line="354" selection-start-column="21" selection-end-line="354" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1498633822787" expanded="true" signature="83:211" ph="{...}" />
+            <marker date="1498633822787" expanded="true" signature="1486:1492" ph="{...}" />
+            <marker date="1498633822787" expanded="true" signature="7357:7378" ph="..." />
+            <marker date="1498633822787" expanded="true" signature="9875:9896" ph="..." />
+            <marker date="1498633822787" expanded="true" signature="10193:10214" ph="..." />
+            <marker date="1498633822787" expanded="true" signature="13454:13475" ph="..." />
+            <marker date="1498633822787" expanded="true" signature="13768:13789" ph="..." />
+            <marker date="1498633822787" expanded="true" signature="13950:13971" ph="..." />
+            <marker date="1498633822787" expanded="true" signature="14846:14885" ph="..." />
+            <marker date="1498633822787" expanded="true" signature="16499:16537" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15795">
+          <caret line="586" column="23" lean-forward="false" selection-start-line="586" selection-start-column="23" selection-end-line="586" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#if#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3169#3173#0" expanded="true" />
+            <element signature="e#3173#3177#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#if#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1498698871223" expanded="true" signature="19954:20011" ph="..." />
+            <marker date="1498698871223" expanded="true" signature="27182:27420" ph="..." />
+            <marker date="1498698871223" expanded="true" signature="27199:27409" ph="{&quot;slideCell&quot;: &quot;##slideBox&quot;...}" />
+            <marker date="1498698871223" expanded="true" signature="27497:29449" ph="..." />
+            <marker date="1498698871223" expanded="true" signature="28228:28257" ph="//..." />
+            <marker date="1498698871223" expanded="true" signature="28483:29437" ph="{...}" />
+            <marker date="1498698871223" expanded="true" signature="28622:28691" ph="{...}" />
+            <marker date="1498698871223" expanded="true" signature="28707:29429" ph="{&quot;url&quot;: formActionUrl...}" />
+            <marker date="1498698871223" expanded="true" signature="28833:29219" ph="{...}" />
+            <marker date="1498698871223" expanded="true" signature="28869:28944" ph="{...}" />
+            <marker date="1498698871223" expanded="true" signature="28984:29056" ph="{...}" />
+            <marker date="1498698871223" expanded="true" signature="29084:29203" ph="{&quot;skin&quot;: &quot;msg&quot;...}" />
+            <marker date="1498698871223" expanded="true" signature="29253:29419" ph="{...}" />
+            <marker date="1498698871223" expanded="true" signature="29282:29403" ph="{&quot;skin&quot;: &quot;msg&quot;...}" />
+            <marker date="1498698871223" expanded="true" signature="29440:29449" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Html/wap/hituiWap/pages/courses02/courses.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8154">
+          <caret line="302" column="39" lean-forward="false" selection-start-line="302" selection-start-column="39" selection-end-line="302" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Video/play.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2133">
+          <caret line="79" column="22" lean-forward="false" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
+          <folding>
+            <marker date="1498704955086" expanded="true" signature="27188:27197" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1620">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="732">
+          <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/css/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="154" column="20" lean-forward="false" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/js/touch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/js/note.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="807">
+          <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/js/style.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="559" column="23" lean-forward="true" selection-start-line="559" selection-start-column="23" selection-end-line="559" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Student/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-972">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Mobile/js/Hform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="180" column="34" lean-forward="true" selection-start-line="180" selection-start-column="34" selection-end-line="180" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+            <element signature="e#1922#3764#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Mobile/View/Login/loginReg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="94" column="49" lean-forward="true" selection-start-line="94" selection-start-column="49" selection-end-line="94" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

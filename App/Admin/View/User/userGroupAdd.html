@@ -1,0 +1,89 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+<div class="wrapper">
+	<!-- 内容标题开始 -->
+	<div id="breadcrumbs" class="breadcrumbs">
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">会员分组</li>
+		</ol>
+
+	</div>
+	<!-- 内容标题结束 -->
+
+	<!-- 主要内容开始 -->
+	<section class="content">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="box box-info"> <!-- box-info天空蓝、 box-primary蓝色、  box-success绿色-->
+					<div class="box-header nav-tabs">
+						<h4 class="box-title"><i class="fa fa-plus"></i> 添加会员分组</h4>
+						<!-- 返回上一页 -->
+						<include file="Public:content-back" />
+					</div>
+					<!-- 表格开始 -->
+					<div class="box-body">
+						<form action="" method="post">
+							<table id="example" class="table table-bordered">
+								<tbody>
+
+									<tr>
+										<td class="table-td-right"> 分组名称：</td>
+										<td><input type="text" name="name" class="form-control" size="30" data-rule="required"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 购买价格：</td>
+										<td><input type="text" name="buy_money" class="form-control" size="30" data-rule="required"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 返点比例：</td>
+										<td><input type="text" name="percent" class="form-control" size="10" ><font style="font-size: 20px;color: red">%</font></td>
+									</tr>
+
+									<tr>
+										<td class="table-td-right"> 有效期(天)：</td>
+										<td><input type="text" name="gqtime" class="form-control" size="30" data-rule="required"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 是否允许购买：</td>
+										<td>
+											允许 <input type="radio" name="allow_buy" id="iCheck1" value="1" checked> &nbsp;
+											禁止 <input type="radio" name="allow_buy" id="iCheck2" value="2" >
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 栏目排序：</td>
+										<td><input type="text" name="sort" value="0" class="form-control" size="30"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 简介：</td>
+										<td>
+											<textarea name="remark" style="width: 266px;min-height: 100px;"></textarea>
+										</td>
+									</tr>
+
+									<tr height="60">
+										<td colspan="2" align="center">
+											<button class="btn btn-success" type="submit"><i class="fa fa-check"></i> 添加会员分组</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+					<!-- 表格结束 -->
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+

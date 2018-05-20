@@ -1,0 +1,153 @@
+
+<include file="Public:headerBefore"/>
+
+
+<!--indexCom-->
+<section class="HcourseCont mt32" id="">
+    <div class="cContent mb20">
+        <p class="fontpp mt6 fonts26">还不是vip ?</p>
+        <p class="fontpp mt6">赶紧加入嗨推，一起成长，享受和数千名实战</p>
+        <p class="fontpp">推广者一起交流成长的快乐，一起培训，终身朋友！</p>
+        <p class="myCourse">
+            <a href="{:U('Pay/courseChoose')}" class="mya"> 报名课程</a>
+        </p>
+    </div>
+
+    <div class="in w1100 m0a   clearfix">
+        <!-- 左边S  -->
+        <div class="cLeft fl">
+            <div class="first">
+                <div class="leftHear">
+                    <i class="leftI"></i>全部课程
+                </div>
+                <ul class="pb16">
+                    <volist name="userGroup" key="k" id="v">
+                        <li class="cur">
+                            <a {$k==1?'class="curC"':''} href="javascript:"><span>{$v['name']}</span></a>
+                        </li>
+                    </volist>
+                    <!--
+                    <li class="cur">
+                        <a class="curC" href="javascript:"><span>新媒体</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:"><span>引爆你的软文流量</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:"><span>淘宝客特训</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:"><span>微商引流特训</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:"><span>推广总监班</span></a>
+                    </li>
+                    -->
+                </ul>
+            </div>
+            <div class="shopping">
+                <img src="__MEMBER__/images/goumai.png" alt="" class="m0a">
+                <a href="{:U('Pay/courseChoose')}" class="shoppingA">在线购买</a>
+            </div>
+            <div class="shopping">
+                <img src="__MEMBER__/images/shiting.png" alt="" class="m0a">
+                <a href="javsscript:;" class="shoppingA">在线试听</a>
+            </div>
+        </div>
+
+        <!-- 右边开始 -->
+        <php>$i=0;</php>
+        <volist name="userGroupInfo" key="k" id="v">
+            <php>$i += 1;</php>
+            <div class="cRigth fr ml15 clearfix {$i==1?'activeH':''}" >
+                <p class="p pl50">
+                    <span class="fonts18 textColor">{$v['title']}</span>
+                </p>
+                <div class="nContent">
+                    {:htmlspecialchars_decode($v['content'])}
+                </div>
+            </div>
+        </volist>
+        <!--
+        <div class="cRigth activeH fr ml15 clearfix">
+            <p class="p pl50">
+                <span class="fonts18 textColor">新媒体</span>
+            </p>
+            <div class="nContent">
+                <ul class="mb8">
+                    <div class="fonts15 mb8">课程主要内容:</div>
+                    <li>
+                        <span >新媒体文章标题写作技巧</span>
+                    </li>
+                    <li >
+                        <span >文章内容如何原创</span>
+                    </li>
+                    <li >
+                        <span>内容如何精炼</span>
+                    </li>
+                    <li >
+                        <span >走心文案打造技巧</span>
+                    </li>
+                    <li >
+                        <span >热点事件爆文技巧</span>
+                    </li>
+                    <li >
+                        <span >如何玩转头条号转正号</span>
+                    </li>
+                    <li >
+                        <span >头条号问答引流</span>
+                    </li>
+                    <li>
+                        <span>百度百家等自媒体引流进阶</span>
+                    </li>
+                    <li>
+                        <span >关于头条号如何盈利<br></span>
+                    </li>
+                </ul>
+                <ul>
+                    <div class="fonts15 mb8">创始人坏坏说:</div>
+                    <li>
+                        <span >随着内容时代的到来，优质的内容越来越受各大平台的欢迎，同时也让很多热衷于</span>
+                    </li>
+                    <li>
+                        <span>内容创造和推广的人从新媒体红利中赚了不少。</span>
+                    </li>
+                </ul>
+                <p class="cRigthP">目前学习新媒体课程主要有两种作用:</p>
+                <ul>
+                    <div class="fonts15 mb18">对上班族来说:</div>
+                    <li>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;凭借对于新媒体良好的信息敏感度，以及对于内容的精准把控，能够为企业</span>
+                    </li>
+                    <li>
+                        <span>的新媒体运营带来很大的帮助，在为企业带来经济效益的同时带来知名度。</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cRigth  fr ml15 clearfix" >
+            <p class="p pl50">
+                <span class="fonts18 textColor">引爆你的软文流量</span>
+            </p>
+        </div>
+        <div class="cRigth  fr ml15 clearfix" >
+            <p class="p pl50">
+                <span class="fonts18 textColor">淘宝客特训</span>
+            </p>
+        </div>
+        <div class="cRigth  fr ml15 clearfix" >
+            <p class="p pl50">
+                <span class="fonts18 textColor">微商引流特训</span>
+            </p>
+        </div>
+        <div class="cRigth  fr ml15 clearfix" >
+            <p class="p pl50">
+                <span class="fonts18 textColor">推广总监班</span>
+            </p>
+        </div>
+        -->
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>

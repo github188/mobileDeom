@@ -1,0 +1,44 @@
+<div class="myLeft fl">
+    <div class="myLHd">
+        <div class="tp">
+            <a href="{:U('User/myLogo')}">
+                <img src="__MEMBER__/images/logo/{:session(C('USER_FACE'))}.png" alt="个人头像">
+            </a>
+        </div>
+        <div class="txt">
+            <p class="name">{:session(C('USER_AUTH_UNAME'))}</p>
+            <p class="lab">{:session(C('USER_GROUP_UNAME'))}</p>
+        </div>
+    </div>
+    <div class="myItem">
+        <ul>
+            <li {:ACTION_NAME=='myAccount'?'class="cur"':''}>
+                <a href="{:U('User/myAccount')}"><i class="iconfont icon-zhanghao"></i><span>账户余额</span></a>
+            </li>
+            <li {:ACTION_NAME=='myBrokerage' || ACTION_NAME=='myInvite' ?'class="cur"':''}>
+                <a href="{:U('User/myBrokerage')}"><i class="iconfont icon-yongjin"></i><span>我的佣金</span></a>
+            </li>
+            <li {:ACTION_NAME=='myRank'?'class="cur"':''}>
+                <a href="{:U('User/myRank')}"><i class="iconfont icon-paiming"></i><span>积分排名</span></a>
+            </li>
+            <li {:ACTION_NAME=='myCourse'?'class="cur"':''}>
+                <a href="{:U('User/myCourse')}"><i class="iconfont icon-jibie"></i><span>报名课程</span></a>
+            </li>
+            <li {:ACTION_NAME=='myInfo'?'class="cur"':''}>
+                <a href="{:U('User/myInfo')}"><i class="iconfont icon-jibenxinxi"></i><span>基本信息</span></a>
+            </li>
+            <li {:CONTROLLER_NAME=='Safe'?'class="cur"':''}>
+                <a href="{:U('Safe/securityList')}"><i class="iconfont icon-lock"></i><span>安全设置</span></a>
+            </li>
+            <li {:ACTION_NAME=='myLogo'?'class="cur"':''}>
+                <a href="{:U('User/myLogo')}"><i class="iconfont icon-user1"></i><span>修改头像</span></a>
+            </li>
+            <li {:ACTION_NAME=='myAddressList' || ACTION_NAME=='myAddress'?'class="cur"':''}>
+                <a href="{:U('User/myAddressList')}"><i class="iconfont icon-dizhi"></i><span>收货信息</span></a>
+            </li>
+            <li {:ACTION_NAME=='myNews'?'class="cur"':''}>
+                <a href="{:U('User/myNews')}"><i class="iconfont icon-lingdang"></i><span>消息中心</span></a>
+            </li>
+        </ul>
+    </div>
+</div>

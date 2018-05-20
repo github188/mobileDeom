@@ -1,0 +1,54 @@
+<include file="Public:header"/>
+<style type="text/css">
+    body{
+        background-color: #fff;
+    }
+</style>
+
+<!--myRecharge-->
+<section class="myRecharge">
+    <div class="in">
+        <div class="withRate">
+            <div class="tp">
+                <img src="__MOBILE__/images/rate03.png">
+            </div>
+            <div class="txt">
+                <div class="tx01 cur">
+                    <span>充值学习币</span>
+                </div>
+                <div class="tx02 cur">
+                    <span>支付方式</span>
+                </div>
+                <div class="tx03 cur">
+                    <span>支付成功</span>
+                </div>
+            </div>
+        </div>
+        <div class="reSuc">
+            <div class="tit">
+
+                <if condition="$arr['status'] eq 2">
+                    <img src="__MOBILE__/images/sucIcoB.png">
+                    <h6 class="th">充值成功，您已成功充值{$arr.currency}学习币！</h6>
+                <else />
+                    <img src="__MOBILE__/images/sucIcoC.png">
+                    <h6 class="th">充值失败，请确认是否支付金额成功！</h6>
+                </if>
+            </div>
+        </div>
+        <div class="recDet recDet2">
+            <p><span>订单编号：</span><span>{$arr.trade_no}</span></p>
+            <p><span>充值金额：</span><span>{$arr.money}元</span></p>
+            <p><span>充值数量：</span><span>{$arr.currency}学习币</span></p>
+            <p><span>充值时间：</span><span>{$arr.pay_time|date='Y-m-d H:i:s',###}</span></p>
+        </div>
+        <div class="txtExp">
+            <p>* 如您在充值后遇到问题，请 <a href="{:U('Content/contactUs')}" style="color:#ffa166;"> 联系我们&gt;&gt;</a> </p>
+            <p>* 如您已支付金额成功，请等待3分钟再看看是否已入账或联系在线客服！</p>
+            <p>* 最终解释权归嗨推学院所有</p>
+        </div>
+    </div>
+</section>
+
+<include file="Public:footerMenu"/>
+<include file="Public:footer"/>

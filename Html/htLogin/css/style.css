@@ -1,0 +1,29 @@
+html{ width: 100%; height: 100%;}
+body{ width: 100%; height: 100%; position: relative; background:#fff url("../img/bg01.jpg") center top no-repeat; background-size: cover;}
+.logo{ width: 460px; height: 460px; position: absolute; left: 50%; top: 50%; margin-left: -230px; margin-top: -230px; z-index: 999;
+border-radius:4px; background-color: rgba(255,255,255,.12);}
+.logo .hd{ width: 100%; height: 69px;border-bottom:1px solid #f4f4f4; text-align: center; position: relative;}
+.logo .hd h2{ line-height: 69px; font-size: 18px; color: #fff;}
+.logo .hd .renew{ width: 60px; height: 60px; background: url("../img/renewBg.png") no-repeat; position: absolute; right: 0; top: 0;}
+.logo .hd .renew i{ width: 34px; height: 34px; background: url("../img/renewIco.png") no-repeat; position: absolute; right: 0; top: 0; cursor: pointer;  }
+.logo .com{ width: 370px; height: auto; margin: 40px auto 0;}
+.logo .inpCom{ width: 100%; overflow: hidden;}
+.logo .inpCom .item{ width: 100%; height: 74px; overflow: hidden; position: relative;}
+.logo .inp{ width: 370px; height: 44px; line-height: 44px;  border-radius: 4px; overflow: hidden; position: relative;}
+.logo .inp .tp{ width: 44px; height: 44px; display: inline-block; overflow: hidden; position: absolute; left: 0; top: 0;}
+.logo .inp .tp img{ width: 100%;}
+.logo .inp input{ width: 316px; padding-left: 44px; padding-right: 10px; height: 44px; line-height: 44px;background-color: rgba(255,255,255,.3);
+    font-size: 14px; color: #fff; border-radius: 4px; overflow: hidden;}
+.logo .inp03{ background-color: transparent;}
+.logo .inp03 input{ width: 184px; }
+.logo .getCode{ width: 118px; height: 44px; overflow: hidden; position: absolute; right: 0; top: 0; cursor: pointer;}
+.logo .remPwd{ color: #fff; font-size: 14px;}
+.logo .remPwd .che{ width: 18px; height: 18px; background: url("../img/che.png") no-repeat; display: inline-block; vertical-align: middle; cursor: pointer;}
+.logo .remPwd .che.hover{ background-position: right top;}
+.logo .remPwd span{ vertical-align: middle; margin-left: 5px;}
+.logo .btn{ width: 100%; height: 44px; line-height: 44px; text-align: center; background-color: #4d94ff; border-radius: 4px; margin-top: 30px;
+    transition: all ease .5s; -webkit-transition: all ease .5s; -moz-transition: all ease .5s; -ms-transition: all ease .5s;}
+.logo .btn:hover{ background-color: #408cff;}
+.logo .btn a{ display: block; font-size: 18px; color: #fff;}
+.copyright{ width: 460px; text-align:center; position: fixed; bottom: 40px;  left: 50%; margin-left: -230px; z-index: 999; color: #fff; font-size: 16px;}
+.tip{ position: absolute; bottom: 5px; left: 45px; color: #ff253b; font-size: 14px;}

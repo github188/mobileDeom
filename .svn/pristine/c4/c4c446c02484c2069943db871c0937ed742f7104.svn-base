@@ -1,0 +1,249 @@
+
+<include file="Public:headerAfter"/>
+<!-- Font Awesome 图标字体 -->
+<link rel="stylesheet" href="__ADMIN__/bootstrap/font-awesome/font-awesome.min.css">
+<!--orderConfirm-->
+<section class="order orderConfirm" id="orderConfirm">
+    <div class="in w1100 m0a">
+        <div class="hd">
+            <a href="javascript:;" class="a1">个人中心</a>
+            <i></i>
+            <a href="javascript:;" class="a2">确认课程</a>
+        </div>
+        <div class="com accPay accPay02">
+            <div class="payPlan" id="payPlan02">
+                <div class="planIn">
+                    <div class="inLine" style="width:426px"></div>
+                    <ol>
+                        <li class="li01 cur">
+                            <div class="item">
+                                <i></i>
+                                <span class="ti">充值学习币</span>
+                            </div>
+                        </li>
+                        <li class="li02">
+                            <div class="item">
+                                <i></i>
+                                <span class="ti">选择课程</span>
+                            </div>
+                        </li>
+                        <li class="li03">
+                            <div class="item">
+                                <i></i>
+                                <span class="ti">确认课程</span>
+                            </div>
+                        </li>
+                        <li class="li04">
+                            <div class="item">
+                                <i></i>
+                                <span class="ti">报名成功</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ordCon">
+                <!--
+                <div class="adr">
+                    <h6 class="tit">收货地址</h6>
+                    <ul>
+                        <li class="li01">
+                            <i class="radio"></i>
+                        </li>
+                        <li class="li02">
+                            <span class="name">麦兜兜</span>
+                        </li>
+                        <li class="li03">
+                            <p class="ad">广东省深圳市滨河大道2018号沙浦头康乐中心</p>
+                        </li>
+                        <li class="li04">
+                            <span class="ph">12345678910</span>
+                        </li>
+                        <li class="li05">
+                            <a href="javascript:;"><i></i><span>修改</span></a>
+                        </li>
+                    </ul>
+                </div>
+                -->
+                <div class="cours" style="margin: 100px 0 0 0;">
+                    <h6 class="tit"></h6>
+                    <form action="" method="post" name="myForm">
+                    <div class="coursInf">
+                        <div class="infHd">
+                            <ol>
+                                <li class="li01">
+                                    <span>课程类型</span>
+                                </li>
+                                <li class="li02">
+                                    <span>数量</span>
+                                </li>
+                                <li class="li02">
+                                    <span>有效期(天)</span>
+                                </li>
+                                <li class="li02">
+                                    <span>单价(学习币)</span>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="infBd">
+                            <ul>
+                                <li>
+                                    <div class="item li01">
+                                        <p class="tiName"><a href="javascript:;">{$goods_type==0?$data['name']:$data['title']}</a></p>
+                                    </div>
+                                    <div class="item li02">
+                                        <span class="">×1</span>
+                                    </div>
+                                    <div class="item li02">
+                                        <span class="">{$goods_type==0?$data['gqtime']:$data['gqtime']}</span>
+                                    </div>
+                                    <div class="item li02">
+                                        <span><em>{$goods_type==0?$data['buy_money']:$data['buy_money']}</em></span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="cheap">
+                                <div class="it">
+                                    <div class="fl yy">
+                                        <i class="js-switch"></i>
+                                        <span>使用优惠卷</span>
+                                        <p class="pp">
+                                            <input type="text" placeholder="" id="ticket" maxlength="10" name="ticket_code">
+                                            <em class="ticket-msg" style="font-size: 13px;"></em>
+                                        </p>
+                                    </div>
+                                    <div class="fr mm">
+                                        <span style="font-size: 13px;">-￥<em class="ticket-money">0</em></span>
+                                    </div>
+                                </div>
+                                <div class="it">
+                                    <div class="fl yy">
+                                        <i class="js-switch"></i>
+                                        <span>使用佣金</span>
+                                        <p class="pp">
+                                            <input type="text" placeholder="" id="expRell" name="brokerage">
+                                            <span>可使用佣金：￥<em class="brokerage">{$user_account['brokerage']}</em>&nbsp;&nbsp;<em class="brokerage-msg" style="font-size: 13px;"></em></span>
+                                        </p>
+                                    </div>
+                                    <div class="fr mm">
+                                        <span style="font-size: 12px;">-￥<em class="yongjin-money">0</em></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="group_id" value="{:I('group_id',0,'intval')}">
+                            <input type="hidden" name="vid" value="{:I('vid',0,'intval')}">
+                            <input type="hidden" name="return_order" class="return_order" value="0">
+
+                            <div class="infHandle">
+                                <div class="fr">
+                                    <div class="tot fl">
+                                        <div class="ti fl">已选：x<span class="num">1</span>个</div>
+                                        <div class="ti fl">合计：<span class="allCost">{$goods_type==0?$data['buy_money']:$data['buy_money']}</span>学习币</div>
+                                    </div>
+                                    <div class="fr">
+                                        <button type="button" class="buyBtn" allow-buy="1" >去结算</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="payExp payExp02">
+                <h6>报名课程中遇到问题：</h6>
+                <p>* 报名课程成功后，系统将自动为您开通该学习课程的权限</p>
+                <p>* 如您在报名课程后遇到问题，请<a href="javascript:;">联系我们&gt;&gt;</a> </p>
+                <p>* 最终解释权归嗨推学院所有</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<script src="__ADMIN__/layer/layer.js"></script>
+<script>
+    //var reg = /^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$/ ;
+
+    var FormUrl      = "{:U('Pay/courseConfirm')}";
+
+    var kecheng = "{$goods_type==0?$data['name']:$data['title']}";
+    var kecheng = '<em style="color: #ff6100;">'+kecheng+'</em>';
+
+    //检查佣金是否可用
+    $('#expRell').on('keyup',function(){
+        checkedOrder();
+    });
+
+    //检查优惠券
+    $('#ticket').on('paste',function(){
+        var this_ = $(this);
+        setTimeout(function() {
+            if(this_.val().length >= 10){
+                checkedOrder();
+            }
+        }, 10);
+    });
+    //检查优惠券
+    $('#ticket').on('keyup',function(){
+        var this_ = $(this);
+        if(this_.val().length >= 10){
+            checkedOrder();
+        }
+    });
+    //检查订单
+    function checkedOrder(obj){
+        $('.return_order').val(1);//返回订单信息，实时显示页面价格
+        $.post(FormUrl,$('form').serialize(),function(data){
+            $('.allCost').text(data.info.pay_currency);
+            $('.yongjin-money').text(data.info.pay_brokerage);
+            $('.ticket-money').text(data.info.ticket_money);
+            if(data.status==0){
+                show_msg(data.info,'error');
+                $('.buyBtn').attr('allow-buy','0');
+                return false;
+            }
+            $('.buyBtn').attr('allow-buy','1');
+        },'json');
+    }
+
+
+
+
+
+    //结算按钮
+    $('.buyBtn').on('click',function(){
+        var this_ = $(this);
+        checkedOrder();
+        setTimeout(function(){
+            if(this_.attr('allow-buy') != 1) return false;
+            var countMoney = $('.allCost').text();
+            var countMoney = '<em style="color: #ff6100;">'+countMoney+'</em>';
+            //询问框
+            var popup = layer.confirm('从账户中扣除'+countMoney+'学习币购买《'+kecheng+'》课程,确认支付吗？', {
+                //icon:3,
+                title:'提示信息',
+                shade:0.4,
+                btn: ['确定支付','取消'] //按钮
+            }, function(e){
+                $('.return_order').val(0);
+                $.post(FormUrl,$('form[name="myForm"]').serialize(),function(data){
+                    if(data.status==0){
+                        show_msg(data.info,'error');
+                    }else if(data.status==1){
+                        show_msg(data.info);
+                    }
+                    if(data.url != ''){
+                        setTimeout(function(){
+                            location.href = data.url;
+                        },1500);
+                    }
+                },'json');
+                layer.close(popup);
+            }, function(e){
+                layer.close(popup);
+            });
+        },100);
+    });
+</script>

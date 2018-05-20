@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>嗨推学院-知名网络推广实战培训平台</title>
+    <link rel="stylesheet" href="__MOBILE__/css/base.css">
+    <link rel="stylesheet" href="__MOBILE__/css/common.css">
+    <link rel="stylesheet" href="__MOBILE__/css/style.css">
+</head>
+<body style="background-color: #fff;">
+<p style="text-align: center;line-height: 100px;">请先进行身份验证,在进行下一步</p>
+<!--myPhoneBind-->
+<section class="myPhoneBind">
+    <div class="in">
+        <!--未绑定：-->
+        <div class="pBindNo">
+            <form action="{:U('Safe/verify')}" method="" name="" id="">
+                <div class="myInps">
+                    <div class="inp">
+                        <span class="ti">手机号/邮箱：</span>
+                        <input type="text" value="" name="mobileORemail" placeholder="请输入账户当前绑定的手机号或邮箱">
+                    </div>
+                    <div class="inp yzmInp">
+                        <span class="ti">验证码</span>
+                        <input type="text" value="" name="code" placeholder="请输入验证码">
+                        <button type="button" class="getCode">获取验证码</button>
+                    </div>
+                </div>
+                <div class="myBtn">
+                    <a href="javascript:;" class="next-btn">下一步</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<include file="Public:footer"/>
+<script src="__MOBILE__/pugins/layer-mobile-2.0/layer.js"></script>
+
+<script>
+    var getCodeUrl    = "{:U('Safe/sendCode')}";
+    //发送验证码
+    $('.getCode').on('click',function(){
+        var this_ = $(this);
+        var num = $.trim($('input[name="mobileORemail"]').val());
+        $.ajax({
+            url: getCodeUrl,
+            type: 'POST',
+            data: {'mobileORemail':num},
+            success: function(data){
+                //提示
+                layer.open({content: data.msg,skin: 'msg',time: 2});
+                if(data.status==0){
+                    return false;
+                }
+                countTime(this_,60);
+                show_msg(data.msg);
+            },
+            error:function(data){
+                alert('网络繁忙请稍后重试!');
+            }
+        });
+    });
+    //提交表单
+    $('.next-btn').on('click', function(){
+        var num  = $.trim($('input[name="mobileORemail"]').val());
+        var code = $.trim($('input[name="code"]').val());
+        if(!num){
+            layer.open({content: '手机号或邮箱不能为空！',skin: 'msg',time: 2});
+            return false;
+        }
+        if(!code){
+            layer.open({content: '验证码不能为空！',skin: 'msg',time: 2});
+            return false;
+        }
+        $.ajax({
+            url: $('form').attr('action'),
+            type: 'POST',
+            data: $('form').serialize(),
+            success: function(data){
+                //提示
+                layer.open({
+                    content: data.msg
+                    ,skin: 'msg'
+                    ,time: 2 //2秒后自动关闭
+                });
+                if(data.status==0){
+                    return false;
+                }
+                else if(data.status==1){
+                    setTimeout(function(){
+                        location.href = data.nextUrl;
+                    },1200);
+                }
+            },
+            error:function(data){
+                alert('网络繁忙请稍后重试!');
+            }
+        });
+    });
+
+</script>

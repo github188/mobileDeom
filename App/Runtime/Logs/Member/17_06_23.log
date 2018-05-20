@@ -1,0 +1,1920 @@
+[ 2017-06-23T09:19:46+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0620s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `ht_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0270s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0170s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` LIMIT 1   [ RunTime:0.0750s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0160s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 16   [ RunTime:0.0510s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.3900s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.1190s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.1640s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.4310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-23T09:19:46+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694074.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T09:19:46+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694059.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T09:19:46+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694046.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T09:19:58+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0110s ]
+
+[ 2017-06-23T09:20:00+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T09:39:30+08:00 ] 127.0.0.1 /public/css/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0150s ]
+
+[ 2017-06-23T09:39:30+08:00 ] 127.0.0.1 /public/css/common.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0630s ]
+
+[ 2017-06-23T09:39:30+08:00 ] 127.0.0.1 /public/css/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0110s ]
+
+[ 2017-06-23T09:39:31+08:00 ] 127.0.0.1 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T09:39:35+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T09:39:45+08:00 ] 127.0.0.1 /public/css/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0090s ]
+
+[ 2017-06-23T09:39:45+08:00 ] 127.0.0.1 /public/css/common.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0480s ]
+
+[ 2017-06-23T09:39:45+08:00 ] 127.0.0.1 /public/css/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0120s ]
+
+[ 2017-06-23T09:39:45+08:00 ] 127.0.0.1 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T09:39:48+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T09:40:40+08:00 ] 127.0.0.1 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T09:40:40+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T09:41:12+08:00 ] 192.168.0.98 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T09:41:38+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T09:41:38+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T09:43:05+08:00 ] 192.168.0.99 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T09:43:05+08:00 ] 192.168.0.99 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T09:59:22+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T09:59:22+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:00:21+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:00:21+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:02:51+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:02:52+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:03:46+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:03:46+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:08:14+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:08:14+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:08:45+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:08:46+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:08:56+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:08:56+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:08:57+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:08:57+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:09:19+08:00 ] 192.168.0.98 /Public/Mobile/images/bfIco.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:11:08+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:11:10+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:11:44+08:00 ] 192.168.0.99 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:11:44+08:00 ] 192.168.0.99 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:12:32+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:12:32+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:20:29+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:20:29+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:21:19+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:21:19+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-06-23T10:22:18+08:00 ] 192.168.0.99 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:22:18+08:00 ] 192.168.0.99 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:25:29+08:00 ] 192.168.0.98 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `ht_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0110s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 16   [ RunTime:0.0210s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:25:30+08:00 ] 192.168.0.98 /Uploads/ad/20170617/1497694074.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:25:30+08:00 ] 192.168.0.98 /Uploads/ad/20170617/1497694059.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:25:30+08:00 ] 192.168.0.98 /Uploads/ad/20170617/1497694046.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:25:33+08:00 ] 192.168.0.98 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0100s ]
+
+[ 2017-06-23T10:45:01+08:00 ] 192.168.0.98 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0890s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.3580s ]
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.1300s ]
+SQL: SELECT * FROM `ht_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0380s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0590s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.3590s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 16   [ RunTime:0.0270s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0560s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.1200s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0610s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0810s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:45:01+08:00 ] 192.168.0.98 /Uploads/ad/20170617/1497694074.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:45:01+08:00 ] 192.168.0.98 /Uploads/ad/20170617/1497694059.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:45:01+08:00 ] 192.168.0.98 /Uploads/ad/20170617/1497694046.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T10:45:05+08:00 ] 192.168.0.98 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0210s ]
+
+[ 2017-06-23T10:59:42+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T10:59:42+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T11:15:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.1440s ]
+SQL: SELECT * FROM `ht_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0620s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0720s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0630s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0560s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 16   [ RunTime:0.0460s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0520s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.5820s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0580s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T11:15:48+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694074.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T11:15:48+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694059.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-23T11:15:48+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694046.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T11:17:46+08:00 ] 192.168.0.98 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T11:17:46+08:00 ] 192.168.0.98 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T11:35:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0160s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.4720s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 16   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0330s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0210s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0170s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T11:35:40+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694074.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T11:35:40+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694046.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T11:35:40+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694059.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T13:52:55+08:00 ] 127.0.0.1 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T13:52:55+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T14:00:16+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0070s ]
+
+[ 2017-06-23T14:00:21+08:00 ] 127.0.0.1 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 16   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0180s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-06-23T14:00:21+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694074.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T14:00:21+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694059.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T14:00:21+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694046.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T14:27:43+08:00 ] 127.0.0.1 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T14:27:43+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T14:28:35+08:00 ] 127.0.0.1 /public/images/home-banner02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T14:28:35+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T14:29:03+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T14:30:58+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T14:31:58+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T14:36:27+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T14:46:28+08:00 ] 127.0.0.1 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 16   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T14:46:28+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694074.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-06-23T14:46:28+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694059.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+
+[ 2017-06-23T14:46:28+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694046.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T14:46:33+08:00 ] 127.0.0.1 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0070s ]
+
+[ 2017-06-23T15:50:44+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T15:50:45+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T15:50:46+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T15:50:47+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T15:50:57+08:00 ] 127.0.0.1 /Public/Mobile/images/bfIco.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T15:56:06+08:00 ] 127.0.0.1 /Public/Mobile/images/mages/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T15:56:06+08:00 ] 127.0.0.1 /Public/Mobile/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T15:56:08+08:00 ] 127.0.0.1 /Public/Mobile/images/bfIco.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T15:56:20+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T15:56:22+08:00 ] 127.0.0.1 /Public/Mobile/images/bfIco.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T15:57:12+08:00 ] 127.0.0.1 /Public/Mobile/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T15:57:12+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T15:57:14+08:00 ] 127.0.0.1 /Public/Mobile/images/bfIco.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T15:58:14+08:00 ] 127.0.0.1 /public/images/videoImg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T15:58:16+08:00 ] 127.0.0.1 /Public/Mobile/images/bfIco.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T15:58:38+08:00 ] 127.0.0.1 /Public/Mobile/images/bfIco.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T17:20:51+08:00 ] 127.0.0.1 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 16   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-23T17:20:51+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694074.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T17:20:51+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694059.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-23T17:20:51+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694046.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T17:20:55+08:00 ] 127.0.0.1 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0080s ]
+
+[ 2017-06-23T17:29:12+08:00 ] 127.0.0.1 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 16   [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 348 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 352 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 361 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 366 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 370 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 371 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 372 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-23T17:29:12+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694059.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T17:29:12+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694046.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T17:29:13+08:00 ] 127.0.0.1 /Uploads/ad/20170617/1497694074.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-23T17:29:16+08:00 ] 127.0.0.1 /Member/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0080s ]
+

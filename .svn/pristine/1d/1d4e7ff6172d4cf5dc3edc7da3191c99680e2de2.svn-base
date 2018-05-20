@@ -1,0 +1,94 @@
+
+<include file="Public:content-header" />
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">后台用户</a></li>
+            <li class="active">管理员管理</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <section class="content">
+        <div class="row">
+            
+            <div class="col-xs-12">
+                <div class="box box-info">
+                    <div class="box-header">
+                        <h3 class="box-title"><i class="fa fa-list-ul"></i> 管理员管理</h3>
+                        <span class="pull-right">
+                            <a class="btn btn-info" href="{:U(MODULE_NAME.'/Rbac/addUser')}">
+                                <i class="fa fa-plus"></i> 添加管理员
+                            </a>
+                        </span>
+                    </div>
+
+                    <!-- 表格开始 -->
+                    <div class="box-body">
+                        <table id="example" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th width="50">ID</th>
+                                    <th>用户名</th>
+                                    <th>姓名</th>
+                                    <th>性别</th>
+                                    <th>最后登录</th>
+                                    <th title="登录次数">登录</th>
+                                    <th>状态</th>
+                                    <th>所属角色</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <volist name="user" id="v">
+                                    <tr>
+                                        <td>{$v.id}</td>
+                                        <td title="电话：{$v.tel}  &nbsp; &nbsp;  Email邮箱：{$v.email}">{$v.username}</td>
+                                        <td>{$v.name}</td>
+                                        <td><if condition="$v['sex']"> 女 <else />男</if></td>
+                                        <td title="{$v.login_time|date='Y-m-d H:i:s',###}">{$v.login_time|date="Y-m-d",###}
+                                        </td>
+                                        <td>{$v.login_count}</td>
+                                        <td><if condition="$v['lock']"><b>已锁定</b><else />正常</if></td>
+                                        <td>
+                                            <foreach name='v.role' item='value'>
+                                                {$value.name}({$value.remark})
+                                            </foreach>
+                                        </td>
+                                        <td>
+                                            <a href="{:U(MODULE_NAME.'/Rbac/editUser', array('uid'=>$v['id'],'super' =>$v['id']))}" class="btn btn-primary"><i class="fa fa-pencil"></i> 修改
+                                            </a>&nbsp;
+                                            <a href="{:U(MODULE_NAME.'/Rbac/userDelete', array('uid'=>$v['id']))}" class="btn btn-danger delete-msg"><i class="fa fa-times"></i> 删除</a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                <if condition="!$user">
+                                    <tr>
+                                        <td colspan="9" align="center"> 没有数据！</td>
+                                    </tr>
+                                </if>
+                                <if condition="$totalPages gt 1">
+                                    <tr>
+                                        <td colspan="9" align="center"> {$page}</td>
+                                    </tr>
+                                </if>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 表格结束 -->
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

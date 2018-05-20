@@ -1,0 +1,58 @@
+
+<include file="Public:headerAfter"/>
+<style>
+    .nContItemNet .pt8 a{font-size: 16px;}
+/*    .nContItemNet .pt8 a:hover{color: orangered;text-decoration: underline;}*/
+    .nContItemNet .FTCOr {font-size: 14px;}
+</style>
+<!--indexCom-->
+<section class="indexCom mt30" id="indexCom">
+    <div class="in w1100 m0a bodyColor hNotice">
+
+        <!--左侧共用菜单-->
+        <include file="leftMenu"/>
+
+        <div class="noticeRigth fr  ml15 pb50">
+            <p class="p pl50">
+                <span class="fonts18 textColor">{$position_name}</span>
+            </p>
+            <div class="nContent  fonts17 pb50 ">
+                <volist name="data" key="k" id="v">
+                    <div class="nContItemNet clearfix pdNshare">
+                        <div>
+                            <p class="clearfix pb12 pt8">
+                                <a href="{:U('Content/goodShare',array('main'=>$v['id']))}" class="fl"><i class="iconfont icon-ganhuofenxiang"></i> {$v['title']}</a>
+                                <span class="fr FTCOr">{:date('Y-m-d',$v['addtime'])}</span>
+                            </p>
+                            <p class="FTCOr" style="width: 80%;">
+                                {:jiequ(strip_tags(htmlspecialchars_decode($v['content'])),0,100,'...')}
+                            </p>
+                        </div>
+                    </div>
+                </volist>
+            </div>
+            <if condition="$totalPages GT 1">
+                <div class="pages">{$pages}</div>
+            </if>
+            <!--<div id="demo3" class="fr mr40"></div>-->
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<script>
+    //分页
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage    //获得模块
+            ,layer = layui.layer;
+
+
+//        laypage({
+//            cont: 'demo3'
+//            ,pages: 34
+//            ,skin: '#ff6100'
+//        });
+
+    });
+</script>

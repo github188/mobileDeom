@@ -1,0 +1,135 @@
+<include file="Public:content-header" />
+<style>
+    .pages div{
+        margin-left: 0px;
+    }
+    .newTd a{
+        cursor: pointer;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 300px;
+        word-break: keep-all;
+    }
+</style>
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">网站内容</a></li>
+            <li class="active">文章列表</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/ArticleOther/index')}">
+
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>文章标题：</b></label>
+                            <input type="text" class="form-control" name="title" value="{$title}" placeholder="输入标题关键字···">
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>显示状态：</b></label>
+                            <select class="form-control inlineSelect" name="is_show">
+                                <option value="0" <if condition='$is_show eq 0'>selected="selected"</if>>全部</option>
+                                <option value="1" <if condition='$is_show eq 1'>selected="selected"</if>>显示</option>
+                                <option value="2" <if condition='$is_show eq 2'>selected="selected"</if>>隐藏</option>
+                            </select>
+                        </div>&nbsp; &nbsp;
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查询</button>
+                        <div class="pull-right" style="display:block;">
+                            <a class="btn btn-info" href="{:U(MODULE_NAME.'/ArticleOther/addArticle')}" >
+                                <i class="fa fa-plus"></i> 添加文章
+                            </a>
+                        </div>
+                    </form>
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/ArticleOther/index')}">
+                        <ul id="myTab" class="nav nav-tabs">
+                            <volist name="articleCategory" id="v" key="k">
+                            <li <if condition="$type eq $k" > class="active" </if> >
+                                <a href="{:U(MODULE_NAME.'/ArticleOther/index', array('type' => $k))}">
+                                    {$v}
+                                </a>
+                            </li>
+                            </volist>
+                        </ul>
+
+                    </form>
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>分类</th>
+                                <th>标题</th>
+                                <th>访问次数</th>
+                                <th>状态</th>
+                                <th>添加时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="body">
+                            <volist name="articleList" id="v">
+                                <tr>
+                                    <td>{$v.id}</td>
+                                    <td>{$v.type}</td>
+                                    <td class="newTd">
+                                        <a data-url="{:U(MODULE_NAME .'/ArticleOther/readArticle',array('aid' => $v['id']))}" href="#" data-toggle="dialog" data-width="90%" data-height="90%" data-title="<i class='fa fa-plus'></i> 查看文章 - [ {$v.title} ]">{$v.title}</a>
+                                    </td>
+                                    <td>{$v.pv}</td>
+                                    <td><if condition="$v['is_show'] eq 2"><b>隐藏</b><elseif condition="$v['is_show'] eq 1"/>显示</if></td>
+                                    <td>{$v.addtime|date="Y-m-d",###}</td>
+                                    <td>
+                                        <a href="{:U(MODULE_NAME.'/ArticleOther/editArticle', array('aid'=>$v['id']))}" class="btn btn-primary" title="修改文章">
+                                            <i class="fa fa-pencil"></i>改</a>&nbsp;
+                                        <a href="{:U(MODULE_NAME.'/ArticleOther/delArticle', array('aid'=>$v['id']))}" class="btn btn-danger delete-msg-find" title="删除本条文章"><i class="fa fa-times"></i> 删</a>
+                                    </td>
+                                </tr>
+                            </volist>
+
+                            <if condition="!$articleList">
+                                <tr>
+                                    <td colspan="6" align="center"> 没有数据！</td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages neq 1">
+                                <tr>
+                                    <td colspan="6" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+  //删除询问框
+$(".delete-msg-find").on('click', function(){
+    var status = confirm('确定删除本条文章？\n \n 删除后将无法恢复！\n 确定删除吗？？？\n \n ');
+    if(!status){
+        return false;
+    }
+});  
+
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

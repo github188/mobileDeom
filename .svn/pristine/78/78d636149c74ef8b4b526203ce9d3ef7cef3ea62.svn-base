@@ -1,0 +1,130 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">回复管理</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                       <form method="post" action="" name="myform" id="myform">
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="header" align="center">
+                              <td width="5%" align="center">选择</td>
+                              <td width="5%" align="center">所属视频</td>
+                              <td width="20%" align="center">问题</td>
+                              <td width="10%" align="center">提问时间</td>
+                              <td width="10%" align="center">回答者</td>
+                              <td width="20%" align="center">回答</td>
+                              <td width="10%" align="center">回答时间</td>
+                              <td align="center">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                       
+                            
+                             <volist name="info" id="v">
+                                <tr class="altbg2" onmouseover="this.className='altbg1'" onmouseout="this.className='altbg2'">
+                                    <input name="dyid"  type="hidden" value="{$dyid}">
+                                   <td style="border-bottom:1px dotted #EDEDED">
+                                       <input name="aid[]" class="checkbox" type="checkbox" value="{$v.aid}"> {$v.aid}
+                                   </td>
+                                   <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.title}</td>
+                                   <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.question|stripslashes}</td>
+                                   <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.dayi_addtime|date="Y-m-d H:i",###}</td>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">
+                                         
+                                        <if condition="empty($v[paid])">
+                                            <font color="#00bfff">{$v.username}</font>说：
+                                        <else />
+                                            <font color="#00bfff">{$v.username}</font>回复#<font color="#00bfff">{$v.you}</font>
+                                        </if>
+                                          
+                                    </td>
+                                   <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.answer}</td>
+                                   <td align="center" style="border-bottom:1px dotted #EDEDED">{$v.addtime|date="Y-m-d",###}</td>
+                                   <td align="center" style="border-bottom:1px dotted #EDEDED">
+                                     
+                                     <a href="{:U(MODULE_NAME.'/User/reply',array('dyid'=>$dyid,'aid'=>$v[aid],'uid'=>$v[uid]))}" >[回复]</a> &nbsp;
+                                     <a href="{:U(MODULE_NAME.'/User/delete_answer',array('dyid'=>$dyid,'aid'=>$v[aid]))}" onclick="return confirm('你确实要删除吗?不可恢复');">[删除]</a> &nbsp;
+                                     </td>
+                                </tr>
+                             </volist>
+                            <if condition="is_array($info)">
+                                    <tr>
+                                    <td colspan="9">
+                                    <input type="button" onclick="checkall(this.form)" value="反选"/>
+                                    <input type="submit" name="dosubmit" onclick="document.myform.action='{:U(MODULE_NAME.\'/User/delete_answer\')}';return confirm('确认删除这些视频吗？')" value="批量删除"/>
+                                    </td>
+                                    </tr>
+                            </if>
+                            <if condition="!$info">
+                                <tr>
+                                    <td colspan="8" align="center"> 没有数据！</td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="8" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                       </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+<!--
+select_type = 0;
+function checkall(form)
+{   
+    if(select_type == 0) select_type = 1;
+    else select_type = 0;
+
+    for(var i = 0; i < form.elements.length; i++)
+    {
+        var e = form.elements[i];
+        e.checked = select_type;
+        if(select_type){
+            $(e).parent().addClass('checked');
+        }else{
+            $(e).parent().removeClass('checked');
+        }
+//        alert(e.parentNode.className);
+//        e.parentNode.className  = select_type;
+    }
+}
+
+function confirmurl(url,message)
+{
+	if(confirm(message)) location.href = url;
+}
+//-->
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge，chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>嗨推全5分--建立优质产品库</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_8pyf275gzycwstt9.css">
+    <!--[if lt IE9]>
+    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../public/css/base.css">
+    <link rel="stylesheet" href="../public/css/common.css">
+    <link rel="stylesheet" href="../public/css/register.css">
+</head>
+<body>
+<!--toolBar-->
+<script type="text/html" id="myToolBar" ></script>
+<!--header-->
+<script type="text/html" id="myHeader" ></script>
+<!--nav-->
+<script type="text/html" id="myNav" ></script>
+
+
+<!--注册页面 2017-05-22 ouHai-->
+<div class="login-box">
+    <form action="" method="post" name="myForm" autocomplete="off">
+        <p class="welcome-msg">欢迎注册</p>
+        <p class="tips-msg">账号或密码错误</p>
+        <input class="username" type="text" name="username" placeholder="请输入用户名，4~12个字符" value=""/>
+        <input class="mobile" type="text" name="mobile" placeholder="请输入手机号" value=""/>
+        <div class="code-div">
+            <input type="text" name="code" placeholder="请输入短信验证码" />
+            <button type="button" class="sendCode-btn" href="javascript:;">获取验证码</button>
+            <div class="clean_float"></div>
+        </div>
+        <input class="password" type="password" name="pwd" placeholder="请输入密码" value=""/>
+        <input class="password" type="password" name="confirm_pwd" placeholder="请再次确认密码" value=""/>
+        <div class="link-div">
+            <em>已有账号？<a href="login.html">立即登陆</a></em>
+        </div>
+        <button class="submit-btn" type="submit">免费注册</button>
+    </form>
+</div>
+
+
+
+<!--footer-->
+<script type="text/html" id="myFooter" ></script>
+</body>
+<script src="../public/js/jquery-1.11.2.min.js"></script>
+<script src="../public/js/style.js"></script>
+<script>
+    //发送验证码
+    $('.sendCode-btn').on('click',function(e){
+        countTime($(this));
+    });
+    //执行倒计时
+    function countTime($e,time) {
+        if(!time) time=60;
+        $e.attr("disabled",true).css({'cursor':'text','color':'#ccc'});;
+        var timer = setInterval(function () {
+            time--;
+            $e.html(time+ "s重新获取");
+            if (time <= 0) {
+                //倒计时完毕，可再次发送
+                clearInterval(timer);
+                $e.html('获取验证码').attr("disabled",false).css({'cursor':'pointer','color':'#666'});  //恢复提示 可发送状态
+            }
+        },1000);
+    }
+</script>
+</html>

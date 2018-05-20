@@ -1,0 +1,49 @@
+
+<include file="Public:header"/>
+<include file="Public:topMenu"/>
+
+<!--notice-->
+<section class="myContactUs notice">
+    <div class="in">
+
+        <include file="backgroundImg"/>
+
+        <div class="tab">
+            <ol>
+                <li class="li01"><a href="{:U('Content/webNoticeList')}">平台公告</a></li>
+                <li class="li02 cur"><a href="{:U('Content/goodShareList')}">干货分享</a></li>
+                <li class="li03"><a href="{:U('Content/problemList')}">常见问题</a></li>
+            </ol>
+        </div>
+        <div class="moduleCom moduleComs">
+            <div class="module">
+
+            </div>
+            <div class="module">
+                <ul>
+                    <volist name="data" key="k" id="v">
+                        <li>
+                            <a href="{:U('Content/goodShare',array('main'=>$v['id']))}">
+                                <div class="tp">
+                                    <img src="__MOBILE__/images/notMesIco.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="tName">{$v['title']}</p>
+                                    <p class="tWz">{:jiequ(strip_tags(htmlspecialchars_decode($v['content'])),0,70,'...')}</p>
+                                    <span class="date">{:date('Y-m-d',$v['addtime'])}</span>
+                                </div>
+                            </a>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="module">
+            </div>
+        </div>
+    </div>
+</section>
+
+<include file="Public:footer"/>
+
+<script src="__MOBILE__/js/menuSilder.js"></script>
+<script src="__MOBILE__/js/theMenu.js"></script>

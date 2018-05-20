@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
+    <title>后台登录页</title>
+    <link rel="stylesheet" href="__PUBLIC__/Admin_Templet1/css/base.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin_Templet1/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="logo" id="logo">
+   <div class="hd">
+       <span class="renew" >
+             <i class="reBtn" title="刷新背景图"></i>
+       </span>
+       <h2>嗨推后台管理登录</h2>
+   </div>
+    <div class="com">
+        <form action="" method="post" name="myForm" id="" class="forms" data-validator-option="{stopOnError:true}" autocomplete="off">
+            <div class="inpCom">
+                <div class="item item01">
+                    <div class="inp inp01">
+                        <span class="tp">
+                            <img src="__PUBLIC__/Admin_Templet1/img/xico01.png" alt="">
+                        </span>
+                        <input type="text" placeholder="请输入用户名" value=""  name="name" id="username" >
+                    </div>
+                    <p class="tip" id="tip01"></p>
+                </div>
+                <div class="item item02">
+                    <div class="inp inp02">
+                        <span class="tp">
+                            <img src="__PUBLIC__/Admin_Templet1/img/xico02.png" alt="">
+                        </span>
+                        <input type="password" placeholder="请输入登录密码" value="" name="pass" id="password" >
+                    </div>
+                    <p class="tip" id="tip02"></p>
+                </div>
+                <div class="item item03">
+                    <div class="inp inp03">
+                        <span class="tp">
+                            <img src="__PUBLIC__/Admin_Templet1/img/xico03.png" alt="">
+                        </span>
+                        <input type="text" placeholder="请输入验证码" value="" name="verify" id="verCode" >
+                        <div class="getCode">
+                            <img id="captcha_img" src="{:U(MODULE_NAME .'/Login/verify','','')}" alt="验证码" height="42" width="130">
+                        </div>
+                    </div>
+                    <p class="tip" id="tip03"></p>
+                </div>
+            </div>
+            <div class="remPwd">
+                <i class="che js-che"></i>
+                <input type="checkbox" class="cheBox" style="display: none;">
+                <span>记住账号</span>
+            </div>
+            <div class="btn">
+                <a href="javascript:;" class="loginBtn">登录</a>
+            </div>
+            <p style="text-align: right;margin: 5px 0 0 0;"><a style="color: #fff;" href="{:U('Member/Index/index')}">返回首页</a></p>
+
+        </form>
+    </div>
+</div>
+<style type="text/css">
+    body{ background:#fff; width:100%; }	img{ border:0;  }
+    body,html{ width:100%; height:100%; ;   }
+    .fullSlide{ position:absolute; left:0; top:0; width:100%;  height:100%; background:#000  }
+    .fullSlide ul{ height:100% !important; width:100% !important;  }
+    .fullSlide li{  height:100% !important; width:100% !important; }
+</style>
+<div class="fullSlide">
+    <ul style="position: relative; width: 1903px; height: 918px;">
+        <li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: list-item; background: url(__PUBLIC__/Admin_Templet1/img/bg02.jpg) 50% 50% no-repeat;"></li>
+        <li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: none; background: url(__PUBLIC__/Admin_Templet1/img/bg03.jpg) 50% 50% no-repeat;"></li>
+        <li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: none; background: url(__PUBLIC__/Admin_Templet1/img/bg04.jpg) 50% 50% no-repeat;"></li>
+        <li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: none; background: url(__PUBLIC__/Admin_Templet1/img/bg05.jpg) 50% 50% no-repeat;"></li>
+        <li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: none; background: url(__PUBLIC__/Admin_Templet1/img/bg01.jpg) 50% 50% no-repeat;"></li>
+    </ul>
+</div>
+<div class="copyright">
+    <p>2016©嗨推版权所有</p>
+</div>
+<script src="__MEMBER__/js/jquery-1.11.2.min.js"></script>
+<script src="__ADMIN__/plugins/SuperSlide2.1/jquery.SuperSlide.2.1.1.js"></script>
+<script src="__STATIC__/js/jquery.cookie.js"></script>
+<script src="__MEMBER__/js/common.js"></script>
+<script>
+    //背景轮播
+    $(".fullSlide").slide({
+        titCell:".fullSlide ul li",
+        mainCell:"ul",
+        effect:"fold",
+        interTime:4000,
+        delayTime:2500,
+        autoPlay:true,
+        mouseOverStop:false,
+    });
+    var url     = "{:U(MODULE_NAME .'/Login/login')}";
+
+    //记住账号
+    var COOKIE_NAME = 'login_name';
+    var h = 'hover';
+    if ($.cookie(COOKIE_NAME)){
+        $("#username").val($.cookie(COOKIE_NAME));
+        $("#password").focus();
+        $('.js-che').toggleClass(h);
+        $('.cheBox').attr('checked',true);
+    } else {
+        $("#username").focus();
+    }
+
+    //点击记住账号
+    $('.js-che').on("click",function () {
+        var $e = $(this);
+        $e.toggleClass(h);
+        if($e.hasClass(h)){
+            $('.cheBox').attr('checked',true);
+            $.cookie(COOKIE_NAME, $("#username").val(), { path: '/', expires: 15 });//设置cookie
+        }else{
+            $('.cheBox').attr('checked',false);
+            $.cookie(COOKIE_NAME, null, { path: '/' });  //删除cookie
+        }
+    });
+
+    //刷新验证码
+    var URL = $("#captcha_img").attr("src");
+    $("#captcha_img").click(function(){
+        $("#captcha_img").attr("src",URL+'/'+Math.random());
+        return false;
+    });
+    //提交表单
+    $('.loginBtn').on('click',function(e){
+        var this_ = $(this);
+        $.post(url,$('form[name="myForm"]').serialize(),function(data){
+            if(data.status==0){
+                show_msg(data.info,'error');
+                $("#captcha_img").click();
+                $('#password').val('');
+                return false;
+            }
+            //this_.css({'background':'#82aef1','cursor':'no-drop'}).html('正在提交..');
+            show_msg(data.info);
+            setTimeout(function(){
+                window.location.href = data.url;
+            },1500);
+        },'json')
+    });
+
+</script>
+
+</body>
+</html>

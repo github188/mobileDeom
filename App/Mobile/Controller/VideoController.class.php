@@ -1,0 +1,215 @@
+<?php
+namespace Mobile\Controller;
+use Think\Controller;
+use Lib\Util\Category;
+use Think\Think;
+
+/*  视频方面 控制器
+ *
+ *  OuHai 2017-06-01
+ */
+class VideoController extends CommonController {
+
+    //视频分类列表
+    public function showList(){
+        $category = I('get.category',0,'intval');
+        if(!$category) _404();
+        #获取左侧视频菜单列表
+        R('Study/leftVideoMenu');
+        $video_db       = M('video');
+        $video_c_db     = M('video_category');
+        $categoryinfo   = $video_c_db->where(array('id'=>$category,'status'=>0))->find();
+        $categoryPinfo  = $video_c_db->where(array('id'=>$categoryinfo['pid'],'status'=>0))->find();
+
+        $where = array('category_id'=>$category,'status'=>0);
+        $count = $video_db->where($where)->count();
+        $page  = new \Think\Page($count,2);
+        $limit = $page->firstRow.','.$page->listRows;
+
+        $category_video = $video_db->where($where)->limit($limit)->select();
+
+        $pages = $page->show();
+
+        $this->assign('category_video',$category_video);
+        $this->assign('categoryinfo',$categoryinfo);
+        $this->assign('categoryPinfo',$categoryPinfo);
+        $this->assign('pages',$pages);
+        $this->assign('totalPages',$page->totalPages);
+        $this->display();
+    }
+
+
+    //视频分类
+    public function videoCategory(){
+        $pid = I('get.pid',0,'intval');
+
+        $video_c_db      = M('video_category');
+        $video_c_auth_db = M('video_category_auth');
+        $video_db        = M('video');
+        $video_auth_db   = M('video_auth');
+        $video_play_db   = M('video_play_record');
+
+        $user_id = session(C('USER_AUTH_UID'));
+        $user_groud = M('user_group_ext')->where(array('user_id'=>$user_id,'end_time'=>array('GT',time())))->field('group_id')->select();
+
+        $pidCategory = $video_c_db->where(array('pid'=>0,'status'=>0))->order('sort ASC')->limit(3)->select();#顶级视频分组
+        if(!$pid) $pid =  $pidCategory[0]['id'];
+        $videoCategory = $video_c_db->where(array('pid'=>$pid,'status'=>0))->select();
+        if(!$videoCategory) _404();
+        foreach($videoCategory as $kk=>$vv){
+                #查出该视频分组允许查看的用户组
+                $category_auth = array();
+                $video_category_auth = $video_c_auth_db->where(array('category_id'=>$vv['id']))->field('ugid')->select();
+                foreach($video_category_auth as $_k => $_v){
+                    $category_auth[] = $_v['ugid'];
+                }
+                #播放权限  1允许 2不允许
+                $can = 2;
+
+                $VideoNum1 =$VideoNum2 = 0;
+                foreach($user_groud as $_kk => $_vv){
+                    if(in_array($_vv['group_id'],$category_auth)){
+                        $can = 1;
+                        $VideoNum1 = $video_db->where(array('category_id'=>$vv['id']))->count();
+
+                    }else{
+                        $VideoNum2 = $video_auth_db->where(array('user_id'=>$user_id,'end_time'=>array('GT',time())))->count('id');
+                    }
+                }
+                #已开通的视频总节数数
+                $videoCategory[$kk]['AllowSeeVideo'] = $VideoNum1+$VideoNum2;#用户组可以看的视频+单独购买的视频
+                #统计允许查看的视频组
+                $videoCategory[$kk]['allow_play'] = $can;
+
+                #计算已播放视频进度条
+                $AllvideoTime = $video_db->where(array('category_id'=>$vv['id']))->sum('video_time');
+                $SeevideoTime = $video_play_db->where(array('category_id'=>$vv['id']))->sum('playtime');
+
+                #已播放时间占总时间的百分比
+                $percent = round($SeevideoTime/$AllvideoTime*100);
+                $videoCategory[$kk]['progress'] = $percent<100?$percent:100;
+        }
+        $this->assign('pidCategory',$pidCategory);
+        $this->assign('videoCategory',$videoCategory);
+        $this->assign('pid',$pid);
+        $this->display();
+    }
+
+    //视频播放页
+    public function play(){
+
+        $vid = I('get.vid',0,'intval');
+        $category_id  = I('get.category_id',0,'intval');
+
+        $user_id = session(C('USER_AUTH_UID'));
+
+//        从课程进来的
+        if ($category_id){
+//            默认播放第一个视频
+            $videoInfo = M('video as v')->join('ht_video_category as c on c.id = v.category_id')->field('v.*, c.name as category_name')->where(array('v.category_id'=>$category_id))->find();
+            $vid = $videoInfo['id'];
+        }else{
+            $videoInfo = M('video as v')->join('ht_video_category as c on c.id = v.category_id')->field('v.*, c.name as category_name')->where(array('v.id'=>$vid))->find();
+        }
+
+        $question_db =  M('video_question');
+        $videoInfo['total_question'] = $question_db->where(array('vid' => $vid))->count();
+        $videoInfo['is_shoucang'] = M('video_shoucang')->where(array('vid' => $vid, 'user_id' => $user_id))->getField('id')?true:false;
+        if(!$videoInfo) _404();
+
+        $play_auth = videoPlayAuth($vid);
+
+        if($play_auth['allow_play']==2){
+            ps($play_auth['msg']);
+        }
+
+//        如果播放记录未存在，添加一条播放记录
+        $is_play = M('video_play_record')->where(array('vid' => $vid, 'user_id' => $user_id))->field('id, playtime')->find();
+        if (!$is_play){
+            $add = array('category_id' => $videoInfo['category_id'], 'vid' => $vid, 'user_id' => $user_id, 'addtime' => time(), 'updatetime' => time());
+
+//          添加播放记录
+            M('video_play_record')->add($add);
+        }else{
+            $playtime = $is_play['playtime'];
+        }
+
+
+
+//      全部笔记
+        $nwhere = array('n.vid' => $vid, 'user_id' => $user_id);
+        $noteList = StudyController::getNote($nwhere);
+
+//      全部问答
+        $qwhere = array('q.vid' => $vid);
+        $question = StudyController::getNewQuestion($qwhere);
+
+//      当前分类下的视频列表
+        $vwhere = array('category_id' => $videoInfo['category_id']);
+        $vwhere['id'] = array('neq', $videoInfo['id']);
+        $categoryVideoList = self::getVideoList($vwhere);
+
+        foreach ($categoryVideoList as $k => $val){
+            $categoryVideoList[$k]['total_question'] = $question_db->where(array('vid' => $val['id']))->count();
+        }
+
+        $this->assign('noteList', $noteList);
+        $this->assign('question', $question);
+        $this->assign('user_id',$user_id);
+        $this->assign('playtime',$playtime);
+        $this->assign('videoInfo',$videoInfo);
+        $this->assign('categoryVideoList',$categoryVideoList);
+
+        $this->assign('vid',$videoInfo['id']);
+        $this->assign('video_name',$videoInfo['title']);
+        $this->assign('category_id',$videoInfo['category_id']);
+        $this->assign('category_name',$videoInfo['category_name']);
+        $this->display();
+    }
+
+
+    /**
+     * 用户离开播放页面时记录播放进度
+     * @param  int  $vid  视频id
+     * @param  int  $playtime  播放时长
+     */
+    function videoPlayRecord(){
+        if (IS_AJAX){
+            $vid = I('post.vid','','intval');
+            $playtime = I('post.playtime','','intval');
+            if ($vid && $playtime){
+                M('video_play_record')->where(array('user_id' => session(C('USER_AUTH_UID')), 'vid' => $vid))->setField(array('playtime' => $playtime, 'updatetime' => time()));
+            }
+        }
+    }
+
+    //收藏和取消视频
+    public function videoShoucang()
+    {
+        if(IS_AJAX){
+            $vid      = I('post.vid',0,'intval');
+            $user_id  = session(C('USER_AUTH_UID'));
+            $db       = M('video_shoucang');
+            if(!M('video')->where(array('id'=>$vid))->find()) $this->error('此视频不存在');
+            $infoID = $db->where(array('user_id'=>$user_id,'vid'=>$vid))->getField('id');
+            if($infoID){
+                $db->where(array('user_id'=>$user_id,'vid'=>$vid))->delete();
+                $this->error('已取消收藏');
+            }else{
+                $db->data(array('vid'=> $vid,'user_id' => $user_id,'addtime' => time()))->add();
+                $this->success('收藏成功');
+            }
+        }else{
+            _404();
+        }
+    }
+
+    function getVideoList($addwhere, $limit = 20){
+        $where = array('status'=>0);
+        $where = array_merge($where, $addwhere);
+        $videoList  = M('video v')->where($where)->limit($limit)->select();
+        return $videoList;
+    }
+
+
+}

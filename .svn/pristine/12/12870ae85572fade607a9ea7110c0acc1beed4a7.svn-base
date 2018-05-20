@@ -1,0 +1,83 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">回复管理</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form method="post" action="">
+                    <table id="example" class="table table-bordered table-hover">
+                        <tbody>
+                            
+                            <tr class="header">
+                              <td colspan="2" style="font-size:14px;text-align:center; background: #e6e6e6 none repeat scroll 0 0">{$question}</td>
+                            </tr>
+                      <volist name='answers' id='v'>      
+                            <tr>
+                                <td colspan="2" style="font-size:14px;text-align:center;">
+                                    <if condition="empty($v[paid])">
+                                        <font color="#00bfff">{$v.username}</font>说： =>
+                                    <else />
+                                        <font color="#00bfff">{$v.username}</font>回复#<font color="#00bfff">{$v.you}</font>
+                                    </if>
+
+                                <font color="#FF0000">{$v.answer}</font>&nbsp;&nbsp;&nbsp;
+                                {$v.addtime|date='Y-m-d H:i',###}
+                                </td>
+                            </tr>
+                      </volist>    
+                             <tr>
+                        <td bgcolor="#F8F8F8" width="34%">请回复:</td>
+                        <td align="left" bgcolor="#FFFFFF" width="66%">
+                            
+                            
+                            <if condition="$aid = I('get.aid') && $uid = I('get.uid')">
+                                 <p>前台用户名：<input type="text" name="info[username]" value="坏坏">回复#<input type="text" disabled value="<?php echo $you;?>"></p>
+                            <else />
+                                <p>前台用户名：<input type="text" name="info[username]" value="坏坏">回复问题：</p>
+                            </if>
+                            
+                        
+                        <textarea name="info[answer]" rows="10" cols="100"><?php echo $info['answer'];?></textarea> 
+                        </td>
+                      </tr> 
+
+                        </tbody>
+                    </table>
+                     <br>
+                  <center>
+                      <button class="btn btn-success inlineSearch display-inline" name='dosubmit' type="submit">提 交</button>
+                  </center>
+                  <input type="hidden" name="info[dyid]" value="{$info.dyid}">
+                  <input type="hidden" name="info[vid]" value="{$info.vid}">
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<!-- 底部 -->
+<include file="Public:content-footer" />

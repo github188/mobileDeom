@@ -1,0 +1,189 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper" style="font-family: '微软雅黑';">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">视频管理</a></li>
+            <li class="active">答疑管理</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+
+                    <h4 align="center"><i class="fa fa-list-ul"></i> 视频答疑管理</h4>
+
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/Video/videoQuestion')}">
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{:cookie('username')}">
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>问题关键词：</b></label>
+                            <input type="text" class="form-control" name="question" value="{:cookie('question')}">
+                        </div>&nbsp; &nbsp;
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查找</button>
+
+                    </form>
+                    <h6>数据统计：总计[<font color="red">{$count}</font>]条记录</h6>
+                    <table id="example" class="table table-bordered table-hover" >
+                        <thead>
+                            <tr>
+                                <td align="center">ID</td>
+                                <td align="center">视频组</td>
+                                <td align="center">视频标题</td>
+                                <td align="center">用户名</td>
+                                <td align="center">问题</td>
+                                <td align="center">状态</td>
+                                <td align="center">日期</td>
+                                <td align="center">是否显示</td>
+                                <td align="center">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <php></php>
+                             <volist name="video_question" id="v" key="k" >
+                                    <tr>
+                                        <td>{$v.id}</td>
+                                        <td>{$v.video_group}</td>
+                                        <td>{$v.video_title}</td>
+                                        <td>{$v.username}</td>
+                                        <td>{$v.question|jiequ=0,40,''}</td>
+                                        <td id="{$v.id}">{$v['is_reply']==1?'已回复':'待回复'}</td>
+                                        <td>{$v.addtime|date="Y-m-d H:i",###}</td>
+                                        <td>
+                                            <if condition="$v.is_show eq 1">
+                                                <button data-status="{$v.is_show}" onclick="changeShow($(this),{$v.id})" class="btn btn-success">是</button>
+                                            <else/>
+                                                <button data-status="{$v.is_show}" onclick="changeShow($(this),{$v.id})" class="btn">否</button>
+                                            </if>
+
+                                        </td>
+                                        <td>
+                                            <php>
+                                                $curr_page = I('get.p',1,'intval');
+                                            </php>
+                                            <a onclick="videoQuestionShow(this,{$v['id']},'{$v['video_title']}');" href="javascript:;" class="btn btn-info">
+                                                <i class="fa fa-eye"></i>查看
+                                            </a>
+                                            <a onclick="Delete(this,{$v['id']},{$curr_page})" href="javascript:;" class="btn btn-danger">
+                                                <i class="fa fa-remove"></i>删除
+                                            </a>
+                                        </td>
+                                    </tr>
+                             </volist>
+
+                            <if condition="!$video_question">
+                                <tr>
+                                    <td colspan="9" align="center"> <i class="fa fa-exclamation-circle" aria-hidden="true" style="font-size: 18px;color: red;">  暂无数据!</i></td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="9" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+
+<script>
+    //显示问题弹窗
+    function videoQuestionShow(obj,id,title){
+        var url = "{:U(MODULE_NAME.'/Video/videoQuestionShow','',true,true)}"+'?question_id='+id;
+        var url = ' /Admin/Video/videoQuestionShow' + '?question_id='+id;
+        //iframe窗
+        layer.open({
+            type: 2,
+            title: '问题来源视频：'+title,
+            maxmin: true, //开启最大化最小化按钮
+            closeBtn: 1, //不显示关闭按钮
+            shade: [0.5],
+            shadeClose:1,
+            area: ['800px', '700px'],
+            offset: ['100px'], //右下角弹出
+            //time: 2000, //2秒后自动关闭
+            anim: 3,
+            content: [url], //iframe的url，no代表不显示滚动条
+            end: function(){ //关闭的时候执行的函数
+
+            }
+        });
+    }
+
+    //删除功能
+    function Delete(obj,id,page){
+
+        var url = "{:U(MODULE_NAME.'/Video/videoQuestionDelete','',false)}"+'/id/'+id+'/p/'+page;
+
+        //询问框
+        var index = layer.confirm('确定要删除该提问吗？该提问下的回答也会被删除，不可恢复！', {
+            shade:0.6,
+            skin: 'layui-layer-molv', //样式类名
+            btn: ['确定','取消']       //按钮
+        }, function(){
+            layer.close(index);
+            location.href = url;
+        }, function(){
+            layer.close(index);
+        });
+    }
+
+
+    // 修改视频问题的显示状态
+    function changeShow(thi,question_id){
+        if (!question_id) {
+            layer.msg('question_id不能为空！！！');
+        }
+        var status = thi.attr('data-status');
+        is_show = status == 1?0:1;
+
+        $.ajax({
+            type:"post",
+            url:"/admin/video/changeShow",
+            data:{"question_id":question_id, "is_show":is_show},
+            dataType:"json",
+            success:function(obj){
+                if (obj.code == 1) {
+                    thi.attr('data-status',is_show);
+                    if (is_show == 1) {
+                        thi.addClass("btn-success");
+                        thi.text('是');
+                    }else{
+                        thi.removeClass('btn-success');
+                        thi.text('否');
+                    }
+
+                    layer.msg('修改成功！');
+                }else{
+                    layer.msg('修改失败，请刷新页面后重试！');
+                }
+            }
+        })
+    }
+</script>

@@ -1,0 +1,88 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">添加新优惠券</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form method="post" action="">
+                    <table id="example" class="table table-bordered table-hover" align="center" cellpadding="4" cellspacing="1" width="100%">
+                       <tbody>
+                            <tr class="header">
+                                <td colspan="2">{$position_name}</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><strong>可用范围</strong></td>
+                            </tr>
+                            <volist name="user_group" id="v">
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td width="10%">
+                                        <input type="checkbox" value="{$v.id}" id="checkbox_{$v.id}" name="group_id[]"/>
+                                        <label style="cursor: pointer;"for="checkbox_{$v.id}">{$v.name}</label>
+                                    </td>
+                                </tr>
+                            </volist>
+                            <tr>
+                                <td width="34%">数量:</td>
+                                <td width="66%">
+                                    <input name="info[num]" value="1"  type="text"  />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="34%">优惠价格:</td>
+                                <td width="66%">
+                                    <input name="info[price]" type="text" value="">(元)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="34%">优惠券备注:</td>
+                                <td width="66%">
+                                    <input name="info[remark]" type="text" value="">(选填)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="34%">过期时间:</td>
+                                <td width="66%">
+                                    <input name="info[end_time]" type="text" value="">
+                                   (选填)例：<?php echo date('Y-m-d'); ?>，留空则有效期为永久
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                     <br>
+                  <center>
+                      <button class="btn btn-success inlineSearch display-inline" name='dosubmit' type="submit">提 交</button>
+                  </center>
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<!-- 底部 -->
+<include file="Public:content-footer" />

@@ -1,0 +1,131 @@
+<include file="Public:content-header" />
+
+<div class="wrapper" style="font-family: '微软雅黑';">
+
+    <!-- 内容标题开始 -->
+
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">会员黑名单</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="" class="tab-pane active">
+                    <h4 align="center"><i class="fa fa-list-ul"></i> 会员登录日志管理</h4>
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="">
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{:cookie('username')}" >
+                        </div>
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">提交查询</button>
+                    </form>
+                    <h6>数据：总计[<font color="red">{$count}</font>]条</h6>
+                        <!-- 表格开始 -->
+
+                    <form action="" method='post' name="myform">
+                        <table id="example" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>用户ID</th>
+                                    <th>用户名</th>
+                                    <th>登录ip</th>
+                                    <th>地点</th>
+                                    <th>登录时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <php>
+                                $curr_page = I('get.p',1,'intval');
+                            </php>
+                                <volist name="data" id="v" key="k" >
+                                    <tr>
+                                        <td><input type="checkbox" name="id[]" value="{$v.id}">&nbsp;&nbsp;{$v.id}</td>
+                                        <td>{$v.user_id}</td>
+                                        <td><b>{$v.username}</b></td>
+                                        <td>{$v.ip}</td>
+                                        <td>{$v.address}</td>
+                                        <td>{:date('Y-m-d H:i:s',$v['logintime'])}</td>
+                                        <td>
+                                            <if condition="1">
+                                                <a onclick="Delete(this,{$v['id']},{$curr_page})" href="javascript:;" class="btn btn-sm btn-danger">
+                                                    <i class="fa fa-remove"></i>删除
+                                                </a>
+                                            </if>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                <if condition="$data">
+                                    <tr>
+                                        <td colspan="20">
+                                            <input type="button" class="btn btn-sm btn-primary" onclick="checkall(this.form)" value="反选"/>
+                                            <input type="submit" class="btn btn-sm btn-danger" onclick="document.myform.action='{:U(MODULE_NAME.\'/User/userLoginLogDelete\')}';return confirm('确认删除这些记录吗？不可恢复');" value="批量删除"/>
+                                        </td>
+                                    </tr>
+                                </if>
+                                <if condition="$totalPages GT 1">
+                                    <tr>
+                                        <td colspan="20" align="center"><div class="pages">{$page}</div></td>
+                                    </tr>
+                                </if>
+                                <if condition="!$data">
+                                    <tr>
+                                        <td colspan="10" align="center"> <i class="fa fa-exclamation-circle" aria-hidden="true" style="font-size: 18px;color: red;">  暂无数据!</i></td>
+                                    </tr>
+                                </if>
+
+                            </tbody>
+                        </table>
+                    </form>
+                        <!-- 表格结束 -->
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <br>
+            <br>
+            <br>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+
+<script>
+
+    //删除功能
+    function Delete(obj,id,page){
+        var url = "{:U(MODULE_NAME.'/User/userLoginLogDelete','',true,true)}"+'?id='+id+'&page='+page;
+        //console.log(url);return;
+        //询问框
+        var index = layer.confirm('确认要删除吗？，不可恢复', {
+            shade:0.6,
+            icon:3,
+            offset:['200px'],
+            skin: 'layui-layer-molv', //样式类名
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            layer.close(index);
+            location.href = url;
+        }, function(){
+            layer.close(index);
+        });
+    }
+
+</script>

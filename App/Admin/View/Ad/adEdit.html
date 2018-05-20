@@ -1,0 +1,177 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+
+
+<!--图片上传插件-->
+<link href="__STATIC__/plugins/uploadfile/css/fileinput.min.css">
+<script src="__STATIC__/plugins/uploadfile/js/fileinput.js"></script>
+<script src="__STATIC__/plugins/uploadfile/js/zh.js"></script>
+<!--图片上传插件-->
+
+<style type="text/css">
+.table-td-right {
+    color: #555;
+    letter-spacing: 0.2em;
+    text-align: right;
+    width: 15%;
+}
+	.table {
+		width: 60%;
+		margin:  50px auto;
+	}
+	.box-body{
+		min-height: 600px;
+	}
+</style>
+
+<div class="wrapper">
+	<!-- 内容标题开始 -->
+	<div id="breadcrumbs" class="breadcrumbs">
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+			<li><a href="#">广告管理</a></li>
+			<li class="active">编辑广告图</li>
+		</ol>
+	</div>
+	<!-- 内容标题结束 -->
+
+	<!-- 主要内容开始 -->
+	<section class="content">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="box box-info">
+					<div class="box-header nav-tabs">
+						<h4 class="box-title">编辑广告图</h4>
+						<!-- 返回上一页 -->
+						<include file="Public:content-back" />
+					</div>
+					<!-- 表格开始 -->
+					<div class="box-body">
+						<form action="" method="post" enctype="multipart/form-data">
+							<table id="example" class="table table-bordered">
+								<tbody>
+									<tr>
+										<td class="table-td-right"> 广告区域：</td>
+										<td>
+											<select class="form-control inlineSelect" style="width: 266px;" name="area" data-rule="required">
+												<option value="" selected="selected"> &nbsp;&nbsp;请选择</option>
+												<foreach name="area" item="v" key="k">
+													<option value="{$k}" {$info['area']==$k?'selected':''} >{$v}</option>
+												</foreach>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 广告链接：</td>
+										<td><input type="text" name="link_url" class="form-control" value="{$info['link_url']?$info['link_url']:'#'}" size="30" data-rule="required"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 广告排序：</td>
+										<td><input type="text" name="sort" value="{$info['sort']?$info['sort']:0}" class="form-control" size="30" data-rule="required;"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 显示状态：</td>
+										<td>
+						                    显示 <input type="radio" name="is_show" id="iCheck1" value="1" {$info['is_show']==1?'checked':''} > &nbsp;
+						                    隐藏 <input type="radio" name="is_show" id="iCheck2" value="2" {$info['is_show']==2?'checked':''} >
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 广告类型：</td>
+										<td>
+											轮播图 <input type="radio" name="is_alert" id="iCheck3" value="0" {$info['is_alert']==0?'checked':''} checked> &nbsp;
+											弹窗广告 <input type="radio" name="is_alert" id="iCheck4" value="1">
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 广告有效期：</td>
+										<td>
+											<input type="text" name="end_time" value="" class="form-control date-time" data-date-format="yyyy-mm-dd" size="30" >
+											<i style="font-style: normal;">注:（不填写则长期有效）</i>
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 广告图片：</td>
+										<td>
+											<if condition="$info['img_url']">
+												<img src="{$info['img_url']}" class="info_img" width="500px" height="200px" alt="">
+											</if>
+											<input id="file-zh" name="image" type="file"  required>
+										</td>
+									</tr>
+									<input type="hidden" name="page" value="{$page}">
+									<input type="hidden" name="id" value="{$info['id']}">
+									<tr height="60">
+										<td colspan="2" align="center">
+											<button class="btn btn-success" type="submit"><i class="fa fa-check"></i> 确定提交</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>	
+					</div>
+					<!-- 表格结束 -->
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!--图片上传插件-->
+<script>
+
+
+    $('#file-zh').fileinput({
+        language: 'zh',
+        uploadUrl: '#',
+        allowedFileExtensions : ['jpg', 'png','gif'],
+    });
+    $(".btn-warning").on('click', function() {
+        if ($('#file-4').attr('disabled')) {
+            $('#file-4').fileinput('enable');
+        } else {
+            $('#file-4').fileinput('disable');
+        }
+    });
+    $(".btn-info").on('click', function() {
+        $('#file-4').fileinput('refresh', {previewClass:'bg-info'});
+    });
+
+    $(document).ready(function() {
+        $("#test-upload").fileinput({
+            'showPreview' : false,
+            'allowedFileExtensions' : ['jpg', 'png','gif'],
+            'elErrorContainer': '#errorBlock'
+        });
+
+
+		//日期插件
+		$('.date-time').datepicker({
+			weekStart: 1,
+			autoclose: true
+		});
+
+    });
+	//如果选择了新图片 就把原图移除
+	$('.btn-file').on('click',function(){
+		var suolietu_div = $('.kv-file-content img');
+		var info_img     = $('.info_img');
+		if(suolietu_div != undefined){
+			if(info_img != undefined){
+				info_img.remove();
+			}
+		}
+	});
+
+
+</script>
+<!--图片上传插件 end-->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+

@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+html,body{
+    height:100%;
+}
+body{
+    font-size: 14px;
+    font-family: "microsoft yahei";
+}
+div {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color:#414141;
+    font-size: 12px;
+    text-align: center;
+}
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 35px;
+    text-align: left;
+    padding-left: 20px;
+    color:#999999; /*修改webkit中input的planceholder样式*/
+}
+input:focus::-webkit-input-placeholder {
+    text-align: left;
+    line-height: 35px;
+    padding-left: 14px;
+    color:#ccc; /*修改webkit中focus状态下input的planceholder样式*/
+}
+
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.signBox {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.sign-top {
+    width: 100%;
+    height: 46%;
+    background:url("../images/jbxq_bg.png") no-repeat center center;
+    background-size:cover ;
+    margin: auto;
+}
+.sign-top .sign-top-left {
+     padding-left: 15px;
+    padding-right: 20px;
+    height: 40px;
+    line-height:40px;
+    border-radius: 50px;
+    position: absolute;
+    top: 44px;
+    left: 20px;
+    background: rgba(255,255,225,0.2);
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+}
+.sign-top .sign-top-left .topP{
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+}
+.sign-top .sign-top-left .topP i{
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    background: url(../images/jinbi.png) no-repeat;
+    background-size: 56% 56%;
+    background-position: 9px 6px;
+    vertical-align: top;
+}
+.sign-top .sign-top-center{
+    width: 160px;
+    height: 160px;
+    background: rgba(255,255,225,0.2);
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-top: 14px;
+}
+.sign-top .sign-top-center .singC{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding-top: 13px;
+    position: relative;
+}
+.sign-top .sign-top-center .singC:after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #ffa1bc;
+    margin: 0 auto;
+}
+.sign-top .sign-top-center .singC p{
+    position: absolute;
+    top: 40%;
+    left: 23%;
+    color: #ff4479;
+    font-size: 18px;
+}
+.sign-top .sign-now {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    line-height:30px ;
+    font-size: 14px;
+    color:#fff ;
+    margin: auto;
+    margin-top: -15px;
+}
+.signing {
+    background: #FFB801;
+}
+.signed {
+    background: #b7b7b7;
+}
+.sign-center{
+    background: #FFFFFF;
+    -webkit-flex: 1.5;
+    flex: 1.5;
+}
+.sign-center h1 {
+    margin:30px auto;
+    font-size: 13px;
+    text-align: center;
+    color: #666666;
+
+}
+.sign-center .progress-bar {
+    width: 90%;
+    height: 8px;
+    margin: auto;
+    border: 1px solid #fe7d53;
+    border-radius: 50px;
+}
+#progress-bar {
+    height: 6px;border-radius: 50px;
+}
+.sign-center .sign-marking {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+}
+.sign-center .sign-marking p{
+    border: 1px solid #E1E1E1;
+    padding: 0 8px;
+    border-radius: 5px;
+}
+.sign-center .sign-marking span {
+    color: #EF4A46;
+}
+.sign-center .sign-marking i {
+    font-size: 20px;
+    color: #ec4a46;
+}
+.sign-bot{
+    -webkit-flex: 1;
+    flex: 1;
+}
+.sign-bot img {
+
+}

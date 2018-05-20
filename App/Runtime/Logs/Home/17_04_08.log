@@ -1,0 +1,613 @@
+[ 2017-04-08T09:36:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0000s ]
+SQL: SELECT `web` FROM `ht_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015600s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015600s ]
+SQL: SELECT `web_name` FROM `ht_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T09:36:53+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T09:36:59+08:00 ] 127.0.0.1 /Index_articleList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_category` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: cid E:\wwwroot\www\kf.hitui.com\App\Home\Controller\IndexController.class.php 第 74 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article` WHERE `status` = 0 ORDER BY sort desc,id desc LIMIT 0,15   [ RunTime:0.0280s ]
+SQL: SELECT * FROM `ht_article` ORDER BY addtime desc LIMIT 10   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_category` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0230s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 75 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 75 行.
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+NOTIC: [8] Undefined variable: cid E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Home\7d99a98a4c4235518dc2983ecb128c6f.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:37:01+08:00 ] 127.0.0.1 /c_304.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_category` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article` WHERE `id` = 304 AND `status` = 0 ORDER BY sort asc,id desc LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` ORDER BY addtime desc LIMIT 10   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` WHERE `category_id` = 110 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article` WHERE `category_id` = 110 AND `status` = 0 LIMIT 281,10   [ RunTime:0.0100s ]
+SQL: UPDATE `ht_article` SET `pv`=pv+1 WHERE `id` = 304 AND `status` = 0 [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_category` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0080s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 108 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `article_ad` FROM `ht_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:37:02+08:00 ] 127.0.0.1 /c_305.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_category` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` WHERE `id` = 305 AND `status` = 0 ORDER BY sort asc,id desc LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` ORDER BY addtime desc LIMIT 10   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` WHERE `category_id` = 110 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` WHERE `category_id` = 110 AND `status` = 0 LIMIT 36,10   [ RunTime:0.0310s ]
+SQL: UPDATE `ht_article` SET `pv`=pv+1 WHERE `id` = 305 AND `status` = 0 [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_category` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0090s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 108 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:37:04+08:00 ] 127.0.0.1 /c_303.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_category` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` WHERE `id` = 303 AND `status` = 0 ORDER BY sort asc,id desc LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` ORDER BY addtime desc LIMIT 10   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` WHERE `category_id` = 110 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` WHERE `category_id` = 110 AND `status` = 0 LIMIT 139,10   [ RunTime:0.0100s ]
+SQL: UPDATE `ht_article` SET `pv`=pv+1 WHERE `id` = 303 AND `status` = 0 [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_category` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0080s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 108 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T09:37:06+08:00 ] 127.0.0.1 /c_302.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `ht_category` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article` WHERE `id` = 302 AND `status` = 0 ORDER BY sort asc,id desc LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` ORDER BY addtime desc LIMIT 10   [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` WHERE `category_id` = 110 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` WHERE `category_id` = 110 AND `status` = 0 LIMIT 234,10   [ RunTime:0.0110s ]
+SQL: UPDATE `ht_article` SET `pv`=pv+1 WHERE `id` = 302 AND `status` = 0 [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_category` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0090s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 108 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:37:09+08:00 ] 127.0.0.1 /c_300.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_category` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` WHERE `id` = 300 AND `status` = 0 ORDER BY sort asc,id desc LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` ORDER BY addtime desc LIMIT 10   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` WHERE `category_id` = 110 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` WHERE `category_id` = 110 AND `status` = 0 LIMIT 96,10   [ RunTime:0.0090s ]
+SQL: UPDATE `ht_article` SET `pv`=pv+1 WHERE `id` = 300 AND `status` = 0 [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_category` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0080s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 108 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T09:37:15+08:00 ] 127.0.0.1 /list_115.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_category` [ RunTime:0.0080s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 115 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` WHERE `status` = 0 AND `category_id` = 115 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` WHERE `status` = 0 AND `category_id` = 115 ORDER BY sort desc,id desc LIMIT 0,15   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` ORDER BY addtime desc LIMIT 10   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_category` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0080s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 115 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 106 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 115 LIMIT 1   [ RunTime:0.0150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:37:16+08:00 ] 127.0.0.1 /list_114.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_category` [ RunTime:0.0140s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 114 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` WHERE `status` = 0 AND `category_id` = 114 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article` WHERE `status` = 0 AND `category_id` = 114 ORDER BY sort desc,id desc LIMIT 0,15   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article` ORDER BY addtime desc LIMIT 10   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_category` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0080s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 114 LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 106 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 114 LIMIT 1   [ RunTime:0.0090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T09:37:18+08:00 ] 127.0.0.1 /list_113.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `ht_category` [ RunTime:0.0110s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 113 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` WHERE `status` = 0 AND `category_id` = 113 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article` WHERE `status` = 0 AND `category_id` = 113 ORDER BY sort desc,id desc LIMIT 0,15   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article` ORDER BY addtime desc LIMIT 10   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ht_category` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0100s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 113 LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 106 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 113 LIMIT 1   [ RunTime:0.0100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:37:19+08:00 ] 127.0.0.1 /list_122.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `ht_article` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `ht_category` [ RunTime:0.0100s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 122 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article` WHERE `status` = 0 AND `category_id` = 122 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article` WHERE `status` = 0 AND `category_id` = 122 ORDER BY sort desc,id desc LIMIT 0,15   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article` ORDER BY addtime desc LIMIT 10   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ht_category` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0100s ]
+SQL: SELECT `pid` FROM `ht_category` WHERE `id` = 122 LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 107 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `ht_category` WHERE `id` = 122 LIMIT 1   [ RunTime:0.0100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T14:59:46+08:00 ] 127.0.0.1 /Public/Static/images/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:04:07+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/3.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/4.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/5.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/6.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/7.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/8.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/9.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/10.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/11.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/12.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:11+08:00 ] 127.0.0.1 /Public/images/face/13.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:05:12+08:00 ] 127.0.0.1 /Public/images/face/14.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-08T15:05:12+08:00 ] 127.0.0.1 /Public/images/face/15.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:12+08:00 ] 127.0.0.1 /Public/images/face/16.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:12+08:00 ] 127.0.0.1 /Public/images/face/17.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:12+08:00 ] 127.0.0.1 /Public/images/face/18.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:12+08:00 ] 127.0.0.1 /Public/images/face/19.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:05:12+08:00 ] 127.0.0.1 /Public/images/face/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:05:26+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_config` [ RunTime:0.0090s ]
+SQL: SELECT `web` FROM `ht_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `web_name` FROM `ht_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:06:24+08:00 ] 127.0.0.1 /Public/images/face/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:24+08:00 ] 127.0.0.1 /Public/images/face/2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:06:24+08:00 ] 127.0.0.1 /Public/images/face/3.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:24+08:00 ] 127.0.0.1 /Public/images/face/4.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:24+08:00 ] 127.0.0.1 /Public/images/face/5.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:06:24+08:00 ] 127.0.0.1 /Public/images/face/6.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T15:06:24+08:00 ] 127.0.0.1 /Public/images/face/7.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:24+08:00 ] 127.0.0.1 /Public/images/face/8.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/9.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/10.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/11.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/12.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/13.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/15.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/17.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/3.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/19.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/18.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/16.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-08T15:06:25+08:00 ] 127.0.0.1 /Public/images/face/14.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+

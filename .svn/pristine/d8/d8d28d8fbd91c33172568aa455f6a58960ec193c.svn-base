@@ -1,0 +1,198 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+             <li><a href="#">用户管理</a></li>
+            <li class="active">编辑会员</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+            <style>
+                .table img {
+                    margin-top: 8px;
+                    margin-left: 2px;
+                }
+            </style>
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                   <form method="post" action="" enctype="multipart/form-data" id="form1">
+                    <table id="example" class="table table-bordered table-hover" align="center" cellpadding="4" cellspacing="1" width="100%">
+                        <tbody>
+                            <tr class="header">
+                                <td bgcolor="#e6e6e6 " colspan="2"><?php echo $position_name; ?></td>
+                            </tr>
+                             <tr>
+                                <td width="40%">所属会员分组:</td>
+                                <td align="left"  width="58%">
+                                    <select name="info[group_id]" class='select' >
+                                        <volist name='user_groups' id='cg'>
+                                            <option value='{$cg.id}' <if condition="$info[group_id] == $cg[id]">  selected="selected"</if>>{$cg['name']}</option>
+                                        </volist>
+                                    </select>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td colspan="2"><font color="#FF0000">扩展会员分组:</font></td>
+                            </tr>
+                            <tr>
+                                <td><strong>用户组</strong></td>
+                                <td><strong>有效期</strong></td>
+                            </tr>
+                              
+                                    
+                                    <volist name="user_groups" id="cg">
+                                      <?php
+                                            if ($ext_datas[$cg['id']]) {
+                                                $checkstr = ' checked';
+                                                $end_time = date('Y-m-d', $ext_datas[$cg['id']]['end_time']);
+                                                if($end_time<date('Y-m-d',time())){
+                                                    $e_gqstr = '<font color="#FF0000">已过期</font>';
+                                                }
+                                            } else {
+                                                $checkstr = '';
+                                                $end_time = '';
+                                                $e_gqstr = '';
+                                            }
+                                       ?>
+                                    <tr>
+                                        <td  width="10%">
+                                            <input type="checkbox" name="ex[group_id][{$cg.id}]" {$checkstr}>{$cg['name']}
+                                        </td>
+                                        <td align="left"  width="88%">
+                                            <input type="text" name="ex[end_time][{$cg.id}]" value="{$end_time}">{$e_gqstr}
+                                        </td>
+                                    </tr>
+                                    </volist>
+                                    <tr>
+                                        <td width="10%">会员名称:</td>
+                                        <td>
+                                            <input style="width:200px;" name="info[username]" type="text" value="{$info.username}">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10%">密码:</td>
+                                        <td>
+                                            <input name="info[password]" id="password" type="password" value="{$info.password}" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10%">确认密码:</td>
+                                        <td>
+                                            <input name="info[passwordok]" id="passwordok" type="password" value="{$info.passwordok}">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10%">头像:</td>
+                                        <td bgcolor="#FFFFFF" width="66%">
+                                       
+                                            <for start = "1" end= "20"> 
+                                            
+                                                <img src="/Public/images/face/{$i}.png">
+                                                <input type="radio" name="info[face]" value="{$i}" <if condition="$info['face'] == $i">checked</if>>
+
+                                             </for>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10%">真实姓名:</td>
+                                        <td width="66%">
+                                            <input style="width:200px;" name="info[realname]" type="text" value="<?php echo $info['realname']; ?>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10%">qq:</td>
+                                        <td  width="66%">
+                                            <input style="width:200px;" name="info[qq]" type="text" value="<?php echo $info['qq']; ?>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10%">城市:</td>
+                                        <td width="66%">
+                                            <input style="width:200px;" name="info[city]" type="text" value="<?php echo $info['city']; ?>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td idth="10%">行业:</td>
+                                        <td width="66%">
+                                            <input style="width:200px;" name="info[trade]" type="text" value="<?php echo $info['trade']; ?>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10%">公司:</td>
+                                        <td  width="66%">
+                                            <input style="width:200px;" name="info[company]" type="text" value="<?php echo $info['company']; ?>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10%">手机:</td>
+                                        <td width="66%">
+                                            <input style="width:200px;" name="info[mobile]" type="text" value="<?php echo $info['mobile']; ?>">
+                                        </td>
+                                    </tr>
+                            
+                                      <!--以下为地址信息-->
+                                    <if condition="!empty($address)">
+                                    <tr>
+                                        <td width="10%">收货地址:</td>
+                                        <td width="66%">
+                                            {$address.name}&nbsp;&nbsp;{$address.mobile}<br/>
+                                            {$address.province_name}{$address.city_name}{$address.county_name}{$address.address}
+                                        </td>
+                                    </tr>
+                                    </if>
+                                    <tr>
+                                        <td width="10%">email:</td>
+                                        <td width="66%">
+                                            <input style="width:200px;" name="info[email]" type="text" value="{$info.email}">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="34%">过期时间:</td>
+                                        <td width="66%">
+                                            <input name="info[end_time]" type="text" value="{$info.end_time}">{$gqstr}
+                                            &nbsp;&nbsp;&nbsp;例：<?php echo date('Y-m-d'); ?>
+                                        </td>
+                                    </tr>
+                        </tbody>
+                    </table>
+                   <br>
+                  <center>
+                      <button class="btn btn-success inlineSearch display-inline" name='dosubmit' type="submit">提 交</button>
+                  </center>
+                    <input type="hidden" name="info[id]" value="{$info.id}">
+                   </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+  //删除询问框
+$(".delete-msg-find").on('click', function(){
+    var status = confirm('确定删除本条文章？\n \n 删除后将无法恢复！\n 确定删除吗？？？\n \n ');
+    if(!status){
+        return false;
+    }
+});  
+
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>积分详情</title>
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_crll8up3ukdquxr.css" />
+	<link rel="stylesheet" href="../../public/css/reset.css" />
+	<link rel="stylesheet" href="../../public/css/pointsDetail.css" />
+</head>
+<body>
+	<!--积分明细-->
+	<div class="pointDetailBox">
+		<div class="pdb-top">
+			<div class="pdb-top-r"  onclick="window.location.href='integral.html'"><i class="iconfont icon-shangcheng"></i>&nbsp;积分商城</div>
+			<div class="pdb-top-m">
+				<div class="pdb-top-m-l">
+				</div>
+				<div class="pdb-top-m-r">
+					<h1>积分总额</h1>
+					<h2>2</h2>
+					<p>暂无即将过期积分</p>
+				</div>
+			</div>
+		</div>
+		<div class="pdb-navbar">
+			<div class="fa">
+				<a href="#" class="on" id="allpro"><span>全部</span></a>
+			</div>
+			<div class="fa"><a href="#"  id="income"><span>收入</span></a></div>
+			<div class="fa"><a href="#"  id="pay"><span>支出</span></a></div>
+		</div>
+
+		<div class="pdb-center allshow" style="padding-bottom:20px;">
+             <ul>
+					<li class="pdbItem clearfix">
+                       <div class="itemLeft ">
+						   <img src="../../public/images/jinbi.png" alt="">
+						   <span>签到积分</span>
+					   </div>
+					   <div class="itemC">+1</div>
+					   <div class="itemR">05-24</div>
+					</li>
+					<li class="pdbItem clearfix">
+						<div class="itemLeft ">
+							<img src="../../public/images/jinbi.png" alt="">
+							<span>签到积分</span>
+						</div>
+						<div class="itemC">+1</div>
+						<div class="itemR">05-24</div>
+					</li>
+				</ul>
+		</div>
+
+		<div class="pdb-center">
+			<p>收入</p>
+		</div>
+
+		<div class="pdb-center">
+			<p>支出</p>
+		</div>
+
+        <div id="goback" onClick="window.history.go(-1);"><i class="iconfont icon-icon07-copy"></i></div>
+	</div>
+<script src="../../public/js/jquery-1.11.1.js"></script>
+<script>
+     var $a=$(".pdb-navbar a"),   //点击的a
+         on='on',                // 当前点击的a的样式
+         allshow="allshow",    //有这个类的div显示
+         $dd=$(".pointDetailBox .pdb-center");    //当前a显示的div内容块
+
+     $a.on("click",function () {
+         $(this).addClass(on).parent(".fa").siblings("").find("a").removeClass(on);
+         $dd.eq($(".pdb-navbar a").index(this)).addClass(allshow).siblings().removeClass(allshow);
+     });
+
+</script>
+</body>
+</html>

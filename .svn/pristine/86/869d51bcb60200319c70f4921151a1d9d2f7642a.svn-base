@@ -1,0 +1,184 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+
+<!--图片上传插件-->
+<link href="__STATIC__/plugins/uploadfile/css/fileinput.min.css">
+<script src="__STATIC__/plugins/uploadfile/js/fileinput.js"></script>
+<script src="__STATIC__/plugins/uploadfile/js/zh.js"></script>
+<style>
+	.file-input,.file-input-ajax-new{
+		width: 50%;
+	}
+</style>
+<!--图片上传插件-->
+
+
+<div class="wrapper">
+	<!-- 内容标题开始 -->
+	<div id="breadcrumbs" class="breadcrumbs">
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">视频管理</a></li>
+            <li class="active">视频列表</li>
+		</ol>
+
+	</div>
+	<!-- 内容标题结束 -->
+
+	<!-- 主要内容开始 -->
+	<section class="content">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="box box-info"> <!-- box-info天空蓝、 box-primary蓝色、  box-success绿色-->
+					<div class="box-header nav-tabs">
+						<h4 class="box-title"><i class="fa fa-plus"></i> 添加视频</h4>
+						<!-- 返回上一页 -->
+						<include file="Public:content-back" />
+					</div>
+					<!-- 表格开始 -->
+					<div class="box-body">
+						<form action="{:U(MODULE_NAME.'/Video/videoAdd')}" method="post" enctype="multipart/form-data">
+							<table id="example" class="table table-bordered">
+								<tbody>
+									<tr>
+										<td class="table-td-right"> 视频分组：</td>
+										<td>
+											<select name="info[category_id]" style="min-width: 406px;max-width: 50%;min-height: 35px;">
+												<foreach name='video_group' item='v' key="k">
+													<option value="0" style="color: red;" disabled>&nbsp;{$v.name}</option>
+													<php>$children = $v['children'];</php>
+													<foreach name="children" item='vv' key="kk">
+														<option value="{$vv['id']}">&nbsp;╠&nbsp;&nbsp;{$vv.name}</option>
+													</foreach>
+												</foreach>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 视频标题：</td>
+										<td><input type="text" name="info[title]" class="form-control" size="50" data-rule="required"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 视频标签：</td>
+										<td>
+											<select name="info[is_tag]" class="form-control">
+												<foreach name="video_tag" item="v" key="k">
+													<option value="{$k}">{$v}</option>
+												</foreach>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 视频code：</td>
+										<td><input type="text" name="info[video_code]" class="form-control" size="50" data-rule="required"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 缩列图：</td>
+										<td>
+
+											<input id="file-zh" name="cover_img" type="file" required>
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 允许提问：</td>
+										<td>
+											允许 <input type="radio" name="info[is_reply]" id="iCheck1" value="1" checked> &nbsp;
+											禁止 <input type="radio" name="info[is_reply]" id="iCheck2" value="2" >
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 审核状态：</td>
+										<td>
+											已审核 <input type="radio" name="info[status]" checked id="iCheck3" value="0" > &nbsp;
+											未审核 <input type="radio" name="info[status]" id="iCheck4" value="1" > &nbsp;
+											已下架 <input type="radio" name="info[status]" id="iCheck5" value="2" >
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 禁止提问时提示音：</td>
+										<td><input type="text" name="info[msg]" value="" class="form-control" size="50" placeholder="例如：该视频暂时不支持提问！"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 单独购买价格：</td>
+										<td>
+											 <div class="input-group" style="width: 41%;">
+									            <input type="number" name="info[buy_money]" value="{$video_info['buy_money']}" class="form-control" data-rule="required">
+									            <span class="input-group-addon">元</span>
+									        </div>
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 有效期：</td>
+										<td>
+										    <div class="input-group" style="width: 41%;">
+									            <input type="number" name="info[gqtime]" value="{$video_info['gqtime']}" class="form-control" data-rule="required" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();">
+									            <span class="input-group-addon">天</span>
+									        </div>
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 视频排序：</td>
+										<td><input type="text" name="info[sort]" value="0" class="form-control" maxlength="1" size="50" data-rule="required;digits"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 视频简介：</td>
+										<td>
+											<textarea name="info[remark]" style="width: 406px;min-height: 100px;"></textarea>
+										</td>
+
+									</tr>
+
+									<tr height="60">
+										<td colspan="2" align="center">
+											<input type="hidden" name="vid" value="{$vid}">
+											<button class="btn btn-success" type="submit"><i class="fa fa-check"></i> 确定添加</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+					<!-- 表格结束 -->
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+
+<!--图片上传插件-->
+<script>
+    $('#file-zh').fileinput({
+        language: 'zh',
+        uploadUrl: '#',
+        allowedFileExtensions : ['jpg', 'png','gif'],
+    });
+    $(".btn-warning").on('click', function() {
+        if ($('#file-4').attr('disabled')) {
+            $('#file-4').fileinput('enable');
+        } else {
+            $('#file-4').fileinput('disable');
+        }
+    });
+    $(".btn-info").on('click', function() {
+        $('#file-4').fileinput('refresh', {previewClass:'bg-info'});
+    });
+
+    $(document).ready(function() {
+        $("#test-upload").fileinput({
+            'showPreview' : false,
+            'allowedFileExtensions' : ['jpg', 'png','gif'],
+            'elErrorContainer': '#errorBlock'
+        });
+    });
+</script>
+<!--图片上传插件 end-->
+
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

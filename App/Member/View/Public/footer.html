@@ -1,0 +1,158 @@
+<footer class="footer clearfix mt20" id="footer">
+    <div class="footHd w1100 m0a">
+        <div class="hdL fl">
+            <div class="log">
+                <a href="{:U('Index/index')}">
+                    <img src="__MEMBER__/images/htsLogo.png"  alt="嗨推学院">
+                </a>
+            </div>
+            <div class="telTime">
+                <div class="tel">
+                    <p class="p1">公司电话</p>
+                    <p class="p2">020-36700550</p>
+                </div>
+                <div class="time">
+                    <p>工作日&nbsp;&nbsp;9:00-18:00&nbsp;&nbsp;周一至周六</p>
+                </div>
+            </div>
+        </div>
+        <div class="hdM fl">
+
+            <div class="item">
+                <h6>联系我们</h6>
+                <ol>
+                    <li><a href="{:U('Content/index')}">公司简介</a></li>
+                    <li><a href="{:U('Content/contactUs')}">在线留言</a></li>
+                    <li><a href="{:U('Content/contactUs')}">联系方式</a></li>
+                </ol>
+            </div>
+            <div class="item">
+                <h6>帮助中心</h6>
+                <ol>
+                    <li><a href="{:U('Content/problemList')}">常见问题</a></li>
+                    <li><a href="{:U('Content/goodShareList')}">干货分享</a></li>
+                    <li><a href="{:U('Home/Index/index')}">客服中心</a></li>
+                </ol>
+            </div>
+            <div class="item">
+                <h6>关于我们</h6>
+                <ol>
+                    <li><a href="{:U('Index/course')}">课程介绍</a></li>
+                    <li><a href="{:U('Content/studentSay')}">精英学员</a></li>
+                    <li><a href="{:U('Content/openVideo')}">学员视频</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="hdR fr">
+            <div class="ewm" id="ewmApp">
+                <p>扫码下载APP</p>
+                <a href="javascript:;">
+                    <img src="__MEMBER__/images/ewmApp.png"  alt="嗨推APP">
+                </a>
+            </div>
+            <div class="ewm" id="ewmWx">
+                <p>关注微信公众号</p>
+                <a href="javascript:;">
+                    <img src="__MEMBER__/images/ewmWx.png"  alt="微信公众号">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="links">
+        <div class="in w1100 m0a">
+            <div class="tit fl">
+                <h5>友情链接</h5>
+            </div>
+            <ul>
+                <volist name="friends" id="val">
+                    <li><a href="{$val.url}" target="_blank">{$val.name}</a></li>
+                </volist>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="in w1100 m0a">
+            <p><a href="javascript:">粤ICP备14026621号</a> &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;Copyright © 2013-2017 hitui.com 嗨推学院 ALL Rights Reserved.</p>
+            <ul>
+                <li>
+                    <a href="javascript:;"><img src="__MEMBER__/images/copy01.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="__MEMBER__/images/copy02.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="__MEMBER__/images/copy03.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="__MEMBER__/images/copy04.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="__MEMBER__/images/copy05.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="__MEMBER__/images/copy06.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="__MEMBER__/images/copy07.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!--sidebar-->
+<section class="sidebar" id="sidebar">
+    <div class="in">
+        <ul>
+            <li class="li01">
+                <a href="{:U('Pay/courseChoose')}">
+                    <i id="shopCarNum">1</i>
+                </a>
+            </li>
+            <li class="li02">
+                <a href="javascript:;"></a>
+                <div class="lePop" id="lePop01">
+                    <img src="__MEMBER__/images/ewmx.png" alt="">
+                    <span>微信公众号关注</span>
+                    <em class="arr"></em>
+                </div>
+            </li>
+            <li class="li03">
+                <a href="{:U('Index/index')}"></a>
+                <div class="lePop" id="lePop02">
+                    <img src="__MEMBER__/images/ewmx.png" alt="">
+                    <span>APP下载</span>
+                    <em class="arr"></em>
+                </div>
+            </li>
+            <li class="li04">
+                <a href="{:U('Index/course')}"></a>
+            </li>
+            <li class="li05 backTop">
+                <a href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+</section>
+<script src="__MEMBER__/js/jquery-1.11.2.min.js"></script>
+<script src="__MEMBER__/js/common.js"></script>
+<script src="__MEMBER__/js/from.js"></script>
+
+<script src="__MEMBER__/js/HloginAftert.js"></script>
+
+<script src="__MEMBER__/js/myForm.js"></script>
+<script src="__MEMBER__/js/loginAfter.js"></script>
+<script src="__MEMBER__/js/loginBefore.js"></script>
+<script src="__MEMBER__/pugins/libs/layui-master/layui.js"></script>
+<script src="__MEMBER__/pugins/libs/validator/dist/jquery.validator.js?local=zh-CN"></script>
+
+<script>
+    var URL = $("#captcha_img").attr("src");
+    //刷新验证码
+    $("#captcha_img").on('click',function(){
+        $("#captcha_img").attr("src",URL+'?r='+Math.random());
+    });
+
+</script>
+</body>
+</html>

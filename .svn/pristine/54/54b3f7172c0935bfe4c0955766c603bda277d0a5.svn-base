@@ -1,0 +1,131 @@
+<include file="Public:header"/>
+
+<!--myHead-->
+<section class="myHead">
+    <div class="in">
+        <div class="head">
+            <div class="tp">
+                <a href="{:U('User/myLogo')}"><img src="__MEMBER__/images/logo/{:session(C('USER_FACE'))}.png" alt="个人头像"></a>
+            </div>
+            <div class="txt">
+                <h2 class="name">{:session(C('USER_AUTH_UNAME'))}</h2>
+                <p class="lab">{:session(C('USER_GROUP_UNAME'))}</p>
+                <div class="money">
+                    <span>学习币：<em>{$user_account['currency']}</em></span>
+                    <a href="{:U('Pay/payMoney')}" class="goRecharge">充值</a>
+                </div>
+            </div>
+            <div class="goJoin">
+                <a href="{:U('Pay/courseChoose')}" class="goCourses">报名课程</a>
+            </div>
+        </div>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="{:U('Study/myNote')}">
+                        <img src="__MOBILE__/images/myTp02.png">
+                        <span>我的笔记</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{:U('Study/myQuestion')}">
+                        <img src="__MOBILE__/images/myTp03.png">
+                        <span>我的提问</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--myList-->
+<section class="myList">
+    <div class="in">
+        <ul class="listUl">
+            <li>
+                <a href="{:U('User/myInfo')}" class="item">
+                    <i class="ico"></i>
+                    <span class="ti">基本信息</span>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('User/myGrade')}"  class="item">
+                    <i class="ico"></i>
+                    <span class="ti">账号级别</span>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('User/myAccount')}" class="item">
+                    <i class="ico"></i>
+                    <span class="ti">账户余额</span>
+                    <em>{$user_account['currency']}</em>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('User/myBrokerage')}" class="item">
+                    <i class="ico"></i>
+                    <span class="ti">我的佣金</span>
+                    <em>{$user_account['brokerage']}</em>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('User/myRank')}" class="item">
+                    <i class="ico"></i>
+                    <span class="ti">我的积分</span>
+                    <em>{$user_account['integral']}</em>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('User/myAddressList')}" class="item">
+                    <i class="ico"></i>
+                    <span class="ti">收货地址</span>
+                </a>
+            </li>
+            <li>
+                <a href="myCollect.html" class="item">
+                    <i class="ico"></i>
+                    <span class="ti">我的收藏</span>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Safe/securityList')}" class="item">
+                    <i class="ico"></i>
+                    <span class="ti">安全设置</span>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('User/myNews')}" class="item">
+                    <i class="ico"></i>
+                    <span class="ti">消息通知</span>
+                    <em>{$user_msgCount?$user_msgCount:''}</em>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Content/contactUs')}" class="item">
+                    <i class="ico"></i>
+                    <span class="ti">联系我们</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="item" onclick="loginOut();">
+                    <i class="ico"></i>
+                    <span class="ti">退出登陆</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!--shopCarFix-->
+<!--
+<div class="shopCarFix">
+    <a href="myJoinVideo01.html" class="item">
+        <i class="ico"></i>
+        <span class="num">10</span>
+    </a>
+</div>
+-->
+<include file="Public:footerMenu"/>
+<include file="Public:footer"/>
+<script src="__MOBILE__/pugins/layer-mobile-2.0/layer.js"></script>
+

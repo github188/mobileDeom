@@ -1,0 +1,2259 @@
+[ 2017-06-17T10:47:16+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT `video_time` FROM `ht_video`  [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T10:47:23+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT `video_time` FROM `ht_video`  [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T10:55:15+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT `video_time` FROM `ht_video`  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 331 行.
+NOTIC: [8] Undefined index: shoucang E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 335 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 344 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 349 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 353 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 354 行.
+NOTIC: [2] Illegal string offset 'allow_play' E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\965a2fd2aa3b34d12ce5f87cdf35d9ca.php 第 355 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T10:55:22+08:00 ] 127.0.0.1 /Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T10:55:22+08:00 ] 127.0.0.1 /Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T10:55:32+08:00 ] 127.0.0.1 /Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_login_log` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_hack` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user` WHERE `username` = '111aaa' LIMIT 1   [ RunTime:0.0080s ]
+SQL: INSERT INTO `ht_user_login_log` (`user_id`,`username`,`ip`,`logintime`) VALUES ('7176','111aaa','127.0.0.1','1497668131') [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0080s ]
+SQL: SELECT `group_id`,`end_time` FROM `ht_user_group_ext` WHERE `user_id` = 7176 ORDER BY end_time DESC LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name` FROM `ht_user_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0080s ]
+
+[ 2017-06-17T10:55:34+08:00 ] 127.0.0.1 /Study/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_video_category` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `ht_video_category_auth` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_auth` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_play_record` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0090s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 0  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 1  [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 4  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` WHERE `category_id` = 4 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 4 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 4 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 80  [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` WHERE `category_id` = 80 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 80 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 80 LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2] Division by zero E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 80 行.
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 69  [ RunTime:0.0090s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 2  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497668133 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 2 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 2 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 3  [ RunTime:0.0080s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497668133 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 3 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 3 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 70  [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497668133 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2] Division by zero E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 80 行.
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 81  [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 82  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497668133 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 82 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 82 LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2] Division by zero E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 80 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`addtime` FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 8   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video_play_record` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_question` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video_question` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_question` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_question_answer` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_question_shoucang` [ RunTime:0.0090s ]
+SQL: SELECT q.*,u.username,u.face,vc.id as category_id,v.id as vid,vc.name as category_name,v.title as video_name FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id DESC LIMIT 10   [ RunTime:0.0090s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3862 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0100s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3861 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3860 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3859 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3858 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3857 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3848 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3847 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3846 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3845 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id DESC LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: category_id E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 182 行.
+NOTIC: [8] Undefined variable: category_id E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 182 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T10:55:59+08:00 ] 127.0.0.1 /Content/aboutCompany.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 6 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 1   [ RunTime:0.0100s ]
+SQL: UPDATE `ht_article_other` SET `pv`=pv+1 WHERE `id` = 21 AND `type` = 6 [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T10:56:05+08:00 ] 127.0.0.1 /Content/goodShareList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 0,10   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T10:56:06+08:00 ] 127.0.0.1 /Content/webNoticeList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 0,10   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T10:56:06+08:00 ] 127.0.0.1 /Content/problemList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 0,10   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T10:56:08+08:00 ] 127.0.0.1 /Content/studentSay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 0,6   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T10:56:09+08:00 ] 127.0.0.1 /Content/openVideo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T10:56:11+08:00 ] 127.0.0.1 /Content/aboutCompany.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 6 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 1   [ RunTime:0.0090s ]
+SQL: UPDATE `ht_article_other` SET `pv`=pv+1 WHERE `id` = 21 AND `type` = 6 [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T10:56:29+08:00 ] 127.0.0.1 /Content/content.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T11:05:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT `video_time` FROM `ht_video`  [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_video_auth` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_category` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_category_auth` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 424 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 424 AND `end_time` > 1497668747 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 3  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_shoucang` [ RunTime:0.0090s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 424 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 423 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 423 AND `end_time` > 1497668747 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 80 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 80  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `group_id` = 1 AND `end_time` > 1497668747 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 423 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 421 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 421 AND `end_time` > 1497668747 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 421 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 420 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 420 AND `end_time` > 1497668747 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 420 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.282016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.282016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T11:05:53+08:00 ] 127.0.0.1 /Study/newQuestion.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_video_question` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_question_answer` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_question_shoucang` [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face,vc.id as category_id,v.id as vid,vc.name as category_name,v.title as video_name FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id DESC LIMIT 10   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3862 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3861 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3860 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3859 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3858 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3857 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3848 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3847 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3846 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3845 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id DESC LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T11:05:54+08:00 ] 127.0.0.1 /Index/course.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '推广精英' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '微信引流与变现' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '社交电商' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '淘宝客项目' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '111111' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '推广基础班' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '试听会员' LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T11:05:55+08:00 ] 127.0.0.1 /User/myAccount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0100s ]
+SQL: SELECT `currency`,`brokerage` FROM `ht_user` WHERE `id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T11:05:57+08:00 ] 127.0.0.1 /User/myBrokerage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_brokerage_tixian` [ RunTime:0.0080s ]
+SQL: SELECT `currency`,`brokerage` FROM `ht_user` WHERE `id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user_brokerage_tixian` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_user_brokerage_tixian` WHERE `user_id` = 7176 ORDER BY addtime DESC LIMIT 0,10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T11:06:03+08:00 ] 127.0.0.1 /User/myRank.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user_ranking` [ RunTime:0.0080s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497024000 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497110400 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497196800 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497283200 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497369600 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497456000 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497542400 LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T11:06:06+08:00 ] 127.0.0.1 /User/myCourse.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_user_group_ext` WHERE `user_id` = 7176 ORDER BY end_time DESC LIMIT 0,10   [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name` FROM `ht_user_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T11:06:10+08:00 ] 127.0.0.1 /User/myInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user` WHERE `id` = 7176 LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T11:13:22+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0060s ]
+SQL: SELECT `video_time` FROM `ht_video`  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ht_video_auth` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_category` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_category_auth` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 424 AND `status` = 0 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 424 AND `end_time` > 1497669202 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 3  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_shoucang` [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 424 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 423 AND `status` = 0 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 423 AND `end_time` > 1497669202 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 80 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 80  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `group_id` = 1 AND `end_time` > 1497669202 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 423 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 421 AND `status` = 0 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 421 AND `end_time` > 1497669202 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 421 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 420 AND `status` = 0 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 420 AND `end_time` > 1497669202 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 420 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.243014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.243014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T11:13:26+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT `video_time` FROM `ht_video`  [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ht_video_auth` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_video_category` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_video_category_auth` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 424 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 424 AND `end_time` > 1497669205 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.3180s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 3  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_shoucang` [ RunTime:0.0090s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 424 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 423 AND `status` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 423 AND `end_time` > 1497669206 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 80 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 80  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `group_id` = 1 AND `end_time` > 1497669206 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 423 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 421 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 421 AND `end_time` > 1497669206 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 421 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 420 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 420 AND `end_time` > 1497669206 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 420 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.633036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.633036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T11:13:34+08:00 ] 127.0.0.1 /Study/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_video_category` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_category_auth` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_auth` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_play_record` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 0  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 1  [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 4  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` WHERE `category_id` = 4 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 4 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 4 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 80  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` WHERE `category_id` = 80 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 80 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 80 LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [2] Division by zero E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 80 行.
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 69  [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 2  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497669214 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 2 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 2 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 3  [ RunTime:0.0060s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497669214 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 3 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 3 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 70  [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497669214 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 71 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 71 LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [2] Division by zero E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 80 行.
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 81  [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 82  [ RunTime:0.0080s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497669214 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 82 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 82 LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [2] Division by zero E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 80 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`addtime` FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 8   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video_play_record` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ht_video_question` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video_question` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_question` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_question_answer` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_question_shoucang` [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face,vc.id as category_id,v.id as vid,vc.name as category_name,v.title as video_name FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id DESC LIMIT 10   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3862 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3861 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3860 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3859 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3858 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3857 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3848 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3847 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3846 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' LIMIT 5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3845 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id DESC LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: category_id E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 182 行.
+NOTIC: [8] Undefined variable: category_id E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 182 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T11:13:35+08:00 ] 127.0.0.1 /Index/course.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '推广精英' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '微信引流与变现' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '社交电商' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '淘宝客项目' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '111111' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '推广基础班' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `title` = '试听会员' LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T11:13:39+08:00 ] 127.0.0.1 /Study/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_video_category` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_category_auth` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `ht_video_auth` [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `ht_video_play_record` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0370s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0260s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 0  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 1  [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 4  [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` WHERE `category_id` = 4 LIMIT 1   [ RunTime:0.0230s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 4 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 4 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 80  [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` WHERE `category_id` = 80 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 80 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 80 LIMIT 1   [ RunTime:0.0220s ]
+NOTIC: [2] Division by zero E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 80 行.
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 69  [ RunTime:0.0220s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 2  [ RunTime:0.0180s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497669219 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 2 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 2 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 3  [ RunTime:0.0080s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497669219 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 3 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 3 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 70  [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497669219 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2] Division by zero E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 80 行.
+SQL: SELECT * FROM `ht_video_category` WHERE `status` = 0 AND `pid` = 81  [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 82  [ RunTime:0.0080s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_video_auth` WHERE `user_id` = 7176 AND `end_time` > 1497669219 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(video_time) AS tp_sum FROM `ht_video` WHERE `category_id` = 82 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(playtime) AS tp_sum FROM `ht_video_play_record` WHERE `category_id` = 82 LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2] Division by zero E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 80 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`addtime` FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 8   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video_play_record` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_question` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video_question` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_question` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_video_question_answer` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_question_shoucang` [ RunTime:0.0090s ]
+SQL: SELECT q.*,u.username,u.face,vc.id as category_id,v.id as vid,vc.name as category_name,v.title as video_name FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id DESC LIMIT 10   [ RunTime:0.0090s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3862 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3862' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0100s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3861 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3861' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3860 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3860' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3859 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3859' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3858 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3858' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3857 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3857' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3848 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3848' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3847 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3847' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2048] Non-static method Member\Controller\StudyController::getReplyLevel2() should not be called statically E:\wwwroot\www\kf.hitui.com\App\Member\Controller\StudyController.class.php 第 163 行.
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3846 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3846' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT MAX(end_time) AS tp_Max FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `end_time` = 1511905472 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.*,u.username,u.face FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' LIMIT 5   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_question_shoucang` WHERE `question_id` = 3845 AND `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question_answer q INNER JOIN ht_user u on q.user_id=u.id  WHERE q.question_id = '3845' ORDER BY q.id desc LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT q.id FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ht_video_question q INNER JOIN ht_video v on q.vid=v.id INNER JOIN ht_video_category vc on v.category_id=vc.id INNER JOIN ht_user u on q.user_id=u.id  WHERE q.is_show = 1 ORDER BY q.id DESC LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: category_id E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 182 行.
+NOTIC: [8] Undefined variable: category_id E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 182 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\c78945e872b170d42ed44658fcf63d74.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T11:13:41+08:00 ] 127.0.0.1 /User/myAccount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SELECT `currency`,`brokerage` FROM `ht_user` WHERE `id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-06-17T11:29:54+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0070s ]
+SQL: SELECT `video_time` FROM `ht_video`  [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_video_auth` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_category` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_category_auth` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 424 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 424 AND `end_time` > 1497670193 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 3  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_shoucang` [ RunTime:0.0090s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 424 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 423 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 423 AND `end_time` > 1497670193 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 80 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 80  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `group_id` = 1 AND `end_time` > 1497670193 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 423 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 421 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 421 AND `end_time` > 1497670193 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 421 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 420 AND `status` = 0 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 420 AND `end_time` > 1497670194 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 420 LIMIT 1   [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.276016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.276016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T11:29:57+08:00 ] 127.0.0.1 /User/myAccount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SELECT `currency`,`brokerage` FROM `ht_user` WHERE `id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-06-17T11:29:59+08:00 ] 127.0.0.1 /User/myBrokerage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ht_user_brokerage_tixian` [ RunTime:0.0100s ]
+SQL: SELECT `currency`,`brokerage` FROM `ht_user` WHERE `id` = 7176 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user_brokerage_tixian` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_user_brokerage_tixian` WHERE `user_id` = 7176 ORDER BY addtime DESC LIMIT 0,10   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T11:30:01+08:00 ] 127.0.0.1 /User/myRank.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user_ranking` [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497024000 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497110400 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497196800 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497283200 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497369600 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497456000 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ranking` FROM `ht_user_ranking` WHERE `user_id` = 7176 AND `addtime` = 1497542400 LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T11:30:03+08:00 ] 127.0.0.1 /User/myCourse.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_user_group_ext` WHERE `user_id` = 7176 ORDER BY end_time DESC LIMIT 0,10   [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name` FROM `ht_user_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T11:31:31+08:00 ] 127.0.0.1 /User/myCourse.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user_group_ext` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_user_group_ext` WHERE `user_id` = 7176 ORDER BY end_time DESC LIMIT 0,10   [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name` FROM `ht_user_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T14:38:18+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT `video_time` FROM `ht_video`  [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ht_video_auth` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_category` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_category_auth` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 424 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 424 AND `end_time` > 1497681497 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 3  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_shoucang` [ RunTime:0.0090s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 424 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 423 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 423 AND `end_time` > 1497681498 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 80 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 80  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `group_id` = 1 AND `end_time` > 1497681498 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 423 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 421 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 421 AND `end_time` > 1497681498 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 421 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 420 AND `status` = 0 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 420 AND `end_time` > 1497681498 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 420 LIMIT 1   [ RunTime:0.0080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.282017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.282017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T14:38:24+08:00 ] 127.0.0.1 /Content/webNotice/main/11.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `id` = 11 AND `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 1   [ RunTime:0.0090s ]
+SQL: UPDATE `ht_article_other` SET `pv`=pv+1 WHERE `id` = 11 AND `type` = 3 [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T14:38:26+08:00 ] 127.0.0.1 /Content/openVideo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T14:38:27+08:00 ] 127.0.0.1 /Content/openVideoPlay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T14:39:20+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T14:40:37+08:00 ] 127.0.0.1 /Content/openVideoPlay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T14:41:24+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT `video_time` FROM `ht_video`  [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_video_auth` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_category` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video_category_auth` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 424 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 424 AND `end_time` > 1497681684 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 3  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_shoucang` [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 424 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 423 AND `status` = 0 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 423 AND `end_time` > 1497681684 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 80 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 80  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `group_id` = 1 AND `end_time` > 1497681684 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 423 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 421 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 421 AND `end_time` > 1497681684 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 421 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 420 AND `status` = 0 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 420 AND `end_time` > 1497681684 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 420 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.241014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.241014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T14:41:29+08:00 ] 127.0.0.1 /Content/webNotice/main/11.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `id` = 11 AND `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 1   [ RunTime:0.0090s ]
+SQL: UPDATE `ht_article_other` SET `pv`=pv+1 WHERE `id` = 11 AND `type` = 3 [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T14:41:31+08:00 ] 127.0.0.1 /Content/studentSay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 0,6   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T14:41:32+08:00 ] 127.0.0.1 /Content/openVideo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-17T17:40:56+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_article_other` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_video` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group` WHERE `allow_buy` = 1 ORDER BY sort ASC,buy_money DESC,id DESC LIMIT 4   [ RunTime:0.0080s ]
+SQL: SELECT `video_time` FROM `ht_video`  [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user` LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_video` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_ad` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_ad` WHERE `is_show` = 1 AND `area` = 1 ORDER BY sort DESC,id DESC  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE ( status=0 ) ORDER BY is_tag DESC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 2 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 4   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 3 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 4 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_article_other` WHERE `type` = 5 AND `is_show` = 1 ORDER BY sort ASC,id DESC LIMIT 7   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_video_auth` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_category` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_video_category_auth` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ht_user_group_ext` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 424 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 424 AND `end_time` > 1497692455 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 3  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_video_shoucang` [ RunTime:0.0090s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 424 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 423 AND `status` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 423 AND `end_time` > 1497692455 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 80 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 80  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_group_ext` WHERE `user_id` = 7176 AND `group_id` = 1 AND `end_time` > 1497692455 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 423 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 421 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 421 AND `end_time` > 1497692455 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 421 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_video` WHERE `id` = 420 AND `status` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_video_auth` WHERE `user_id` = 7176 AND `vid` = 420 AND `end_time` > 1497692456 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `group_id` FROM `ht_user_group_ext` WHERE `user_id` = 7176  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_video_category` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `ugid` FROM `ht_video_category_auth` WHERE `category_id` = 71  [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `ht_video_shoucang` WHERE `user_id` = 7176 AND `vid` = 420 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.287017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.287017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T17:41:00+08:00 ] 127.0.0.1 /User/myAccount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0070s ]
+SQL: SELECT `currency`,`brokerage` FROM `ht_user` WHERE `id` = 7176 LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T17:41:04+08:00 ] 127.0.0.1 /User/myAddressList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_user_address` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_area` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user_address` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ht_user_address` WHERE `user_id` = 7176 ORDER BY addtime DESC LIMIT 0,10   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 397 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 3384 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 232 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 2314 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 171 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 1740 LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-17T17:41:06+08:00 ] 127.0.0.1 /User/myAddress.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ht_area` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_address` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_area` WHERE `pid` = 1 ORDER BY id ASC  [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 198 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 207 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 210 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 210 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 213 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 213 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 221 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 227 行.
+NOTIC: [8] Undefined variable: info E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 233 行.
+NOTIC: [8] Undefined variable: id E:\wwwroot\www\kf.hitui.com\App\Runtime\Cache\Member\bc220ab37234153724a5cd9c735f2214.php 第 237 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-17T17:41:25+08:00 ] 127.0.0.1 /User/getSelectAddress.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_area` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name` FROM `ht_area` WHERE `pid` = 5  [ RunTime:0.0080s ]
+
+[ 2017-06-17T17:41:27+08:00 ] 127.0.0.1 /User/getSelectAddress.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `ht_area` WHERE `pid` = 64  [ RunTime:0.0080s ]
+
+[ 2017-06-17T17:41:44+08:00 ] 127.0.0.1 /User/myAddress.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_area` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_address` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user_address` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0070s ]
+SQL: INSERT INTO `ht_user_address` (`name`,`province`,`city`,`county`,`address`,`postalcode`,`mobile`,`user_id`,`addtime`) VALUES ('老板','5','64','617','广州市','0','15411112222','7176','1497692504') [ RunTime:0.0080s ]
+
+[ 2017-06-17T17:41:46+08:00 ] 127.0.0.1 /User/myAddressList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\wwwroot\www\kf.hitui.com\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ht_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_link` WHERE `is_show` = 1 ORDER BY sort desc  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_user_address` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ht_area` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_user_address` WHERE `user_id` = 7176 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ht_user_address` WHERE `user_id` = 7176 ORDER BY addtime DESC LIMIT 0,10   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 64 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 617 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 397 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 3384 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 232 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 2314 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 171 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `ht_area` WHERE `id` = 1740 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

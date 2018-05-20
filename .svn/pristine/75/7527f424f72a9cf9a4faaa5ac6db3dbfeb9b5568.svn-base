@@ -1,0 +1,176 @@
+/**
+ * Created by lfm81 on 2017/6/20.
+ */
+
+/**
+ * 发表笔记
+ */
+function writeNote(){
+    var content = $('#noteContent').val();  //发表的内容
+
+    if(isEmpty(content) === false){
+        showMsg('发表内容不能为空！');return;
+    }
+
+    var playtime = player.j2s_getCurrentTime();
+
+    if (!playtime){
+        showMsg('请播放视频后再发表笔记！');return;
+    }
+
+    $.ajax({
+        type: "post",
+        url: _writeNoteUrl,
+        data: {"vid": _vid, "content":content, "playtime":playtime},
+        dataType: "json",
+        success: function (json) {
+            if (json.status == 1) {
+                showMsg('发表成功！');
+                var html = '';
+
+                html += '<div class="noteItem" id="'+json.data.note_id+'" data-noteid="'+json.data.note_id+'">';
+                html += '<a href="javascript;" class="noteA">';
+                html += '<p class="pp">'+json.data.content+'</p>';
+                html += '</a>';
+
+                html += '<div class="anArea mt0 bgColor ">';
+                html += '<form action="" method="post">';
+                html += '<textarea placeholder="" ></textarea>';
+                html += '<div class="bot mt20 mr42 mb25">';
+                html += '<a href="javascript:;" class="cancleBtn subBtn1" onclick="cancleBtn($(this),\'active\')">取消</a>';
+                html += '<a href="javascript:;" class="subBtn subBtn1" onclick="subBtn($(this),\'active\')">提交</a>';
+                html += '</div>';
+                html += '</form>';
+                html += '</div>';
+
+                html += '<div class="noteFoot fc clearfix mt4">';
+                html += '<span class="fl ">'+json.data.addtime+'</span>';
+                html += '<div class="fr operate">';
+                html += '<span class="revise" onclick="xiugai($(this),\'active\')"><i class="iconfont icon-bianxie"></i>修改</span>';
+                html += '<span class="delete" onclick="deletea($(this),\'delBoxAni\')"><i class="iconfont icon-del"></i>删除</span>';
+                html += '<span><i class="iconfont icon-bofang"></i><em>'+json.data.playtime+'</em></span>';
+                html += '</div>';
+                html += '</div>';
+                html += '</div>';
+
+                $('#noteMain .Hfrom').after(html);   //追加内容
+                $('#note_noData').hide();  //隐藏数据为空的提示
+                $('#noteContent').val(''); //清空输入内容
+            }else{
+                showMsg(json.msg);
+            }
+        }
+    })
+}
+
+
+/**
+ * 修改笔记
+ * @param  note_id  笔记id
+ * @param  content  修改后的内容
+ * @return bool
+ */
+function editNote(note_id, content) {
+    var status;
+    $.ajax({
+        type:'post',
+        url: _editNoteUrl,
+        data:{'note_id':note_id, 'content':content},
+        async:false,
+        dataType:'json',
+        success:function (json) {
+            console.log(json.status);
+            if (json.status == 1){
+                status = true;
+            }else{
+                status = false;
+            }
+
+        }
+    });
+    return status;
+}
+
+
+/**
+ * 删除笔记
+ * @param note_id  笔记id
+ * @return bool
+ */
+function deleteNote(note_id){
+    var status;
+    $.ajax({
+        type:'post',
+        url: _deleteNoteUrl,
+        data:{'note_id':note_id},
+        async:false,
+        dataType:'json',
+        success:function (json) {
+            if (json.status == 1){
+                status= true;
+            }else{
+                status= false;
+            }
+        }
+    });
+    return status;
+}
+
+
+// 笔记点击加载更多
+function notePage(thisObj) {
+    $.ajax({
+        type:'get',
+        url: _notePageUrl,
+        data:{'last_note_id':_last_note_id, 'vid':_vid},
+        dataType:'json',
+        success:function (json) {
+            if (json.status == 1){
+                var note_templates = $('#note_templates').clone();
+                var html = '';
+                $.each(json.data.noteList, function (k,val) {
+                    var note_templates2 = note_templates;
+
+                    note_templates2.css('display','block');
+                    note_templates2.attr('id',val.id);
+                    note_templates2.attr('data-noteid', val.id);
+                    note_templates2.find('.q_content').html(val.content);
+                    note_templates2.find('.q_playtime').html(val.playtime);
+                    note_templates2.find('.q_addtime').html(val.addtime);
+
+                    html += note_templates2.prop("outerHTML");
+
+                })
+
+                thisObj.before(html);
+                _last_note_id = json.data.limit_end_id;
+            }else{
+                thisObj.text(json.msg);
+            }
+        }
+    })
+}
+
+
+
+// 判断输入是否为空
+function isEmpty(content){
+    content = content.replace(/&nbsp;/ig, "");  //将所有空格替换为空字符串
+    content = $.trim(content);  //去除首尾空格
+    if(content.length > 0){
+        return true;
+    }else{
+        return true;
+    }
+}
+
+function showMsg($msg){
+    layer.open({
+        time: 2,
+        skin: "msg",
+        content:$msg
+    })
+}
+
+/*-------------------------------------   hehuihua    ----------------------------------------------*/
+

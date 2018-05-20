@@ -1,0 +1,197 @@
+<include file="Public:content-header" />
+
+<style>
+    @media screen and (max-width:1920px){
+
+
+    }
+    @media screen and (max-width:1680px){
+
+
+    }
+    @media screen and (max-width:1440px){
+          .newTd{
+              padding: 14px 0 !important;
+              padding-left: 1% !important;
+          }
+        .newTd a{
+            padding: 2px 10px !important;
+            float: left;
+            margin-right: 1%;
+            width: 18%;
+        }
+    }
+
+
+</style>
+
+<div class="wrapper" style="font-family: '微软雅黑';">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">用户列表</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/User/userList')}">
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户组：</b></label>
+                            <select class="form-control inlineSelect" name="group_id">
+                                <option value="0" >  全部 </option>
+                                <volist name="group" id="v">
+                                    <option value="{$v.id}" <if condition="$condition[group_id] == $v[id]">selected="selected"</if>>{$v.name}</option>
+                                </volist>
+                            </select>
+                        </div>&nbsp; &nbsp;&nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{$condition[username]}" >
+                        </div>
+
+                      <div class="form-group inlineForm display-inline">
+                            <label><b>手机号码：</b></label>
+                            <input type="text" class="form-control" name="mobile" value="{$condition[mobile]}">
+                      </div>&nbsp; &nbsp;
+
+
+                         <div class="form-group inlineForm display-inline">
+                            <label><b>时间类型：</b></label>
+                            <input name="time_type" type="radio" value="0" {$condition['time_type']==0?'checked':''} >全部
+                            <input name="time_type" type="radio" value="1" {$condition['time_type']==1?'checked':''} >即将过期
+                            <input name="time_type" type="radio" value="2" {$condition['time_type']==2?'checked':''} >已经过期
+                        </div>&nbsp; &nbsp;
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">提交查询</button>
+                        <div class="pull-right" style="display:block;margin:15px 0px 10px 0px;">
+                        <a class="btn btn-info" href="{:U(MODULE_NAME.'/User/userAdd')}" >
+                            <i class="fa fa-plus"></i> 添加新会员
+                        </a>
+                    </div>
+
+                    </form>
+                    <h6>会员统计：总计[<font color="red">{$count}</font>]名会员</h6>
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>分组</td>
+                                <td>会员</td>
+                                <td>手机</td>
+                                <td>注册</td>
+                                <td>邀请人</td>
+                                <!--<td>开通时间</td>-->
+                                <td>过期时间</td>
+                                <td>学习币</td>
+                                <td>总佣金(元)</td>
+                                <td>积分</td>
+                                <td>状态</td>
+                                <td>操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <php>$curr_page = I('get.p',1,'intval');</php>
+                             <volist name="info" id="v">
+                                    <tr>
+                                        <td>{$v.user_id}</td>
+                                        <td><img style="display: inline-block;border-radius: 3px;" src="__MEMBER__/images/user_group/{$v.user_group_id}.png" alt="会员组">{$v['group_name']}</td>
+                                        <td><img style="display: inline-block;border-radius: 3px;" src="__MEMBER__/images/user_group/{$v.user_group_id}.png" alt="会员名">{$v.username}</td>
+                                        <td>{$v.mobile}</td>
+                                        <td title="{:date('Y-m-d H:i',$v['reg_time'])}">{:date('Y-m-d',$v['reg_time'])}</td>
+                                        <td>{$v.y_username}</td>
+                                        <!--<td>{:date('Y-m-d',$v['start_time'])}</td>-->
+                                        <td>{:date('Y-m-d',$v['end_time'])}{$v['end_time'] < time()?'<font color="#FF0000">已过期</font>':''}</td>
+                                        <td>{$v.currency}</td>
+                                        <td>{$v.brokerage}</td>
+                                        <td>{$v.integral}</td>
+                                        <td>
+                                            <if condition="$v['is_hack']==1">
+                                                <font style="border-radius: 5px;padding:2px 3px;">锁定</font>
+                                            <else/>
+                                                <font style="border-radius: 4px;padding:2px 3px;">正常</font>
+                                            </if>
+                                        </td>
+                                        <td style="border-bottom:1px dotted #EDEDED" class="newTd">
+
+                                            <a class="btn btn-sm btn-primary" href="{:U(MODULE_NAME.'/User/userEdit',array('user_id'=>$v['user_id'],'page'=>$curr_page))}" title="编辑">
+                                               <!--<i class="fa fa-pencil"></i>-->
+                                                编辑
+                                            </a>
+                                            <a class="btn btn-sm btn-danger" href="{:U(MODULE_NAME.'/User/userHackAdd',array('user_id'=>$v['user_id'],'page'=>$curr_page))}" title="拉黑">
+                                               <!--<i class="fa fa-hacker-news"></i>-->
+                                                拉黑
+                                            </a>
+                                            <a class="btn btn-sm btn-danger" onclick="Delete(this,{$v['user_id']},{$curr_page})" href="javascript:;" title="删除">
+                                               <!--<i class="fa fa-times"></i>-->
+                                                删除
+                                            </a>
+                                             <a class="btn btn-sm btn-info"  target="_black" href="http://xue.quan5fen.com/?m=front_new&c=index&a=login_admin&username={$v['username']}&password={$v['password']}&encrypt={$v['encrypt']}"  title="登录平台">
+                                               <!--<i class="fa fa-laptop"></i>-->
+                                                 登录
+                                            </a>
+                                              <a class="btn btn-sm btn-success" href="{:U(MODULE_NAME.'/User/send_message',array('user_id'=>$v['user_id']))}"  title="测试模板消息">
+                                               <!--<i class="fa fa-send"></i>-->
+                                                  消息
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                             </volist>
+
+                            <if condition="!$info">
+                                <tr>
+                                    <td colspan="20" align="center"> <i class="fa fa-exclamation-circle" aria-hidden="true" style="font-size: 18px;color: red;">  暂无数据!</i></td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages GT 1">
+                                <tr>
+                                    <td colspan="12" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+    //删除功能
+    function Delete(obj,id,page){
+
+        var url = "{:U(MODULE_NAME.'/User/userDelete','',true,true)}"+'?user_id='+id+'&p='+page;
+        //console.log(url);return;
+        //询问框
+        var index = layer.confirm('确定要删除该会员吗？该会员下的所有信息也会被删除，不可恢复！请慎重选择', {
+            shade:0.6,
+            icon:2,
+            offset:['200px'],
+            skin: 'layui-layer-molv', //样式类名
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            layer.close(index);
+            location.href = url;
+        }, function(){
+            layer.close(index);
+        });
+    }
+
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />

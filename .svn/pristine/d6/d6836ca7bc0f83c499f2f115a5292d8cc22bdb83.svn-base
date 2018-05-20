@@ -1,0 +1,128 @@
+<!--[if lt IE 9]>
+<div class="chromeframe">您使用的IE浏览器版本过低，本站不再支持，<a href="http://windows.microsoft.com/">升级您的IE浏览器</a>，或使用<a
+        href="http://www.google.cn/chrome/">Google Chrome</a>、<a href="http://www.firefox.com.cn/download/">Firefox</a>等高级浏览器，将会得到更好的体验！
+</div>
+<![endif]-->
+
+<header class="toolBar clearfix" id="toolBar">
+    <div class="in w1100 m0a">
+        <div class="inL fl">
+            <div class="sp app">
+                <a href="javascript:;">
+                    <i class="iconfont icon-shouji"></i><span>手机APP</span>
+                </a>
+            </div>
+            <div class="sp wx">
+                <a href="javascript:;">
+                    <i class="iconfont icon-weixin_sel "></i>
+                    <span>微信公众号</span>
+                </a>
+
+                <div class="ewmPop">
+                    <i></i>
+                    <div class="con">
+                        <a href="javascript:;">
+                            <img src="__MEMBER__/images/ewmWx.png"  alt="嗨推微信公众号">
+                        </a>
+                        <p>[微信公众号]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inR fr">
+            <div class="sp tel">
+                <a href="javascript:;">
+                    <i class="iconfont icon-telphone"></i>
+                    <span>联系电话&nbsp;&nbsp;020-36700550</span>
+                </a>
+            </div>
+            <div class="sp chat">
+                <a href="{:U('Content/contactUs')}">
+                    <span>联系我们</span>
+                </a>
+            </div>
+            <div class="sp kf">
+                <a href="{:U('Content/problemList')}">
+                    <span>常见问题</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<section class="header clearfix" id="header">
+    <div class="in w1100 m0a ">
+        <div class="inL fl">
+            <div class="logo">
+                <h1>
+                    <a href="{:U('Index/index')}" title="嗨推学院"></a>
+                </h1>
+            </div>
+        </div>
+        <div class="inR fr">
+            <nav class="nav fl">
+                <ul>
+                    <li><a href="{:session(C('USER_AUTH_UID'))?U('Study/index'):U('Index/index')}" class="ti">首页</a><span></span></li>
+                    <li><a href="{:U('Index/videoList')}" class="ti">热门视频</a><span></span></li>
+                    <li class="down">
+                        <a href="{:U('Index/course')}" class="ti">课程介绍</a><span></span>
+                         <div class="Hlist">
+                             <ul>
+                                 <li><a href="#">推广精英</a></li>
+                                 <li><a href="#">微信引流与变现</a></li>
+                                 <li><a href="#">社交电商</a></li>
+                                 <li><a href="#">淘宝客项目</a></li>
+                                 <li><a href="#">试听会员</a></li>
+                             </ul>
+                         </div>
+                    </li>
+                    <li><a href="{:U('Study/newQuestion')}" class="ti">学习助手</a><span></span></li>
+                    <li class="mes">
+                    <a href="{:U('User/myNews')}" class="ti">消息</a><span></span>
+                    <php>  $getUserMessageCount = getUserMessageCount(session(C('USER_AUTH_UID'))); </php>
+                        <if condition="$getUserMessageCount"><i class="mesNum">{$getUserMessageCount}</i></if>
+                    
+                    </li>
+                </ul>
+            </nav>
+            <div class="rCon fr">
+                <div class="sel fl">
+                    <form id="key_word_form" action="{:U('Index/videoList')}">
+                        <input type="text" name="key_word" value="{:cookie('key_word')}" placeholder="视频名称">
+                        <a onclick="$('#key_word_form').submit();" class="ico iconfont icon-sousuo"></a>
+                    </form>
+
+                </div>
+
+                <if condition="session(C('USER_AUTH_UID'))">
+                    <!--已登录 start-->
+                    <div class="myTx fl">
+                        <div class="tx">
+                            <a href="javascript:;"><img src="__MEMBER__/images/logo/{:session(C('USER_FACE'))}.png" alt="个人头像"></a>
+                        </div>
+
+                        <div class="myList">
+                            <i></i>
+                            <ul>
+                                <li><a href="{:U('User/myAccount')}">个人中心</a></li>
+                                <li><a href="{:U('Safe/securityList')}">安全设置</a></li>
+                                <li><a href="{:U('User/myInfo')}">用户信息</a></li>
+                                <li><a href="{:U('Login/loginOut')}">退出</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                <!--已登录 end-->
+                <else/>
+                    <!--未登录 start-->
+                    <div class="loginBtn fl">
+                        <a href="{:U('Login/index')}">登录</a>
+                    </div>
+                    <!--未登录 end-->
+                </if>
+
+            </div>
+        </div>
+    </div>
+</section>

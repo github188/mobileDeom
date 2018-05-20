@@ -1,0 +1,85 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myCourse-->
+<section class="myCom myCourse" id="myCourse">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">报名课程</a>
+                </div>
+            </div>
+            <div class="com accCom">
+                <ol>
+                    <li class="ti01"><span>账号类型</span></li>
+                    <li class="ti02"><span>开通时间</span></li>
+                    <li class="ti03"><span>过期时间</span></li>
+                    <li class="ti04"><span></span></li>
+                </ol>
+                <ul>
+                    <volist name="data" key="k" id="v">
+                        <li>
+                            <div class="item">
+                                <span class="ti01"><img style="display: inline-block;border-radius: 3px;" src="__MEMBER__/images/user_group/{$v['group_id']}.png" width="18px" height="18px" alt="图片"/>&nbsp;&nbsp;{$v['group_name']}</span>
+                                <span class="ti02">{:date('Y-m-d',$v['start_time'])}</span>
+                                <span class="ti03">{:date('Y-m-d',$v['end_time'])} <if condition="$v['end_time'] LT time()"><em style="color: red;">(已过期)</em></if></span>
+                                <span class="ti04"><s class="jt"></s></span>
+                            </div>
+                            <div class="xlItem">
+                                <div class="itBot">
+                                    <div class="bb">
+                                        <span class="ti01"><a href="javascript:;"><img src="__MEMBER__/images/ico-shipin.png">新人学习知道</a> </span>
+                                        <span class="ti05">
+                                            <div class="progess">
+                                                <div class="maxPro">
+                                                    <p class="curPro" style="width: 50%;"></p>
+                                                </div>
+                                                <em class="proNum">50%</em>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="bb">
+                                        <span class="ti01"><a href="javascript:;"><img src="__MEMBER__/images/ico-shipin.png">新人学习知道</a></span>
+                                        <span class="ti05">
+                                            <div class="progess">
+                                                <div class="maxPro">
+                                                    <p class="curPro" style="width: 50%;"></p>
+                                                </div>
+                                                <em class="proNum">50%</em>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="bb">
+                                        <span class="ti01"><a href="javascript:;"><img src="__MEMBER__/images/ico-suo.png">新人学习知道</a></span>
+                                        <span class="ti05">
+                                            <div class="progess">
+                                                <div class="maxPro">
+                                                    <p class="curPro" style="width: 50%;"></p>
+                                                </div>
+                                                <em class="proNum">50%</em>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </volist>
+                </ul>
+                <if condition="$totalPages GT 1">
+                    <div class="pages">{$pages}</div>
+                </if>
+                <div class="myBtn upBtn">
+                    <button type="button"  class="bbtn"  onclick="location.href='{:U(\'Pay/courseChoose\')}';">升级账号</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>

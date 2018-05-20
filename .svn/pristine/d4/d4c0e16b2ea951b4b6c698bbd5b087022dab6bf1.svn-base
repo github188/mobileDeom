@@ -1,0 +1,31 @@
+    <!-- 左侧导航 -->
+    <aside class="main-sidebar">
+        <section class="sidebar"> 
+            <ul class="sidebar-menu"> 
+                <!-- 数据库读取导航菜单开始  style="overflow-y:auto;"-->
+                <foreach name="left" item="v" key="k" >
+                    <li class="treeview">
+                        <a href="javascript:void(0)">
+                            <i class="fa {$v.attr}"></i> 
+                            <span>{$v.title}</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <if condition='$v["menu"]'>
+                                <volist name="v.menu" id="var">
+                                    <php> $last = count($var['left']); parse_str(str_replace(',',htmlspecialchars_decode('&amp;'),$var['url']),$url);</php>
+                                    <li>
+                                        <a href="<if condition='$last eq 3'>{:U($var['left'][1]['name'].'/'.$var['left'][2]['name'],$url)}<else/>{:U($var['left'][0]['name'].'/'.$var['left'][1]['name'].'/index',$url)}</if>" target='rightContent'>
+                                            <i class="fa fa-circle-o"></i>{$var.title}
+                                        </a>
+                                    </li>
+                                </volist>
+                            <else/>
+                                <li><a href="#">暂没有菜单！</a></li>
+                            </if>
+                        </ul>
+                    </li>
+                </foreach>     
+            </ul>
+        </section>
+    </aside>

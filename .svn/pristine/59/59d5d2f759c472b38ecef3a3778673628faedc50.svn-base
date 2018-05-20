@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+html,body{
+    height:100%;
+}
+body{
+    font-size: 14px;overflow: hidden;
+    font-family: "microsoft yahei";
+}
+div {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color:#414141;
+    font-size: 12px;
+    text-align: center;
+}
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    text-align: right;
+    color:#999999; /*修改webkit中input的planceholder样式*/
+}
+input:focus::-webkit-input-placeholder {
+    text-align: right;
+    padding-left: 14px;
+    color:#999; /*修改webkit中focus状态下input的planceholder样式*/
+}
+
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.partnerBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+}
+.partnerBox .par-top{
+    width: 100%;
+    margin: auto;
+}
+.partnerBox .par-top img {
+    display: block;
+}
+.partnerBox .par-center {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: #F2F2F2;
+}
+.weui-cells,.par-center .weui-cells__title,.weui-cell{
+    padding: 0;margin: 0;
+}
+.partnerBox .par-form{
+    width: 100%;
+}
+.partnerBox .par-form .weui-cells{
+}
+
+.partnerBox .par-form .weui-cell {
+    padding: 12px 20px;
+}
+.par-form .weui-cell .weui-label {
+    width: 110px;
+    font-size: 14px;
+}
+#name {
+    color: #333;
+    font-size:15px ;
+}
+.par-form .weui-cell .weui-label span{
+    color: #999;
+}
+.par-form .weui-cell .weui-label span.marking{
+    color: #EF4A46;
+}
+.par-form .weui-cell .weui-cell__bd .weui-cell_primary .weui-input{
+    text-align: right;
+}
+.par-form .weui-cell .weui-flex .weui-cell__ft {
+    right: 0;
+}
+.par-form .weui-cell img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+.weui-cell_primary{
+    text-align: right;
+    font-size: 14px;
+    color: #666666;
+}
+
+.partnerBox .par-bot{
+    width: 100%;
+    background: #F6F6F6;
+    padding:20px;
+    margin:auto;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.partnerBox .par-bot a {
+    font-size: 16px;
+}
+.weui-btn:after{
+    border: none;
+}
+.bg-org {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background:#ff4479;
+}
+/**********************订单提交*****************************/
+.order_title{font-size: 15px;color: #76bdff;}
+.order-tips-div{width: 100%;padding: 20px 20px 0 20px;
+    background: #F6F6F6; font-size: 13px;color: #999999;line-height: 22px;}
+
+/**********************查优惠券*****************************/
+.coupon-title{display: flex;display: -webkit-flex;}
+.coupon-t-left{-webkit-flex: 1;flex: 1;text-align: left;padding-left: 20px;color: #666;}
+.coupon-t-left i{font-size: 25px;color: #ffcc00;vertical-align: middle;margin-right: 5px;}
+.coupon-t-right{-webkit-flex: 1;flex: 1;text-align: right;padding-right: 20px;color: #FFCC00;}
+.coupon-t-right span{border: 1px solid #FFCC00;padding:2px 8px;border-radius: 5px;}
+.coupon-div-flex{display: flex;display: -webkit-flex;padding: 15px 15px 0 15px;}
+.coupon-flex1{flex: 3;-webkit-flex: 3;margin-right:10px ;}
+.coupon-flex1-div1 { width: 100%; height: 44px;line-height: 44px;border: 1px solid #FF3333;border-radius: 5px;}
+.coupon-flex2{flex: 1;-webkit-flex: 1;}
+.coupon-flex1-div2 a{ width: 100%; height: 44px;line-height: 44px;border-radius: 5px;background: #FF3333;font-size:14px;}
+.coupon-tips-div{margin: auto;margin-bottom: 27px; text-align: center;font-size: 13px;color: #999;}
+.use-tutorial{margin-top: 10px;width: 100%;height: 100%; background: #FFFFFF;}
+.u-t-steps { width: 100%;padding: 0 20px;}
+.u-t-s-title{width: 50%;height: 45px;display: flex;display:-webkit-flex;line-height: 45px;text-align: center;margin: auto;margin-top: 15px;margin-bottom: 5px;}
+.u-t-s-title h1{ font-size: 16px;color: #333333;flex: 1;}
+.u-t-s-title p{width: 45px;height: 2px;background: #ccc;margin: auto;}
+.u-t-s-desc {width:100% ;text-align: center;font-size: 12px;color: #666666;margin-bottom:10px ;}
+
+.coup-title-1{height: 45px;background: url(../images/coup-title-1.png) no-repeat center;background-size: 100%;}
+.coup-pic-1{height: 250px;background: url(../images/coup-pic-1.png) no-repeat center;background-size: 100%;}
+.coup-title-2{height: 45px;background: url(../images/coup-title-2.png) no-repeat center;background-size: 100%;}
+.coup-pic-2{height: 250px;background: url(../images/coup-pic-2.png) no-repeat center;background-size: 100%;}
+.coup-title-3{height: 45px;background: url(../images/coup-title-3.png) no-repeat center;background-size: 100%;}
+.coup-pic-3{height: 250px;background: url(../images/coup-pic-3.png) no-repeat center ;background-size: 100%;}
+
+/********** postOrderid.html*************/
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    text-align: left;
+    padding-left: 10px;
+    color:#DADADA; /*修改webkit中input的planceholder样式*/
+}
+input:focus::-webkit-input-placeholder {
+    font-size: 14px;
+    text-align: left;
+    padding-left: 10px;
+    color:rgba(255,255,255,0); /*修改webkit中focus状态下input的planceholder样式*/
+}
+.logs{text-align:center;margin-top:6px;}
+#goback{position:fixed;top:10px;left:10px;width:30px;height:30px;text-align:center;line-height:30px;color:#fff;background:rgba(0,0,0,0.6);border-radius:50%;}
+/*  kefu  */
+#kefu{position:fixed;top:10px;right:10px;color:#333;}
+#kefu span{display:block;width:35px;height:35px;line-height:35px;background:#fff;color:#d81e06;text-align:center;border:1px solid #d81e06;border-radius:50%;}
+#kefu i.iconfont{font-size:25px;}
+#kefu_mask{position:fixed;z-index:99999;background:rgba(0,0,0,0.7);width:100%;height:100%;display:none;top:0;left:0}
+#kefu_mask .qrcode_box{width:65%;background:#fff;border-radius:6px;margin:30% auto 0;padding:30px 0 20px;position:relative}
+#kefu_mask .qrcode_box img{display:block;width:70%;margin:auto}
+#kefu_mask .qrcode_box .text{font-size:12px;color:#999;text-align:center;line-height:18px;margin-top:10px;}
+#close_kefu{position:absolute;right:-10px;top:-10px;width:22px;height:22px;line-height:19px;border:1px solid #999;border-radius:50%;text-align:center;background:#fff;}
+#close_kefu i.iconfont{font-size:14px;}

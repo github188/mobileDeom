@@ -1,0 +1,40 @@
+<php>
+    $AllowSeeVideo = 0;    #统计首页开通的课程节数
+    $AllowSeeCategory = 0; #判断当前分类视频是否有权限播放
+</php>
+<div class="inL fl">
+    <volist name="video_category" key="k" id="v">
+        <div class="item item0{$k}">
+            <div class="hdTit">
+                <h3>{$v['name']}</h3>
+                <i></i>
+            </div>
+            <div class="list">
+                <ul>
+                    <if condition="$v['children']">
+                        <php>$children = $v['children'];</php>
+                        <volist name="children" key="kk" id="vv">
+                            <if condition="$vv['AllowSeeVideo'] GT 0">
+                                <php>$AllowSeeVideo += $vv['AllowSeeVideo'];</php>
+                            </if>
+                            <if condition="($vv['allow_play'] EQ 1 && $vv['id'] EQ $category_id)">
+                                <php>$AllowSeeCategory = 1;</php>
+                            </if>
+                            <li>
+                                <a href="{:U('Video/showList',array('category'=>$vv['id']))}">
+                                    <p><img src="__MEMBER__/images/{$vv['allow_play']==1?'icon_eye':'icon_suo'}.png">{$vv['name']}</p>
+                                    <div class="progess">
+                                        <div class="maxPro">
+                                            <p class="curPro"></p>
+                                        </div>
+                                        <span class="proNum">{$vv['progress']}%</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </volist>
+                    </if>
+                </ul>
+            </div>
+        </div>
+    </volist>
+</div>

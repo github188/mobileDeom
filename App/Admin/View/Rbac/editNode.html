@@ -1,0 +1,90 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+<div class="wrapper">
+
+	<!-- 主要内容开始 -->
+	<section class="content">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="box box-info">
+					<div class="box-header nav-tabs">
+						<h4 class="box-title">修改{$type}</h4>
+					</div>
+					<!-- 表格开始 -->
+					<div class="box-body">
+						<form action="{:U(MODULE_NAME.'/Rbac/editNode')}" method="post">  
+							<table id="example" class="table table-bordered">
+								<tbody>
+									<tr>
+										<td class="table-td-right"> {$type}名称：</td>
+										<td><input type="text" name="name" value="{$node.name}" class="form-control" size="30" data-rule="required"> &nbsp; (*英文区分大小写)</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> {$type}描述：</td>
+										<td><input type="text" name="title" value="{$node.title}" class="form-control" size="30" data-rule="required"> &nbsp; (*中文描述)</td>
+									</tr>
+									<if condition='$node["level"] eq 3'>
+										<tr>
+											<td class="table-td-right"> {$type}URL参数：</td>
+											<td><input type="text" name="url" value="{$node.url}" class="form-control" size="30">&nbsp; URL传参: 变量1=value1<b>,</b>变量2=value2 &nbsp;(多个以英文<b>,</b>逗号分隔)</td>
+										</tr>
+									</if>
+									<tr>
+										<td class="table-td-right">{$type}排序：</td>
+										<td><input type="text" name="sort" value="{$node.sort}" class="form-control" size="30" data-rule="required"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right">开启状态：</td>
+										<td>
+						                    开启 <input type="radio" name="status" id="iCheck1" value="1" <if condition='$node["status"]'>checked</if>> &nbsp;
+						                    关闭 <input type="radio" name="status" id="iCheck2" value="0" <if condition='!$node["status"]'>checked</if>>
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right">{$type}详细描述：</td>
+										<td>
+						                    <textarea name="remark"  rows="3" cols="32">{$node.remark}</textarea> *可留空
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right">所属导航栏：</td>
+										<td>
+											<select name="menu_id">
+												<option value="0">&nbsp;未分组</option>
+												<foreach name='menu' item='v'>
+													<option value="{$v['id']}" <if condition="$v['id'] EQ $node['menu_id']">selected="selected"</if>>{$v.title}&nbsp;</option>
+												</foreach>
+											</select>
+										</td>
+									</tr>
+									<tr height="60">
+										<td class="table-td-right">在导航栏显示：</td>
+										<td>
+						                    显示 <input type="radio" name="menu_status" id="iCheck1" value="1" <if condition='$node["menu_status"]'>checked</if>> &nbsp;
+						                    隐藏 <input type="radio" name="menu_status" id="iCheck2" value="0"  <if condition='!$node["menu_status"]'>checked</if>>
+										</td>
+									</tr>
+									<tr height="60">
+										<td colspan="2" align="center">
+											<input type="hidden" name='nid' value='{$node.id}'/>
+											<button class="btn btn-success" type="button" onclick="ajaxSubmit(this)"><i class="fa fa-check"></i> 确定修改</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>	
+					</div>
+					<!-- 表格结束 -->
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

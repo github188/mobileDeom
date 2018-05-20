@@ -1,0 +1,252 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>嗨推学院-知名网络推广实战培训平台</title>
+    <link rel="stylesheet" href="/Public/Mobile/css/base.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/common.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/style.css">
+</head>
+<body >
+
+
+<!--myEnterCourses-->
+<section class="myJoinVideo myJoinVideo02 myEnterCourses">
+    <div class="in">
+        <div class="withRate">
+            <div class="tp">
+                <img src="/Public/Mobile/images/rate02.png">
+            </div>
+            <div class="txt">
+                <div class="tx01 cur">
+                    <span>选择课程</span>
+                </div>
+                <div class="tx02 cur">
+                    <span>确认课程</span>
+                </div>
+                <div class="tx03">
+                    <span>报名成功</span>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="addList">
+            <ul>
+                <li>
+                    <a href="myAddress.html" class="item">
+                        <div class="txH">
+                            <span class="name fl">麦兜兜</span>
+                            <span class="phone fr">1231325556</span>
+                        </div>
+                        <div class="dz">
+                            <p>广东省深圳市滨河大道2018号沙浦头康乐中心哈哈型阿卡需要告诉有点长改为按哈哈哈哈哈</p>
+                        </div>
+                        <i class="arr"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        -->
+        <div class="vidInf">
+            <div class="hd">
+                <span class="ti0 ti01">课程类型</span>
+                <span class="ti0 ti02">单价</span>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <span class="ti0 ti01"><?php echo ($goods_type==0?$data['name']:$data['title']); ?></span>
+                            <span class="ti0 ti02"><em class="mm"><?php echo ($goods_type==0?$data['buy_money']:$data['buy_money']); ?></em>学习币</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tol">
+                    <p>小计：<em class="tolMM"><?php echo ($goods_type==0?$data['buy_money']:$data['buy_money']); ?></em>学习币</p>
+                </div>
+            </div>
+        </div>
+        <div class="recSettle">
+            <div class="con">
+                <form action="" method="post">
+                <div class="cheap">
+                    <div class="it">
+                        <div class="fl yy">
+                            <i class="js-switch"></i>
+                            <span style="width: auto;">使用佣金：</span>
+                            <span class="num" style="width: auto;">￥<?php echo ($user_account['brokerage']); ?></span>
+                            <p class="pp">
+                                <input type="text" placeholder="" name="brokerage" class="brokerage">
+                            </p>
+                        </div>
+                        <div class="fr rr">
+                            <span class="jxmm yongjin-money">-￥0</span>
+                        </div>
+                    </div>
+                    <div class="it">
+                        <div class="fl yy">
+                            <i class="js-switch"></i>
+                            <span>使用优惠券：</span>
+                            <p class="pp">
+                                <input type="text" placeholder="" maxlength="10" name="ticket_code" class="ticket_code">
+                            </p>
+                        </div>
+                        <div class="fr rr">
+                            <span class="jxmm ticket-money">-￥0</span>
+                        </div>
+                    </div>
+                </div>
+                    <input type="hidden" name="return_order" class="return_order" value="0">
+                    <input type="hidden" name="group_id" value="<?php echo I('group_id',0,'intval');?>">
+                    <input type="hidden" name="vid" value="<?php echo I('vid',0,'intval');?>">
+                </form>
+                <div class="curMoney">
+                    <span class="mm fl">您目前学习币：<em class="num"><?php echo ($user_account['currency']); ?></em></span>
+                    <a href="<?php echo U('Pay/payMoney');?>" class="fr aRec">充值&gt;</a>
+                </div>
+            </div>
+        </div>
+        <div class="txtExp">
+            <h6 class="tit">报名课程中遇到问题：</h6>
+            <p>* 报名课程成功后，系统将自动为您开通该学习课程的权限</p>
+            <p>* 如您在报名课程后遇到问题，请<a href="javascript:;" class="goLink">联系我们&gt;&gt;</a></p>
+            <p>* 最终解释权归嗨推学院所有</p>
+        </div>
+    </div>
+</section>
+
+<!--countBot-->
+<section class="countBot">
+    <div class="in">
+        <div class="cou">
+            <span class="sp1">已选:x<em class="num">1</em>个</span>
+            <span class="sp2">合计:<em class="allCost"><?php echo ($goods_type==0?$data['buy_money']:$data['buy_money']); ?></em>学习币</span>
+        </div>
+        <div class="btn">
+            <a href="javascript:;" class="submit-btn" allow-buy="1">确认报名</a>
+        </div>
+    </div>
+</section>
+
+
+<script src="/Public/Mobile/js/jquery-1.11.3.min.js"></script>
+<script src="/Public/Mobile/js/zepto_plus.js"></script>
+<script src="/Public/Mobile/js/base.js"></script>
+<script src="/Public/Mobile/js/style.js"></script>
+
+<script>
+    var Url = "<?php echo U('Login/loginOut');?>";//退出登陆url
+    //执行退出登陆操作
+    function loginOut(){
+        //底部对话框
+        var index = layer.open({
+            content: '确定要退出当前登陆吗？'
+            ,btn: ['确定', '取消']
+            ,skin: 'footer'
+            ,yes: function(index){
+                layer.close(index);
+                $.post(Url,{},function(data){
+                    if(data.status==0){
+                        return false;
+                    }
+                    if(data.url!=''){
+                        location.href = data.url;
+                    }
+                },'json');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
+<script src="/Public/Mobile/pugins/layer-mobile-2.0/layer.js"></script>
+<script>
+    //var reg = /^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$/ ;
+
+    var FormUrl      = "<?php echo U('Pay/courseConfirm');?>";
+
+    var kecheng = "<?php echo ($goods_type==0?$data['name']:$data['title']); ?>";
+    var kecheng = '<em style="color: #ff6100;">'+kecheng+'</em>';
+
+    //检查佣金是否可用
+    $('.brokerage').on('keyup',function(){
+        checkedOrder();
+    });
+
+    //检查优惠券
+    $('.ticket_code').on('paste',function(){
+        var this_ = $(this);
+        setTimeout(function() {
+            if(this_.val().length >= 10){
+                checkedOrder();
+            }
+        }, 10);
+    });
+    //检查优惠券
+    $('.ticket_code').on('keyup',function(){
+
+        var this_ = $(this);
+        if(this_.val().length >= 10){
+            checkedOrder(this_);
+        }
+    });
+
+
+    //检查订单
+    function checkedOrder(obj){
+        $('.return_order').val(1);//返回订单信息，实时显示页面价格
+        $.post(FormUrl,$('form').serialize(),function(data){
+            $('.allCost').text(data.info.pay_currency);
+            $('.yongjin-money').text(data.info.pay_brokerage);
+            $('.ticket-money').text(data.info.ticket_money);
+            if(data.status==0){
+                layer.open({content: data.info,skin: 'msg',time: 2});
+                $('.submit-btn').attr('allow-buy','0');
+                return false;
+            }
+            $('.submit-btn').attr('allow-buy','1');
+        },'json');
+    }
+
+
+
+
+    //结算按钮
+    $('.submit-btn').on('click',function(){
+        var this_ = $(this);
+        checkedOrder();
+        setTimeout(function(){
+            if(this_.attr('allow-buy') != 1) return false;
+            var countMoney = $('.allCost').text();
+            var countMoney = '<em style="color: #ff6100;">'+countMoney+'</em>';
+
+            //询问框
+            var index = layer.open({
+                className: 'popuo-confirm', //这样你就可以在css里面控制该弹层的风格了
+                content: '从账户中扣除'+countMoney+'学习币购买《'+kecheng+'》课程,确认支付吗？'
+                ,btn: ['取消', '确定']
+                ,no: function(index){
+                    layer.close(index);
+                    $('.return_order').val(0);//生成并支付订单，不返回订单信息
+                    $.post(FormUrl,$('form').serialize(),function(data){
+                        layer.open({content: data.info,skin: 'msg',time: 2});
+                        if(data.url != ''){
+                            setTimeout(function(){
+                                location.href = data.url;
+                            },1500);
+                        }
+                    },'json');
+                }
+            });
+        },100);
+    });
+</script>

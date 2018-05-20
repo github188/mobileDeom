@@ -1,0 +1,101 @@
+<include file="Public:header"/>
+<include file="Public:topMenu"/>
+<style>
+    .layui-layer-demo{
+        left: 0;
+        width: calc(100%);
+    }
+</style>
+<!--student-->
+<section class="student">
+    <div class="in">
+        <div class="myBan">
+            <a href="javascript:;" class="tp">
+                <img src="__MOBILE__/images/banTp.jpg" alt="">
+            </a>
+        </div>
+        <div class="tab">
+            <ol>
+                <li class="li01 cur"><a href="javascript:;">学员介绍</a></li>
+                <li class="li02"><a href="javascript:;">学员视频</a></li>
+            </ol>
+        </div>
+        <div class="stuCom">
+
+            <!--学员介绍-->
+            <ul class="list list01">
+                <volist name="studentRemark" id="val">
+                    <li class="js-text">
+                        <div class="item">
+                            <div class="tp">
+                                <img src="{$val.cover_img}" alt="">
+                            </div>
+                            <div class="txt">
+                                <div class="tName">{$val.title}</div>
+                                <div class="wz js-wz">{$val.content}</div>
+                            </div>
+                        </div>
+                    </li>
+                </volist>
+            </ul>
+
+
+
+            <!--学员视频-->
+            <ul class="list list02">
+                <volist name="videoStudent" id="val">
+                <li>
+                    <div class="item">
+                        <div data-code="{$val.video_code}" data-vid="{$val.id}" class="tp play_video">
+                            <a href="javascript:;">
+                                <i class="ico-play"></i>
+                                <img src="{$val.cover_img}" alt="">
+                            </a>
+                        </div>
+                        <div class="txt">
+                            <p class="ti">{$val.title}</p>
+                            <span class="more js-thgMore">更多<i class="ico"></i></span>
+                        </div>
+                    </div>
+                    <div class="txBd">
+                        <p class="ti">{$val.remark}</p>
+                    </div>
+                </li>
+                </volist>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<include file="Public:footer"/>
+<script src="__MOBILE__/js/menuSilder.js"></script>
+<script src="__MOBILE__/js/theMenu.js"></script>
+<script src="__ADMIN__/layer/layer.js"></script>
+<script>
+
+    $('.play_video').on('click', function () {
+        var vid = $(this).attr('data-vid');
+        var code = $(this).attr('data-code');
+        var w = document.body.clientWidth;
+        var url = "{:U('Student/openVideoPlay','',false)}" + "/vid/"+vid+"/code/"+code+"/w/"+w;
+
+        var h = document.body.clientHeight;
+        h = h/3;
+
+        //播放视频弹窗
+        layer.open({
+            type: 2,
+            title:'学员公开视频',
+            skin: 'layui-layer-demo', //样式类名
+            scrollbar: false,
+            closeBtn: 1, //不显示关闭按钮
+            anim: 2,
+            area: [w, h],
+            shadeClose: true, //开启遮罩关闭
+            shade: 0.5, //遮罩
+            content: url
+        });
+    });
+</script>
+</body>
+</html>

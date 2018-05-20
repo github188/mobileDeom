@@ -1,0 +1,132 @@
+<include file="Public:content-header" />
+<style>
+    .status-wait , .status-fail , .status-success{
+        font-style: normal;padding: 3px;border-radius: 2px;color: #fff;font-size: 12px;
+    }
+    .status-wait , .status-fail{background-color: orangered;}
+    .status-success{background-color: #00a65a;}
+</style>
+<div class="wrapper" style="font-family: '微软雅黑';">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">财务管理</a></li>
+            <li class="active">充值订单管理</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+
+                    <h4 align="center"><i class="fa fa-list-ul"></i> 充值订单管理</h4>
+
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="">
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>支付状态：</b></label>
+                            <input name="status" type="radio" value="2" {$status==2?'checked':''} >已支付
+                            <input name="status" type="radio" value="3" {$status==0?'checked':''} >待支付
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{:cookie('username')}">
+                        </div>&nbsp; &nbsp;
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>平台订单：</b></label>
+                            <input type="text" class="form-control" name="trade_no" value="{:cookie('trade_no')}">
+                        </div>&nbsp; &nbsp;
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查找</button>
+
+                    </form>
+                    <table id="example" class="table table-bordered table-hover" >
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>用户名</td>
+                                <td>付款金额</td>
+                                <td>学习币</td>
+                                <td>支付类型</td>
+                                <td>平台订单</td>
+                                <td>交易订单</td>
+                                <td>状态</td>
+                                <td>备注</td>
+                                <td>支付时间</td>
+                                <if condition="$status LT 2">
+                                <td>订单生成</td>
+                                <td>操作</td>
+                                </if>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <php>
+                                $curr_page = I('get.p',1,'intval');
+                            </php>
+                             <volist name="data" id="v" key="k" >
+                                 <php>
+                                     $userGroup = getUserGroup($v['user_id']);
+                                 </php>
+                                    <tr>
+                                        <td>{$v['id']}</td>
+                                        <td><img style="display: inline-block;border-radius: 3px;" src="/Public/Member/images/user_group/{$userGroup['group_id']}.png" width="18px" height="18px" alt="图片">{:getUserInfo($v['user_id'],'username')}</td>
+                                        <td>{$v['buyer_pay_money']}</td>
+                                        <td>{$v['currency']}</td>
+                                        <td><if condition="$v['pay_type'] EQ 1">支付宝<elseif condition="$v['pay_type'] EQ 2"/>微信支付<else/>人工充值</if></td>
+                                        <td>{$v['trade_no']}</td>
+                                        <td>{$v['order_no']?$v['order_no']:'---'}</td>
+                                        <td>
+                                            <if condition="$v['status'] eq 0">
+                                                <em class="status-wait">待支付</em>
+                                            <elseif condition="$v['status'] eq 1"/>
+                                                <em class="status-fail">失败</em>
+                                            <elseif condition="$v['status'] eq 2"/>
+                                                <em class="status-success">已支付</em>
+                                            </if>
+                                        </td>
+                                        <td>{:htmlspecialchars_decode($v['remark'])}</td>
+                                        <td>{$v['pay_time']?date('Y/m/d H:i:s',$v['pay_time']):'---'}</td>
+                                        <if condition="$status LT 2">
+                                            <td>{:date('Y/m/d H:i:s',$v['add_time'])}</td>
+                                            <td>
+                                                <a class="btn btn-xs btn-danger" href="javascript:;" onclick="deleteOne(this,{$v['id']},'{:U(MODULE_NAME.\'/Money/rechargeOrderDelete\',array(\'p\'=>$curr_page))}');" title="删除">
+                                                    <i class="fa fa-times"></i>
+                                                    删除
+                                                </a>
+                                            </td>
+                                        </if>
+                                    </tr>
+                             </volist>
+
+                            <if condition="!$data">
+                                <tr>
+                                    <td colspan="20" align="center"> <i class="fa fa-exclamation-circle" aria-hidden="true" style="font-size: 18px;color: red;">  暂无数据!</i></td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="9" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

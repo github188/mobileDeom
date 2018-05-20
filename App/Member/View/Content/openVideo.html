@@ -1,0 +1,64 @@
+<include file="Public:headerAfter"/>
+
+<!--indexCom-->
+<section class="indexCom mt32" id="indexCom">
+    <div class="in w1100 m0a bodyColor hNotice">
+        <!--左侧共用菜单-->
+        <include file="leftMenu"/>
+        <div class="noticeRigth fr">
+            <div class="p">
+                <span class="fonts18 textColor">学员视频</span>
+            </div>
+            <div class="stuVideo">
+                <div class="vidList">
+                    <ul>
+                        <volist name="videoStudent" id="val">
+                            <li>
+                                <div data-code="{$val.video_code}" data-vid="{$val.id}" class="item" >
+                                    <div class="tp">
+                                        <a href="javascript:;">
+                                            <i class="ico"></i>
+                                            <img src="{$val.cover_img}" alt="">
+                                            <div class="tx">
+                                                <p>{$val.remark}</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="txt">
+                                        <a href="javascript:;" class="ti">{$val.title}</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<script src="__ADMIN__/layer/layer.js"></script>
+<script>
+
+       $('.item').on('click', function () {
+           var vid = $(this).attr('data-vid');
+           var code = $(this).attr('data-code');
+           var url = "{:U('Content/openVideoPlay','',false)}" + "/vid/"+vid+"/code/"+code;
+        //播放视频弹窗
+        layer.open({
+            type: 2,
+            title:'学员公开视频',
+            //skin: 'layui-layer-demo', //样式类名
+            scrollbar: false,
+            closeBtn: 1, //不显示关闭按钮
+            anim: 2,
+            area: ['800px', '500px'],
+            shadeClose: true, //开启遮罩关闭
+            shade: 0.5, //遮罩
+            content: url
+        });
+    });
+</script>
+

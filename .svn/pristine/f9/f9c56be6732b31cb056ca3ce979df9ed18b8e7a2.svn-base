@@ -1,0 +1,127 @@
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">后台用户</a></li>
+            <li class="active">节点管理</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_{$gid}" class="tab-pane active">
+                    <div class="pull-right" style="display:block;">
+                        <a  style="display:block;" class="btn btn-info" href="{:U(MODULE_NAME.'/Rbac/addNode')}" >
+                            <i class="fa fa-plus"></i> 添加应用模块
+                        </a>
+                    </div>
+                    <h4 align="center"><i class="fa fa-list-ul"></i> 后台节点权限管理</h4>
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+			                	<th>ID</th>
+								<th>应用名称</th>
+								<th>应用描述</th>
+								<th>状态</th>
+								<th>排序</th>
+								<th>所属导航</th>
+								<th>显示</th>
+								<th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+							<volist id="v" name="node">
+								<tr>
+									<td >{$v['id']}</td>
+									<td><span style="float:left;margin-left:10px;">{$v['name']}</span></td>
+									<td><span style="float:left;margin-left:10px;">{$v['title']}</span></td>
+									<td><if condition='!$v["status"]'>&nbsp;关闭<else/>开启</if></td>
+									<td>{$v['sort']}</td>
+									<td><if condition="!$v['menu']['title']">未分组<else/>{$v['menu']['title']}</if></td>
+									<td><if condition='!$v["menu_status"]'>隐藏<else/>显示 <i class="icon-ok"></i></if></td>
+									<td>
+										<span style="float:left;margin-left:5px;">
+											<a data-url="{:U(MODULE_NAME .'/Rbac/addNode',array('pid' => $v['id'],'level' =>2 ))}" href="#" data-toggle="dialog" data-width="80%" data-height="80%" data-title="<i class='fa fa-plus'></i> 添加控制器 - [所属上级：{$v['name']} ({$v['title']}) ]" class="btn btn-info"><i class="fa fa-plus"></i> 添加控制器</a>&nbsp;
+							                <a data-url="{:U(MODULE_NAME .'/Rbac/editNode',array('pid' => $v['id'],'level' =>1))}" href="#" data-toggle="dialog" data-width="80%" data-height="80%" data-title="<i class='fa fa-pencil'></i> 修改应用模块" class="btn btn-primary"><i class="fa fa-pencil"></i> 改</a>&nbsp;
+							                <a href="{:U(MODULE_NAME .'/Rbac/nodeDelete',array('pid' => $v['id']))}" class="btn btn-danger delete-msg"><i class="fa fa-times"></i> 删</a>
+						                </span>
+									</td>
+
+									<volist id="action" name="v.child">
+									<tr>
+										<td height="25">{$action['id']}</td>
+										<td>
+											<span style="float:left;margin-left:20px;">╚&nbsp; &nbsp;{$action['name']}</span>
+										</td>
+										<td>
+											<span style="float:left;margin-left:20px;">╚&nbsp; &nbsp;{$action['title']}</span>
+										</td>
+										<td><if condition='!$action["status"]'>&nbsp;关闭<else/>开启</if></td>
+										<td>{$action['sort']}</td>
+										<td><if condition="!$action['menu']['title']">未分组<else/>{$action['menu']['title']}</if></td>
+										<td><if condition='!$action["menu_status"]'>隐藏<else/>显示 <i class="icon-ok"></i></if></td>
+										<td>
+											<span style="float:left;margin-left:10px;">╚&nbsp;
+												<a data-url="{:U(MODULE_NAME .'/Rbac/addNode',array('pid' => $action['id'],'level' =>3 ))}" href="#" data-toggle="dialog" data-width="80%" data-height="80%" data-title="<i class='fa fa-plus'></i> 添加动作方法 - [所属上级：{$action['name']} ({$action['title']}) ]" class="btn btn-info"><i class="fa fa-plus"></i> 添加方法</a>&nbsp;
+								                <a data-url="{:U(MODULE_NAME .'/Rbac/editNode',array('pid' => $action['id'],'level' =>2))}" href="#" data-toggle="dialog" data-width="80%" data-height="80%" data-title="<i class='fa fa-pencil'></i> 修改控制器 - [所属上级：{$v['name']} ({$v['title']}) ]" class="btn btn-primary"><i class="fa fa-pencil"></i> 改</a>&nbsp;
+								                <a href="{:U(MODULE_NAME .'/Rbac/nodeDelete',array('pid' => $action['id']))}" class="btn btn-danger delete-msg"><i class="fa fa-times"></i> 删</a>
+							                </span>
+										</td>
+
+											<volist id="method" name="action.child">
+											<tr>
+												<td height="25">{$method['id']}</td>
+												<td >
+													<span style="float:left;margin-left:45px;">╠&nbsp; &nbsp;{$method['name']}</span>
+												</td>
+												<td>
+													<span style="float:left;margin-left:45px;">╠&nbsp; &nbsp;{$method['title']}</span>
+												</td>
+												<td><if condition='!$method["status"]'>&nbsp;关闭<else/>开启</if></td>
+												<td>{$method['sort']}</td>
+												<td><if condition="!$method['menu']['title']">未分组<else/>{$method['menu']['title']}</if></td>
+												<td><if condition='!$method["menu_status"]'>隐藏<else/>显示 <i class="icon-ok"></i></if></td>
+												<td>
+													<span style="float:left;margin-left:35px;">╠&nbsp;
+										                <a data-url="{:U(MODULE_NAME .'/Rbac/editNode',array('pid' => $method['id'],'level' =>3))}" href="#" data-toggle="dialog" data-width="80%" data-height="85%" data-title="<i class='fa fa-pencil'></i> 修改动作方法 - [所属上级：{$action['name']} ({$action['title']}) ]" class="btn btn-primary"><i class="fa fa-pencil"></i> 改</a>&nbsp;
+										                <a href="{:U(MODULE_NAME .'/Rbac/nodeDelete',array('pid' => $method['id']))}" class="btn btn-danger delete-msg"><i class="fa fa-times"></i> 删</a>
+									                </span>
+												</td>
+											</tr>
+											</volist>
+
+									</tr>
+									</volist>
+								</tr>
+							</volist>
+								<if condition="!$node">
+									<tr>
+										<td colspan="8" align="center"> 没有数据！</td>
+									</tr>
+								</if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

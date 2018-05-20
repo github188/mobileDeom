@@ -1,0 +1,76 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+<style type="text/css">
+.table-td-right {
+    color: #555;
+    letter-spacing: 0.2em;
+    text-align: right;
+    width: 180px;
+}
+</style>
+<div class="wrapper">
+
+    <!-- 主要内容开始 -->
+    <section class="content">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <div class="box box-info">
+
+                    <!-- 表格开始 -->
+                    <div class="box-body">
+                            <table id="example" class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td class="table-td-right"> 文章标题：</td>
+                                        <td>{$arr.title}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-td-right"> 文章分类：</td>
+                                        <td>{$arr.type}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-td-right"> 显示状态：</td>
+                                        <td><if condition="$arr['is_show'] eq 1">显示<elseif condition="$arr['is_show'] eq 2"/>隐藏</if> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-td-right"> 添加时间：</td>
+                                        <td>{$arr.addtime|date="Y-m-d H:i:s",###} </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-td-right"> 最后修改时间：</td>
+                                        <td>{$arr.savetime|date="Y-m-d H:i:s",###} </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-td-right"> 文章封面：</td>
+                                        <td><img width="30%" height="auto" src="{$arr.cover_img}" alt="暂无封面"></td>
+                                    </tr>
+
+                                    <tr height="60">
+                                        <td colspan="2" align="center">
+                                            <h4><b>《 文章详细内容 》</b></h4>
+                                        </td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2">
+                                            <div style="width: 1100px;">{$arr.content|htmlspecialchars_decode}</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                    </div>
+                    <!-- 表格结束 -->
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+

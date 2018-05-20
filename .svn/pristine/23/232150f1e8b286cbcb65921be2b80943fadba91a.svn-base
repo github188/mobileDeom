@@ -1,0 +1,107 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myBankList-->
+<section class="myCom myBankList" id="myBankCard">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">银行卡列表</a>
+                </div>
+            </div>
+            <div class="com bankcard">
+                <ol>
+                    <li class="ti01">
+                        <span>开户姓名</span>
+                    </li>
+                    <li  class="ti02">
+                        <span>账户类型</span>
+                    </li>
+                    <li  class="ti03">
+                        <span>账户号码</span>
+                    </li>
+                    <li  class="ti04">
+                        <span>操作</span>
+                    </li>
+                </ol>
+                <ul>
+                    <li>
+                        <if condition="$data">
+                            <volist name="data" id="v" key="k" >
+                                <div class="item">
+                                    <span class="ti01">{$v['name']}</span>
+                                    <span class="ti02">{$v['bank_type']}</span>
+                                    <span class="ti03">{:substr_replace($v['number'],'****',4,strlen($v['number'])-8)}</span>
+                                    <div class="ti04 han">
+                                        <a href="javascript:;" class="del del-btn" delete-id="{$v['id']}">
+                                            <i></i><span>删除</span>
+                                        </a>
+                                        <!--
+                                        <a href="myBankBind.html" class="chg">
+                                            <i></i><span>修改</span>
+                                        </a>
+                                        <em></em>
+                                        -->
+                                    </div>
+                                </div>
+                            </volist>
+                        <else/>
+                            <p style="text-align: center;line-height: 50px;"><em>还没有添加银行卡哦~</em></p>
+                        </if>
+                    </li>
+                </ul>
+                <if condition="$countPage GT 1">
+                    <div class="pages">{$page}</div>
+                </if>
+                <div class="myBtn">
+                    <button type="button" class="bbtn" onclick="location.href='{:U(\'Safe/myBank\')}';">{$data?'添加银行卡':'马上去添加'}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+
+<script src="__ADMIN__/layer/layer.js"></script>
+
+<script>
+    var formActionUrl = "{:U('Safe/myBankList')}";
+    //删除收货地址
+    $('.del-btn').on('click',function(){
+        var delID = $(this).attr('delete-id');
+        //询问框
+        var index = layer.confirm('确定要删除该银行卡吗？', {
+            shade:0.6,
+            icon:2,
+            //skin: 'layui-layer-lan', //样式类名
+            btn: ['确定','取消']       //按钮
+        }, function(){
+            layer.close(index);
+            deleteBankCard(delID);
+        }, function(){
+            layer.close(index);
+        });
+    });
+    //执行删除操作
+    function deleteBankCard(id){
+        $.post(formActionUrl,{'delID':id},function(data){
+            if(data.status==0){
+                show_msg(data.msg,'error');
+                return false;
+            }
+            else if(data.status==1){
+                show_msg(data.msg);
+                setTimeout(function(){
+                    location.reload();
+                },1200);
+            }
+        },'json');
+    }
+</script>

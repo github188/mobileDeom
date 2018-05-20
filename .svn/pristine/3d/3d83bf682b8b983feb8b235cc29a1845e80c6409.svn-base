@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Keywords" content=" 嗨推学院，嗨推在线客服，嗨推客服中心，嗨推客服网站，{$arr.seo_keyword}"/>
+    <meta name="description" content="嗨推客服官网网站，{$arr.seo_description}，为您解决使用嗨推产品过程中遇到的问题，嗨推客服中心提醒您：谨防网络骗术，教您如何识别网络骗术"/>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="robots" content="all">
+    <meta name="author" content="Tencent-OUI">
+    <meta name="Copyright" content="Tencent">
+
+    <link rel="stylesheet" type="text/css" href="__HOME__/css/kefu_public.css">
+    <!--  浮窗样式 -->
+    <link rel="stylesheet" type="text/css" href="__HOME__/css/index.css">
+    <!-- Font Awesome 图标字体 -->
+    <link rel="stylesheet" href="__ADMIN__/bootstrap/font-awesome/font-awesome.min.css">
+
+    <title>内容详情 - {:getConfig('web_name')}</title>
+    <style type="text/css">
+        .cont_container a{
+            color: #00ace9;
+        }
+        .cont_container a:hover{
+            color: #428bca;
+        }
+    </style>
+
+</head>
+<body>
+<include file="Public:header"/>
+
+<!--内容区域begin-->
+<div class="main">
+    <div class="container">
+        <div class="sw-crumb clearfix mb15">
+            <ul class="fleft">
+                <em>当前位置：</em>
+                <li><a href="/">首页</a>&nbsp; &gt; </li>
+                <li>{:getCateName($pid)}&nbsp; &gt; </li>
+                <li><a href="{:U('list/'.$cid)}">{:getCateName($cid)}</a>&nbsp; &gt; </li>
+                <li>{$arr.title|htmlspecialchars_decode|jiequ=0,60,'...'}</li>
+            </ul>
+        </div>
+        <!--左边选项卡-->
+        <include file="Public:leftTab"/>
+
+        <div class="cont_container">
+            <div class="faq_cont_container details_cont_container">
+                <div class="searchBox">
+                    <!--<a href="javascript:history.go(-1);" class="btn-back"><i class="iconfont icon-back"></i>返回</a>-->
+                    <div class="kf_mod_searchBox">
+                        <form action="{:U('Index/searchList')}" method="post">
+                            <div class="searchBar">
+                                <input type="text" class="search" name="name" id="current_search_key" value="" placeholder="请输入关键字或问题搜索">
+                                <button class="iconfont icon-search" type="submit" id="kf_search_inner_btn"></button>
+                            </div>
+                        </form>
+                        <div class="search_key_suggest" id="kf_search_index_key_suggest" style="display: none"></div>
+                    </div>
+                </div>
+
+                <!--问题内容-->
+                <div class="faq_cont_list">
+                    <div class="hotQuestion questionList" id="faqlist">
+
+                        <if condition="$arr">
+                            <div class="faq_cont_list_title"><i class="iconfont icon-read"></i>  &nbsp; {$arr.title}<a style="float: right;font-size: 14px;" href="javascript:window.print();">打印</a></div>
+                            <div class="faq_cont_list details_cont_list" id="faq_content">
+                                {$arr.content|htmlspecialchars_decode=###}
+                                <span style="float: right; line-height: 80px;">最后修改：{$arr.addtime|date='Y-m-d',###}</span>
+                            </div>
+
+                        <else/>
+                            <div style="text-align: center; margin: 30px 0;">
+                                暂没有正文内容！
+                            </div>
+                        </if>
+
+                    </div>
+                </div>
+
+                <div class="sw-modBox mt15">
+                   <div class="sw_modBox_border">
+                       {:htmlspecialchars_decode(getConfig('article_ad'))}
+                   </div>
+                </div>
+                <div class="sw-modBox mt15">
+                    <div class="sw_modBox_border">
+                        <h3>与本文相关文章</h3>
+                        <ol>
+                            <foreach name="correlation_article" item="v" key="k">
+                                <li>
+                                    {$k+1}. &nbsp;<a href="{:U('c/'.$v['id'])}">{$v.title|htmlspecialchars_decode|jiequ=0,46,'...'}</a>
+                                </li>
+                            </foreach>
+
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--内容区域end-->
+<include file="Public:fuchuang"/>
+<include file="Public:footer"/>

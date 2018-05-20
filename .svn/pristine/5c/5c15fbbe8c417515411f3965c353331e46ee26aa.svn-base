@@ -1,0 +1,31 @@
+*{margin:0;padding:0;}
+.fl{float:left}
+.fr{float:right}
+.clear{clear:both}
+body{background:#f6f6f6;font-family:"微软雅黑"}
+.warp{max-width:640px;margin:0 auto 15px;}
+.warp .banner img{display:block;width:100%;}
+.warp .tip{text-align:center;font-size:14px;color:#cfcfcf;line-height:40px;}
+.warp .form-box{background:#fff;border-bottom:1px solid #e1e1e1;}
+.warp .form-box .userinfo{padding:20px 0;}
+.warp .form-box .uname{color:#000;font-size:18px;margin-left:3%;margin-top:5%; }
+.warp .form-box .avatar{width:20%;margin-right:4%}
+.warp .form-box .avatar img{display:block;width:100%;border-radius:50%;}
+.warp .form-box .input_box{position:relative;height:50px;border-top:1px solid #e1e1e1;}
+.warp .form-box .input_box input{border:none;height:50px;text-align:right;color:#666;}
+.warp .form-box .input_box span{position:absolute;left:10px;top:15px;}
+.warp .form-box .input_box span label{color:#f00;}
+.button{width:88%;text-align:center;margin:auto;color:#fff;background:#ff4479;height:45px;line-height:45px;border-radius:5px;margin-top:18px;}
+.warp .back{line-height:30px;text-align:center;color:#666;margin-top:10px;}
+
+#goback{position:fixed;top:10px;left:10px;width:30px;height:30px;text-align:center;line-height:30px;color:#fff;background:rgba(0,0,0,0.6);border-radius:50%;}
+
+#kefu{position:fixed;top:10px;right:10px;color:#333;}
+#kefu span{display:block;width:35px;height:35px;line-height:35px;background:#fff;color:#d81e06;text-align:center;border:1px solid #d81e06;border-radius:50%;}
+#kefu i.iconfont{font-size:25px;}
+#kefu_mask{position:fixed;z-index:99999;background:rgba(0,0,0,0.7);width:100%;height:100%;display:none;top:0;left:0}
+#kefu_mask .qrcode_box{width:65%;background:#fff;border-radius:6px;margin:30% auto 0;padding:30px 0 20px;position:relative}
+#kefu_mask .qrcode_box img{display:block;width:70%;margin:auto}
+#kefu_mask .qrcode_box .text{font-size:12px;color:#999;text-align:center;line-height:18px;margin-top:10px;}
+#close_kefu{position:absolute;right:-10px;top:-10px;width:22px;height:22px;line-height:19px;border:1px solid #999;border-radius:50%;text-align:center;background:#fff;}
+#close_kefu i.iconfont{font-size:14px;}

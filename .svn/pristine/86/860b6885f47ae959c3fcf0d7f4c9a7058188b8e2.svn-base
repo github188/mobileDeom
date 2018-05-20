@@ -1,0 +1,105 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+<div class="wrapper">
+	<!-- 内容标题开始 -->
+	<div id="breadcrumbs" class="breadcrumbs">
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">视频管理</a></li>
+            <li class="active">视频分组</li>
+		</ol>
+
+	</div>
+	<!-- 内容标题结束 -->
+
+	<!-- 主要内容开始 -->
+	<section class="content">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="box box-info"> <!-- box-info天空蓝、 box-primary蓝色、  box-success绿色-->
+					<div class="box-header nav-tabs">
+						<h4 class="box-title"><i class="fa fa-plus"></i> 添加视频分组</h4>
+						<!-- 返回上一页 -->
+						<include file="Public:content-back" />
+					</div>
+					<!-- 表格开始 -->
+					<div class="box-body">
+						<form action="{:U(MODULE_NAME.'/Video/videoGroupAdd')}" method="post">
+							<table id="example" class="table table-bordered">
+								<tbody>
+									<tr>
+										<td class="table-td-right"> 上级视频分组：</td>
+										<td>
+											<select name="info[pid]" class="usergroup-selected form-control">
+												<option value="0">&nbsp;顶级分组</option>
+												<foreach name='video_group' item='v' key="k">
+													<option <if condition="$v.id eq $p_category_id">selected</if> value="{$v['id']}">&nbsp;{$v.name}</option>
+												</foreach>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 分组名称：</td>
+										<td><input type="text" name="info[name]" class="form-control" size="30" data-rule="required"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 显示状态：</td>
+										<td>
+											显示 <input type="radio" name="info[status]" id="iCheck1" value="0" checked> &nbsp;
+											隐藏 <input type="radio" name="info[status]" id="iCheck2" value="1" >
+										</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 栏目排序：</td>
+										<td><input type="text" name="info[sort]" value="0" class="form-control" size="30" data-rule="required;digits"></td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 简介：</td>
+										<td>
+											<textarea name="info[remark]" rows="6" cols="50"></textarea>
+										</td>
+									</tr>
+									<tr class="usergroup-checked" style="display: none;">
+										<td class="table-td-right"> 允许查看的用户组：</td>
+										<td>
+											<foreach name='user_group' item='v' key="k">
+												{$v.name}<input type="checkbox" name="ugid[{$v.id}]" value="{$v.id}">&nbsp;
+											</foreach>
+										</td>
+									</tr>
+									<tr height="60">
+										<td colspan="2" align="center">
+											<input type="hidden" name="pid" value="{$pid}">
+											<button class="btn btn-success" type="submit"><i class="fa fa-check"></i> 确定添加</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>	
+					</div>
+					<!-- 表格结束 -->
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />
+
+<script>
+	$(function(){
+		$('.usergroup-selected').on('change',function(){
+			if($(this).val()==0){
+				$('.usergroup-checked').stop().hide(200);
+			}else{
+				$('.usergroup-checked').stop().show(500);
+			}
+		});
+	});
+</script>

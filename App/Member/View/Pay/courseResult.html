@@ -1,0 +1,78 @@
+
+<include file="Public:headerAfter"/>
+
+<!--orderSuc-->
+<section class="order orderSuc" id="orderSuc">
+    <div class="in w1100 m0a">
+        <div class="hd">
+            <a href="javascript:;">个人中心</a>
+            <i></i>
+            <a href="javascript:;">报名成功</a>
+            <div class="ye">
+                <span>账号余额：</span>
+                <span><em>{$user_account['currency']}</em>学习币</span>
+            </div>
+        </div>
+        <div class="com accPay accPay02">
+            <div class="payPlan" id="payPlan02">
+                <div class="planIn">
+                    <div class="inLine" style="width:100%"></div>
+                    <ol>
+                        <li class="li01 cur">
+                            <div class="item">
+                                <i></i>
+                                <span class="ti">充值学习币</span>
+                            </div>
+                        </li>
+                        <li class="li02">
+                            <div class="item">
+                                <i></i>
+                                <span class="ti">选择课程</span>
+                            </div>
+                        </li>
+                        <li class="li03">
+                            <div class="item">
+                                <i></i>
+                                <span class="ti">确认课程</span>
+                            </div>
+                        </li>
+                        <li class="li04">
+                            <div class="item">
+                                <i></i>
+                                <span class="ti">报名成功</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="paySuc">
+                    <if condition="$order_info['status'] EQ 1">
+                        <!--报名成功-->
+                        <div class="sucTip">
+                            <img src="__MEMBER__/images/sucTipIco.png">
+                            <span>您已成功开通课程</span>
+                        </div>
+                    <else/>
+                        <!--报名失败-->
+                        <div class="sucTip sucTipNo">
+                            <img src="__MEMBER__/images/sucTipIco2.png">
+                            <span>您未成功开通课程</span>
+                        </div>
+                    </if>
+
+                    <div class="sucInf">
+                        <p><span>课程名称：</span><span>{$order_info['goods_name']}</span></p>
+                        <p><span>课程总额：</span><span>{$order_info['total_money']}学习币</span></p>
+                    </div>
+                    <div class="expTip">
+                        <p>* 报名课程成功后，系统将自动为您开通该学习课程的权限</p>
+                        <p>* 如您在报名课程后遇到问题，请<a href="javascript:;" class="">联系我们&gt;&gt;</a> </p>
+                        <p>* 最终解释权归嗨推学院所有</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>

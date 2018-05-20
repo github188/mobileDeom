@@ -1,0 +1,102 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myPhoneBind-->
+<section class="myCom myPhoneBind" id="myPhoneBind">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">手机绑定</a>
+                </div>
+            </div>
+            <div class="com basicInf phoneBind">
+                <div class="inpCom">
+                    <form  action="" method="post" name="myForm" autocomplete="off" data-validator-option="{stopOnError:true}">
+                        <ul>
+                            <li>
+                                <div class="inp">
+                                    <span class="ti">新手机号：</span>
+                                    <input type="text" placeholder="" value="" name="mobile" data-rule="手机号:required;mobile;">
+                                    <p class="tip"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inp yzmInp">
+                                    <span class="ti">验证码：</span>
+                                    <input type="text" placeholder="" value="" id="yzm" name="code" data-rule="验证码:required;">
+                                    <button type="button" id="getCode" name="code" class="getCode" data-html="获取验证码" data-send="1">获取验证码</button>
+                                    <p class="tip2"></p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="myBtn keepBtn">
+                            <button type="submit" class="bbtn" id="subBtnPhone">保存修改</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<script>
+    var formActionUrl = "{:U('Safe/phone')}";
+    var getCodeUrl    = "{:U('Index/publicSendCode')}";
+    var successUrl    = "{:U('Safe/securityList')}";
+
+    //发送验证码
+    $('#getCode').on('click',function(){
+        var this_ = $(this);
+        var num = $.trim($('input[name="mobile"]').val());
+        $.ajax({
+            url: getCodeUrl,
+            type: 'POST',
+            data: {'num':num},
+            success: function(data){
+                if(data.status==0){
+                    show_msg(data.msg,'error');
+                    return false;
+                }
+                countTime(this_,60);
+                show_msg(data.msg);
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','error');
+            }
+        });
+    });
+    //提交表单
+    $('form[name="myForm"]').bind('valid.form', function(){
+        $.ajax({
+            url: formActionUrl,
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(data){
+                if(data.status==0){
+                    show_msg(data.msg,'error');
+                    return false;
+                }
+                else if(data.status==1){
+                    show_msg(data.msg,'info');
+                    setTimeout(function(){
+                        location.href = successUrl;
+                    },1200);
+                }
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','error');
+            }
+        });
+    });
+    $('form').validator({
+        theme: "simple_right", //消息皮肤
+        msgClass: "n-bottom"   //消息显示在输入框的位置
+    });
+</script>

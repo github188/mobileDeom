@@ -1,0 +1,39 @@
+<include file="Public:header"/>
+<style>
+    body{background-color: #fff;}
+</style>
+
+<include file="Public:topMenu"/>
+
+<!--courseInter-->
+<section class="notice courseInter">
+    <div class="in">
+
+        <include file="backgroundImg"/>
+
+        <div class="moduleCom moduleComs">
+            <div class="module">
+                <ul>
+                    <volist name="data" key="k" id="v">
+                        <li>
+                            <a href="{:U('Content/course',array('main'=>$v['id']))}">
+                                <div class="tp">
+                                    <img src="__MOBILE__/images/bookIco.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="tName">{$v['title']}</p>
+                                    <p class="tWz">{:jiequ(strip_tags(htmlspecialchars_decode($v['content'])),0,50,'...')}</p>
+                                </div>
+                            </a>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<include file="Public:footer"/>
+<script src="__MOBILE__/js/menuSilder.js"></script>
+<script src="__MOBILE__/js/theMenu.js"></script>

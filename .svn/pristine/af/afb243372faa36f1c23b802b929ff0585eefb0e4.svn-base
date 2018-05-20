@@ -1,0 +1,101 @@
+
+<include file="Public:headerAfter"/>
+
+<!--mySafety-->
+<section class="myCom mySafety" id="mySafety">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">安全设置</a>
+                </div>
+            </div>
+            <div class="com safety">
+                <ul>
+                    <li class="item {$user_info['mobile']?'bind':''}">
+                        <div class="ti01">
+                            <img src="__MEMBER__/images/aqIco01.png">
+                            <span>手机绑定</span>
+                        </div>
+                        <div class="ti02">
+                            <span>{:substr_replace($user_info['mobile'],'****',3,4)}</span>
+                        </div>
+                        <div class="ti03">
+                            <span><i></i>{$user_info['mobile']?'已绑定':'未绑定'}</span>
+                        </div>
+                        <div class="ti04">
+                            <a href="{:U('Safe/verify',array('type'=>'phone'))}">更换</a>
+                        </div>
+                    </li>
+                    <li class="item {$user_info['email']?'bind':''}">
+                        <div class="ti01">
+                            <img src="__MEMBER__/images/aqIco02.png">
+                            <span>邮箱绑定</span>
+                        </div>
+                        <div class="ti02">
+                            <span>{$user_info['email']?substr_replace($user_info['email'],'****',3,4):'绑定后可用于找回密码'}</span>
+                        </div>
+                        <div class="ti03">
+                            <span><i></i>{$user_info['email']?'已绑定':'未绑定'}</span>
+                        </div>
+                        <div class="ti04">
+                            <a href="{:U('Safe/verify',array('type'=>'email'))}">{$user_info['email']?'更换':'绑定'}</a>
+                        </div>
+                    </li>
+                    <li class="item {:empty($user_info['weixin_openid']) && empty($user_info['weixin_unionid'])?'':'bind'}">
+                        <div class="ti01">
+                            <img src="__MEMBER__/images/aqIco03.png">
+                            <span>微信绑定</span>
+                        </div>
+                        <div class="ti02">
+                            <span>绑定微信后可以免费试听内容</span>
+                        </div>
+                        <div class="ti03">
+                            <span><i></i>{:empty($user_info['weixin_openid']) && empty($user_info['weixin_unionid'])?'未绑定':'已绑定'}</span>
+                        </div>
+                        <div class="ti04">
+                            <a href="{:U('Safe/weixin')}">{:empty($user_info['weixin_openid']) && empty($user_info['weixin_unionid'])?'绑定':'查看'}</a>
+                        </div>
+                    </li>
+                    <li class="item {$user_info['password'] && $user_info['encrypt']?'bind':''}">
+                        <div class="ti01">
+                            <img src="__MEMBER__/images/aqIco04.png">
+                            <span>修改密码</span>
+                        </div>
+                        <div class="ti02">
+                            <span>修改密码，保护账号安全</span>
+                        </div>
+                        <div class="ti03">
+                            <span><i></i>{$user_info['password'] && $user_info['encrypt']?'已设置':'未设置'}</span>
+                        </div>
+                        <div class="ti04">
+                            <a href="{:U('Safe/password')}">修改</a>
+                        </div>
+                    </li>
+                    <li class="item {$bankCard?'bind':''}">
+                        <div class="ti01">
+                            <img src="__MEMBER__/images/aqIco05.png">
+                            <span>银行卡绑定</span>
+                        </div>
+                        <div class="ti02">
+                            <span>绑定银行卡，提现方便快捷</span>
+                        </div>
+                        <div class="ti03">
+                            <span><i></i>{$bankCard?'已绑定':'未绑定'}</span>
+                        </div>
+                        <div class="ti04">
+                            <a href="{:U('Safe/myBankList')}">{$bankCard?'修改':'绑定'}</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>

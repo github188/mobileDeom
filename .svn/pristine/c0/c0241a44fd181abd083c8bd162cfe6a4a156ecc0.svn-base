@@ -1,0 +1,59 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+<div class="wrapper">
+	<!-- 内容标题开始 -->
+	<div id="breadcrumbs" class="breadcrumbs">
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+			<li><a href="#">系统设置</a></li>
+			<li class="active">清除缓存</li>
+		</ol>
+	</div>
+	<!-- 内容标题结束 -->
+
+	<!-- 主要内容开始 -->
+	<section class="content">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="box box-info"> <!-- box-info天空蓝、 box-primary蓝色、  box-success绿色-->
+					<div class="box-header nav-tabs">
+						<h4 class="box-title">清除缓存文件</h4>
+					</div>
+
+					<!-- 表格开始 -->
+					<div class="box-body">
+						<form action="{:U(MODULE_NAME.'/Index/allrun')}" method="post">
+							<table id="example" class="table table-bordered">
+								<tbody>
+									<tr height="60">
+										<td width="40%" align="right"> <strong>清除缓存类型：</strong></td>
+										<td>
+						                    模板缓存 <input type="checkbox" name="type[]" id="iCheck1" value="Cache" checked> &nbsp; 
+						                    数据缓存 <input type="checkbox" name="type[]" id="iCheck2" value="Data" checked> &nbsp;
+						                    日记缓存 <input type="checkbox" name="type[]" id="iCheck3" value="Logs" checked> &nbsp;
+						                    临时缓存 <input type="checkbox" name="type[]" id="iCheck4" value="temp" checked> &nbsp;
+										</td>
+									</tr>
+									<tr height="60">
+										<td colspan="2" align="center">
+											<button class="btn btn-success" type="submit"><i class="fa fa-check"></i> 确定清除缓存</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>	
+					</div>
+					<!-- 表格结束 -->
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

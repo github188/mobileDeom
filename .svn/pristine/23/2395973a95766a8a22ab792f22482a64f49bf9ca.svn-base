@@ -1,0 +1,407 @@
+
+<include file="Public:headerBefore"/>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2xxs7sl9jpf7ds4i.css">
+<style>
+    body{background-color: #fff;}
+</style>
+<!--banShow-->
+<section class="banShow" id="banShow">
+    <if condition="$banner">
+        <div class="banner">
+            <div class="bImg">
+                <volist name="banner" key="k" id="v">
+                    <a href="javascript:;" style="background-image:url('{$v[\'img_url\']}');background-size:100% 100%"></a>
+                </volist>
+            </div>
+            <div class="bList hor_center"></div>
+        </div>
+    <else/>
+        <p style="line-height: 400px;background-color: #00a65a;"></p>
+    </if>
+    <div class="regLogPop w1100">
+        <div class="in">
+            <if condition="session(C('USER_AUTH_UID'))">
+                <!--已登录 start-->
+                <div class="regLog log">
+                    <div class="hd">
+                        <h2>我的账号</h2>
+                    </div>
+                    <div class="face">
+                        <a href="javascript:;">
+                            <img src="__MEMBER__/images/logo/{$user_arr.face}.png" alt="">
+                        </a>
+                        <p>{$user_arr.username}</p>
+                        <span class="lab"><php>$getUserGroup = getUserGroup($user_arr['id']);</php> {$getUserGroup['group_name']} </span>
+                    </div>
+                    <div class="bot">
+                        <div class="ye">
+                            <p>
+                                <span class="fl">学习币余额：</span>
+                                <span class="fr">{$user_arr.currency}</span>
+                            </p>
+                            <p>
+                                <span class="fl">账号佣金：</span>
+                                <span class="fr">{$user_arr.brokerage}</span>
+                            </p>
+                        </div>
+                        <div class="bbtn">
+                            <a href="{:U('Study/index')}">进入系统</a>
+                        </div>
+                    </div>
+                </div>
+            <else/>
+                <!--未登录 start-->
+                <div class="regLog reg" >
+                    <div class="hd">
+                        <h2>免费注册</h2>
+                    </div>
+                    <div class="face">
+                        <a href="javascript:;">
+                            <img src="__MEMBER__/images/defautTx.png" alt="">
+                        </a>
+                        <p style="margin-top: 10px;">学推广到嗨推</p>
+                    </div>
+                    <div class="bot">
+                        <div class="bbtn">
+                            <a href="{:U('Login/register')}">注册</a>
+                        </div>
+                        <div class="link">
+                            <span>已有账号</span>
+                            <a href="{:U('Login/index')}">立即登录</a>
+                        </div>
+                    </div>
+                </div>
+            </if>
+        </div>
+    </div>
+</section>
+
+<!--main-->
+<section class="indMain" id="indMain">
+    <div class="affiche">
+        <div class="gfNot  m0a">
+            <div class="tit fl">
+                <i></i>
+                <h6>官方公告：</h6>
+            </div>
+            <a href="{:U('Content/webNoticeList')}" class="more">更多公告&gt;&gt;</a>
+            <ul >
+
+                <volist name="notice" key="k" id="v">
+                    <li>
+                        <a href="{:U('Content/webNotice',array('main'=>$v['id']))}">
+
+                            <p>{$v['title']}</p>
+                        </a>
+                        <span>{:date('Y/m/d',$v['addtime'])}</span>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+        <div class="affList w1100 m0a">
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <div class="tp">
+                            <img src="__MEMBER__/images/aff01.png" alt="">
+                        </div>
+                    </a>
+                    <div class="txt">
+                        <span class="ti"><em>{$userCount}</em>人</span>
+                        <p>学员人数</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="tp">
+                            <img src="__MEMBER__/images/aff02.png" alt="">
+                        </div>
+                    </a>
+                    <div class="txt">
+                        <span class="ti"><em>{$videoCount}</em>节</span>
+                        <p>专业课程</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="tp">
+                            <img src="__MEMBER__/images/aff03.png" alt="">
+                        </div>
+                    </a>
+                    <div class="txt">
+                        <span class="ti"><em>{$timeCount}</em>分钟</span>
+                        <p>课程时间</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="tp">
+                            <img src="__MEMBER__/images/aff04.png" alt="">
+                        </div>
+                    </a>
+                    <div class="txt">
+                        <span class="ti"><em>1368</em>家</span>
+                        <p>服务商家</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mainCom kcCom ">
+        <div class="hdTit">
+            <div class="fl">
+                <i class="ico ico01"></i><h4>课程推荐</h4><span>看看别人是如何成功的</span>
+            </div>
+            <a href="{:U('Index/course')}" class="more">更多&gt;&gt;</a>
+        </div>
+        <div class="kcIn">
+            <div class="fl kcL" style="background: url(__MEMBER__/images/kcTP01.png) no-repeat;">
+                <p>权威课程 坏坏主讲</p>
+                <a href="{:U('Index/course')}" class="linkDet">
+                    <span>课程详情</span>
+                </a>
+            </div>
+            <div class="fr kcR">
+                <div class="kcList">
+                    <ul>
+                        <volist name="coursePrice" key="k" id="v">
+                            <li>
+                                <if condition="($k EQ 1)">
+                                    <i class="lab" style="background-color: #76bdff;">最新课程</i>
+                                <elseif condition="($k EQ 2)"/>
+                                    <i class="lab" style="background-color: #ff6100;">最热课程</i>
+                                </if>
+                                <div class="ti ti01">
+                                    <h6><a href="javascript:;"> {$v['name']}</a></h6>
+                                    <p><a href="javascript:;"> {$v['remark']}</a></p>
+                                </div>
+                                <div class="ti ti02">
+                                    <span>{:floor($v['gqtime']/365)}年</span>
+                                    <p>期限</p>
+                                </div>
+                                <div class="ti ti03">
+                                    <em>{$v['buy_money']}</em>
+                                    <p>学习币</p>
+                                </div>
+                                <div class="ti ti04">
+                                    <a href="{:U('Pay/courseConfirm',array('group_id'=>$v['id']))}" class="">立即报名</a>
+                                </div>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainCom spCom clearfix">
+        <div class="hdTit">
+            <div class="fl">
+                <i class="ico ico02"></i><h4>热门视频</h4><span>看看别人是如何成功的</span>
+            </div>
+            <a href="{:U('Index/videoList')}" class="more">更多&gt;&gt;</a>
+        </div>
+        <div class="courIn courIn2">
+            <div class="turn">
+                <i class="prev"></i>
+                <i class="next"></i>
+            </div>
+            <div class="courLists">
+                <ul>
+                    <volist name="videoshow" key="k" id="v">
+                        <php>
+                            #判断视频是否有播放权限
+                            $playAuth = $user_id ? videoPlayAuth($v['id']) : '';
+                            #判断视频是否被收藏
+                            if($user_id){
+                                $v['shoucang'] = M('video_shoucang')->where(array('user_id'=>$user_id,'vid'=>$v['id']))->getField('id');
+                            }
+                        </php>
+                        <li>
+                            <div class="item">
+                                <div class="tp">
+                                    <a href="{$playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                        <img src="__MEMBER__/images/tptp01.png" alt="" title="" >
+                                    </a>
+
+                                    <i data-id="{$v['id']}" class="love-btn iconfont icon-shoucang {$v['shoucang']?'icon-shoucang_sel-copy':''}"></i>
+
+                                    <span <if condition="$v['is_tag'] EQ 1">
+                                            class="lab labNew"
+                                        <elseif condition="$v['is_tag'] EQ 2"/>
+                                            class="lab labTj"
+                                        </if>
+                                    ></span>
+                                </div>
+                                <div class="txt">
+                                    <p class="tiName">
+                                        <a href="{$playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                            {:jiequ($v['title'],0,30,'')}
+                                        </a>
+                                    </p>
+                                    <div class="bot">
+                                        <div class="money fl {$playAuth['allow_play']==1 ? 'delNo':''}">
+                                            <em>{$v['buy_money']}</em>学习币
+                                        </div>
+                                        <div class="handle fr">
+                                            <a href="{$playAuth['allow_play']==1 ? U('Video/play',array('vid'=>$v['id'])):U('Pay/courseConfirm',array('vid'=>$v['id']))}">
+                                                <i class="iconfont {$playAuth['allow_play']==1 ? 'icon-bofang':'icon-216'}"></i>
+                                                <span class="ti00">{$playAuth['allow_play']==1 ? '播放':'购买'}</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mainCom xyCom">
+        <div class="hdTit">
+            <div class="fl">
+                <i class="ico ico03"></i><h4>精英学员</h4><span>看看别人是如何成功的</span>
+            </div>
+            <a href=" {:U('Content/studentSay')}" class="more">更多&gt;&gt;</a>
+        </div>
+        <div class="stuElite stuEliste2">
+            <div class="elList">
+                <ul>
+                    <volist name="student" key="k" id="v">
+                        <li class="">
+                            <div class="item">
+                                <div class="tp">
+                                    <img src="{$v['cover_img']}" alt="学员头像">
+                                </div>
+                                <div class="txt">
+                                    <h4 class="tiName">{$v['title']}</h4>
+                                    <div class="wz js-wz" data-html="" data-staus="0">{:htmlspecialchars_decode($v['content'])}</div>
+                                </div>
+                            </div>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mainCom notCom" style="margin-top: -80px;">
+        <div class="notTab" >
+            <ol>
+                <li>
+                    <span>平台公告</span>
+                </li>
+                <li>
+                    <span>干货分享</span>
+                </li>
+                <li>
+                    <span>常见问题</span>
+                </li>
+            </ol>
+            <a href="{:U('Content/index')}" class="more">更多&gt;&gt;</a>
+        </div>
+        <div class="notList">
+            <ul>
+                <li>
+                    <div class="tp">
+                        <a href="javascript:;"><img src="__MEMBER__/images/notTp01.jpg" alt=""></a>
+                    </div>
+                    <div class="txt">
+                        <volist name="notice" key="k" id="v">
+                            <div class="pp">
+                                <p class="fl wz"><a href="{:U('Content/webNotice',array('main'=>$v['id']))}">{$v['title']}</a></p>
+                                <span class="fr data">{$v['addtime']|date='Y-m-d',###}</span>
+                            </div>
+                        </volist>
+                    </div>
+                </li>
+                <li>
+                    <div class="tp">
+                        <a href="javascript:;"><img src="__MEMBER__/images/notTp02.jpg" alt=""></a>
+                    </div>
+                    <div class="txt">
+                        <volist name="ganhuo" key="k" id="v">
+                            <div class="pp">
+                                <p class="fl wz"><a href="{:U('Content/goodShare',array('main'=>$v['id']))}">{$v['title']}</a></p>
+                                <span class="fr data">{$v['addtime']|date='Y-m-d',###}</span>
+                            </div>
+                        </volist>
+                    </div>
+                </li>
+                <li>
+                    <div class="tp">
+                        <a href="javascript:;"><img src="__MEMBER__/images/notTp03.jpg" alt=""></a>
+                    </div>
+                    <div class="txt">
+                        <volist name="problem" key="k" id="v">
+                            <div class="pp">
+                                <p class="fl wz"><a href="{:U('Content/problem',array('main'=>$v['id']))}">{$v['title']}</a></p>
+                                <span class="fr data">{$v['addtime']|date='Y-m-d',###}</span>
+                            </div>
+                        </volist>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+<script src="__ADMIN__/layer/layer.js"></script>
+<script>
+    var user_id = '{$user_id}';
+    var formActionUrl = "{:U('Video/videoShoucang')}";
+    //收藏和取消视频
+    $('.love-btn').on('click',function(e){
+        var this_ = $(this);
+        var vid = this_.attr('data-id');
+        if(!user_id){
+            layer.msg('收藏失败，请先登录');
+            return false;
+        }
+
+        $.ajax({
+            url: formActionUrl,
+            type: 'POST',
+            data: {'vid':vid},
+            success: function(data){
+                if(data.status==0){
+                    this_.attr('class','love-btn iconfont icon-shoucang');
+                }
+                else if(data.status==1){
+                    this_.attr('class','love-btn iconfont icon-shoucang icon-shoucang_sel-copy');
+                }
+                layer.msg(data.info);
+            },
+            error:function(data){
+                show_msg('网络繁忙请稍后重试','error');
+            }
+        });
+    });
+</script>
+
+<script>
+    //精英学员
+    +function () {
+        var $wz =$('.js-wz'),
+            str0 = $wz.html(),
+            str1 = str0,
+            txtSize = 30;
+        function txtFn(){
+            str0=str0.substr(0,txtSize)+'...';
+            $wz.html(str0);
+        }
+        txtFn();
+        $('.elList li').hover(function () {
+            var $wz =$(this).find('.js-wz');
+            $(this).addClass('hover');
+            $wz.attr('data-staus',1);
+            $wz.html(str1);
+        },function () {
+            var $wz =$(this).find('.js-wz');
+            $(this).removeClass('hover');
+            $wz.attr('data-staus',0);
+            txtFn();
+        });
+    }();
+</script>

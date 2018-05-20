@@ -1,0 +1,140 @@
+
+<include file="Public:headerAfter"/>
+
+<!--myAccount-->
+<section class="myCom myAccount" id="myAccount">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <a href="javascript:;">个人中心</a>
+                    <i></i>
+                    <a href="javascript:;">账户余额</a>
+                </div>
+                <div class="moneyHanle">
+                    <div class="mL fl">
+                        <span>学习币金额：</span>
+                        <span class="ye">{$user_account['currency']}</span>
+                    </div>
+                    <div class="mR fr">
+                        <button class="btn01" onclick="location.href='{:U(\'Pay/payMoney\')}';">充值</button>
+                        <button class="btn02" onclick="location.href='{:U(\'Pay/courseChoose\')}';">升级</button>
+                    </div>
+                </div>
+            </div>
+            <div class="finance mt20">
+                <div class="hdT">
+                    <span>财务记录</span>
+                </div>
+                <div class="finRecord">
+                    <div class="tab">
+                        <ol>
+                            <li><a href="{:U('User/myAccount')}">充值记录</a></li>
+                            <li class="cur"><a href="{:U('User/myAccountPurchase')}">消费记录</a></li>
+                        </ol>
+                        <div class="dt">
+                                <span class="ti01">商品名称</span>
+                                <span class="ti02">学习币</span>
+                                <span class="ti03">优惠券</span>
+                                <span class="ti04">佣金</span>
+                                <span class="ti05">消费时间</span>
+                                <span class="ti06">状态</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <if condition="$data">
+                                    <div class="itemIn">
+                                        <volist name="data" key="k" id="v">
+                                            <div class="item">
+                                                <span class="ti01">{$v['goods_name']}</span>
+                                                <span class="ti02">{$v['pay_currency']}</span>
+                                                <span class="ti03">{$v['ticket_money']}</span>
+                                                <span class="ti04">{$v['pay_brokerage']}</span>
+                                                <span class="ti05">{$v['status']==1?date('Y/m/d H:i',$v['paytime']):date('Y/m/d H:i',$v['addtime'])}</span>
+                                                <if condition="$v['status'] EQ 1">
+                                                    <span class="ti06">
+                                                        成功
+                                                    </span>
+                                                <else/>
+                                                    <span class="ti06" data-id="{$v['id']}">
+                                                        <a href="javascript:;" class="payOrderBtn" >[支付]</a> <a href="javascript:;" class="deleteOrderBtn" >[取消]</a>
+                                                    </span>
+                                                </if>
+                                            </div>
+                                        </volist>
+                                    </div>
+                                 <else/>
+                                    <p style="text-align: center;">还没有消费的订单哦~</p>
+                                </if>
+                            </li>
+                        </ul>
+                        <if condition="$totalPages GT 1">
+                            <div class="pages">{$pages}</div>
+                        </if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer-->
+<include file="Public:footer"/>
+<script src="__ADMIN__/layer/layer.js"></script>
+<script>
+    var deleteUrl = "{:U('User/deleteGoodsOrder')}";
+    var payUrl    = "{:U('Pay/payByOrderId')}";
+
+    //支付订单
+    $('.payOrderBtn').on('click',function(e){
+        var this_ = $(this);
+        var order_id = this_.parent('span').attr('data-id');
+        var kecheng = this_.parent('span').siblings('.ti01').html();
+        var kecheng = '<em style="color: #ff6100;">'+kecheng+'</em>';
+
+        var countMoney = this_.parent('span').siblings('.ti02').html();
+        var countMoney = '<em style="color: #ff6100;">'+countMoney+'</em>';
+
+        var msg = '从账户中扣除'+countMoney+'学习币购买《'+kecheng+'》课程,确认支付吗？';
+        commonajax(this_,payUrl,order_id,msg);
+    });
+
+
+
+    //取消订单
+    $('.deleteOrderBtn').on('click',function(e){
+        var this_ = $(this);
+        var order_id = this_.parent('span').attr('data-id');
+
+        var msg = '确认要取消该笔订单吗？';
+        commonajax(this_,deleteUrl,order_id,msg);
+    });
+
+    //执行前询问框
+    function commonajax(obj,url,order_id,msg){
+
+        var popup = layer.confirm(msg, {
+            //icon:3,
+            title:'提示信息',
+            shade:0.4,
+            btn: ['确定','取消'] //按钮
+        }, function(e){
+            $.post(url,{'order_id':order_id},function(data){
+                if(data.status==0){
+                    show_msg(data.info,'error');
+                }else if(data.status==1){
+                    show_msg(data.info);
+                }
+                setTimeout(function(){
+                    window.location.reload();
+                },1500);
+
+            },'json');
+            layer.close(popup);
+        }, function(e){
+            layer.close(popup);
+        });
+    }
+
+</script>

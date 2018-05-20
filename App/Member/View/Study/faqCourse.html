@@ -1,0 +1,96 @@
+
+<include file="Public:headerAfter"/>
+
+<!--content-->
+<div class="videoContent m0a learnContent">
+    <div class="videoTab mt20">
+        <!--选项卡切换S-->
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <!--top菜单-->
+            <include file="topMenu"/>
+            <div class="layui-tab-content clearfix layui-tab-content-new" style="padding-top: 0;">
+
+                <!--课程收藏-->
+                <div class="layui-tab-item layui-show learnCourse">
+                    <div class="courList mt0">
+                        <ul class="videoUl">
+                            <empty name="dataList">
+                                <!--没有数据：-->
+                                <div class="noData" style="text-align: center;">
+                                    <img style="margin: 0 auto;" src="__MEMBER__/images/errorTp.png" alt="没有数据"  width="" height="">
+                                    <p>您目前数据为空</p>
+                                </div>
+                            </empty>
+                            <foreach name="dataList" item="val" key="k">
+                                <li class="learnItem">
+                                    <div class="fl">
+
+
+                                        <a style="font-size: 15px" href="/Member/Video/play/vid/{$val.vid}"><i class="mr10"></i>{$val.title}</a>
+
+
+                                    </div>
+                                    <div class="fr">
+                                        <span class="courseTime mr100">{$val.addtime|date="Y-m-d H:i",###}</span>
+                                        <span class="sc1 shoucang" data-vid="{$val.vid}"><em class="videoEm active"></em><i style="font-size: 16px">取消</i></span>
+                                    </div>
+                                </li>
+                            </foreach>
+
+                        </ul>
+                    </div>
+                    <if condition="$totalPages GT 1">
+                        <div id="demo3" class="Hpage mt30">{$pages}</div>
+                    </if>
+
+                </div>
+
+            </div>
+          <!--选项卡切换E-->
+         </div>
+  </div>
+</div>
+<!--footer-->
+<include file="Public:footer"/>
+<script>
+    // 插件validator.js
+    $('form').validator({
+        theme: "simple_right", //消息皮肤
+        msgClass: "n-bottom"   //消息将自动显示在输入框右边
+    });
+    layui.use('element', function(){
+        var $ = layui.jquery
+            ,element = layui.element();
+    });
+
+
+$('.shoucang').unbind('click').click(function () {
+    var url = '/Member/Video/videoShoucang';
+    var vid = $(this).attr('data-vid');
+    var thisObj = $(this);
+
+    $.ajax({
+        type:"post",
+        url:url,
+        data:{"vid":vid},
+        dataType:"json",
+        success:function (data) {
+
+            if(data.status==1){
+                thisObj.find('em').addClass("active");
+                thisObj.find("i").html('取消');
+            }else if(data.status==0){
+                thisObj.find('em').removeClass("active");
+                thisObj.find("i").html('收藏');
+
+                thisObj.parents('li').slideUp();
+            }
+            layui.use('layedit', function(){
+                layer.msg(data.info);
+            })
+
+        }
+    })
+})
+
+</script>

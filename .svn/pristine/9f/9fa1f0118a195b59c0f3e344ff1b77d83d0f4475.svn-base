@@ -1,0 +1,44 @@
+<style>
+    .fa {
+        display: inline;
+        margin-left: -25px;
+    }
+</style>
+<div class="aside_container">
+    <div class="faq_kinds_aside">
+        <ul class="faq_kinds sw-listRank" id="menu_list">
+            <li><a class="column" id="hot_faq">栏目分类</a></li>
+            <foreach name="cate" item="val">
+                <li>
+                    <a down="0" id="{$val.id}" class="leftTab">
+                        <i class="fa fa-angle-right" style="width: 6px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$val.name}
+                    </a>
+                    <dl>
+                        <foreach name="val.child" item="v">
+                            <dd>
+                                <a href="{:U('list/'.$v['id'])}" id="{$v.id}" <if condition="$v['id'] eq $cid">class="current"</if> >{$v.name}</a>
+                            </dd>
+                        </foreach>
+                    </dl>
+                </li>
+            </foreach>
+        </ul>
+    </div>
+
+    <div class="sw-listRank ">
+        <div id="topten">
+            <h3 class="h3">最新文章</h3><ol>
+            <foreach name="new_article" item="v">
+                <li>
+                    {$v.pv} 次阅读: <br>
+                    <a href="{:U('c/'.$v['id'])}">{$v.title|jiequ=0,30,''}</a>
+                </li>
+            </foreach>
+
+        </ol>
+        </div>
+    </div>
+
+
+
+</div>

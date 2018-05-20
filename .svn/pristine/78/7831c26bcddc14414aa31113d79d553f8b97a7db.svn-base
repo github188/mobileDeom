@@ -1,0 +1,112 @@
+
+<include file="Public:headerAfter"/>
+
+<!-- myAccountPay-->
+<section class="myCom myAccountPay" id="myAccountPay">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <span>个人中心</span>
+                    <i></i>
+                    <span>账户充值</span>
+                </div>
+                <div class="com accPay">
+                    <div class="payPlan" id="payPlan01">
+                        <div class="planIn">
+                            <div class="inLine" style="width:25%;"></div>
+                            <ol>
+                                <li class="li01">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">充值学习币</span>
+                                    </div>
+                                </li>
+                                <li class="li02">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">确认支付</span>
+                                    </div>
+                                </li>
+                                <li class="li03">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">支付完成</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="payCen">
+                        <form action="{:U('Pay/payWay')}" method="post" class="myForm">
+                            <div class="cenHd">
+                                <div class="itt">
+                                    <span class="fl ti">当前账户</span>
+                                    <span class="fl"><em>230</em>学习币</span>
+                                </div>
+                                <div class="itt">
+                                    <span class="fl ti">充值金额</span>
+                                    <span class="fl inp">
+                                        <input type="text" name="money" id="accPayMoney" value="{$money}">
+                                        <s>元</s>
+                                    </span>
+                                    <p class="tip"></p>
+                                </div>
+                            </div>
+                            <div class="cenSel">
+                                <div class="payTip">
+                                    <p>快捷选择：<span>（比例：充值1元，可兑换1个学习币）</span></p>
+                                </div>
+                                <div class="selList">
+                                    <ul>
+                                        <li>
+                                            <i class="js-radio"></i>
+                                            <span data-num=1000 >1000个学习币，需1000元</span>
+                                        </li>
+                                        <li>
+                                            <i class="js-radio"></i>
+                                            <span data-num=2000 >2000个学习币，需2000元</span>
+                                        </li>
+                                        <li>
+                                            <i class="js-radio"></i>
+                                            <span data-num=3000 >3000个学习币，需3000元</span>
+                                        </li>
+                                        <li>
+                                            <i class="js-radio"></i>
+                                            <span data-num=4000 >4000个学习币，需4000元</span>
+                                        </li>
+                                        <li>
+                                            <i class="js-radio"></i>
+                                            <span data-num=5000 >5000个学习币，需5000元</span>
+                                        </li>
+                                        <li>
+                                            <i class="js-radio"></i>
+                                            <span data-num=6000 >6000个学习币，需6000元</span>
+                                        </li>
+                                    </ul>
+                                    <p class="tip2"></p>
+                                </div>
+                                <div class="myBtn nextBtn">
+                                    <button type="submit" class="bbtn">下一步</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="payExp">
+                        <h6>说明：</h6>
+                        <p>* 充值学习币可在嗨推学院的PC端，WAP端，APP中购买所有课程</p>
+                        <p>* 充值学习币没有使用期限，会一直保存在您的账户内，可以随时使用</p>
+                        <p>* 充值学习币后不能退回，不能兑现，不能转让给他人，请谅解</p>
+                        <p>* 您充值的学习币仅可以在嗨推学院的PC端，WAP端，App内消费，不可以在其他平台消费</p>
+                        <p>* 最终解释权归嗨推学院所有</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>

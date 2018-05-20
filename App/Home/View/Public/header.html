@@ -1,0 +1,35 @@
+<script type="text/javascript" src="__ADMIN__/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="{:U('Index/index')}"><i class="logo_img"></i></a>
+        </div>
+        <div class="member">
+            <div class="photo">
+                <if condition="!session('ht_kf_uid')">
+                    <div>
+                        <a href="{:U('Login/index')}" class="loginBtn" style="">登录</a>
+                        <a href="{:U('Login/register')}" class="registerBtn" style="">注册</a>
+                    </div>
+                <else/>
+                    <div style=""  class="headBtn">
+                        <img src="http://xue.hitui.com/templates/front_new/img/face/{:session('ht_kf_face') ? session('ht_kf_face') :1}.png">
+                    </div>
+                    <div style="" class="nameBtn">
+                        <span style="white-space:nowrap">
+                            {:session('ht_kf_uname')}
+                            <a href="{:U('Login/logout')}" style="padding-left: 15px;">退出</a>
+                        </span>
+                        <span style="white-space:nowrap;">
+                            {:session('ht_kf_groupname') ? session('ht_kf_groupname') :'试听会员'}
+                        </span>
+                    </div>
+                </if> 
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    
+

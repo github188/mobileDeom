@@ -1,0 +1,67 @@
+<!-- 头部 -->
+<include file="Public:content-header" />
+<div class="wrapper">
+	<!-- 内容标题开始 -->
+	<div id="breadcrumbs" class="breadcrumbs">
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+			<li><a href="#">后台用户</a></li>
+			<li class="active">修改角色</li>
+		</ol>
+	</div>
+	<!-- 内容标题结束 -->
+
+	<!-- 主要内容开始 -->
+	<section class="content">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="box box-info">
+					<div class="box-header nav-tabs">
+						<h4 class="box-title">修改角色</h4>
+						<!-- 返回上一页 -->
+						<include file="Public:content-back" />
+					</div>
+					<!-- 表格开始 -->
+					<div class="box-body">
+						<form action="{:U(MODULE_NAME.'/Rbac/editRole')}" method="post">  
+							<table id="example" class="table table-bordered">
+								<tbody>
+									<tr>
+										<td class="table-td-right"> 角色名称：</td>
+										<td><input type="text" name="name" value="{$role.name}" class="form-control" size="30" data-rule="required"> &nbsp; (*英文名称)</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 角色描述：</td>
+										<td><input type="text" name="remark" value="{$role.remark}" class="form-control" size="30" data-rule="required"> &nbsp; (*中文描述)</td>
+									</tr>
+									<tr>
+										<td class="table-td-right"> 开启状态：</td>
+										<td>
+						                    开启 <input type="radio" name="status" id="iCheck1" value="1" <if condition="$role['status']">checked</if>> &nbsp;
+						                    关闭 <input type="radio" name="status" id="iCheck2" value="0" <if condition="!$role['status']">checked</if>>
+										</td>
+									</tr>
+									<tr height="60">
+										<td colspan="2" align="center">
+											<input type="hidden" name="rid" value="{$role.id}" >
+											<button class="btn btn-success" type="submit"><i class="fa fa-check"></i> 确定修改</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>	
+					</div>
+					<!-- 表格结束 -->
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+
+<!-- 底部 -->
+<include file="Public:content-footer" />

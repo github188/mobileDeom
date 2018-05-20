@@ -1,0 +1,1106 @@
+<?php
+
+//打印函数
+function p($arr) {
+    echo '<pre>' . print_r($arr, true) . '</pre>';
+}
+
+function ps($val, $dump = 1, $die = true) {
+    if ($dump != 1) {
+        $fun = 'var_dump';
+    } else {
+        $fun = (is_array($val) || is_object($val)) ? 'print_r' : 'printf';
+    }
+    header('Content-type:text/html;charset=utf-8');
+    echo '<pre>';
+    $fun($val);
+    echo '</pre>';
+    if ($die)
+        die;
+}
+
+/*
+ * 中文字符截取
+ * @param      string        $string       被处理的字符串
+ * @param      int           $start        开始截取的位置
+ * @param      int           $length       截取的字符长度
+ * @param      string        $dot          缩略符号
+ * @param      string        $charset      字符编码
+ * @return       string      $new          成功截取后的字符串
+ */
+
+function jiequ($string, $start, $length, $dot = '', $charset = "utf-8") {
+    //判断当前的环境中是否开启了mb_substr这个函数
+    if (function_exists("mb_substr")) {
+
+        if (mb_strlen($string, $charset) > $length) {
+            //如果开启了就可以直接使用这个
+            return mb_substr($string, $start, $length, $charset) . $dot;
+        }
+        return mb_substr($string, $start, $length, $charset);
+    }
+    //否则就是下面没开启
+    $new = '';
+    //判断是否是gbk，是gbk就转码成utf-8
+    if ($charset === 'gbk') {
+        $string = iconv("gbk", "utf-8", $string);
+    }
+    //下面这个只能使用在utf-8的编码格式中
+    $str = preg_split('//u', trim($string));
+    for ($i = $start, $len = 1; $i < count($str) - 1 && $len <= $length; $i++, $len++) {
+        $new .= $str[$i + 1];
+    }
+    //如果是gbk，就需要在返回结果之前，把之前的转换编码恢复一下
+    if ($charset === 'gbk') {
+        $new = iconv("utf-8", "gbk", $new);
+    }
+    return count($str) - 2 < $length ? $new : $new . $dot;
+}
+
+//手机识别判断
+function is_mobile() {
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    $mobile_agents = Array("240x320", "acer", "acoon", "acs-", "abacho", "ahong", "airness", "alcatel", "amoi", "android", "anywhereyougo.com", "applewebkit/525", "applewebkit/532", "asus", "audio", "au-mic", "avantogo", "becker", "benq", "bilbo", "bird", "blackberry", "blazer", "bleu", "cdm-", "compal", "coolpad", "danger", "dbtel", "dopod", "elaine", "eric", "etouch", "fly ", "fly_", "fly-", "go.web", "goodaccess", "gradiente", "grundig", "haier", "hedy", "hitachi", "htc", "huawei", "hutchison", "inno", "ipad", "ipaq", "ipod", "jbrowser", "kddi", "kgt", "kwc", "lenovo", "lg ", "lg2", "lg3", "lg4", "lg5", "lg7", "lg8", "lg9", "lg-", "lge-", "lge9", "longcos", "maemo", "mercator", "meridian", "micromax", "midp", "mini", "mitsu", "mmm", "mmp", "mobi", "mot-", "moto", "nec-", "netfront", "newgen", "nexian", "nf-browser", "nintendo", "nitro", "nokia", "nook", "novarra", "obigo", "palm", "panasonic", "pantech", "philips", "phone", "pg-", "playstation", "pocket", "pt-", "qc-", "qtek", "rover", "sagem", "sama", "samu", "sanyo", "samsung", "sch-", "scooter", "sec-", "sendo", "sgh-", "sharp", "siemens", "sie-", "softbank", "sony", "spice", "sprint", "spv", "symbian", "tablet", "talkabout", "tcl-", "teleca", "telit", "tianyu", "tim-", "toshiba", "tsm", "up.browser", "utec", "utstar", "verykool", "virgin", "vk-", "voda", "voxtel", "vx", "wap", "wellco", "wig browser", "wii", "windows ce", "wireless", "xda", "xde", "zte");
+    $is_mobile = false;
+    foreach ($mobile_agents as $device) {
+        if (stristr($user_agent, $device)) {
+            $is_mobile = true;
+            break;
+        }
+    }
+    return $is_mobile;
+}
+
+
+
+/**
+ * 遍历获取目录下的指定类型的文件
+ * @param $path
+ * @param array $files
+ * @return array
+ */
+function getfiles($path, $allowFiles, &$files = array())
+{
+    if (!is_dir($path)) return null;
+    if(substr($path, strlen($path) - 1) != '/') $path .= '/';
+    $handle = opendir($path);
+    while (false !== ($file = readdir($handle))) {
+        if ($file != '.' && $file != '..') {
+            $path2 = $path . $file;
+            if (is_dir($path2)) {
+                getfiles($path2, $allowFiles, $files);
+            } else {
+                if (preg_match("/\.(".$allowFiles.")$/i", $file)) {
+                    $files[] = array(
+                        'url'=> substr($path2, strlen($_SERVER['DOCUMENT_ROOT'])),
+                        'mtime'=> filemtime($path2)
+                    );
+                }
+            }
+        }
+    }
+    return $files;
+}
+
+
+//获取已上传的文件列表
+function getUploadfileList ($allowFiles, $listSize, $path, $size, $start) {
+
+    $allowFiles = substr(str_replace(".", "|", join("", $allowFiles)), 1);
+
+    //获取参数 
+    $size = isset($size) ? htmlspecialchars($size) : $listSize;
+    $start = isset($start) ? htmlspecialchars($start) : 0;
+    $end = $start + $size;
+
+    //获取文件列表
+    $path = $_SERVER['DOCUMENT_ROOT'] . (substr($path, 0, 1) == "/" ? "":"/") . $path;
+    $files = getfiles($path, $allowFiles);
+    if (!count($files)) {
+        return  array(
+            "state" => "没有匹配的文件",
+            "list" => array(),
+            "start" => $start,
+            "total" => count($files)
+        );
+    }
+
+    //获取指定范围的列表 
+    $len = count($files);
+    for ($i = min($end, $len) - 1, $list = array(); $i < $len && $i >= 0 && $i >= $start; $i--){
+        $list[] = $files[$i];
+    }
+    //倒序
+    //for ($i = $end, $list = array(); $i < $len && $i < $end; $i++){
+    //    $list[] = $files[$i];
+    //}
+
+    //返回数据 
+    return  array(
+        "state" => "SUCCESS",
+        "list" => $list,
+        "start" => $start,
+        "total" => count($files)
+    );
+
+}
+
+//CURL  POST 发送方法 
+function postCurl($data='', $url='http://'){
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_HEADER, false);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_NOBODY, true);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        $return_str = curl_exec($curl);
+        curl_close($curl);
+        return $return_str;
+}
+
+
+//发送手机验证码 并写入数据库
+function get_mobile_code($mobile) {
+    $get_arr = send_code_info('mobile_'.$mobile); //数据库中获取验证码信息
+    if($get_arr && $get_arr['code'] && $get_arr['error_number'] <5 && $get_arr['send_time']+5*60 > time())
+        return array('msg'=>'验证码已下发，5分钟内请勿重复发送','status'=>0);//防止网络延迟-前台多次点击
+
+    $target = "http://106.ihuyi.cn/webservice/sms.php?method=Submit";
+    $arr['mobile'] = $mobile;
+    $arr['code'] = getRandCore(6, 1); //随机数
+    $arr['send_time'] = time(); //发送时间
+    $post_data = "account=cf_jieshun&password=123456&mobile=" . $arr['mobile'] . "&format=json&content=" . rawurlencode("您的验证码是：" . $arr['code'] . "。请不要把验证码泄露给其他人。");
+
+    //$gets = xml_to_array(postCurl($post_data, $target));
+    $gets = json_decode(postCurl($post_data, $target),true);
+
+    if ($gets['code'] == 2) {
+        $is_get = $get_arr ? 2 : 1;
+        $today_time = strtotime(date('Y-m-d'));
+        if ($get_arr['today_time'] == $today_time) {
+            $arr['number'] = intval($get_arr['number']) ? intval($get_arr['number']) +1 : 1; //发送次数
+        }else{
+            $arr['number'] = 1;
+        }
+        $get_arr['error_number'] = 0;
+        $arr['today_time'] = $today_time; //今天时间 用于判断
+        send_code_info('mobile_'.$mobile, $is_get, $arr); //写入数据库
+
+        return array('msg'=>'短信已下发，请注意查收','status'=>1);//发送成功
+    }else{
+        return array('msg'=>$gets['msg'],'status'=>0);//发送失败
+    }
+}
+
+
+/**
+ * 获取或存储 验证码信息
+ * @param string $code_id  [ID标识]
+ * @param intval $is_get   [0获取 1写入 2更新]
+ * @param array $data     [验证码信息]
+ * @return 
+ */
+function send_code_info($code_id, $is_get=0, $data=array()) {
+    if (!$code_id) return false;
+    $db = M('send_code');
+
+    //删除两天前的验证码信息
+    $del_time = strtotime("-1 day", strtotime(date('Y-m-d')));
+    $db->where(array('expire' => array('lt',$del_time)))->delete();
+
+    if ($is_get ==2 && $data && is_array($data)) {
+        //更新验证码信息
+        $arr = array('data' => serialize($data), 'expire' => time(), 'ip' => $_SERVER["REMOTE_ADDR"]);
+        $db->where(array('code_id' => $code_id))->save($arr);
+        return true;
+
+    }elseif ($is_get ==1 && $data && is_array($data)) {
+
+        //写入验证码信息
+        $arr = array('code_id' => $code_id, 'data' => serialize($data), 'expire' => time(), 'ip' => $_SERVER["REMOTE_ADDR"]);
+        $db->add($arr);
+        return true;
+    }else{
+        //获取验证码信息
+        $send_code = $db->where(array('code_id' => $code_id))->order('expire DESC')->find();
+        return unserialize($send_code['data']);
+    }
+
+}
+
+
+/**
+ * 验证 验证码是否正确
+ * @param string  $mobileORemail  [手机号码]
+ * @param string  $code           [验证码]
+ * @param int     $type           [类型：1手机-2邮箱]
+ * @return string  [返回验证错误信息]
+ */
+function validator_Code($mobileORemail, $code='',$type=1) {
+
+    $mobileORemail = $type==1?'mobile_'.$mobileORemail : 'email_'.$mobileORemail;
+    $arr = send_code_info($mobileORemail);
+    $msg_1 = $type==1?'手机号':'邮箱';
+    if (!$code || !$arr) return '验证码输入错误或'.$msg_1.'不正确！';
+
+    $send_time = $type==1?$arr['send_time'] + 5*60 : $arr['send_time'] + 15*60; //设置验证码有效时间
+    if ($send_time < time()) {
+        return '验证码已过期，请重新获取！';
+    }
+
+    $today_time = strtotime(date('Y-m-d'));
+    if ($arr['today_time'] == $today_time  && $arr['error_number'] >=5) {
+        return '验证码输入错误次数已超出限制，请重新获取验证码！';
+    }
+
+    if ($arr['code'] != $code) {
+
+        $arr['error_number'] = intval($arr['error_number']) ? intval($arr['error_number']) +1 : 1; //验证码输入错误次数
+        $arr['error_time'] = time(); //验证码输入错误时间
+        send_code_info($mobileORemail, 2, $arr);
+        return '验证码不正确';
+    }
+
+    unset($arr['code']);//验证成功清除
+    send_code_info($mobileORemail, 2, $arr);
+
+    return 1; //验证成功返回1
+
+}
+
+
+//发送邮件验证码
+function get_email_code($email, $username = '', $title = '', $content = '') {
+    $get_arr = send_code_info('email_'.$email); //数据库中获取验证码信息
+    if($get_arr && $get_arr['code'] && $get_arr['error_number'] <5 && $get_arr['send_time']+5*60 > time())
+        return array('msg'=>'验证码已下发，5分钟内请勿重复发送','status'=>0);//防止网络延迟-前台多次点击
+    $today_time = strtotime(date('Y-m-d'));
+    if($get_arr['today_time'] == $today_time  && $get_arr['number'] >= 15){
+        return array('msg'=>'发送失败，验证码发送次数已超出当天最大限制','status'=>0);//限制一天的发送数量15条
+    }
+
+    $user = $username?"亲爱的$username：":"尊敬的用户：";
+    if (!$title) {
+        $title = "亲爱的嗨推用户,请查收验证码";
+    }
+    $code = rand(100000,999999);
+    if (!$content) {
+        $content = <<<AAA
+<p><br/></p>
+<p style="line-height: 23.8px; font-family: &#39;lucida Grande&#39;, Verdana, &#39;Microsoft YaHei&#39;; font-size: 14px; white-space: normal;">
+    <span style="line-height: 23.8px; font-family: 微软雅黑, &#39;Microsoft YaHei&#39;;">$user</span>
+</p><span style="font-family: 微软雅黑, &#39;Microsoft YaHei&#39;; line-height: 23.8px; font-size: 14px;">您好！请查收验证码</span><br/>
+<p style="line-height: 23.8px; font-size: 14px; white-space: normal;">
+    <span style="font-family:微软雅黑, Microsoft YaHei">本次验证码为<span style="color:#00b0f0">$code</span>，请您在15分钟内输入。</span>
+</p>
+<p style="line-height: 23.8px; font-family: &#39;lucida Grande&#39;, Verdana, &#39;Microsoft YaHei&#39;; font-size: 14px; white-space: normal;">
+    <span style="line-height: 23.8px; font-family: 微软雅黑, &#39;Microsoft YaHei&#39;;">祝您使用愉快.</span>
+</p>
+<p style="line-height: 23.8px; font-family: &#39;lucida Grande&#39;, Verdana, &#39;Microsoft YaHei&#39;; font-size: 14px; white-space: normal;">
+    <span style="line-height: 23.8px; font-family: 微软雅黑, &#39;Microsoft YaHei&#39;;">系统发信，请勿回复</span>
+</p>
+<p style="line-height: 23.8px; font-family: &#39;lucida Grande&#39;, Verdana, &#39;Microsoft YaHei&#39;; font-size: 14px; white-space: normal;">
+    <span style="line-height: 23.8px; font-family: 微软雅黑, &#39;Microsoft YaHei&#39;;">嗨推学院：<a href="http://xue.hitui.com" target="_blank" title="http://xue.hitui.com"><span style="color:#00b0f0">http://xue.hitui.com</span></a></span>
+</p>
+AAA;
+
+        //$content = "<h3>您的验证码是：<font color='red'><b>" . $code . " </b></font>有效期为15分钟。 为了您的账号安全，请勿把证码泄露验给其他人。</h3>";
+    }
+
+    $mail = new Lib\Mail\PHPMailer();
+    $mail->CharSet  = "UTF-8";                   //可以解决乱码问题
+    $mail->IsSMTP();                             // 经smtp发送
+    $mail->Host     = "services.unimarketing.com.cn";            // SMTP 服务器
+    //$mail->Port     = 25;                        //邮件发送端口
+    $mail->SMTPAuth = true;                      // 打开SMTP 认证
+    $mail->Username = "ihitui.com";      // 用户名
+    $mail->Password = "hPr/x+t6re8YRfj7tjDvZrpaJng=";               // 密码
+    $mail->From     = "admin@edm.51hitui.com";      //发件人地址（也就是你的邮箱）
+    $mail->FromName = "=?UTF-8?B?" . base64_encode("嗨推学院") . "?=";                 //发件人姓名
+    $mail->AddAddress($email);                   // 收信人
+    //$mail->WordWrap = 50;
+    $mail->IsHTML(true);                         // 以html方式发送
+    $mail->Subject  = $title;                    // 邮件标题
+    $mail->Body     = $content;                  // 邮件内空
+    $result         = $mail->Send();
+    //$mail->AltBody  =  "请使用HTML方式查看邮件。";
+    if($result){
+        $arr['email'] = $email;
+        $arr['code'] = $code; //随机数
+        $arr['send_time'] = time(); //发送时间
+        $is_get = $get_arr ? 2 : 1;
+        if ($get_arr['today_time'] == $today_time) {
+            $arr['number'] = intval($get_arr['number']) ? intval($get_arr['number']) +1 : 1; //发送次数
+        }else{
+            $arr['number'] = 1;
+        }
+        $get_arr['error_number'] = 0;
+        $arr['today_time'] = $today_time; //今天时间 用于判断
+        send_code_info('email_'.$email, $is_get, $arr); //写入数据库
+
+        return array('msg'=>'验证码已下发，请注意查收','status'=>1);
+    }else{
+        //p("邮件发送失败: " . $mail->ErrorInfo) ;
+        return array('msg'=>'网络繁忙，邮件发送失败请稍后重试','status'=>0);
+    }
+
+}
+
+
+//XML转数组
+function xml_to_array($xml) {
+    $reg = "/<(\w+)[^>]*>([\\x00-\\xFF]*)<\\/\\1>/";
+    if (preg_match_all($reg, $xml, $matches)) {
+        $count = count($matches[0]);
+        for ($i = 0; $i < $count; $i++) {
+            $subxml = $matches[2][$i];
+            $key = $matches[1][$i];
+            if (preg_match($reg, $subxml)) {
+                $arr[$key] = xml_to_array($subxml);
+            } else {
+                $arr[$key] = $subxml;
+            }
+        }
+    }
+
+    return $arr;
+}
+
+
+//嗨推学院密码加密处理
+function password_md5($password, $encrypt = '') {
+    $pwd = array();
+    $pwd['encrypt'] = $encrypt ? $encrypt : getRandCore();
+    $pwd['password'] = md5(md5(trim(filtrationSrt($password))) . $pwd['encrypt']);
+    return $encrypt ? $pwd['password'] : $pwd;
+}
+
+
+//生成随机字符串
+function getRandCore($lenth = 6, $numeric = 0) {
+    if ($numeric) {
+        return substr(str_shuffle('0123456789'),0,$lenth);
+    }else{
+        return substr(str_shuffle('abcdefghijklmnpqrstuvwxyz0123456789ABCDEFGHIJKLMNPQRSTUVWXYZ'),0,$lenth);
+    }
+}
+
+
+
+//过滤去掉字符串中的空格 换行
+function filtrationSrt ($str){
+    $search = array(" ","　","\n","\r","\t");
+    $replace = array("","","","","");
+    return str_replace($search, $replace, $str);
+}
+
+
+//传递分类ID 获取分类名称
+function getCateName ($cid) {
+    $db = M('Category');
+    $name = $db->where(array('id' =>intval($cid)))->getField('name');
+    return $name;
+}
+
+//传递分类ID 获取父级分类名称
+function getParentCateName ($cid,$str=' -') {
+    $db = M('Category');
+    $pid = $db->where(array('id' =>intval($cid)))->getField('pid');
+    $name_ = $db->where(array('id' =>intval($pid)))->getField('name');
+    $name = $name_ ? $name_.$str : '';
+    return $name;
+}
+
+//获取分类栏目分组名称
+function getGroupCategory ($key=null) {
+    $group_list = array('问题文章', '关于我们');
+    if (is_numeric($key)) {
+        return $group_list[$key];
+    }else{
+        return $group_list;
+    }
+ }
+
+
+//获取数据库公共配置参数
+function getConfig($name){
+    $db = M('Config');
+    if ($name) {
+        $results = $db->where(array('id' => 1))->cache(true,60)->getField($name);
+    }else{
+        $results = $db->where(array('id' => 1))->cache(true,60)->find();
+    }
+
+    return $results;
+}
+//把秒数转换成 => 时：分：秒
+function video_time_change($playtime, $true = false) {
+    if ($true) {
+        $d = floor($playtime / 86400);
+        $shengyu_time = $playtime - $d * 86400;
+        $h = floor($shengyu_time / 3600);
+        if ($d < 10)
+            $d = '0' . $d;
+        if ($h < 10)
+            $h = '0' . $h;
+        return $d . '天' . $h . '时';
+    }
+    else {
+        $h = floor($playtime / 3600);
+        $shengyu_time = $playtime - $h * 3600;
+        $m = floor($shengyu_time / 60);
+        $s = $shengyu_time - $m * 60;
+        if ($h < 10)
+            $h = '0' . $h;
+        if ($m < 10)
+            $m = '0' . $m;
+        if ($s < 10)
+            $s = '0' . $s;
+        return $h . ':' . $m . ':' . $s;
+    }
+}
+
+//从api接口获取 视频信息
+function api_get_video_info($video_code,$return_type='video_time'){
+
+    $video_code = trim(stripcslashes($video_code));
+    preg_match("/'vid' : '([0-9a-z_]+)'/is", $video_code,$match);
+    $vid = $match ? $match[1] : $video_code;
+
+    $api_url = 'http://v.polyv.net/uc/services/rest?method=getById';
+    $readtoken = 'xIou5QTXB0-osiT6905rs-ILNEBIDYx7';
+    $secretkey = 'qzdSwQMnmX';
+    // $writetoken = 'N0bXqdSVgaeW0ao-YfgwdTkU25qesXtU';
+    $sign = sha1('readtoken='.$readtoken.'&vid='.$vid.$secretkey);
+
+    $url = $api_url . '&readtoken='.$readtoken.'&vid='.$vid.'&sign='.$sign;
+    $body = @file_get_contents($url);
+
+    $video_info = json_decode($body,true);
+
+    if($return_type=='video_time'){ //默认返回视频时间
+        return $video_info['data'][0]['duration'];
+    }
+    elseif($return_type=='video_img'){//返回视频 第一张缩列图
+        return $video_info['data'][0]['first_image'];
+    }
+
+}
+
+/**
+ * UTF-8编码 GBK编码相互转换/（支持数组）
+ *
+ * @param array $str   字符串，支持数组传递
+ * @param string $in_charset 原字符串编码
+ * @param string $out_charset 输出的字符串编码
+ * @return array
+ */
+function array_iconv($str, $in_charset="gbk", $out_charset="utf-8")
+{
+    if(is_array($str))
+    {
+        foreach($str as $k => $v)
+        {
+            $str[$k] = array_iconv($v);
+        }
+        return $str;
+    }
+    else
+    {
+        if(is_string($str))
+        {
+            // return iconv('UTF-8', 'GBK//IGNORE', $str);
+            return mb_convert_encoding($str, $out_charset, $in_charset);
+        }
+        else
+        {
+            return $str;
+        }
+    }
+}
+
+//获取用户信息
+function getUserInfo($user_id=0,$name=''){
+
+    $db = M('user');
+    if ($name) {
+        $results = $db->where(array('id' => $user_id))->cache(true,10)->getField($name);
+    }else{
+        $results = $db->where(array('id' => $user_id))->cache(true,10)->find();
+    }
+
+    return $results;
+}
+
+
+/*
+ * 获取用户组信息
+ *
+ * @param  int     $user_id   用户ID
+ * @param  string  $group     用户用拥有的用户组权限()需要返回的数量
+ * @return array
+ */
+function getUserGroup($user_id=0,$group=1){
+    $groupInfo    = array();
+    $db_group_ext = M('user_group_ext');
+    $db_group     = M('user_group');
+
+    if($user_id){
+        //获取该用户的一个用户组权限----默认返回
+        if($group==1){
+            $group_ext = $db_group_ext->where(array('user_id'=>$user_id))->order('end_time DESC')->field('group_id,start_time,end_time')->cache(true,10)->find();
+            if(!$group_ext) return;
+            $group_arr = $db_group->where(array('id'=>$group_ext['group_id']))->field('id,name')->cache(true,10)->find();
+            $groupInfo['group_id']   = $group_arr['id'];
+            $groupInfo['group_name'] = $group_arr['name'];
+            $groupInfo['start_time'] = $group_ext['start_time'];
+            $groupInfo['end_time']   = $group_ext['end_time'];
+        }
+        //获取该用户的所有用户组权限
+        elseif($group==2){
+            $group_ext  = $db_group_ext->where(array('user_id'=>$user_id))->order('end_time DESC')->field('group_id,start_time,end_time')->cache(true,10)->select();
+            if(!$group_ext) return;
+            foreach($group_ext as $k=>$v){
+                $group_arr = $db_group->where(array('id'=>$v['group_id']))->field('id,name')->cache(true,10)->find();
+                $groupInfo[$k]['group_id']   = $group_arr['id'];
+                $groupInfo[$k]['group_name'] = $group_arr['name'];
+                $groupInfo[$k]['start_time'] = $v['start_time'];
+                $groupInfo[$k]['end_time']   = $v['end_time'];
+            }
+        }
+    }
+    return $groupInfo;
+}
+
+/*  ouHai 2017-06-02
+ *  判断当前视频 用户是否有权限播放
+ *  $vid       播放视频的ID
+ *  $user_id   用户ID
+ *  return  array()
+ */
+function videoPlayAuth($vid,$user_id=0){
+    if(!$user_id) $user_id = session(C('USER_AUTH_UID'));
+    $video_db        = M('video');
+    $video_auth_db   = M('video_auth');
+    $video_c_db      = M('video_category');
+    $video_c_auth_db = M('video_category_auth');
+    $user_g_ext_db   = M('user_group_ext');
+
+    $videoInfo =  $video_db->where(array('id'=>$vid,'status'=>0))->find();
+    #先优先查询是否单独购买过视频
+    $video_auth = $video_auth_db->where(array('user_id'=>$user_id,'vid'=>$vid,'end_time'=>array('GT',time())))->find();
+    #没有单独购买过视频或者单独购买已经过期，则查询用户组
+    if(!$video_auth){
+        #用户开通的所有权限
+        $user_groud = $user_g_ext_db->where(array('user_id'=>$user_id))->field('group_id')->select();
+        $ugid = array();
+        foreach($user_groud as $k=>$v){
+            $ugid[] = $v['group_id'];
+        }
+        array_unique($ugid);
+        #当前视频分组允许查看的用户组
+        $video_category = $video_c_db->where(array('id'=>$videoInfo['category_id']))->find();
+        $video_c_auth   = $video_c_auth_db->where(array('category_id'=>$video_category['id']))->field('ugid')->select();
+
+        $canSee = 0 ;#是否有权限观看视频
+        $normal_userGroud = $guoqi_userGroud =  array();#正常用户组--过期用户组
+
+        foreach($video_c_auth as $k=>$v){//循环当前视频分组允许查看的用户组
+            if(in_array($v['ugid'],$ugid)){
+                $canSee = 1;
+                $groudInfo = $user_g_ext_db->where(array('user_id'=>$user_id,'group_id'=>$v['ugid'],'end_time'=>array('GT',time())))->find();
+                if($groudInfo){
+                    $normal_userGroud[] = $v['ugid'];
+                    break;
+                }else{
+                    $guoqi_userGroud[]  = $v['ugid'];
+                }
+            }
+        }
+        if(!$canSee)
+            return array('allow_play'=>2,'msg'=>'没有权限查看该视频');
+        if($normal_userGroud)
+            return array('allow_play'=>1);
+        else
+            return array('allow_play'=>2,'msg'=>'用户组已经过期，请及时续费');
+    }
+    return array('allow_play'=>1);
+}
+
+//获取视频标签
+function getVideoTag($tag){
+    $arr = array();
+    $arr[1] = '最新';
+    $arr[2] = '推荐';
+    return $arr[$tag]?$arr[$tag]:'';
+}
+
+/*  ouHai 2017-06-06
+ *  传入一个优惠码  判断是否可以使用
+ *  判断当前优惠券 能否使用优惠当前用户组
+ *  $ticket_code    优惠码
+ *  $group_id       用户组ID
+ *  return  array()
+ */
+function checkedTicket($ticket_code,$group_id=0){
+    $ticket_db     = M('ticket');
+    $ticket_ext_db = M('ticket_ext');
+
+    $ticket_info = $ticket_db->where(array('code'=>$ticket_code))->find();
+    if(!$ticket_info)
+        return array('status'=>0,'msg'=>'优惠券口令不正确');
+    if($ticket_info['end_time'] < time())
+        return array('status'=>0,'msg'=>'优惠券已经过期');
+    if($ticket_info['use_time'] or $ticket_info['status']==1)
+        return array('status'=>0,'msg'=>'优惠券已经被使用');
+
+    if($group_id) {
+        $ticket_ext = $ticket_ext_db->where(array('ticket_id'=>$ticket_info['id'],'group_id'=>$group_id))->getField('id');
+        if(!$ticket_ext)
+            return array('status'=>0,'msg'=>'优惠券不适用于当前商品');
+    }
+    return array('status'=>1,'info'=>$ticket_info);
+}
+
+/* ===== 统一生成购买课程或者视频订单 =======
+ * PC和手机端 统一调用
+ * ouHai 2017-06-23
+ * $id 会员组ID或视频ID   $user_id 用户ID  $type 类型(1.购买用户组2.购买视频)
+ *
+ * return array()  status状态 msg错误提示  info成功返回的数据
+ * =====                            =======
+ */
+function makeCourseOrder($id,$user_id=0,$type=0,$return_order=0){
+    $userGroup_db  = M('user_group');
+    $video_db      = M('video');
+    if(!$user_id) return false;
+
+    if($id && $type==0)#购买会员组
+        $userGroupInfo =  $userGroup_db->where(array('id'=>$id,'allow_buy'=>1))->find();
+    if($id && $type==1)#购买视频
+        $videoInfo =  $video_db->where(array('id'=>$id,'status'=>0))->find();
+
+    if(IS_AJAX){
+        //用户输入优惠券 判断是否可用
+        $ticket_code   = I('post.ticket_code',''); #优惠券口令
+        $brokerage     = I('post.brokerage','');   #佣金
+        $brokerage     = sprintf('%.2f', floatval($brokerage));#金额保留2位小数; #佣金
+        if($ticket_code){
+            $checkedResult = checkedTicket($ticket_code,$type==0?$id:0);
+            if($checkedResult['status']==0) return array('status'=>0,'msg'=>$checkedResult['msg']);
+        }
+        $user_account  = M('user')->where(array('id'=>$user_id))->field('currency,integral,brokerage')->find();
+        //用户输入佣金抵扣 判断是否可用
+        if($brokerage){
+            if($user_account['brokerage']<=0) return array('status'=>0,'msg'=>'账户佣金余额不足');
+            if($user_account['brokerage']<$brokerage) return array('status'=>0,'msg'=>'超出账户佣金可用余额');
+        }
+
+        $order = array();
+        $order['user_id']         = $user_id;
+        $order['addtime']         = time();
+        $order['paytime']         = 0;
+        $order['status']          = 0;
+        $order['number']          = 1;
+        $order['pay_brokerage']   = $brokerage ? $brokerage : 0;//消费佣金
+        $order['ticket_id']       = $ticket_code && $checkedResult['info']?$checkedResult['info']['id']    : 0;
+        $order['ticket_money']    = $ticket_code && $checkedResult['info']?$checkedResult['info']['price'] : 0;
+        $order['ticket_code']     = $ticket_code;
+
+        //购买用户组
+        if($type==0){
+            if(!$userGroupInfo) return array('status'=>0,'msg'=>'请选择要购买的会员组');
+            $order['goods_type']  = 0;
+            $order['goods_id']    = $userGroupInfo['id'];
+            $order['total_money'] = $userGroupInfo['buy_money'];
+        }
+        //购买单个视频
+        if($type==1){
+            if(!$videoInfo) return array('status'=>0,'msg'=>'请选择要购买的视频');
+            $order['goods_type']  = 1;
+            $order['goods_id']    = $videoInfo['id'];
+            $order['total_money'] = $videoInfo['buy_money'];
+        }
+
+        //使用佣金和优惠券
+        if($order['pay_brokerage'] && $order['ticket_money']){
+            $pay_currency = $order['total_money'] - $order['pay_brokerage'] - $order['ticket_money'];
+            $pay_currency = $pay_currency>0?$pay_currency:0;
+        }
+        //使用佣金
+        elseif($order['pay_brokerage']){
+            $pay_currency = $order['total_money'] - $order['pay_brokerage'];
+            $pay_currency = $pay_currency>0?$pay_currency:0;
+        }
+        //使用优惠券
+        elseif($order['ticket_money']){
+            $pay_currency = $order['total_money'] - $order['ticket_money'];
+            $pay_currency = $pay_currency>0?$pay_currency:0;
+        }
+        //两个都不使用
+        else{
+            $pay_currency = $order['total_money']>0 ? $order['total_money'] : 0;
+        }
+        $order['pay_currency']   = $pay_currency;
+
+        if($return_order)
+            return array('status'=>1,'info'=>$order);#返回订单信息。
+
+        $insertId = M('order_goods')->data($order)->add();
+
+        if($insertId){
+            return array('status'=>1,'info'=>$insertId);#不返回订单信息，返回订单ID
+        }else{
+            return array('status'=>0,'msg'=>'订单生成失败，请重新选择课程');
+        }
+
+    }
+}
+
+
+/* ===== 根据订单ID开通课程          =======
+ * PC和手机端 统一调用
+ * ouHai 2017-06-23
+ * $id 会员组ID或视频ID   $user_id 用户ID  $type 类型(1.购买用户组2.购买视频)
+ *
+ * return array()  status状态 msg错误提示   url跳转链接
+ * =====                            =======
+ */
+function courseOrderPay($order_id,$user_id){
+    $order_goods_db = M('order_goods');
+    $user_db   = M('user');
+    $ticket_db = M('ticket');
+
+    $order_info = $order_goods_db->where(array('id'=>$order_id,'user_id'=>$user_id))->find();
+    if(!$order_info)  return array('status'=>0,'msg'=>'订单不存在');
+    if($order_info['status']==1)  return array('status'=>0,'msg'=>'该订单已经支付过了');
+
+    $user_account  = $user_db->where(array('id'=>$user_id))->field('currency,brokerage')->find();
+    if($user_account['currency'] < $order_info['pay_currency']) return array('status'=>0,'msg'=>'学习币余额不足,请先充值','url'=>U('Pay/payMoney'));
+
+
+    #实际开通课程 检查优惠券 是否被被人使用过
+   if($order_info['ticket_id']){
+        $checkedResult = checkedTicket($order_info['ticket_code'],$order_info['goods_type']==0?$order_info['ticket_id']:0);
+        if($checkedResult['status']==0) return array('status'=>0,'msg'=>$checkedResult['msg']);
+    }
+
+    //购买视频
+    if($order_info['goods_type']==1){
+        $video_auth_db = M('video_auth');
+        $video_db      = M('video');
+
+        $video_auth_info = $video_auth_db->where(array('user_id'=>$user_id,'vid'=>$order_info['goods_id']))->find();
+        $gqtime   = $video_db->where(array('vid'=>$order_info['goods_id']))->getField('gqtime');//单个视频有效期(天)
+        $end_time = date('Y-m-d',strtotime("+ {$gqtime} day"));
+        list($y, $m, $d) = explode('-', $end_time);
+        $end_time = mktime(0, 0, 1, $m, $d, $y);
+
+        if($video_auth_info){//判断当前视频是否购买过
+            $end_time = $end_time-time();
+            $now_time = $video_auth_info['end_time'] > time()?$video_auth_info['end_time'] : time() ;
+            $end_time = $now_time+$end_time;
+            $video_auth_db->where(array('user_id'=>$user_id,'vid'=>$order_info['goods_id']))->data(array('end_time'=>$end_time))->save();
+        }else{//没有购买过 新添加一条数据
+            $data = array(
+                'user_id'    => $user_id,
+                'vid'        => $order_info['goods_id'],
+                'start_time' => time(),
+                'end_time'   => $end_time,
+                'addtime'    => time(),
+            );
+            $video_auth_db->data($data)->add();
+        }
+    }
+    //购买用户组
+    else if($order_info['goods_type']==0){
+        $user_g_db       = M('user_group');
+        $user_g_ext_db   = M('user_group_ext');
+
+        $user_ext = $user_g_ext_db->where(array('user_id'=>$user_id,'group_id'=>$order_info['goods_id']))->find();
+        $gqtime   = $user_g_db->where(array('id'=>$order_info['goods_id']))->getField('gqtime');//单个视频有效期(天)
+        $end_time = date('Y-m-d',strtotime("+ {$gqtime} day"));
+        list($y, $m, $d) = explode('-', $end_time);
+        $end_time = mktime(0, 0, 1, $m, $d, $y);
+
+        if($user_ext){//判断当前用户组是否购买过
+            $end_time = $end_time-time();
+            $now_time = $user_ext['end_time'] > time()?$user_ext['end_time'] : time() ;
+            $end_time = $now_time+$end_time;
+            $user_g_ext_db->where(array('user_id'=>$user_id,'group_id'=>$order_info['goods_id']))->data(array('end_time'=>$end_time))->save();
+        }else{//没有购买过 新添加一条数据
+            $data = array(
+                'user_id'    => $user_id,
+                'group_id'   => $order_info['goods_id'],
+                'start_time' => time(),
+                'end_time'   => $end_time,
+                'addtime'    => time(),
+            );
+            $user_g_ext_db->data($data)->add();
+        }
+    }
+    //权限开通成功--扣除对应的 学习币-佣金
+    $currency  = $user_account['currency']  - $order_info['pay_currency'] ;
+    $brokerage = $user_account['brokerage'] - $order_info['pay_brokerage'] ;
+    $user_db->where(array('id'=>$user_id))->data(array('currency'=>$currency,'brokerage'=>$brokerage,))->save();
+    //权限开通成功--修改优惠券状态
+    if($order_info['ticket_id'] && $order_info['ticket_money']){
+        $data = array(
+            'user_id'  => $user_id,
+            'group_id' => $order_info['goods_type'] ==0 ? $order_info['goods_id'] : 0 ,
+            'vid'      => $order_info['goods_type'] ==1 ? $order_info['goods_id'] : 0 ,
+            'status'   => 1,
+            'use_time' => time(),
+        );
+        $ticket_db->where(array('id'=>$order_info['ticket_id']))->data($data)->save();
+    }
+
+    //权限开通成功--修改订单状态
+    $order_goods_db->where(array('id'=>$order_id,'user_id'=>$user_id))->data(array('status'=>1,'paytime'=>time()))->save();
+    return array('status'=>1,'msg'=>'订单支付成功','url'=>U('Pay/courseResult',array('order'=>$order_info['id'])));
+}
+
+
+
+//登录的时候写入公共未读消息
+function insertPublicMessage($user_id=''){
+    if(!$user_id) $user_id = session(C('USER_AUTH_UID'));
+    //如果有用户未读的公共消息 则写入一条
+    $msg_db      = M('message');
+    $msg_user_db = M('message_user');
+
+    $public_message = $msg_db->where(array('is_public'=>1))->order('id DESC')->select();
+    if($public_message){
+        foreach($public_message as $k=>$v){
+            $is_read = $msg_user_db->where(array('recipient_id'=>$user_id,'message_id'=>$v['id']))->find();
+            if(!$is_read){
+                $data = array(
+                    'message_id'   => $v['id'],
+                    'recipient_id' => $user_id,
+                    'is_read'      => 0,
+                    'is_show'      => 1,
+                );
+                $msg_user_db->data($data)->add();
+            }
+        }
+    }
+}
+
+
+//404页面
+function _404(){
+    R('Empty/_empty');
+    die;
+}
+
+
+//js弹窗消息
+function layer_msg($notice='',$url='',$time=1500){
+    header("Content-type: text/html; charset=utf-8");
+    $msg =<<<AAA
+    <style>
+        body{font-family: 'Microsoft YaHei';font-size: 20px;}
+    </style>
+        <script src="/Public/Member/js/jquery-1.11.2.min.js"></script>
+        <script src="/Public/AdminLte/layer/layer.js"></script>
+                <script>
+                    var url = "{$url}";
+                    window.onload = function(){
+                    setTimeout(function(){
+                        layer.msg("{$notice}");
+                        if(url != ''){
+                            setTimeout(function(){
+                                window.location.href = "{$url}";
+                            },{$time});
+                        }
+                        },100);
+                    }
+
+                </script>
+AAA;
+    echo $msg;
+}
+
+
+/**
+ * 检查用户名是否符合规定 (两个字符以上，只能有中文，字母，数字，下划线的)
+ *
+ * @param STRING $username 要检查的用户名
+ * @return  TRUE or FALSE
+ */
+function isUsername($username){
+    $strlen = strlen($username);
+    if (is_badword($username) || !preg_match("/^[a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]+$/", $username)) {
+        return false;
+    } elseif (16 < $strlen || $strlen < 3) {
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * 检测输入中是否含有错误字符
+ *
+ * @param char $string 要检查的字符串名称
+ * @return TRUE or FALSE
+ */
+function is_badword($string) {
+    $badwords = array("\\", '&', ' ', "'", '"', '/', '*', ',', '<', '>', "\r", "\t", "\n", "#");
+    foreach ($badwords as $value) {
+        if (strpos($string, $value) !== false) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+//验证密码是否合法
+function isPassword($password){
+    $reg = "/^[a-zA-Z\d_]{6,16}$/";
+    $strlen = strlen(trim($password));
+    if(!$password) return false;
+    if (!$strlen >= 6 && !$strlen <= 16)
+        return false;
+
+    if (!preg_match($reg,$password)) {
+        return false;
+    }
+    return true;
+}
+
+//验证是否为手机号码
+function isPhone($str){
+    $pattern = "/^1(3[0-9]|4[57]|5[0-35-9]|7[0135678]|8[0-9])\\d{8}$/";
+    if(!$str) return false;
+    if (!preg_match($pattern, $str)) return false;
+    return true;
+}
+
+//验证是否为邮箱
+function isEmail($email){
+    if(!$email) return false;
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return false;
+    }
+    return true;
+}
+
+
+//验证输入金额是否合法
+function isMoneynum($num){
+    if (preg_match('/^[0-9]+(.[0-9]{1,2})?$/', $num)) {
+        return true;
+    }
+    return false;
+}
+
+//获取银行卡类型
+function getBankType($type=0){
+
+    $arr = array(
+        1 => '工商银行',
+        2 => '农业银行',
+        3 => '中国银行',
+        4 => '建设银行',
+        5 => '招商银行',
+        6 => '交通银行',
+        7 => '浦发银行',
+        8 => '广发银行',
+        9 => '民生银行',
+        10 => '兴业银行',
+        11 => '光大银行',
+        12 => '平安银行',
+        13 => '中信银行',
+        14 => '邮政储蓄银行',
+        15 => '华夏银行',
+        16 => '支付宝'
+        );
+    if($type=='all') return $arr;
+    $name =  is_numeric($type) && $arr[$type] ? $arr[$type] : '';
+    return $name ? $name :'' ;
+}
+
+
+/**
+ * 获取用户默认显示的用户组
+ * @param  int    $user_id  用户ID
+ * @return int   $user_group_id 用户组id
+ */
+function getDefaultUserGroup($user_id){
+    if (!$user_id){
+        return false;
+    }
+
+    $user_group_ext_db = M('user_group_ext');
+    $max_end_time = $user_group_ext_db->where(array('user_id' => $user_id))->Max('end_time');
+    $user_group_id = $user_group_ext_db->where(array('user_id' => $user_id, 'end_time' => $max_end_time))->getField('group_id');
+    return $user_group_id?:'';
+
+}
+
+
+/**
+ * 功能：生成二维码
+ * @param string $url_data     URL或其它参数
+ * @param string $level    默认纠错比例 分为L、M、Q、H四个等级，H代表最高纠错能力
+ * @param int    $size     二维码图大小，1－10可选，数字越大图片尺寸越大
+ * @param string $pathName   图片存储文件夹名称
+ * @return string  返回文件及路径
+ */
+function createQRcode($url_data, $pathName='payQRcode', $fileName='', $level='L', $size=6){
+
+    //如果没有传参数或参数不正确 即返回空
+    if(!isset($pathName) || !isset($url_data)  || !ctype_alnum($pathName)) return ''; 
+
+    //设置生成png图片的路径
+    $date = date('Ym', time());
+    $png_temp_dir = './Uploads/'.$pathName.'/'.$date.'/';
+    if(!isset($fileName)) $fileName = date("YmdHis") . mt_rand(100, 999);
+
+    //检测并创建生成文件夹
+    if (!file_exists($png_temp_dir)){
+        mkdir($png_temp_dir,0777,true);
+    }
+
+    //组合文件名.png
+    $dir_filename = $png_temp_dir.$level.$size.'_'.$fileName.'.png';
+
+    $errorCorrectionLevel = 'L';
+    if (isset($level) && in_array($level, array('L','M','Q','H'))){
+        $errorCorrectionLevel = & $level;
+    }
+    $matrixPointSize = 4;
+    if (isset($size)){
+        $matrixPointSize = & min(max((int)$size, 1), 10);
+    }
+    //检查如果二维码文件不存在 即生成
+    $basename = basename($dir_filename);
+    if (!file_exists($png_temp_dir.$basename)) {
+        //开始生成
+        $Qrcode = new \Lib\Util\Qrcode();
+        $Qrcode->png($url_data, $dir_filename, $errorCorrectionLevel, $matrixPointSize, 2);
+    }
+
+    //返回文件路径
+    return str_replace('.','',$png_temp_dir).$basename; 
+
+}
+
+
+/**
+ * 获取用户未读消息总数
+ * @param  int    $user_id  用户ID
+ * @return int   
+ */
+function getUserMessageCount($user_id){
+    if (!$user_id){
+        return false;
+    }
+
+    $count = M('message_user')->where(array('recipient_id' => $user_id, 'is_read' =>0, 'is_show' =>1))->cache(30)->count();
+    return $count;
+
+}

@@ -1,0 +1,163 @@
+
+<include file="Public:headerAfter"/>
+<style>
+
+    .ask *,.wz img{
+        display: inline-block;
+    }
+    .ask .time{
+        display: block;
+        font-size: 12px;
+        color: #999;
+    }
+</style>
+<!--content-->
+<div class="videoContent m0a learnContent">
+    <div class="videoTab mt20">
+        <!--选项卡切换S-->
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <!--top菜单-->
+            <include file="topMenu"/>
+            <div class="layui-tab-content clearfix layui-tab-content-new" >
+            <!--我的提问-->
+            <div class="layui-tab-item layui-show" >
+                <div class="com newsAsk mt20">
+                    <ul id="questionlist" data-last-question-id="{$question.end_id}">
+                        <empty name="question.question">
+                            <!--没有数据：-->
+                            <div class="noData" style="text-align: center;">
+                                <img style="margin: 0 auto;" src="__MEMBER__/images/errorTp.png" alt="没有数据"  width="" height="">
+                                <p>您目前数据为空</p>
+                            </div>
+                        </empty>
+                        <foreach name="question.question" item="val" key="k">
+                            <li>
+                                <div data-last-answer-id="{$val.limit_end_id}" class="item question_list">
+                                    <div class="tp">
+                                        <a href="javascript:;">
+                                            <img src="__MEMBER__/images/logo/{$val.face}.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="txIn">
+                                            <div class="tHd">
+                                                <img style="display: inline-block" src="__MEMBER__/images/user_group/{$val.user_group_id}.png" alt="">
+                                                <span class="name">{$val.username}</span>
+                                            </div>
+                                            <p class="wz">{$val.question}</p>
+                                            <p class="from">
+                                            <span>
+                                                <em>来源：</em>
+                                                <a href="/Member/Video/showList/category/{$val.category_id}">{$val.category_name}/</a><a href="/Member/Video/play/vid/{$val.vid}">{$val.video_name}</a>
+                                            </span>
+                                            </p>
+                                            <div class="hand handLi clearfix">
+                                                <span class="time">{$val.addtime}</span>
+
+                                                <empty name="val.is_shoucang">
+                                                    <span class="sc1 fr ml110" onclick="shoucang($(this), {$val.id})"><em class="videoEms"></em><i class="fonts14"><i>收藏</i></i></span>
+                                                <else />
+                                                    <span class="sc1 fr ml110" onclick="shoucang($(this), {$val.id})"><em class="videoEms active"></em><i class="fonts14"><i>取消</i></i></span>
+                                                </empty>
+
+
+                                                <a onclick="createBox($(this))" class="mesIco mesIcoT"><i></i>(<span class="reply_count">{$val.count}</span>)</a>
+
+                                            </div>
+                                            <!--<div class="hand handLi clearfix ">-->
+                                                <!--<span class="time">2017-04-15 17:11</span>-->
+                                                <!--<span class="sc1 fr ml110"><em class="videoEm"></em><i class="fonts14"><i>取消</i></i></span>-->
+                                                <!--<a href="javascript:;" class="mesIco mesIcoT"><i class="ml25"></i>(<span>2</span>)</a>-->
+                                            <!--</div>-->
+                                        </div>
+                                        <div class="anArea anAreaT">
+                                            <form action="" method="post">
+                                                <textarea placeholder="" id="q{$val.id}"></textarea>
+                                                <div class="bot">
+                                                    <a href="javascript:;" class="cancleBtn cancel">取消</a>
+                                                    <a data-question-id="{$val.id}" onclick="replyMssage($(this),{$val.user_id}, {$user_id})" style="background-color: #0b97c4; color: #fff;">提交</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <foreach name="val.answer" item="v" key="kk">
+                                        <div data-last-answer-id="{$v.id}" class="item itemX">
+                                            <div class="tp">
+                                                <a href="javascript:;">
+                                                    <img src="__MEMBER__/images/logo/{$v.face}.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="txt">
+                                                <div class="txIn txInB">
+                                                    <div class="tHd">
+                                                        <!--<i style="background-color: #ff7683; border-color: #e55a5a;">试</i>-->
+
+                                                        <php>
+
+                                                            //一级回复
+                                                        if($v['reply_user_id'] == 0){
+                                                            echo '<img style="display: inline-block" src="__MEMBER__/images/user_group/'.$v['user_group_id'].'.png"><span class="name">'.$v['username'].'：</span><span class="ask">'.htmlspecialchars_decode(stripslashes($v['answer'])).'</span>';
+                                                        }else{
+                                                            //二级回复
+                                                        echo '<img style="display: inline-block" src="__MEMBER__/images/user_group/'.$v['user_group_id'].'.png" alt=""><span class="name">'.$v['username'].'：回复#<img style="display: inline-block" src="__MEMBER__/images/user_group/'.$v['reply_user_group_id'].'.png" alt="">'.$v['reply_username'].'：</span><span class="ask">'.htmlspecialchars_decode(stripslashes($v['answer'])).'</span>';
+                                                        }
+
+                                                        </php>
+
+                                                    </div>
+                                                    <div class="hand">
+                                                        <span class="time">{$v.addtime}</span>
+                                                        <php>
+                                                            if($v['user_id'] != $user_id){
+                                                                echo ' <a onclick="createBox($(this))" class="mesIco mesIcoBs"><i></i></a>';
+                                                            }
+                                                        </php>
+
+                                                    </div>
+                                                </div>
+                                                <div class="anArea anAreaB">
+                                                    <form action="" method="post">
+                                                        <textarea class="answer" id="e{$v.id}" placeholder=""></textarea>
+                                                        <div class="bot">
+                                                            <a href="javascript:;" class="cancleBtn">取消</a>
+                                                            <a style="background-color: #0b97c4; color: #fff;" data-question-id="{$val.id}" data-answer-id="{$v.id}" onclick="replyMssage($(this),{$v.user_id}, {$user_id})">提交</a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </foreach>
+                                    <notempty name="val.is_show_more">
+                                        <a data-limit-end-id="{$val.limit_end_id}" onclick="answer_page($(this), {$val.id}, {$user_id})" style="display:block; text-align: left; margin-left: 80px; margin-top:25px;cursor:pointer;color: rgba(102, 102, 102, 0.65);">点击加载更多</a>
+                                    </notempty>
+                                </div>
+                            </li>
+
+                        </foreach>
+                        <notempty name="question.is_show_more">
+                            <div class="bgColor textAlign mt-10">
+                                <a class="Hmore m0a" data-last-limit-id="{$question.limit_end_id}" onclick="question_page($(this), {$user_id})">点击加载更多</a></div>
+                        </notempty>
+                    </ul>
+                </div>
+                <div id="demo4" class="Hpage mt30"></div>
+
+                </div>
+            </div>
+            <!--选项卡切换E-->
+         </div>
+  </div>
+</div>
+<!--footer-->
+<include file="Public:footer"/>
+<!--回复评论JS-->
+<script src="__MEMBER__/js/replyMssage.js"></script>
+<script>
+
+    // 插件validator.js
+    $('form').validator({
+        theme: "simple_right", //消息皮肤
+        msgClass: "n-bottom"   //消息将自动显示在输入框右边
+    });
+
+</script>

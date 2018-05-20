@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频播放页面</title>
+    <link rel="stylesheet" href="__MEMBER__/css/base.css">
+</head>
+<body>
+<script src='//player.polyv.net/script/polyvplayer.min.js'></script>
+<!-- 视频播放 -->
+<div class="play_box" id='plv_d81a899efa2b46067129582904a9e95f_d'></div>
+<script>
+    //视频播放参数
+    var player = polyvObject('#plv_d81a899efa2b46067129582904a9e95f_d').videoPlayer({
+        'width':{$w},
+        'height':'146',
+        'vid' : 'd81a899efa2b46067129582904a9e95f_d',
+        'flashvars':{"ban_history_time":"off", "history_video_duration":1, "autoplay":1}
+    });
+</script>
+</body>
+</html>

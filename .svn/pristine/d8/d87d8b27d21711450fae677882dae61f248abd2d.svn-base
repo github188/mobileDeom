@@ -1,0 +1,71 @@
+<include file="Public:headerAfter"/>
+
+<!--indexCom-->
+<section class="indexCom mt32" id="indexCom">
+    <div class="in w1100 m0a bodyColor hNotice">
+        <!--左侧共用菜单-->
+        <include file="leftMenu"/>
+        <div class="noticeRigth fr">
+            <div class="p">
+                <span class="fonts18 textColor">精英学员</span>
+            </div>
+            <div class="stuElite">
+                <div class="elList">
+                    <ul>
+                        <volist name="data" id="v" key="k">
+                            <li>
+                                <div class="item">
+                                    <div class="tp">
+                                        <if condition="$v['cover_img']">
+                                            <img src="{$v['cover_img']}" alt="图片">
+                                        <else/>
+                                            <img src="__MEMBER__/images/stu01.jpg" alt="图片">
+                                        </if>
+                                    </div>
+                                    <div class="txt">
+                                        <h4 class="tiName">{$v['title']}</h4>
+                                        <div class="wz js-wz" data-html="" data-staus="">{:htmlspecialchars_decode($v['content'])}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+            <if condition="$totalPages GT 1">
+                <div class="pages">{$pages}</div>
+            </if>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+
+
+<script>
+    //精英学员
+    +function () {
+        var $wz =$('.js-wz'),
+            str0 = $wz.html(),
+            str1 = str0,
+            txtSize = 30;
+        function txtFn(){
+            str0=str0.substr(0,txtSize)+'...';
+            $wz.html(str0);
+        }
+        txtFn();
+        $('.elList li').hover(function () {
+            var $wz =$(this).find('.js-wz');
+            $(this).addClass('hover');
+            $wz.attr('data-staus',1);
+            $wz.html(str1);
+        },function () {
+            var $wz =$(this).find('.js-wz');
+            $(this).removeClass('hover');
+            $wz.attr('data-staus',0);
+            txtFn();
+        });
+    }();
+</script>

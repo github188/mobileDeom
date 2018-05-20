@@ -1,0 +1,72 @@
+
+<include file="Public:headerAfter"/>
+
+<!-- myAccPayWay-->
+<section class="myCom myAccPaySuc" id="myAccPaySuc">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <span>个人中心</span>
+                    <i></i>
+                    <span>账户充值</span>
+                </div>
+                <div class="com accPay">
+                    <div class="payPlan" id="payPlan01">
+                        <div class="planIn">
+                            <div class="inLine" style="width:100%;"></div>
+                            <ol>
+                                <li class="li01">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">充值学习币</span>
+                                    </div>
+                                </li>
+                                <li class="li02">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">确认支付</span>
+                                    </div>
+                                </li>
+                                <li class="li03">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">支付完成</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="paySuc" style="text-align:left; padding-left: 245px;">
+                        <div class="sucTip">
+                            <if condition="$arr['status'] eq 2">
+                                <img src="__MEMBER__/images/sucTipIco.png">
+                                <span>充值成功，您已成功充值{$arr.currency}学习币！</span>
+                            <else />
+                                <img src="__MEMBER__/images/sucTipIco2.png">
+                                <span>充值失败，请确认是否支付金额成功！</span>
+
+                            </if>
+                        </div>
+                        <div class="sucInf" style="margin-left: 40px;">
+                            <p><span>充值金额：</span><span>{$arr.money}元</span></p>
+                            <p><span>充值数量：</span><span>{$arr.currency}学习币</span></p>
+                            <p><span>充值时间：</span><span>{$arr.pay_time|date='Y-m-d H:i:s',###}</span></p>
+                        </div>
+                        <div class="expTip">
+                            <p>* 如您在充值后遇到问题，请<a href="javascript:;" class="">联系我们&gt;&gt;</a> </p>
+                            <p>* 如您已支付金额成功，请等待3分钟再看看是否已入账或联系在线客服！</p>
+                            <p>* 最终解释权归嗨推学院所有</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>

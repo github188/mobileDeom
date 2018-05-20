@@ -1,0 +1,88 @@
+
+<include file="Public:headerAfter"/>
+
+<!-- myAccPayWay-->
+<section class="myCom myAccPayWay" id="myAccPayWay">
+    <div class="in w1100 m0a">
+        <!--左侧共用菜单-->
+        <include file="Public:leftMenu"/>
+        <div class="myRight fr">
+            <div class="rHd">
+                <div class="hdTit">
+                    <span>个人中心</span>
+                    <i></i>
+                    <span>账户充值</span>
+                </div>
+                <div class="com accPay">
+                    <div class="payPlan" id="payPlan01">
+                        <div class="planIn">
+                            <div class="inLine" style="width:75%;"></div>
+                            <ol>
+                                <li class="li01">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">充值学习币</span>
+                                    </div>
+                                </li>
+                                <li class="li02">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">确认支付</span>
+                                    </div>
+                                </li>
+                                <li class="li03">
+                                    <div class="item">
+                                        <i></i>
+                                        <span class="ti">支付完成</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="payWap">
+                        <form action="{:U('Pay/payAlipay')}" method="post" class="myForm" name="payForm" target="_blank">
+                           <div class="payInf">
+                                <p><span>订单编号： </span><span>{$trade_no}</span></p>
+                                <p><span>充值数量： </span><span>{$money}学习币</span></p>
+                                <p><span>应付总金额：</span><em>￥{$money}元</em></p>
+                            </div>
+                            <div class="paySel">
+                                <h6>充值方式</h6>
+                                <ul>
+                                    <li class="cur">
+                                        <a href="javascript:;" data-pay-url="{:U('Pay/payAlipay')}">
+                                            <img src="__MEMBER__/images/accPayWay01.jpg" alt="">
+                                        </a>
+                                        <i></i>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-pay-url="{:U('Pay/payWeixin')}">
+                                            <img src="__MEMBER__/images/accPayWay02.jpg" alt="">
+                                        </a>
+                                        <i></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="myBtn">
+                                <input type="hidden" name="trade_no" value="{$trade_no}">
+                                <input type="hidden" name="money" value="{$money}">
+                                <button type="button" class="bbtn" onclick="document.payForm.submit();">立即充值</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="payExp payExp2">
+                        <h6>说明：</h6>
+                        <p>* 付款完成后请等待页面跳转，系统将自动为您充值学习币</p>
+                        <p>* 微信充值方式只适用于微信客户端，支付宝充值方式可适用于网页浏览器</p>
+                        <p>* 如您无法使用在线支付，可联系客服选择汇款方式 <a href="{:U('Content/contactUs')}" style="color:#ffa166;"> 联系我们&gt;&gt;</a> </p>
+                        <p>* 最终解释权归嗨推学院所有</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<include file="Public:footer"/>
+

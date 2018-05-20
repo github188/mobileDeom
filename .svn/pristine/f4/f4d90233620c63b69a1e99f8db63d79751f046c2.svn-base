@@ -1,0 +1,92 @@
+
+
+<include file="Public:content-header" />
+
+<div class="wrapper">
+
+    <!-- 内容标题开始 -->
+    <div id="breadcrumbs" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 后台首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">会员登录日志管理</li>
+        </ol>
+    </div>
+    <!-- 内容标题结束 -->
+
+    <!-- 主要内容开始 -->
+    <div class="col-md-12">
+
+        <!-- 自定义标签开始 -->
+        <div class="nav-tabs-custom">
+
+            <!-- 标签内容开始 -->
+            <div class="tab-content">
+                <div id="tab_1" class="tab-pane active">
+                    <form style="margin:15px 0px 10px 0px;" class="form-inline display-inline" method="post" action="{:U(MODULE_NAME.'/User/login_log')}">
+                   
+                        <div class="form-group inlineForm display-inline">
+                            <label><b>用户名：</b></label>
+                            <input type="text" class="form-control" name="username" value="{$username}" >
+                        </div>&nbsp; &nbsp;                    
+                        <button type="submit" class="btn btn-success inlineSearch display-inline">查询</button>
+                    </form>
+
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="header" align="center">
+                                <td width="10%" align="center">用户名</td>
+                                <td width="10%" align="center">登录城市</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <volist name="info" id="v">
+                                 <php>
+                                     $login = $log->where(array('user_id'=>$v['id']))->limit(0,10)->order('logintime desc')->select();
+                                     
+                                 </php>
+                                <tr class="altbg2" onmouseover="this.className='altbg1'" onmouseout="this.className='altbg2'">
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED"><a href="{:U(MODULE_NAME.'/User/login_log',array('username'=>$v[username]))}">{$v['username']}</a></td>
+                                    <td align="center" style="border-bottom:1px dotted #EDEDED">
+                                        <volist name="login" id="vv">
+                                       
+                                        {$vv['ip']} {$vv['ip']|convertip} - {$vv['logintime']|date='Y-m-d H:i:s',###}
+                                        </volist>
+                                    </td>
+                                  </tr>
+                             </volist>
+
+                            <if condition="!$info">
+                                <tr>
+                                    <td colspan="3" align="center"> 没有数据！</td>
+                                </tr>
+                            </if>
+                            <if condition="$totalPages gt 1">
+                                <tr>
+                                    <td colspan="3" align="center"><div class="pages">{$page}</div> </td>
+                                </tr>
+                            </if>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- 标签内容结束 -->
+        </div>
+        <!-- 自定义标签结束 -->
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+<!-- ./wrapper结束 -->
+<script type="text/javascript">
+  //删除询问框
+$(".delete-msg-find").on('click', function(){
+    var status = confirm('确定删除本条文章？\n \n 删除后将无法恢复！\n 确定删除吗？？？\n \n ');
+    if(!status){
+        return false;
+    }
+});  
+
+</script>
+<!-- 底部 -->
+<include file="Public:content-footer" />
